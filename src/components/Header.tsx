@@ -7,6 +7,8 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/rules-guide', label: 'Rules Guide' },
   { href: '/top-cards', label: 'Top Cards' },
+  { href: '/card-value-calculator', label: 'Card Value' },
+  { href: '/best-cards-by-category', label: 'Best Cards' },
   { href: '/faq', label: 'FAQ' },
   { href: '/about', label: 'About' },
 ];

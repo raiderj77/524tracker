@@ -9,6 +9,8 @@ export interface CardApplication {
   isBusinessCard: boolean;
   isAuthorizedUser?: boolean;
   amexBonusReceived?: boolean;
+  annualFee?: number;
+  cardOpenDate?: string; // ISO date string, defaults to applicationDate
 }
 
 export interface RuleViolation {
@@ -274,6 +276,8 @@ export function exportToCSV(applications: CardApplication[]): string {
     'Status',
     'Business Card',
     'Amex Bonus Received',
+    'Annual Fee',
+    'Card Open Date',
   ];
   const rows = sortByDate(applications).map((app) => [
     `"${app.cardName}"`,
@@ -282,7 +286,22 @@ export function exportToCSV(applications: CardApplication[]): string {
     app.status,
     app.isBusinessCard ? 'Yes' : 'No',
     app.amexBonusReceived ? 'Yes' : 'No',
+    app.annualFee != null ? `$${app.annualFee}` : '',
+    app.cardOpenDate || '',
   ]);
 
   return [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+}
+
+export function getAnnualFeeDueDate(app: CardApplication): Date | null {
+  if (app.annualFee == null || app.annualFee <= 0) return null;
+  const openDate = app.cardOpenDate || app.applicationDate;
+  const due = new Date(openDate + 'T00:00:00');
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  // Advance to the next anniversary that's in the future
+  while (due <= now) {
+    due.setFullYear(due.getFullYear() + 1);
+  }
+  return due;
 }

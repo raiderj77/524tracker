@@ -10,7 +10,9 @@ import {
   sortByDate,
   generateId,
   exportToCSV,
+  getAnnualFeeDueDate,
 } from '@/lib/tracker';
+import HardInquiryTracker from './HardInquiryTracker';
 import { searchCards, type CardInfo } from '@/lib/cardList';
 
 const STORAGE_KEY = '524tracker-applications';
@@ -137,6 +139,8 @@ export default function TrackerTool() {
   const [status, setStatus] = useState<'approved' | 'denied' | 'pending'>('approved');
   const [isBusiness, setIsBusiness] = useState(false);
   const [amexBonus, setAmexBonus] = useState(false);
+  const [annualFee, setAnnualFee] = useState('');
+  const [cardOpenDate, setCardOpenDate] = useState('');
 
   // Autocomplete
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -199,6 +203,9 @@ export default function TrackerTool() {
     e.preventDefault();
     if (!cardName.trim()) return;
 
+    const feeValue = annualFee !== '' ? parseFloat(annualFee) : undefined;
+    const openDateValue = cardOpenDate || undefined;
+
     if (editingId) {
       setApplications((prev) =>
         prev.map((app) =>
@@ -211,6 +218,8 @@ export default function TrackerTool() {
                 status,
                 isBusinessCard: isBusiness,
                 amexBonusReceived: bank === 'American Express' ? amexBonus : undefined,
+                annualFee: feeValue,
+                cardOpenDate: openDateValue,
               }
             : app
         )
@@ -226,6 +235,8 @@ export default function TrackerTool() {
         status,
         isBusinessCard: isBusiness,
         amexBonusReceived: bank === 'American Express' ? amexBonus : undefined,
+        annualFee: feeValue,
+        cardOpenDate: openDateValue,
       };
       setApplications((prev) => [...prev, newApp]);
       const newCount = get524Count([...applications, newApp], countAU);
@@ -242,6 +253,8 @@ export default function TrackerTool() {
     setStatus('approved');
     setIsBusiness(false);
     setAmexBonus(false);
+    setAnnualFee('');
+    setCardOpenDate('');
     setEditingId(null);
   }
 
@@ -253,7 +266,8 @@ export default function TrackerTool() {
     setStatus(app.status);
     setIsBusiness(app.isBusinessCard);
     setAmexBonus(app.amexBonusReceived ?? false);
-    // Scroll to form
+    setAnnualFee(app.annualFee != null ? String(app.annualFee) : '');
+    setCardOpenDate(app.cardOpenDate ?? '');
     document.getElementById('app-form')?.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -462,6 +476,48 @@ export default function TrackerTool() {
                 <span>Received welcome bonus</span>
               </label>
             )}
+          </div>
+
+          {/* Annual Fee & Card Open Date */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label
+                htmlFor="annual-fee"
+                className="block text-sm font-medium text-text-primary mb-1"
+              >
+                Annual Fee (optional)
+              </label>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-secondary">$</span>
+                <input
+                  id="annual-fee"
+                  type="number"
+                  min="0"
+                  step="1"
+                  value={annualFee}
+                  onChange={(e) => setAnnualFee(e.target.value)}
+                  placeholder="e.g. 95"
+                  className="w-full pl-7 pr-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="card-open-date"
+                className="block text-sm font-medium text-text-primary mb-1"
+              >
+                Card Open Date (optional)
+              </label>
+              <input
+                id="card-open-date"
+                type="date"
+                value={cardOpenDate}
+                onChange={(e) => setCardOpenDate(e.target.value)}
+                max={todayISO()}
+                className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
+              />
+              <p className="text-[10px] text-text-secondary mt-0.5">Defaults to application date if blank</p>
+            </div>
           </div>
 
           <div className="flex gap-3">
@@ -692,6 +748,8 @@ export default function TrackerTool() {
                 dropoff524.setDate(dropoff524.getDate() + 730);
                 const countsFor524 =
                   app.status === 'approved' && !app.isBusinessCard;
+                const feeDue = getAnnualFeeDueDate(app);
+                const feeDays = feeDue ? daysUntil(feeDue) : null;
 
                 return (
                   <div
@@ -735,6 +793,20 @@ export default function TrackerTool() {
                             })}
                           </span>
                         )}
+                        {feeDue && feeDays != null ? (
+                          <span className="ml-2">
+                            &middot; Fee ${app.annualFee} due{' '}
+                            <span className={
+                              feeDays < 30 ? 'text-brand-red font-medium' :
+                              feeDays < 60 ? 'text-brand-gold font-medium' :
+                              'text-brand-green'
+                            }>
+                              in {feeDays} days
+                            </span>
+                          </span>
+                        ) : app.annualFee != null && app.annualFee <= 0 ? (
+                          <span className="ml-2">&middot; No annual fee</span>
+                        ) : null}
                       </div>
                     </div>
                     <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -801,6 +873,59 @@ export default function TrackerTool() {
           )}
         </div>
       )}
+
+      {/* Upcoming Annual Fees */}
+      {applications.length > 0 && (() => {
+        const upcomingFees = applications
+          .map((app) => {
+            const due = getAnnualFeeDueDate(app);
+            if (!due) return null;
+            const days = daysUntil(due);
+            if (days > 90) return null;
+            return { cardName: app.cardName, fee: app.annualFee!, dueDate: due, days };
+          })
+          .filter((x): x is { cardName: string; fee: number; dueDate: Date; days: number } => x !== null)
+          .sort((a, b) => a.days - b.days);
+
+        return (
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mt-6">
+            <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
+              Upcoming Annual Fees
+            </h3>
+            {upcomingFees.length > 0 ? (
+              <div className="space-y-3">
+                {upcomingFees.map((item, i) => (
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0">
+                    <div>
+                      <p className="text-sm font-medium">{item.cardName}</p>
+                      <p className="text-xs text-text-secondary">
+                        Due {item.dueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm font-bold tabular-nums">${item.fee}</p>
+                      <p className={`text-xs font-medium tabular-nums ${
+                        item.days < 30 ? 'text-brand-red' :
+                        item.days < 60 ? 'text-brand-gold' :
+                        'text-brand-green'
+                      }`}>
+                        {item.days} days
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-text-secondary">
+                No annual fees due in the next 90 days.
+              </p>
+            )}
+          </div>
+        );
+      })()}
+
+      {/* Hard Inquiry Tracker */}
+      <HardInquiryTracker />
 
       {/* Informational disclaimer */}
       <div className="mt-8 p-4 border border-gray-200 rounded-xl text-xs text-text-secondary leading-relaxed">
