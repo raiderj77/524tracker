@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     'chase 5/24 tracker, chase 5/24 calculator, amex lifetime rule, credit card application tracker, citi 8/65, churning rules',
   verification: {
     google: '-WV6T4gtpPzXxsIxh0JvtjPqnmWrbqvjX61RUy6qrSw',
+    other: {
+      'msvalidate.01': 'C4C9B6256BDEDED169E4DE01CA953390',
+    },
   },
   metadataBase: new URL('https://524tracker.com'),
   robots: {
