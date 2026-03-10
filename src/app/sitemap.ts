@@ -14,5 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/privacy', lastModified },
     { url: 'https://524tracker.com/terms', lastModified },
     { url: 'https://524tracker.com/contact', lastModified },
+    { url: 'https://524tracker.com/blog', lastModified },
+    { url: 'https://524tracker.com/blog/chase-5-24-rule-explained', lastModified },
   ];
 }

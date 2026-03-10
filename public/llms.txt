@@ -9,6 +9,10 @@
 - [Card Value Calculator](https://524tracker.com/card-value-calculator): Calculate whether a credit card is worth keeping by comparing annual fee vs benefits received
 - [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the top 3 credit cards for any spending category — gas, groceries, dining, travel, and more
 
+## Blog
+- [Blog](https://524tracker.com/blog): Expert guides on credit card application rules, churning strategies, and bank-specific restrictions
+- [Chase 5/24 Rule: Complete Guide](https://524tracker.com/blog/chase-5-24-rule-explained): Everything you need to know about Chase's 5/24 rule — what counts, what doesn't, and how to check your status
+
 ## About
 - [About Us](https://524tracker.com/about): Who we are and editorial policy
 - [Privacy Policy](https://524tracker.com/privacy): How we handle data (spoiler: tracker data never leaves your browser)
