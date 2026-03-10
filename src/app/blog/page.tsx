@@ -1,34 +1,27 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
-  title: 'Blog — Credit Card Rules & Strategy',
+  title: '524Tracker Blog — Credit Card Strategy & Bank Rules',
   description:
-    'Expert guides on credit card application rules, churning strategies, Chase 5/24, Amex lifetime bonuses, and more. Updated for 2026.',
+    'Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.',
   keywords:
-    'credit card blog, churning blog, chase 5/24 guide, credit card strategy',
+    'credit card blog, churning blog, chase 5/24 guide, amex lifetime rule, credit card strategy',
   robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/blog' },
   openGraph: {
-    title: 'Blog — Credit Card Rules & Strategy | 524Tracker',
+    title: '524Tracker Blog — Credit Card Strategy & Bank Rules',
     description:
-      'Expert guides on credit card application rules, churning strategies, and bank-specific restrictions.',
+      'Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.',
     url: 'https://524tracker.com/blog',
     type: 'website',
   },
 };
 
-const posts = [
-  {
-    slug: 'chase-5-24-rule-explained',
-    title: 'Chase 5/24 Rule: Complete Guide (2026)',
-    description:
-      "Chase 5/24 rejects applications if you've opened 5+ cards in 24 months. Learn what counts, what doesn't, and how to check your status free.",
-    date: '2026-03-09',
-  },
-];
-
 export default function BlogIndexPage() {
+  const posts = getAllPosts();
+
   return (
     <>
       <script
@@ -36,10 +29,25 @@ export default function BlogIndexPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://524tracker.com' },
-              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://524tracker.com/blog' },
+            '@graph': [
+              {
+                '@type': 'WebPage',
+                name: '524Tracker Blog — Credit Card Strategy & Bank Rules',
+                description:
+                  'Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.',
+                url: 'https://524tracker.com/blog',
+                publisher: {
+                  '@type': 'Organization',
+                  name: '524Tracker',
+                },
+              },
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://524tracker.com' },
+                  { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://524tracker.com/blog' },
+                ],
+              },
             ],
           }),
         }}
@@ -50,7 +58,7 @@ export default function BlogIndexPage() {
           Blog
         </h1>
         <p className="text-sm text-text-secondary mb-10">
-          In-depth guides on credit card application rules, bank-specific restrictions, and strategies for maximizing welcome bonuses.
+          Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.
         </p>
 
         <div className="space-y-6">
@@ -60,13 +68,17 @@ export default function BlogIndexPage() {
               href={`/blog/${post.slug}`}
               className="block bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:border-brand-gold transition-colors group"
             >
-              <p className="text-xs text-text-secondary mb-1">
-                {new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </p>
+              <div className="flex items-center gap-3 text-xs text-text-secondary mb-1">
+                <span>
+                  {new Date(post.datePublished + 'T00:00:00').toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </span>
+                <span>&middot;</span>
+                <span>{post.readTimeMinutes} min read</span>
+              </div>
               <h2 className="font-display font-bold text-xl text-brand-navy group-hover:text-brand-gold transition-colors mb-2">
                 {post.title}
               </h2>

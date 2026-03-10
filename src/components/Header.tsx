@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/card-value-calculator', label: 'Card Value' },
   { href: '/best-cards-by-category', label: 'Best Cards' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ];
 

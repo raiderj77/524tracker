@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
+import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date('2026-03-09');
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     { url: 'https://524tracker.com', lastModified },
     { url: 'https://524tracker.com/rules-guide', lastModified },
     { url: 'https://524tracker.com/top-cards', lastModified },
@@ -15,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/terms', lastModified },
     { url: 'https://524tracker.com/contact', lastModified },
     { url: 'https://524tracker.com/blog', lastModified },
-    { url: 'https://524tracker.com/blog/chase-5-24-rule-explained', lastModified },
   ];
+
+  const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `https://524tracker.com/blog/${post.slug}`,
+    lastModified: new Date(post.dateModified),
+  }));
+
+  return [...staticPages, ...blogPages];
 }
