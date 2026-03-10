@@ -1,0 +1,16 @@
+# 524Tracker
+
+> 524Tracker is the only free web tool that tracks all major bank credit card application rules in one place — including Chase 5/24, Amex once-per-lifetime bonus eligibility, Citi 8/65, and Bank of America 2/3/4. No account required. All data stays in your browser.
+
+## Main Tools
+- [5/24 & Bank Rules Tracker](https://524tracker.com/): Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, BoA 2/3/4, Capital One, and more
+- [Rules Guide](https://524tracker.com/rules-guide): Complete explanation of all major bank credit card application rules with examples
+- [Top Cards](https://524tracker.com/top-cards): Best credit cards to apply for, optimized for points maximizers
+
+## About
+- [About Us](https://524tracker.com/about): Who we are and editorial policy
+- [Privacy Policy](https://524tracker.com/privacy): How we handle data (spoiler: tracker data never leaves your browser)
+
+## Reference
+- [FAQ](https://524tracker.com/faq): 20 most common churning questions answered
+- [Contact](https://524tracker.com/contact): Rule corrections and feedback

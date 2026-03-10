@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:/Users/jason/empire/524tracker\" && npm run build 2>&1)",
+      "Bash(cd \"C:/Users/jason/empire/524tracker\" && npm run lint 2>&1)"
+    ]
+  }
+}
