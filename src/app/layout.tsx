@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     google: '-WV6T4gtpPzXxsIxh0JvtjPqnmWrbqvjX61RUy6qrSw',
     other: {
       'msvalidate.01': 'C4C9B6256BDEDED169E4DE01CA953390',
+      'google-adsense-account': 'ca-pub-7171402107622932',
     },
   },
   metadataBase: new URL('https://524tracker.com'),
