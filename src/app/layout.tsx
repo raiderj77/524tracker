@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     'Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, and 8 more bank rules free. Know exactly which credit cards you can apply for today.',
   keywords:
     'chase 5/24 tracker, chase 5/24 calculator, amex lifetime rule, credit card application tracker, citi 8/65, churning rules',
+  verification: {
+    google: '-WV6T4gtpPzXxsIxh0JvtjPqnmWrbqvjX61RUy6qrSw',
+  },
   metadataBase: new URL('https://524tracker.com'),
   robots: {
     index: true,
