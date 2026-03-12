@@ -17,6 +17,16 @@
 - [Bank of America 2/3/4 Rule: Complete Guide](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months — how all three windows work together
 - [How to Check Your Chase 5/24 Status](https://524tracker.com/blog/how-to-check-5-24-status): Check your 5/24 count for free without a hard inquiry using three methods that work in 2026
 
+## Credit Card Rule Guides
+- [Chase 5/24 Rule Explained](https://524tracker.com/blog/chase-5-24-rule): The Chase 5/24 rule rejects applications if you opened 5+ cards in 24 months — which cards are exempt, authorized user fixes, and optimal strategy
+- [Amex Once-Per-Lifetime Rule](https://524tracker.com/blog/amex-once-per-lifetime-rule): Amex limits each welcome bonus to once per lifetime per card — NLL offers, pop-up jail, and strategy for maximizing bonuses
+- [Citi 8/65 Rule Guide](https://524tracker.com/blog/citi-8-65-rule): Citi limits approvals to 1 per 8 days and 2 per 65 days — timing calendar and ThankYou Points strategy
+- [Bank of America 2/3/4 Rule](https://524tracker.com/blog/bank-of-america-2-3-4-rule): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months — rolling windows and Preferred Rewards impact
+- [Best Chase Cards Under 5/24](https://524tracker.com/blog/best-chase-cards-under-5-24): Which Chase cards to prioritize while under 5/24, ranked by bonus value with optimal application order
+- [Cards That Don't Count Toward 5/24](https://524tracker.com/blog/cards-that-dont-count-toward-5-24): Business cards by issuer that don't report to personal credit bureaus and don't count toward Chase 5/24
+- [Credit Card Application Order Strategy](https://524tracker.com/blog/credit-card-application-order-strategy): The optimal order to apply for credit cards across all banks with a 12-month roadmap and velocity rules
+- [When Does 5/24 Reset?](https://524tracker.com/blog/when-does-5-24-reset): How to calculate your exact Chase 5/24 reset date using the first-of-next-month rule with example timelines
+
 ## About
 - [About Us](https://524tracker.com/about): Who we are and editorial policy
 - [Privacy Policy](https://524tracker.com/privacy): How we handle data (spoiler: tracker data never leaves your browser)

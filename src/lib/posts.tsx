@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { newPosts1to4 } from './newPosts';
+import { newPosts5to8 } from './newPosts5to8';
 
 export interface BlogPost {
   slug: string;
@@ -1290,12 +1292,14 @@ const posts: BlogPost[] = [
   },
 ];
 
+const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8];
+
 export function getAllPosts(): BlogPost[] {
-  return [...posts].sort(
+  return [...allPosts].sort(
     (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
   );
 }
 
 export function getPost(slug: string): BlogPost | undefined {
-  return posts.find((p) => p.slug === slug);
+  return allPosts.find((p) => p.slug === slug);
 }

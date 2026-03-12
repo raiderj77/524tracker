@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date('2026-03-09');
+  const lastModified = new Date('2026-03-11');
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: 'https://524tracker.com', lastModified },
