@@ -1,4 +1,5 @@
 import TrackerTool from '@/components/TrackerTool';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import Link from 'next/link';
 
 const featuredCards = [
@@ -194,6 +195,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <FinancialDisclaimer />
     </>
   );
 }

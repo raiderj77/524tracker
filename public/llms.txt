@@ -1,36 +1,28 @@
-# 524Tracker
+# 524 Tracker
 
-> 524Tracker is the only free web tool that tracks all major bank credit card application rules in one place — including Chase 5/24, Amex once-per-lifetime bonus eligibility, Citi 8/65, and Bank of America 2/3/4. No account required. All data stays in your browser.
+> Free credit card application rules tracker for points and miles enthusiasts. Track Chase 5/24 status, Amex lifetime bonus eligibility, Citi 8/65 rules, Bank of America 2/3/4 restrictions, and more — all stored locally in your browser, never sent to any server.
 
 ## Main Tools
-- [5/24 & Bank Rules Tracker](https://524tracker.com/): Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, BoA 2/3/4, Capital One, and more
-- [Rules Guide](https://524tracker.com/rules-guide): Complete explanation of all major bank credit card application rules with examples
+- [Chase 5/24 Tracker](https://524tracker.com/): Track your Chase 5/24 card count and next eligibility date
+- [Card Value Calculator](https://524tracker.com/card-value-calculator): Calculate the net value of a card after annual fee vs. benefits
+- [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the highest-earning card for dining, travel, groceries, gas, and more
 - [Top Cards](https://524tracker.com/top-cards): Best credit cards to apply for, optimized for points maximizers
-- [Card Value Calculator](https://524tracker.com/card-value-calculator): Calculate whether a credit card is worth keeping by comparing annual fee vs benefits received
-- [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the top 3 credit cards for any spending category — gas, groceries, dining, travel, and more
+- [Rules Guide](https://524tracker.com/rules-guide): Complete explanation of all major bank credit card application rules
 
 ## Blog
 - [Blog](https://524tracker.com/blog): Expert guides on credit card application rules, churning strategies, and bank-specific restrictions
 - [Chase 5/24 Rule: Complete Guide](https://524tracker.com/blog/chase-5-24-rule-explained): Everything you need to know about Chase's 5/24 rule — what counts, what doesn't, and how to check your status
-- [Amex Lifetime Bonus Rule: Complete Guide](https://524tracker.com/blog/amex-lifetime-bonus-rule-explained): The Amex lifetime rule means you can only earn a welcome bonus on each card once per lifetime — which cards are affected and how to check eligibility
-- [Citi 8/65 Rule: Complete Guide](https://524tracker.com/blog/citi-8-65-rule-explained): The Citi 8/65 rule limits you to 1 Citi card every 8 days and 2 every 65 days — how to time applications correctly
-- [Bank of America 2/3/4 Rule: Complete Guide](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months — how all three windows work together
-- [How to Check Your Chase 5/24 Status](https://524tracker.com/blog/how-to-check-5-24-status): Check your 5/24 count for free without a hard inquiry using three methods that work in 2026
-
-## Credit Card Rule Guides
-- [Chase 5/24 Rule Explained](https://524tracker.com/blog/chase-5-24-rule): The Chase 5/24 rule rejects applications if you opened 5+ cards in 24 months — which cards are exempt, authorized user fixes, and optimal strategy
-- [Amex Once-Per-Lifetime Rule](https://524tracker.com/blog/amex-once-per-lifetime-rule): Amex limits each welcome bonus to once per lifetime per card — NLL offers, pop-up jail, and strategy for maximizing bonuses
-- [Citi 8/65 Rule Guide](https://524tracker.com/blog/citi-8-65-rule): Citi limits approvals to 1 per 8 days and 2 per 65 days — timing calendar and ThankYou Points strategy
-- [Bank of America 2/3/4 Rule](https://524tracker.com/blog/bank-of-america-2-3-4-rule): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months — rolling windows and Preferred Rewards impact
-- [Best Chase Cards Under 5/24](https://524tracker.com/blog/best-chase-cards-under-5-24): Which Chase cards to prioritize while under 5/24, ranked by bonus value with optimal application order
-- [Cards That Don't Count Toward 5/24](https://524tracker.com/blog/cards-that-dont-count-toward-5-24): Business cards by issuer that don't report to personal credit bureaus and don't count toward Chase 5/24
-- [Credit Card Application Order Strategy](https://524tracker.com/blog/credit-card-application-order-strategy): The optimal order to apply for credit cards across all banks with a 12-month roadmap and velocity rules
-- [When Does 5/24 Reset?](https://524tracker.com/blog/when-does-5-24-reset): How to calculate your exact Chase 5/24 reset date using the first-of-next-month rule with example timelines
+- [Amex Lifetime Bonus Rule: Complete Guide](https://524tracker.com/blog/amex-lifetime-bonus-rule-explained): The Amex lifetime rule means you can only earn a welcome bonus on each card once per lifetime
+- [Citi 8/65 Rule: Complete Guide](https://524tracker.com/blog/citi-8-65-rule-explained): The Citi 8/65 rule limits you to 1 Citi card every 8 days and 2 every 65 days
+- [Bank of America 2/3/4 Rule: Complete Guide](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months
 
 ## About
-- [About Us](https://524tracker.com/about): Who we are and editorial policy
-- [Privacy Policy](https://524tracker.com/privacy): How we handle data (spoiler: tracker data never leaves your browser)
+- [About](https://524tracker.com/about): About this tool and how it works
+- [Privacy Policy](https://524tracker.com/privacy): All data stored locally in your browser — nothing sent to servers
+- [Terms of Service](https://524tracker.com/terms): Terms of use
 
-## Reference
-- [FAQ](https://524tracker.com/faq): 20 most common churning questions answered
-- [Contact](https://524tracker.com/contact): Rule corrections and feedback
+## Key Facts
+- All tracking data stored in browser localStorage only — never transmitted to any server
+- No account or login required
+- Free to use, supported by advertising and card affiliate links
+- Rules based on community knowledge from r/churning — always verify with card issuer before applying

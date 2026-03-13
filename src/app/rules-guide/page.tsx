@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
   title: 'Complete Bank Credit Card Application Rules Guide (2026)',
@@ -349,9 +350,7 @@ export default function RulesGuidePage() {
           </div>
         </section>
 
-        <p className="text-xs text-text-secondary italic">
-          Reviewed by an experienced web developer. Always verify with card issuers directly.
-        </p>
+        <FinancialDisclaimer />
       </article>
     </>
   );

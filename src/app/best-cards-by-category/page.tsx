@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 interface CategoryCard {
   name: string;
@@ -220,9 +221,7 @@ export default function BestCardsByCategoryPage() {
           </div>
         )}
 
-        <p className="text-xs text-text-secondary mt-8 italic">
-          Card rewards rates and terms subject to change. Verify with issuers before applying.
-        </p>
+        <FinancialDisclaimer />
       </article>
     </>
   );

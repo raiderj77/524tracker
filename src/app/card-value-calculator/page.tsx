@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 interface Perk {
   id: string;
@@ -337,9 +338,7 @@ export default function CardValueCalculatorPage() {
           </div>
         )}
 
-        <p className="text-xs text-text-secondary mt-8 italic">
-          This calculator is for informational purposes only. It does not account for all possible card benefits or opportunity costs.
-        </p>
+        <FinancialDisclaimer />
       </article>
     </>
   );

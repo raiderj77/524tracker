@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
   title: 'Best Credit Cards to Apply For in 2026',
@@ -184,6 +185,8 @@ export default function TopCardsPage() {
             Track Your Applications Free &rarr;
           </Link>
         </div>
+
+        <FinancialDisclaimer />
       </article>
     </>
   );
