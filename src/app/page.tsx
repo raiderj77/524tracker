@@ -144,6 +144,76 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Featured Tools */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Link
+            href="/card-tracker"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
+              5
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Card Tracker
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                All 5 issuer rules calculated from your application history
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/spend-tracker"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
+              %
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Spend Tracker
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Track welcome bonus minimum spend across all your cards
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/card-value-calculator"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              $
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Card Value Calculator
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Calculate the real dollar value of any card&apos;s rewards
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/rules-guide"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              ?
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Rules Guide
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Every bank rule explained with examples and tips
+              </p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Tracker Tool */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <TrackerTool />

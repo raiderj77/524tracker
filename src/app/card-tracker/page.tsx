@@ -85,6 +85,15 @@ export default function CardTrackerPage() {
 
         <CardTrackerTool />
 
+        <div className="mt-8 bg-brand-light border border-gray-200 rounded-xl p-5">
+          <p className="text-sm">
+            Tracking your spend toward welcome bonuses?{' '}
+            <Link href="/spend-tracker" className="text-brand-gold hover:text-amber-600 font-semibold">
+              Use our Spend Tracker &rarr;
+            </Link>
+          </p>
+        </div>
+
         <div className="mt-10 pt-6 border-t border-gray-200">
           <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Learn More</h2>
           <ul className="space-y-2 text-sm">
