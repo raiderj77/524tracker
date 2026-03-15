@@ -3,15 +3,15 @@ import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
-  title: 'Complete Bank Credit Card Application Rules Guide (2026)',
+  title: 'Credit Card Application Rules Guide (2026)',
   description:
-    'Complete guide to all bank credit card application rules: Chase 5/24, Amex lifetime bonus, Citi 8/65, Bank of America 2/3/4, Capital One, and more. Updated March 2026.',
+    'All bank credit card application rules explained: Chase 5/24, Amex lifetime, Citi 8/65, Bank of America 2/3/4, Capital One, and more. Updated March 2026.',
   keywords:
     'chase 5/24 rule, amex lifetime bonus rule, citi 8/65 rule, bank of america 2/3/4 rule, credit card application rules, churning rules guide',
   robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/rules-guide' },
   openGraph: {
-    title: 'Complete Bank Credit Card Application Rules Guide (2026)',
+    title: 'Credit Card Application Rules Guide (2026)',
     description:
       'Every bank credit card application rule explained — Chase 5/24, Amex lifetime, Citi 8/65, BoA 2/3/4, and more.',
     url: 'https://524tracker.com/rules-guide',
