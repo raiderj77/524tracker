@@ -146,7 +146,7 @@ export default function HomePage() {
 
       {/* Featured Tools */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <Link
             href="/card-tracker"
             className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
@@ -192,6 +192,22 @@ export default function HomePage() {
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
                 Calculate the real dollar value of any card&apos;s rewards
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/application-flowchart"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              &rarr;
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Flowchart
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Find out what card to apply for next
               </p>
             </div>
           </Link>

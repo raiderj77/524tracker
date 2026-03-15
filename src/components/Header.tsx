@@ -7,6 +7,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/card-tracker', label: 'Card Tracker' },
   { href: '/spend-tracker', label: 'Spend Tracker' },
+  { href: '/application-flowchart', label: 'Flowchart' },
   { href: '/rules-guide', label: 'Rules Guide' },
   { href: '/top-cards', label: 'Top Cards' },
   { href: '/card-value-calculator', label: 'Card Value' },

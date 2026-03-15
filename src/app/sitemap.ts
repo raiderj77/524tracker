@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/contact', lastModified },
     { url: 'https://524tracker.com/card-tracker', lastModified },
     { url: 'https://524tracker.com/spend-tracker', lastModified },
+    { url: 'https://524tracker.com/application-flowchart', lastModified },
     { url: 'https://524tracker.com/blog', lastModified },
   ];
 
