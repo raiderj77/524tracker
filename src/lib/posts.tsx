@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { newPosts1to4 } from './newPosts';
 import { newPosts5to8 } from './newPosts5to8';
+import { postBestCardsAfter524 } from './postBestCardsAfter524';
 
 export interface BlogPost {
   slug: string;
@@ -1292,7 +1293,7 @@ const posts: BlogPost[] = [
   },
 ];
 
-const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8];
+const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524];
 
 export function getAllPosts(): BlogPost[] {
   return [...allPosts].sort(
