@@ -3,8 +3,15 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: '524Tracker privacy policy — how we handle your data, including localStorage usage, AdSense cookies, and affiliate link tracking.',
-  robots: { index: true, follow: true },
+  keywords: 'privacy policy, 524tracker privacy, data handling, localStorage, cookie policy',
+  robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/privacy' },
+  openGraph: {
+    title: 'Privacy Policy — 524Tracker',
+    description: '524Tracker privacy policy — how we handle your data, including localStorage usage and cookies.',
+    url: 'https://524tracker.com/privacy',
+    type: 'website',
+  },
 };
 
 export default function PrivacyPage() {

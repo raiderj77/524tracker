@@ -1,26 +1,246 @@
-# 524Tracker — Credit Card Application Rule Tracker
+# 524Tracker — Complete Credit Card Application Rules Reference
 
-## About
-524Tracker helps credit card enthusiasts track the Chase 5/24 rule
-and other bank application restrictions to maximize credit card
-welcome bonuses.
+> 524Tracker (524tracker.com) is a free credit card application rules tracker covering Chase 5/24, Amex lifetime bonuses, Citi 8/65, Bank of America 2/3/4, Capital One velocity limits, and more. All tracking data is stored in the user's browser localStorage — nothing is ever transmitted to a server.
 
-## Key Pages
-- /: Main 5/24 tracker tool
-- /rules-guide: Complete guide to bank application rules
-- /top-cards: Top credit cards to get under 5/24
-- /best-cards-by-category: Best cards by spending category
-- /card-value-calculator: Calculate credit card point values
-- /faq: Frequently asked questions about 5/24
+## How the 5/24 Tracker Works
 
-## Blog Posts
-- /blog/chase-5-24-rule: The Chase 5/24 rule explained
-- /blog/amex-once-per-lifetime-rule: Amex once per lifetime rule
-- /blog/citi-8-65-rule: Citi 8/65 rule explained
-- /blog/bank-of-america-2-3-4-rule: BofA 2/3/4 rule explained
+The 524Tracker tool lets users log their credit card applications by entering the card name, issuing bank, and approval date. The tool automatically calculates:
 
-## Content Summary
-524Tracker provides free tools and guides for credit card
-application strategy. Content covers Chase 5/24, Amex lifetime
-bonus rules, Citi velocity rules, and Bank of America restrictions.
-All content is for informational purposes only.
+- **Chase 5/24 count**: How many new personal credit card accounts were opened in the past 24 months from any bank. If this count is 5 or more, Chase will deny most applications.
+- **Drop-off dates**: When each application will "fall off" the 24-month window, reducing the 5/24 count.
+- **Next eligibility date**: The earliest date the user will be under 5/24 again.
+- **Bank-specific rule checks**: Whether the user is eligible to apply at each major bank based on their application history.
+
+All data is stored in the browser's localStorage. Users can export their data as JSON for backup and import it on another device. No account or login is required.
+
+---
+
+## Bank Application Rules — Complete Reference
+
+### Chase 5/24 Rule
+
+**Rule**: Chase will deny most credit card applications if you have opened 5 or more new credit card accounts (from ANY bank) in the past 24 months.
+
+**Window**: 24 months (730 days)
+**Limit**: 5 new accounts from all banks combined
+**Counts all banks**: Yes — this is what makes 5/24 unique
+
+**What counts toward 5/24**:
+- Personal credit cards from any bank
+- Store credit cards (Macy's, Amazon Store Card, etc.)
+- Authorized user accounts (these appear on your credit report)
+- Capital One business cards (they report to personal credit reports)
+
+**What does NOT count toward 5/24**:
+- Most business credit cards (Chase Ink, Amex Business, Citi Business)
+- Charge cards that don't appear on personal credit reports
+- Product changes (upgrades/downgrades within the same bank)
+- Credit limit increases
+
+**Important notes**:
+- Authorized user cards can sometimes be removed from your 5/24 count by calling Chase's reconsideration line and explaining you were an AU, not the primary cardholder.
+- Some Chase cards are reportedly exempt from 5/24 (certain co-branded cards), but this changes frequently.
+- Business cards from most banks do not count toward 5/24, making them a key strategy for earning bonuses while staying under 5/24.
+
+**Last verified**: March 2026
+
+---
+
+### American Express Rules
+
+#### Amex Once-Per-Lifetime Bonus Rule
+
+**Rule**: Each American Express card welcome bonus is available only once per lifetime per person. If you have ever received the bonus for a specific card, you cannot earn it again.
+
+**Key details**:
+- The lifetime language appears in the application terms: "Welcome offer not available to applicants who have or have had this Card."
+- Some data points suggest the restriction may reset after 7+ years, but this is not officially confirmed.
+- This makes it critical to prioritize your highest-value Amex applications — you only get one shot at each bonus.
+
+#### Amex 2/90 Rule
+
+**Rule**: American Express limits approvals to a maximum of 2 personal credit cards within any rolling 90-day window.
+
+**Key details**:
+- Applies to personal credit cards only
+- Charge cards (Platinum, Gold, Green) do NOT count toward this limit
+- Business credit cards are tracked separately
+
+#### Amex 4 Credit Card Maximum
+
+**Rule**: You can hold a maximum of 4 personal Amex credit cards at any one time. Charge cards do not count toward this limit and are unlimited.
+
+#### Amex 5 Business Credit Card Maximum
+
+**Rule**: You can hold a maximum of 5 business Amex credit cards at any one time. Business charge cards do not count.
+
+#### Amex 1/5 Business Rule
+
+**Rule**: American Express generally limits business card approvals to 1 every 5 days. Wait at least 5 days between Amex business card applications.
+
+**Last verified**: March 2026
+
+---
+
+### Citi Rules
+
+#### Citi 8/65 Rule (also called 1/8 and 2/65)
+
+**Rule**: Citi limits applications in two ways:
+- **1/8**: You can only be approved for 1 Citi card per 8-day period
+- **2/65**: You can only be approved for 2 Citi cards per 65-day period
+
+**Strategy**: Space Citi applications at least 8 days apart. If applying for 2 Citi cards, the second application should be at least 8 days after the first, and you must wait 65 days before applying for a third.
+
+#### Citi 24-Month Bonus Rule
+
+**Rule**: You cannot earn the welcome bonus on a Citi card if you currently hold the same card OR if you received a bonus on it (or a predecessor card) within the past 24 months.
+
+**Key details**:
+- Predecessor cards count — if a card was rebranded, the old card's bonus history carries over
+- You must close the card AND wait 24 months from the bonus posting date
+- The 24-month clock starts from when the bonus posted to your account, not when you opened the card
+
+**Last verified**: March 2026
+
+---
+
+### Bank of America 2/3/4 Rule
+
+**Rule**: Bank of America limits approvals in three tiers:
+- **2/30**: Maximum 2 new BoA cards in any 30-day period
+- **3/12**: Maximum 3 new BoA cards in any 12-month period
+- **4/24**: Maximum 4 new BoA cards in any 24-month period
+
+**Key details**:
+- These limits apply only to Bank of America cards (not cards from other banks)
+- Preferred Rewards customers (those with $20,000+ in BoA/Merrill accounts) may have better approval odds
+- BoA is known for being more conservative with approvals compared to Chase or Amex
+
+**Last verified**: March 2026
+
+---
+
+### Capital One Rules
+
+#### Capital One 2 Card Maximum
+
+**Rule**: Capital One enforces a maximum of 2 personal credit cards held at any one time. You must close an existing Capital One personal card before being approved for a new one if you already hold 2.
+
+#### Capital One 1/6 Month Rule
+
+**Rule**: Capital One generally limits approvals to 1 new Capital One card per 6 months. This is a soft guideline, not an absolute rule.
+
+**Important note**: Capital One business cards DO report to personal credit reports, which means they count toward Chase 5/24. This is unusual — most other banks' business cards do not report to personal credit bureaus.
+
+**Last verified**: March 2026
+
+---
+
+### Discover Rules
+
+**Rule**: Discover only allows you to hold 1 Discover credit card at a time. You must close your existing Discover card before opening a different one. You can product change between Discover cards without closing.
+
+**Last verified**: March 2026
+
+---
+
+### US Bank Rules
+
+**Rule**: US Bank generally limits approvals to approximately 1 new US Bank card per 6 months. US Bank is known for being conservative with approvals. Having an existing banking relationship (checking or savings account) significantly helps approval odds.
+
+**Last verified**: March 2026
+
+---
+
+### Barclays Rules
+
+**Rule**: Barclays generally limits approvals to 1 new Barclays card per 6 months. Barclays also considers your total number of recent inquiries and new accounts across all banks — they are sensitive to high velocity across the board.
+
+**Last verified**: March 2026
+
+---
+
+## Recommended Application Order
+
+For someone starting with a clean slate (0/24), the generally recommended order is:
+
+1. **Chase cards first** — because Chase counts ALL banks toward 5/24
+2. **Mix in business cards** — most don't count toward 5/24, letting you earn bonuses while staying under the limit
+3. **Amex cards next** — remember the lifetime bonus rule; prioritize high-value bonuses
+4. **Citi and Bank of America** — these have their own velocity rules but don't count cards from other banks
+5. **Capital One, Discover, US Bank, Barclays last** — these have simpler or more restrictive rules
+
+---
+
+## Card Value Calculator
+
+The Card Value Calculator helps users determine whether a credit card is worth keeping after the first year. Users input:
+
+- Annual fee amount
+- Value of each card benefit (travel credits, dining credits, lounge access, etc.)
+- Estimated annual rewards earned from spending
+
+The calculator totals all benefits and rewards, then subtracts the annual fee to give a net value. The result is color-coded: green (worth keeping), yellow (marginal), or red (consider canceling or downgrading).
+
+---
+
+## Best Cards by Category
+
+524Tracker provides recommendations for the best credit cards in each spending category:
+
+- **Dining**: Cards with the highest rewards rate at restaurants
+- **Groceries**: Cards with the best earn rate at supermarkets
+- **Gas**: Top cards for fuel purchases
+- **Travel**: Best general travel rewards cards
+- **Hotels**: Hotel-specific loyalty cards
+- **Airlines**: Airline-specific co-branded cards
+- **Online shopping**: Cards with bonus categories for online purchases
+- **Business**: Best business credit cards for various spend categories
+- **Cashback**: Flat-rate and category cashback cards
+
+Each recommendation includes the rewards rate, annual fee, and whether the card counts toward Chase 5/24.
+
+---
+
+## Frequently Asked Questions
+
+### Does being an authorized user count toward Chase 5/24?
+Yes, authorized user accounts generally count toward your Chase 5/24 total because they appear on your credit report as new accounts. However, some people have successfully had AU cards excluded by calling Chase's reconsideration line.
+
+### Do business credit cards count toward 5/24?
+Most business credit cards do NOT count toward Chase 5/24. The major exception is Capital One, whose business cards appear on personal credit reports.
+
+### What is the best order to apply for credit cards?
+Start with Chase cards while under 5/24, mix in business cards (most don't count toward 5/24), then move to Amex, Citi, Bank of America, and others.
+
+### Can I have multiple Chase Sapphire cards?
+No. Chase enforces a "one Sapphire" rule — you cannot hold more than one Sapphire card at a time, and you cannot receive a Sapphire bonus if you've received one within the past 48 months.
+
+### Is credit card churning legal?
+Yes, churning is completely legal. Banks design welcome bonuses to attract new customers. However, banks may close accounts or restrict applications if they determine you are not using cards as a genuine customer.
+
+### How do I check my 5/24 status?
+Pull your free credit report from annualcreditreport.com and count every new account opened in the past 24 months. Or use 524Tracker's free tool which calculates your count automatically.
+
+### What credit score do I need for premium cards?
+Premium cards like Chase Sapphire Reserve and Amex Platinum generally require a FICO score of 720+. Scores of 740+ give the best approval odds.
+
+### Does closing a credit card hurt my credit score?
+Closing a card can temporarily reduce your score by 5-20 points by increasing your utilization ratio. However, closed accounts in good standing remain on your report for up to 10 years.
+
+---
+
+## Data Privacy
+
+524Tracker stores all card application tracking data in the browser's localStorage only. No data is ever transmitted to any server. No account or login is required. Users can export their data as JSON for backup and portability.
+
+The site uses Google AdSense for advertising and includes affiliate links to credit card application pages through CJ Affiliate. Affiliate relationships are disclosed on all recommendation pages.
+
+---
+
+## Disclaimer
+
+This tool is for informational purposes only and does not constitute financial advice. Credit card approval decisions are made solely by the issuing bank. 524Tracker cannot guarantee approval or bonus eligibility. Credit card rules change frequently — always verify current terms with the issuing bank before applying.
+
+Last updated: March 2026

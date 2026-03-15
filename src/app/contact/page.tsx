@@ -4,8 +4,15 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Contact the 524Tracker team — report outdated rules, suggest features, or ask questions about credit card application tracking.',
-  robots: { index: true, follow: true },
+  keywords: 'contact 524tracker, report rules, suggest features, credit card tracker support',
+  robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/contact' },
+  openGraph: {
+    title: 'Contact Us — 524Tracker',
+    description: 'Contact the 524Tracker team — report outdated rules or suggest features.',
+    url: 'https://524tracker.com/contact',
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {

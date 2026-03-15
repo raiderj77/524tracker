@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.524tracker.com" }],
+      "destination": "https://524tracker.com/$1",
+      "permanent": true
+    }
+  ]
+}

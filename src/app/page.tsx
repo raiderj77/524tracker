@@ -1,6 +1,24 @@
+import type { Metadata } from 'next';
 import TrackerTool from '@/components/TrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Chase 5/24 Tracker & Credit Card Rules | 524Tracker',
+  description:
+    'Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, and 8 more bank rules free. Know exactly which credit cards you can apply for today.',
+  keywords:
+    'chase 5/24 tracker, chase 5/24 calculator, credit card application tracker, amex lifetime rule, citi 8/65, churning rules, bank of america 2/3/4',
+  robots: { index: true, follow: true, 'max-snippet': -1 },
+  alternates: { canonical: 'https://524tracker.com' },
+  openGraph: {
+    title: 'Chase 5/24 Tracker & Credit Card Rules | 524Tracker',
+    description:
+      'Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, and 8 more bank rules free.',
+    url: 'https://524tracker.com',
+    type: 'website',
+  },
+};
 
 const featuredCards = [
   {

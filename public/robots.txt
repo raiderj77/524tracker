@@ -50,9 +50,11 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
+# Default
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /private/
 
 Sitemap: https://524tracker.com/sitemap.xml

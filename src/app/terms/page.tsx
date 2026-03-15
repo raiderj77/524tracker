@@ -3,8 +3,15 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: '524Tracker terms of service — usage terms, disclaimers, and affiliate disclosures.',
-  robots: { index: true, follow: true },
+  keywords: 'terms of service, 524tracker terms, usage terms, disclaimers',
+  robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/terms' },
+  openGraph: {
+    title: 'Terms of Service — 524Tracker',
+    description: '524Tracker terms of service — usage terms, disclaimers, and affiliate disclosures.',
+    url: 'https://524tracker.com/terms',
+    type: 'website',
+  },
 };
 
 export default function TermsPage() {

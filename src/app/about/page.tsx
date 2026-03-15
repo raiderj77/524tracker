@@ -4,8 +4,15 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About 524Tracker',
   description: 'About 524Tracker — our mission to give credit card enthusiasts free, neutral application tracking tools. Editorial policy and contact information.',
-  robots: { index: true, follow: true },
+  keywords: 'about 524tracker, credit card tracker, churning tools, 5/24 calculator',
+  robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/about' },
+  openGraph: {
+    title: 'About 524Tracker',
+    description: 'About 524Tracker — free, neutral credit card application tracking tools.',
+    url: 'https://524tracker.com/about',
+    type: 'website',
+  },
 };
 
 export default function AboutPage() {
