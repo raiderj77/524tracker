@@ -1,0 +1,26 @@
+# 524Tracker — Credit Card Application Rule Tracker
+
+## About
+524Tracker helps credit card enthusiasts track the Chase 5/24 rule
+and other bank application restrictions to maximize credit card
+welcome bonuses.
+
+## Key Pages
+- /: Main 5/24 tracker tool
+- /rules-guide: Complete guide to bank application rules
+- /top-cards: Top credit cards to get under 5/24
+- /best-cards-by-category: Best cards by spending category
+- /card-value-calculator: Calculate credit card point values
+- /faq: Frequently asked questions about 5/24
+
+## Blog Posts
+- /blog/chase-5-24-rule: The Chase 5/24 rule explained
+- /blog/amex-once-per-lifetime-rule: Amex once per lifetime rule
+- /blog/citi-8-65-rule: Citi 8/65 rule explained
+- /blog/bank-of-america-2-3-4-rule: BofA 2/3/4 rule explained
+
+## Content Summary
+524Tracker provides free tools and guides for credit card
+application strategy. Content covers Chase 5/24, Amex lifetime
+bonus rules, Citi velocity rules, and Bank of America restrictions.
+All content is for informational purposes only.
