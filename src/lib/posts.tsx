@@ -7,6 +7,7 @@ import { postApplicationStrategy } from './postApplicationStrategy';
 import { postHowToCalculate524 } from './postHowToCalculate524';
 import { postBofa234 } from './postBofa234';
 import { postAmexLifetime } from './postAmexLifetime';
+import { postBofaRules } from './postBofaRules';
 
 export interface BlogPost {
   slug: string;
@@ -488,6 +489,16 @@ const posts: BlogPost[] = [
           <p className="text-sm">
             The practical difference is significant. With Citi, waiting 24 months after closing a card restores your bonus eligibility. With Amex, no amount of waiting changes your eligibility once a bonus has been received. See the <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">Complete Bank Rules Guide</Link> for details on all bank restrictions.
           </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-lg text-brand-navy mb-2" id="further-reading">
+            Further Reading
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm mb-6">
+            <li><Link href="/blog/amex-once-per-lifetime-rule" className="text-brand-gold hover:text-amber-600">Amex Once-Per-Lifetime Rule: NLL Offers, Pop-Up Jail &amp; Card Family Details</Link></li>
+            <li><Link href="/blog/amex-lifetime-bonus-rule" className="text-brand-gold hover:text-amber-600">Amex Once Per Lifetime Rule: What It Is and How It Affects You</Link></li>
+          </ul>
         </section>
 
         <section>
@@ -1297,7 +1308,7 @@ const posts: BlogPost[] = [
   },
 ];
 
-const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234, postAmexLifetime];
+const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234, postAmexLifetime, postBofaRules];
 
 export function getAllPosts(): BlogPost[] {
   return [...allPosts].sort(
