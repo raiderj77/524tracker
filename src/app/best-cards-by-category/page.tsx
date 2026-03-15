@@ -221,6 +221,75 @@ export default function BestCardsByCategoryPage() {
           </div>
         )}
 
+        {/* Informational content */}
+        <section className="mt-12 space-y-8">
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Are Credit Cards Categorized?</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              Credit cards earn rewards at different rates depending on where you spend. Most issuers assign merchant category codes (MCCs) to each transaction, and cards offer bonus multipliers for specific MCCs. For example, a grocery card earns elevated rewards at supermarkets because those merchants are classified under grocery MCCs. Understanding these categories helps you pick the right card for each type of spending.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              We organize cards into nine spending categories: gas and fuel, groceries, dining and restaurants, general travel, hotels, airlines, online shopping, everyday spending, and business expenses. Each category includes the top three cards ranked by rewards rate, annual fee value, and overall utility. Some cards appear in multiple categories because they excel in more than one area.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Makes a Card the Best for a Category?</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              We evaluate cards on three primary factors. <strong>Rewards rate</strong> is the most important — a card earning 5% cashback on gas is objectively better than one earning 2% for that specific category. <strong>Welcome bonus</strong> matters for the first year because a large sign-up bonus can offset an annual fee or provide exceptional one-time value. <strong>Annual fee</strong> affects the long-term equation — a high rewards rate means less if the annual fee eats into your earnings.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              Beyond these three factors, we also consider spending caps (some cards limit bonus rewards to a certain dollar amount per quarter or year), additional perks like purchase protection and extended warranty, and whether the card counts toward Chase 5/24 since that affects your ability to open other cards. A card that earns 6% on groceries but caps at $6,000 per year in bonus spending may be less valuable to a large family than one earning 4% with no cap.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Evaluate Cards for Your Spending</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              Start by reviewing your last three months of credit card or bank statements to identify where your money actually goes. Most people overestimate dining spending and underestimate grocery spending. Once you know your top two or three categories by dollar volume, focus on maximizing rewards in those areas first.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              For example, if you spend $800 per month on groceries, $400 on dining, and $200 on gas, a card earning 4x on groceries generates $384 in annual rewards value on groceries alone (at 1 cent per point). That same card at 1x on gas only generates $24 from gas spending. The category where you spend the most deserves the card with the highest multiplier.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              Consider whether you prefer simplicity or optimization. A single 2% cashback card on everything earns a respectable return with zero effort. A multi-card strategy using category specialists can earn 3% to 5% effective cashback but requires carrying and remembering to use the right card for each purchase. According to industry data, the average American household spends roughly $6,000 per month across all categories, meaning the difference between a 1.5% flat card and a 3% average optimized setup is approximately $1,080 per year.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Tips for Choosing the Right Card</h2>
+            <ul className="list-disc pl-6 space-y-2 text-sm text-text-primary leading-relaxed">
+              <li><strong>Check your 5/24 count first.</strong> If you are under Chase 5/24, prioritize Chase cards before opening cards from other issuers. Use the <a href="/" className="text-brand-gold hover:text-amber-600">524Tracker</a> to see your current count.</li>
+              <li><strong>Watch for spending caps.</strong> Cards advertising high bonus rates often cap the bonus spending at a certain threshold. Make sure your actual spending in that category falls within the cap to get the full benefit.</li>
+              <li><strong>Factor in the annual fee.</strong> A $95 annual fee on a card earning 4x at restaurants only makes sense if you spend at least $2,375 per year dining out (assuming 1 cent per point). Below that threshold, a no-fee 3% dining card may deliver better net value.</li>
+              <li><strong>Consider the rewards ecosystem.</strong> Cards earning transferable points (Chase Ultimate Rewards, Amex Membership Rewards, Capital One Miles) offer more flexibility than cards locked into cashback or a single airline program.</li>
+              <li><strong>Read the fine print on category definitions.</strong> Not all groceries count as groceries — warehouse clubs like Costco and Sam&apos;s Club, and superstores like Walmart and Target, often code differently and may not earn grocery bonus rates.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">How often are these recommendations updated?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">We review card recommendations monthly and update whenever a card changes its rewards structure, annual fee, or welcome bonus. The last update date is shown at the top of the page. Card issuers may change terms at any time, so always verify current offers directly with the issuer before applying.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">Do business cards count toward Chase 5/24?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">Most business cards from Chase, Amex, Capital One, and other issuers do not count toward your 5/24 count when approved. However, opening a Chase business card still requires you to be under 5/24 at the time of application. Business cards are flagged in our recommendations so you can plan your application strategy accordingly.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">Should I get multiple cards in the same category?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">It depends on spending caps. If your top grocery card caps bonus rewards at $6,000 per year and you spend $12,000 on groceries annually, a second grocery card for the overflow spending can make sense. Otherwise, it is usually better to diversify across categories to maximize total rewards from all your spending.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">What if I do not see my preferred category listed?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">Our categories cover the most common spending types. For niche categories like transit, home improvement, or recurring bills, the best approach is often a flat-rate 2% card or a rotating 5% category card that periodically covers your area of spending. Check the Everyday category for the best all-purpose options.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <FinancialDisclaimer />
       </article>
     </>

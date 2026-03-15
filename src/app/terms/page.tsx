@@ -9,6 +9,19 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Terms of Service — 524Tracker',
+            description: '524Tracker terms of service — usage terms, disclaimers, and affiliate disclosures.',
+            url: 'https://524tracker.com/terms',
+          }),
+        }}
+      />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Terms of Service</h1>
       <p className="text-xs text-text-secondary mb-8">Effective Date: March 1, 2026</p>
@@ -70,5 +83,6 @@ export default function TermsPage() {
         </section>
       </div>
     </article>
+    </>
   );
 }

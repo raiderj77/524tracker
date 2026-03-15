@@ -9,6 +9,19 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Privacy Policy — 524Tracker',
+            description: '524Tracker privacy policy — how we handle your data, including localStorage usage, AdSense cookies, and affiliate link tracking.',
+            url: 'https://524tracker.com/privacy',
+          }),
+        }}
+      />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-sm">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Privacy Policy</h1>
       <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last Reviewed: March 2026</p>
@@ -212,5 +225,6 @@ export default function PrivacyPage() {
         </section>
       </div>
     </article>
+    </>
   );
 }

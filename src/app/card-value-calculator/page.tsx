@@ -338,6 +338,82 @@ export default function CardValueCalculatorPage() {
           </div>
         )}
 
+        {/* Informational content */}
+        <section className="mt-12 space-y-8">
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Is the Card Value Calculator?</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              The Card Value Calculator helps you determine whether a credit card with an annual fee is worth keeping at renewal time. Many premium cards charge annual fees ranging from $95 to $695, but they also offer credits, perks, and rewards that can offset or exceed that cost. This tool compares your total benefits received against the annual fee to give you a clear net value figure.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              Rather than guessing whether a card pays for itself, you can enter the specific credits and perks you actually used over the past year, add in the value of points or miles you earned, and see an objective breakdown. The calculator accounts for the most common card benefits including travel credits, dining credits, lounge access valuations, streaming credits, statement credits, hotel status, and any other perks your card offers.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Use This Calculator</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              Start by entering your card name and its annual fee. Then list every credit or perk you actually used in the past 12 months along with the dollar value you received. Be honest with yourself here — only count benefits you genuinely used, not the theoretical maximum. A $300 travel credit is worth $0 if you never redeemed it.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              Next, enter the total points, miles, or cashback you earned on the card during the year and select a valuation rate. The calculator multiplies your rewards by the per-point value to estimate your total rewards benefit. Click Calculate to see a visual comparison of your annual fee versus total benefits, a detailed breakdown, and a keep-or-cancel recommendation.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Why Credit Card Point Values Vary by Redemption Method</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              Not all points are created equal. The same 100,000 Chase Ultimate Rewards points can be worth $1,000 as cashback, $1,250 through the Chase travel portal, or $2,000 or more when transferred to airline partners for premium cabin flights. The redemption method you choose dramatically affects the value you extract from your rewards.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              Cashback is the simplest valuation — typically 1 cent per point. Travel portal redemptions often provide a 25% to 50% boost for premium cardholders. Transfer partners offer the highest ceiling but require more effort and flexibility. When using this calculator, select the valuation that matches how you actually redeem your rewards, not the aspirational best case. According to industry data, the average credit card holder redeems points at roughly 1 to 1.5 cents per point.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Common Redemption Options Compared</h2>
+            <p className="text-sm text-text-primary leading-relaxed mb-3">
+              <strong>Cash back</strong> delivers a straightforward $0.01 per point with no effort required. <strong>Travel portal bookings</strong> through Chase, Amex, or Capital One portals typically yield $0.01 to $0.02 per point depending on your card tier. <strong>Transfer partners</strong> can deliver $0.02 or more per point when you transfer to airline or hotel loyalty programs and book award flights or stays. <strong>Statement credits</strong> and <strong>gift cards</strong> generally match cashback at $0.01 per point or less.
+            </p>
+            <p className="text-sm text-text-primary leading-relaxed">
+              The right redemption method depends on your travel habits and willingness to plan. If you value simplicity, cashback is the baseline. If you travel frequently and can be flexible with dates, transfer partners unlock the highest per-point value. Use the valuation dropdown in the calculator to reflect your typical redemption approach.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Tips for Maximizing Card Value</h2>
+            <ul className="list-disc pl-6 space-y-2 text-sm text-text-primary leading-relaxed">
+              <li><strong>Set calendar reminders</strong> for annual credits. Many cardholders forfeit hundreds in unused travel or dining credits simply because they forget to redeem before the card year resets.</li>
+              <li><strong>Stack benefits</strong> by pairing card perks with other loyalty programs. For example, use a hotel card&apos;s elite status to earn free breakfast and late checkout, which adds value beyond the card&apos;s stated benefits.</li>
+              <li><strong>Consider the downgrade path</strong> before canceling. Many issuers let you product-change to a no-annual-fee version of the same card, preserving your credit history and any remaining rewards balance.</li>
+              <li><strong>Call the retention line</strong> at renewal. Many issuers offer statement credits or bonus points to keep you as a cardholder, which can tip a borderline card into positive territory.</li>
+              <li><strong>Re-evaluate annually</strong> because your spending patterns change over time. A card that was worth it last year may not be this year, and vice versa.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">How do I value lounge access?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">Estimate the dollar amount you would have spent on airport meals and drinks during the year if you did not have lounge access. A reasonable estimate is $30 to $50 per visit. If you visited airport lounges 10 times, that could represent $300 to $500 in value.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">Should I count the welcome bonus in my card value calculation?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">No. The welcome bonus is a one-time benefit. This calculator focuses on the ongoing annual value to help you decide whether to keep the card at renewal. The welcome bonus should influence your decision to open the card, not whether to keep it in year two and beyond.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">What if my card has a $0 annual fee?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">Cards with no annual fee always have a positive or neutral net value. You can still use this calculator to compare the rewards value of no-fee cards against each other to determine which one deserves the most spend.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-base text-brand-navy mb-1">How often should I recalculate?</h3>
+                <p className="text-sm text-text-primary leading-relaxed">Run this calculation once a year, ideally one to two months before your card anniversary date. This gives you enough time to either cancel, downgrade, or negotiate a retention offer before the next annual fee posts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <FinancialDisclaimer />
       </article>
     </>

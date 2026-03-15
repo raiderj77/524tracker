@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'About 524Tracker',
+            description: 'About 524Tracker — our mission to give credit card enthusiasts free, neutral application tracking tools. Editorial policy and contact information.',
+            url: 'https://524tracker.com/about',
+          }),
+        }}
+      />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-6">About 524Tracker</h1>
 
@@ -54,5 +67,6 @@ export default function AboutPage() {
         </section>
       </div>
     </article>
+    </>
   );
 }
