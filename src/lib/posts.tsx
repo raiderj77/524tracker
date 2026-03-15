@@ -6,6 +6,7 @@ import { postBestCardsAfter524 } from './postBestCardsAfter524';
 import { postApplicationStrategy } from './postApplicationStrategy';
 import { postHowToCalculate524 } from './postHowToCalculate524';
 import { postBofa234 } from './postBofa234';
+import { postAmexLifetime } from './postAmexLifetime';
 
 export interface BlogPost {
   slug: string;
@@ -1296,7 +1297,7 @@ const posts: BlogPost[] = [
   },
 ];
 
-const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234];
+const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234, postAmexLifetime];
 
 export function getAllPosts(): BlogPost[] {
   return [...allPosts].sort(
