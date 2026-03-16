@@ -10,6 +10,7 @@ export const postBofa234: BlogPost = {
     'bank of america 2/3/4 rule, bofa 2/3/4, bank of america credit card rules, bofa application rules, bank of america card limits, bofa velocity limits',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 7,
   ctaText: 'Check Your BofA 2/3/4 Status Free',
   ctaHref: '/card-tracker',

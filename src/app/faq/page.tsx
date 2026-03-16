@@ -133,7 +133,7 @@ export default function FAQPage() {
       />
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-xs text-text-secondary mb-2">Last updated: March 2026</p>
+        <p className="text-xs text-text-secondary mb-2">Last updated: March 16, 2026</p>
         <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-6">
           Credit Card Churning FAQ
         </h1>

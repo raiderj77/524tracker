@@ -3,13 +3,14 @@ import type { BlogPost } from './posts';
 
 export const postBofaRules: BlogPost = {
   slug: 'bank-of-america-credit-card-rules',
-  title: 'Bank of America Credit Card Rules: The Complete Guide',
+  title: 'Bank of America Credit Card Rules (2026)',
   description:
     'Bank of America enforces the 2/3/4 velocity rule, Preferred Rewards tiers, and business card limits. Learn every BofA rule and how to plan your applications.',
   keywords:
     'bank of america credit card rules, bofa credit card rules, bank of america 2/3/4 rule, bofa preferred rewards, bofa business card rules, bofa application limits',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 7,
   ctaText: 'Track Your BofA Status Free',
   ctaHref: '/card-tracker',

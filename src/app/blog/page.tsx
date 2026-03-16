@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
-  title: '524Tracker Blog — Credit Card Strategy & Bank Rules',
+  title: 'Credit Card Strategy Blog | 524Tracker',
   description:
     'Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.',
   keywords:
@@ -57,9 +57,10 @@ export default function BlogIndexPage() {
         <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-4">
           Blog
         </h1>
-        <p className="text-sm text-text-secondary mb-10">
+        <p className="text-sm text-text-secondary mb-4">
           Guides and explainers on Chase 5/24, Amex lifetime rules, Citi 8/65, and all major bank application rules.
         </p>
+        <p className="text-xs text-text-secondary mb-10">Last updated: March 16, 2026</p>
 
         <div className="space-y-6">
           {posts.map((post) => (

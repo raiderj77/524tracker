@@ -31,21 +31,22 @@ export default function AboutPage() {
         }}
       />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="font-display font-bold text-3xl text-brand-navy mb-6">About 524Tracker</h1>
+      <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">About 524Tracker</h1>
+      <p className="text-xs text-text-secondary mb-6">Last updated: March 16, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Our Mission</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Is 524Tracker's Mission?</h2>
           <p>Giving credit card enthusiasts the tools they deserve — free, neutral, and always up to date. Before 524Tracker, the only way to track your 5/24 count and bank rules was a spreadsheet or mental math. We built the tool we wished existed: a single dashboard that shows your eligibility across every major bank, automatically.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Who Built This</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Who Built This Tool?</h2>
           <p>524Tracker was built by an experienced web developer passionate about personal finance optimization. Our team combines software engineering expertise with deep knowledge of credit card application strategies and bank-specific rules.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Editorial Policy</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Verify Bank Rules</h2>
           <p className="mb-3">All bank rules documented on 524Tracker are verified against multiple sources:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Official card issuer terms and conditions</li>
@@ -57,17 +58,17 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Affiliate Relationships</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Affiliate Relationships Work</h2>
           <p>524Tracker earns revenue through credit card affiliate links and advertising. These relationships never influence how we document bank rules, calculate your 5/24 count, or present eligibility information. The tracker tool functions identically regardless of affiliate relationships.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Privacy by Design</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Protect Your Data</h2>
           <p>We deliberately chose localStorage over server storage because your credit card application history is your business — not ours. Your tracker data never leaves your browser. There is no account to create, no data to breach, and no information to sell. See our <Link href="/privacy" className="text-brand-gold hover:text-amber-600">Privacy Policy</Link> for details.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Contact</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Contact 524Tracker</h2>
           <p>General inquiries: <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a></p>
           <p>Rule corrections: <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a></p>
           <p>Privacy inquiries: <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">privacy@524tracker.com</a></p>

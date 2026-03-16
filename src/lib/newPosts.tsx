@@ -11,6 +11,7 @@ export const newPosts1to4: BlogPost[] = [
     keywords: 'chase 5/24 rule explained, chase 5/24, 5/24 rule, chase credit card rules, chase sapphire 5/24, ink business 5/24 exempt',
     datePublished: '2026-03-11',
     dateModified: '2026-03-11',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 12,
     ctaText: 'Track Your 5/24 Status Free',
     ctaHref: '/',
@@ -315,6 +316,7 @@ export const newPosts1to4: BlogPost[] = [
     keywords: 'amex once per lifetime rule, amex lifetime bonus rule, amex popup jail, amex NLL offer, amex welcome bonus eligibility',
     datePublished: '2026-03-11',
     dateModified: '2026-03-11',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 8,
     ctaText: 'Track Your Amex Cards Free',
     ctaHref: '/',
@@ -494,6 +496,16 @@ export const newPosts1to4: BlogPost[] = [
         </section>
 
         <section>
+          <h2 className="font-display font-bold text-lg text-brand-navy mb-2" id="further-reading">
+            Further Reading
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm mb-6">
+            <li><Link href="/blog/amex-lifetime-bonus-rule-explained" className="text-brand-gold hover:text-amber-600">Amex Lifetime Bonus Rule: Complete Guide (2026)</Link></li>
+            <li><Link href="/blog/amex-lifetime-bonus-rule" className="text-brand-gold hover:text-amber-600">Amex Once Per Lifetime Rule: What It Is and How It Affects You</Link></li>
+          </ul>
+        </section>
+
+        <section>
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4" id="faq">
             Frequently Asked Questions
           </h2>
@@ -558,6 +570,7 @@ export const newPosts1to4: BlogPost[] = [
     keywords: 'citi 8/65 rule, citi 1/8 rule, citi 2/65 rule, citi application rules, citi credit card timing, citi 6/6 rule',
     datePublished: '2026-03-11',
     dateModified: '2026-03-11',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 6,
     ctaText: 'Track Your Citi Applications Free',
     ctaHref: '/',
@@ -789,257 +802,5 @@ export const newPosts1to4: BlogPost[] = [
       </>
     ),
   },
-  {
-    slug: 'bank-of-america-2-3-4-rule',
-    title: 'Bank of America 2/3/4 Rule: How It Works',
-    description:
-      'Bank of America limits cards to 2 per 30 days, 3 per 12 months, and 4 per 24 months. Learn tracking tips, Preferred Rewards impact, and card priority.',
-    keywords: 'bank of america 2/3/4 rule, boa 2/3/4 rule, bank of america credit card rules, boa application limits, bank of america velocity rule',
-    datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    readTimeMinutes: 6,
-    ctaText: 'Track Your BoA Applications Free',
-    ctaHref: '/',
-    faqSchema: [
-      {
-        question: 'What does the Bank of America 2/3/4 rule mean?',
-        answer:
-          'The 2/3/4 rule means Bank of America limits cardholders to 2 new cards per 30 days, 3 new cards per 12 months, and 4 new cards per 24 months. All three limits apply simultaneously, so you must be under all thresholds to be approved.',
-      },
-      {
-        question: 'Does the 2/3/4 rule count cards from other banks?',
-        answer:
-          'The 2/3/4 rule counts only Bank of America credit cards, not cards from other banks. However, BoA does review your overall credit profile and may deny applications if you have too many recent accounts across all issuers.',
-      },
-      {
-        question: 'Does Preferred Rewards status help with BoA card approvals?',
-        answer:
-          'Preferred Rewards status does not exempt you from the 2/3/4 rule, but it may improve your overall approval odds and can unlock higher credit limits. BoA values the banking relationship when making credit decisions.',
-      },
-      {
-        question: 'Do Bank of America business cards count toward 2/3/4?',
-        answer:
-          'Based on crowdsourced community data, BoA business card applications may count toward the 2/3/4 limits. The community consensus is less certain than with other bank rules, so track both personal and business applications to be safe.',
-      },
-      {
-        question: 'What is the BoA 3/12 and 7/12 rule?',
-        answer:
-          'The 3/12 rule is part of the 2/3/4 system — max 3 BoA cards per 12 months. The 7/12 rule is a separate guideline suggesting BoA may deny applications if you have 7 or more new accounts across all banks in the past 12 months.',
-      },
-    ],
-    relatedLinks: [
-      { href: '/blog/chase-5-24-rule', label: 'Chase 5/24 Rule: Complete Guide' },
-      { href: '/blog/amex-once-per-lifetime-rule', label: 'Amex Once-Per-Lifetime Rule Guide' },
-      { href: '/blog/citi-8-65-rule', label: 'Citi 8/65 Rule: Application Timing Guide' },
-      { href: '/rules-guide', label: 'Complete Bank Rules Guide' },
-      { href: '/faq', label: 'Credit Card Rules FAQ' },
-    ],
-    content: () => (
-      <>
-        <p className="text-base bg-brand-light border border-gray-200 rounded-xl p-5">
-          The Bank of America 2/3/4 rule limits credit card approvals to 2 new BoA cards per 30 days, 3 per 12 months, and 4 per 24 months. Unlike Chase&apos;s 5/24, this rule only counts Bank of America cards &mdash; not cards from other issuers. Understanding how rolling windows reset, how Preferred Rewards status affects approvals, and which BoA cards to prioritize is key to maximizing your applications.
-        </p>
-
-        <p className="text-xs text-gray-500 mt-2 mb-4">Last verified: March 2026 &middot; Rules may change &mdash; verify with Bank of America before applying</p>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="what-is-234">
-            What Is the Bank of America 2/3/4 Rule?
-          </h2>
-          <p className="text-sm mb-4">
-            The 2/3/4 rule is Bank of America&apos;s application velocity restriction, limiting how many new BoA credit cards you can open within specific time windows. All three limits apply simultaneously.
-          </p>
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full text-sm border border-gray-200 rounded-lg">
-              <thead>
-                <tr className="bg-brand-light">
-                  <th className="text-left px-4 py-2 font-medium">Rule</th>
-                  <th className="text-left px-4 py-2 font-medium">Limit</th>
-                  <th className="text-left px-4 py-2 font-medium">Window</th>
-                  <th className="text-left px-4 py-2 font-medium">Resets</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2 font-medium">2/30</td><td className="px-4 py-2">2 BoA cards</td><td className="px-4 py-2">30 days</td><td className="px-4 py-2">Rolling &mdash; 30 days from each approval</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2 font-medium">3/12</td><td className="px-4 py-2">3 BoA cards</td><td className="px-4 py-2">12 months</td><td className="px-4 py-2">Rolling &mdash; 12 months from each approval</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2 font-medium">4/24</td><td className="px-4 py-2">4 BoA cards</td><td className="px-4 py-2">24 months</td><td className="px-4 py-2">Rolling &mdash; 24 months from each approval</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm">
-            Each window is a rolling period measured from each individual approval date. When your oldest BoA approval within a window passes the threshold, that slot opens up again. Track your exact approval dates to know when each slot becomes available.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="only-boa">
-            Does the 2/3/4 Rule Count Cards from Other Banks?
-          </h2>
-          <p className="text-sm mb-3">
-            No. The 2/3/4 rule counts only Bank of America credit cards. Cards from Chase, Amex, Citi, and other issuers do not count toward these limits.
-          </p>
-          <p className="text-sm mb-3">
-            However, Bank of America does review your overall credit profile. The community has identified a separate informal guideline known as the <strong>7/12 rule</strong>: BoA may deny applications if you have opened 7 or more new accounts across all banks in the past 12 months. This is not as firm as the 2/3/4 limits but has been observed in numerous data points.
-          </p>
-          <p className="text-sm">
-            This means you could be under the 2/3/4 limits for BoA cards specifically but still get denied due to too many total new accounts across all issuers. Monitor your overall account velocity if you are applying to multiple banks.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="preferred-rewards">
-            How Does Preferred Rewards Status Affect BoA Approvals?
-          </h2>
-          <p className="text-sm mb-3">
-            Bank of America&apos;s Preferred Rewards program provides tiered benefits based on your combined BoA banking and Merrill Lynch investment balances. While Preferred Rewards status does not exempt you from the 2/3/4 rule, it may improve your approval odds.
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li><strong>Gold ($20K+ combined balance):</strong> 25% bonus on BoA card rewards, may improve approval odds</li>
-            <li><strong>Platinum ($50K+):</strong> 50% bonus on rewards, stronger relationship signal for approvals</li>
-            <li><strong>Platinum Honors ($100K+):</strong> 75% bonus on rewards, highest-tier relationship status</li>
-          </ul>
-          <p className="text-sm mb-3">
-            The Preferred Rewards boost is particularly valuable for the <a href="#apply-boa-premium-rewards" target="_blank" rel="nofollow sponsored noopener noreferrer">BoA Premium Rewards</a> card, where the 75% Platinum Honors bonus increases the effective cash back rate significantly.
-          </p>
-          <p className="text-sm">
-            Having a BoA checking account and existing banking relationship is also a positive signal for approval. BoA values their existing customers when making credit decisions, though this does not override the hard 2/3/4 velocity limits.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="rolling-windows">
-            How Do the Rolling Window Resets Work?
-          </h2>
-          <p className="text-sm mb-3">
-            Each of the three windows (30-day, 12-month, 24-month) is a rolling period that resets independently based on individual approval dates.
-          </p>
-          <p className="text-sm mb-3">
-            <strong>Example:</strong> You are approved for BoA cards on the following dates:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li>Card 1: January 10, 2025</li>
-            <li>Card 2: January 20, 2025</li>
-            <li>Card 3: June 15, 2025</li>
-          </ul>
-          <p className="text-sm mb-3">
-            As of March 11, 2026, your status is:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li><strong>2/30:</strong> 0 cards in last 30 days &mdash; both slots open</li>
-            <li><strong>3/12:</strong> 1 card in last 12 months (Card 3) &mdash; 2 slots open</li>
-            <li><strong>4/24:</strong> 3 cards in last 24 months &mdash; 1 slot open</li>
-          </ul>
-          <p className="text-sm">
-            You could apply for a new BoA card today. Card 1 drops off your 4/24 count on January 10, 2027, opening another slot. Use the <Link href="/" className="text-brand-gold hover:text-amber-600">524 Tracker</Link> to calculate your exact rolling window dates.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="which-cards">
-            Which BoA Cards Should You Prioritize?
-          </h2>
-          <p className="text-sm mb-3">
-            Since the 2/3/4 rule limits how many BoA cards you can open, choosing the right ones first maximizes your return.
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li><strong>Priority 1:</strong> <a href="#apply-boa-premium-rewards" target="_blank" rel="nofollow sponsored noopener noreferrer">BoA Premium Rewards</a> &mdash; best general rewards card, especially with Preferred Rewards status. $95 annual fee, strong welcome bonus.</li>
-            <li><strong>Priority 2:</strong> <a href="#apply-boa-travel-rewards" target="_blank" rel="nofollow sponsored noopener noreferrer">BoA Travel Rewards</a> &mdash; no annual fee, solid travel rewards card, good as a long-term keeper</li>
-            <li><strong>Priority 3:</strong> BoA Customized Cash Rewards &mdash; $0 annual fee, 3% in a category of your choice</li>
-            <li><strong>Priority 4:</strong> BoA Unlimited Cash Rewards &mdash; $0 annual fee, flat 1.5% cash back on everything</li>
-          </ul>
-          <p className="text-sm">
-            If you have Preferred Rewards Platinum Honors status, multiple BoA cash back cards become significantly more valuable due to the 75% rewards boost. Some strategists open multiple Customized Cash cards in different 3% categories to maximize return across spending types.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="business-cards">
-            Do BoA Business Cards Count Toward the 2/3/4 Rule?
-          </h2>
-          <p className="text-sm mb-3">
-            The community consensus on whether BoA business cards count toward 2/3/4 is less certain than with other bank rules. Based on crowdsourced data, business card applications likely do count toward the 2/3/4 limits.
-          </p>
-          <p className="text-sm mb-3">
-            Unlike Chase Ink cards (which are clearly exempt from 5/24), BoA business cards do not provide a reliable &ldquo;free slot&rdquo; workaround. If you plan to apply for BoA business cards, count them toward your 2/3/4 total to be safe.
-          </p>
-          <p className="text-sm">
-            BoA business cards do not appear on your personal credit report, which means they do not count toward Chase 5/24 or other banks&apos; personal account velocity rules. The 2/3/4 restriction is specific to Bank of America&apos;s internal tracking.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="interaction">
-            How Does the 2/3/4 Rule Interact with Other Bank Rules?
-          </h2>
-          <p className="text-sm mb-3">
-            The BoA 2/3/4 rule operates independently from other banks&apos; restrictions, but your overall application activity can affect approvals across issuers.
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li>BoA personal cards count toward <Link href="/blog/chase-5-24-rule" className="text-brand-gold hover:text-amber-600">Chase 5/24</Link> (they appear on personal credit reports)</li>
-            <li>BoA applications generate hard inquiries that affect <Link href="/blog/citi-8-65-rule" className="text-brand-gold hover:text-amber-600">Citi&apos;s 6/6 rule</Link></li>
-            <li>BoA business cards do not count toward Chase 5/24</li>
-            <li>The BoA 7/12 informal rule considers total new accounts from all banks</li>
-          </ul>
-          <p className="text-sm">
-            For a complete overview of how all bank rules interact, see the <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">Complete Bank Rules Guide</Link>.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4" id="faq">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-display font-bold text-base text-brand-navy mb-2">What does the Bank of America 2/3/4 rule mean?</h3>
-              <p className="text-sm">
-                The 2/3/4 rule means Bank of America limits cardholders to 2 new BoA cards per 30 days, 3 new BoA cards per 12 months, and 4 new BoA cards per 24 months. All three limits apply simultaneously, so you must be under all three thresholds to be approved for a new card.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display font-bold text-base text-brand-navy mb-2">Does the 2/3/4 rule count cards from other banks?</h3>
-              <p className="text-sm">
-                No. The 2/3/4 rule counts only Bank of America credit cards. Cards from Chase, Amex, Citi, Capital One, and other issuers do not count toward these limits. However, BoA may separately consider your overall credit profile and total new accounts when making approval decisions.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display font-bold text-base text-brand-navy mb-2">Does Preferred Rewards status help with BoA card approvals?</h3>
-              <p className="text-sm">
-                Preferred Rewards status does not exempt you from the 2/3/4 rule, but it may improve your overall approval odds. BoA values existing banking relationships. Preferred Rewards also boosts card rewards by 25&ndash;75% depending on your tier, making BoA cards more valuable.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display font-bold text-base text-brand-navy mb-2">Do Bank of America business cards count toward 2/3/4?</h3>
-              <p className="text-sm">
-                Based on crowdsourced community data, BoA business card applications likely do count toward the 2/3/4 limits. The data is less definitive than with other bank rules. To be safe, include business card applications in your 2/3/4 count when planning your application strategy.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display font-bold text-base text-brand-navy mb-2">What is the BoA 3/12 and 7/12 rule?</h3>
-              <p className="text-sm">
-                The 3/12 rule is the middle component of the 2/3/4 system &mdash; a maximum of 3 new BoA cards per 12 months. The 7/12 rule is a separate informal guideline: BoA may deny applications if you have 7 or more total new accounts across all banks in the past 12 months. The 7/12 rule is less firmly established than 2/3/4 but has been observed in community data points.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="text-center my-6">
-            <Link href="/" className="inline-block px-6 py-3 bg-brand-gold text-brand-navy font-semibold rounded-lg hover:bg-amber-400 transition-colors text-sm">
-              Track Your BoA Applications Free &rarr;
-            </Link>
-          </div>
-          <p className="text-xs text-gray-500 mt-4 mb-2">
-            This tool is for informational purposes only and does not constitute financial advice. Credit card approval decisions are made solely by the issuing bank. We cannot guarantee approval or bonus eligibility.
-          </p>
-          <p className="text-xs text-gray-500 mb-2">
-            Some links on this page are affiliate links. We may receive compensation if you apply and are approved, at no additional cost to you. This does not affect our recommendations.
-          </p>
-          <p className="text-xs text-gray-500">
-            Reviewed by an experienced credit card strategist and verified against crowdsourced community data.
-          </p>
-        </section>
-      </>
-    ),
-  },
 ];
+

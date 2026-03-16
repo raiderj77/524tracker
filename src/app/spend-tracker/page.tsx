@@ -4,9 +4,9 @@ import SpendTrackerTool from '@/components/SpendTrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
-  title: 'Welcome Bonus Spend Tracker — Track Minimum Spend Requirements Free',
+  title: 'Welcome Bonus Spend Tracker | 524Tracker',
   description:
-    'Free tool to track credit card welcome bonus minimum spend requirements. See progress, days remaining, and daily spend needed across all your cards. No account required.',
+    'Track credit card welcome bonus minimum spend requirements free. See progress, days remaining, and daily spend needed.',
   keywords:
     'welcome bonus spend tracker, minimum spend tracker, credit card spend tracker, welcome bonus deadline, minimum spend calculator, bonus spend progress',
   robots: { index: true, follow: true, 'max-snippet': -1 },
@@ -116,6 +116,7 @@ export default function SpendTrackerPage() {
             See progress bars, days remaining, and daily spend needed to hit every bonus deadline.
             No account required — all data stays in your browser.
           </p>
+          <p className="text-xs text-text-secondary mt-2">Last updated: March 16, 2026</p>
         </header>
 
         <SpendTrackerTool />
@@ -180,7 +181,7 @@ export default function SpendTrackerPage() {
 
           <section>
             <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions About Spend Tracking
             </h2>
             <div className="space-y-6">
               {spendTrackerFaqs.map((faq) => (

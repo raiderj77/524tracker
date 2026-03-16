@@ -3,13 +3,14 @@ import type { BlogPost } from './posts';
 
 export const postHowToCalculate524: BlogPost = {
   slug: 'how-to-calculate-chase-5-24',
-  title: 'How to Calculate Your Chase 5/24 Status: A Step-by-Step Guide',
+  title: 'How to Calculate Your Chase 5/24 Status',
   description:
     'Learn exactly how to calculate your Chase 5/24 status step by step. Find out what counts, what doesn\'t, how to pull your credit report, and when cards fall off.',
   keywords:
     'how to calculate chase 5/24, chase 5/24 calculator, check 5/24 status, what counts toward 5/24, chase 5/24 count, how to check 5/24',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 8,
   ctaText: 'Calculate Your 5/24 Status Free',
   ctaHref: '/',

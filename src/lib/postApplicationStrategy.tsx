@@ -3,13 +3,14 @@ import type { BlogPost } from './posts';
 
 export const postApplicationStrategy: BlogPost = {
   slug: 'credit-card-application-strategy',
-  title: 'Credit Card Application Strategy: How to Maximize Approvals and Bonuses',
+  title: 'Credit Card Application Strategy (2026)',
   description:
-    'A step-by-step credit card application strategy covering Chase 5/24, Amex lifetime rules, Citi 8/65, BofA 2/3/4, velocity timing, and the optimal issuer order for maximum bonuses.',
+    'Step-by-step credit card application strategy covering Chase 5/24, Amex lifetime rules, Citi 8/65, and BofA 2/3/4.',
   keywords:
     'credit card application strategy, credit card application order, best order to apply for credit cards, how to maximize credit card bonuses, credit card churning strategy',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 10,
   ctaText: 'Track Your Applications Free',
   ctaHref: '/',

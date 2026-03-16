@@ -3,13 +3,14 @@ import type { BlogPost } from './posts';
 
 export const postAmexLifetime: BlogPost = {
   slug: 'amex-lifetime-bonus-rule',
-  title: 'Amex Once Per Lifetime Rule: What It Is and How It Affects You',
+  title: 'Amex Once Per Lifetime Rule Explained',
   description:
-    'The Amex once per lifetime rule means you can only earn a welcome bonus on each Amex card product once — ever. Learn how it works, exceptions, and how to plan around it.',
+    'The Amex once per lifetime rule limits each card bonus to one per person. Learn how it works and how to plan around it.',
   keywords:
     'amex once per lifetime rule, amex lifetime bonus rule, amex lifetime rule update, amex welcome bonus eligibility, amex popup, amex lifetime rule 2026',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 7,
   ctaText: 'Track Your Amex Cards Free',
   ctaHref: '/card-tracker',
@@ -162,6 +163,17 @@ export const postAmexLifetime: BlogPost = {
         <p className="text-sm">
           Before applying for any Amex card, check the application page for the welcome bonus popup. If the popup appears warning that you are not eligible for the bonus, you can back out without a hard inquiry and reconsider your options.
         </p>
+      </section>
+
+      {/* Further Reading */}
+      <section>
+        <h2 className="font-display font-bold text-lg text-brand-navy mb-2" id="further-reading">
+          Further Reading
+        </h2>
+        <ul className="list-disc pl-6 space-y-1 text-sm mb-6">
+          <li><Link href="/blog/amex-lifetime-bonus-rule-explained" className="text-brand-gold hover:text-amber-600">Amex Lifetime Bonus Rule: Complete Guide (2026)</Link></li>
+          <li><Link href="/blog/amex-once-per-lifetime-rule" className="text-brand-gold hover:text-amber-600">Amex Once-Per-Lifetime Rule: NLL Offers, Pop-Up Jail &amp; Card Family Details</Link></li>
+        </ul>
       </section>
 
       {/* FAQ */}

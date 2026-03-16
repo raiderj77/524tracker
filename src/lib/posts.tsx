@@ -16,6 +16,7 @@ export interface BlogPost {
   keywords: string;
   datePublished: string;
   dateModified: string;
+  lastUpdated: string;
   readTimeMinutes: number;
   faqSchema: { question: string; answer: string }[];
   relatedLinks: { href: string; label: string }[];
@@ -33,6 +34,7 @@ const posts: BlogPost[] = [
     keywords: 'chase 5/24 rule, chase 5/24 explained, what counts toward 5/24, chase 5/24 2026',
     datePublished: '2026-03-09',
     dateModified: '2026-03-09',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 8,
     ctaText: 'Check Your 5/24 Status Free',
     ctaHref: '/',
@@ -283,6 +285,7 @@ const posts: BlogPost[] = [
     keywords: 'amex lifetime rule, amex once per lifetime, amex welcome bonus eligibility, amex lifetime bonus 2026',
     datePublished: '2026-03-09',
     dateModified: '2026-03-09',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 9,
     ctaText: 'Track Your Amex Bonus History Free',
     ctaHref: '/',
@@ -549,6 +552,7 @@ const posts: BlogPost[] = [
     keywords: 'citi 8/65 rule, citi application rules, citi credit card timing, citi 8/65 explained 2026',
     datePublished: '2026-03-09',
     dateModified: '2026-03-09',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 7,
     ctaText: 'Track Your Citi Application Timing Free',
     ctaHref: '/',
@@ -808,6 +812,7 @@ const posts: BlogPost[] = [
     keywords: 'bank of america 2/3/4 rule, boa application rules, bank of america credit card limits, 2/3/4 rule explained 2026',
     datePublished: '2026-03-09',
     dateModified: '2026-03-09',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 8,
     ctaText: 'Track Your BoA Application Windows Free',
     ctaHref: '/',
@@ -1053,6 +1058,7 @@ const posts: BlogPost[] = [
     keywords: 'how to check 5/24 status, check chase 5/24, 5/24 count free, chase 5/24 checker 2026',
     datePublished: '2026-03-09',
     dateModified: '2026-03-09',
+    lastUpdated: 'March 16, 2026',
     readTimeMinutes: 7,
     ctaText: 'Check Your 5/24 Status Free',
     ctaHref: '/',

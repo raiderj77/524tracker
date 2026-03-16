@@ -31,11 +31,11 @@ export default function PrivacyPage() {
       />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-sm">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Privacy Policy</h1>
-      <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last Reviewed: March 2026</p>
+      <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last updated: March 16, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Data Controller</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Who Is the Data Controller?</h2>
           <p>524Tracker (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website at 524tracker.com. For privacy inquiries, contact us at <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">privacy@524tracker.com</a>.</p>
         </section>
 
@@ -61,12 +61,12 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Data Retention</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Long We Retain Data</h2>
           <p>localStorage data persists in your browser until you clear it — you can delete it at any time through your browser settings. We do not set any first-party cookies. Google AdSense cookies are retained for up to 13 months per Google&apos;s policies. Affiliate network cookies typically expire within 7–90 days depending on the issuer program. Vercel server logs (containing IP addresses) are retained for up to 30 days.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Third Parties</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Third Parties Receive Data</h2>
           <ul className="list-disc pl-6 space-y-1">
             <li>Google AdSense — advertising</li>
             <li>Vercel — website hosting</li>
@@ -75,12 +75,12 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">International Data Transfers</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How International Data Transfers Work</h2>
           <p>Third-party services (Google, Vercel) may process data in the United States and other countries. These transfers are protected by Standard Contractual Clauses and other appropriate safeguards.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Your Rights (GDPR)</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Are Your Rights Under GDPR?</h2>
           <p className="mb-2">If you are in the EU/EEA/UK, you have the right to:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Access, rectify, or erase your personal data</li>
@@ -212,12 +212,12 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Children&apos;s Privacy</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Handle Children&apos;s Privacy</h2>
           <p>Our service is not directed to individuals under 18. We do not knowingly collect personal information from children.</p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Financial Information Disclaimer</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Our Financial Information Disclaimer</h2>
           <p>524Tracker provides informational tools and content about credit card application rules. Nothing on this site constitutes financial, legal, or credit advice. Card recommendations may include affiliate links from which we earn a commission if you apply and are approved. Always review the issuer&apos;s terms before applying for any credit card.</p>
         </section>
 
@@ -227,7 +227,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Contact</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Contact Us About Privacy</h2>
           <p>For privacy-related inquiries: <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">privacy@524tracker.com</a></p>
         </section>
       </div>

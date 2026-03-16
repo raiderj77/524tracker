@@ -105,12 +105,7 @@ export default async function BlogPostPage({
             {post.title}
           </h1>
           <p className="text-xs text-text-secondary">
-            Last updated:{' '}
-            {new Date(post.dateModified + 'T00:00:00').toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}{' '}
+            Last updated: {post.lastUpdated}{' '}
             &middot; By an experienced web developer &middot; {post.readTimeMinutes} min read
           </p>
         </header>

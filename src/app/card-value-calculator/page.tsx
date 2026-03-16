@@ -108,6 +108,7 @@ export default function CardValueCalculatorPage() {
         <p className="text-sm text-text-secondary mb-8">
           Should you keep or cancel your credit card at renewal? Enter your benefits and find out if the card is paying for itself.
         </p>
+        <p className="text-xs text-text-secondary mb-0">Last updated: March 16, 2026</p>
 
         <form onSubmit={handleCalculate} className="space-y-6">
           {/* Card info */}

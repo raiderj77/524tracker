@@ -135,7 +135,7 @@ export default function HomePage() {
             Start Tracking My Applications
           </a>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-gray-400">
-            <span>Used by 10,000+ card enthusiasts</span>
+            <span>Free &middot; No account required</span>
             <span className="hidden sm:inline">&middot;</span>
             <span>All rules updated March 2026</span>
             <span className="hidden sm:inline">&middot;</span>
@@ -232,6 +232,7 @@ export default function HomePage() {
 
       {/* Tracker Tool */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <p className="text-xs text-text-secondary mb-4">Last updated: March 16, 2026</p>
         <TrackerTool />
       </div>
 
@@ -243,7 +244,7 @@ export default function HomePage() {
           links. This does not affect our editorial recommendations.
         </p>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-6">
-          Top Cards to Consider
+          Top Credit Cards to Consider in 2026
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuredCards.map((card) => (

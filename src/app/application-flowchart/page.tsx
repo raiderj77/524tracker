@@ -4,7 +4,7 @@ import ApplicationFlowchart from '@/components/ApplicationFlowchart';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
-  title: 'Credit Card Application Flowchart — What Card Should I Get Next?',
+  title: 'Card Application Flowchart | 524Tracker',
   description:
     'Interactive flowchart to find the best credit card for your situation. Based on your 5/24 status, rewards preference, and existing cards. Free, no account required.',
   keywords:
@@ -115,6 +115,7 @@ export default function ApplicationFlowchartPage() {
             Answer a few questions to find out what credit card you should apply for next.
             Based on your 5/24 status, rewards preferences, and existing cards.
           </p>
+          <p className="text-xs text-text-secondary mt-2">Last updated: March 16, 2026</p>
         </header>
 
         <ApplicationFlowchart />
@@ -182,7 +183,7 @@ export default function ApplicationFlowchartPage() {
 
           <section>
             <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions About Application Order
             </h2>
             <div className="space-y-6">
               {flowchartFaqs.map((faq) => (

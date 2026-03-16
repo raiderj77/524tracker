@@ -5,7 +5,7 @@ import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 export const metadata: Metadata = {
   title: 'Best Credit Cards to Apply For in 2026',
   description:
-    'Best credit cards for points maximizers in 2026 — optimized for welcome bonuses, travel rewards, and churning. See how each card interacts with Chase 5/24 and other bank rules.',
+    'Best credit cards for points maximizers in 2026. Top welcome bonuses and travel rewards ranked by value with 5/24 impact.',
   keywords:
     'best credit cards 2026, best travel credit cards, best welcome bonus, credit card churning, chase sapphire preferred, amex platinum',
   robots: { index: true, follow: true, 'max-snippet': -1 },
@@ -80,7 +80,7 @@ export default function TopCardsPage() {
           <strong>Affiliate Disclosure:</strong> 524Tracker may earn a commission when you apply for and are approved for a credit card through our affiliate links. This does not affect our editorial recommendations.
         </p>
 
-        <p className="text-xs text-text-secondary mb-2">Last updated: March 2026</p>
+        <p className="text-xs text-text-secondary mb-2">Last updated: March 16, 2026</p>
         <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-6">
           Best Credit Cards for Points Maximizers in 2026
         </h1>
@@ -138,7 +138,7 @@ export default function TopCardsPage() {
 
         {/* Chase section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Chase Cards</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Why Chase Cards Should Come First</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Chase cards should be your first priority if you&apos;re under 5/24. The Sapphire Preferred and Reserve are the foundation of most travel rewards strategies, while Ink Business cards let you earn valuable Ultimate Rewards points without counting toward 5/24. Chase Ultimate Rewards points are worth approximately 2 cents each when transferred to partners like Hyatt.
           </p>
@@ -149,7 +149,7 @@ export default function TopCardsPage() {
 
         {/* Amex section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">American Express Cards</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How American Express Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Amex cards offer some of the highest welcome bonuses in the industry, but remember the lifetime rule — you only get one shot at each card&apos;s bonus. Prioritize cards with the largest bonuses first. The Platinum and Gold cards are charge cards and don&apos;t count toward the 4-card credit limit. Amex Membership Rewards points are worth approximately 1.5–2 cents each.
           </p>
@@ -160,7 +160,7 @@ export default function TopCardsPage() {
 
         {/* Capital One section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Capital One Cards</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Capital One Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             The Venture X offers premium lounge access and a $300 travel credit that effectively reduces its $395 annual fee to $95. Capital One limits you to 2 personal cards and generally 1 new approval per 6 months. Capital One miles are worth 1 cent each and transfer to a growing list of airline and hotel partners.
           </p>
@@ -171,7 +171,7 @@ export default function TopCardsPage() {
 
         {/* Citi section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Citi Cards</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Citi Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             The Strata Premier is Citi&apos;s best travel card with 3x points on travel, dining, and groceries. Citi ThankYou points are worth approximately 1.5 cents each when transferred to partners. Remember the 8/65 rule: wait 8 days between applications and limit to 2 per 65 days. Citi&apos;s 24-month bonus restriction is more forgiving than Amex&apos;s lifetime rule.
           </p>

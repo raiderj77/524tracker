@@ -46,7 +46,8 @@ export default function ContactPage() {
         }}
       />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="font-display font-bold text-3xl text-brand-navy mb-6">Contact Us</h1>
+      <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Contact Us</h1>
+      <p className="text-xs text-text-secondary mb-6">Last updated: March 16, 2026</p>
 
       <div className="space-y-6 text-sm text-text-primary leading-relaxed">
         <p>
@@ -56,7 +57,7 @@ export default function ContactPage() {
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 space-y-4">
           <div>
-            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">General Inquiries</h2>
+            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">How to Send General Inquiries</h2>
             <p className="mb-1">
               <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600 font-medium">
                 contact@524tracker.com
@@ -68,7 +69,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">Rule Corrections</h2>
+            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">How to Report Rule Corrections</h2>
             <p className="mb-1">
               <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600 font-medium">
                 contact@524tracker.com
@@ -82,7 +83,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">Privacy Inquiries</h2>
+            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">How to Submit Privacy Inquiries</h2>
             <p className="mb-1">
               <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600 font-medium">
                 privacy@524tracker.com
@@ -94,7 +95,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">Legal</h2>
+            <h2 className="font-display font-bold text-lg text-brand-navy mb-1">How to Reach Our Legal Team</h2>
             <p className="mb-1">
               <a href="mailto:legal@524tracker.com" className="text-brand-gold hover:text-amber-600 font-medium">
                 legal@524tracker.com
@@ -121,7 +122,7 @@ export default function ContactPage() {
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Explore Our Tools</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Explore Our Free Tools and Guides</h2>
           <p className="mb-3">
             Before reaching out, you may find the answer you need in one of our tools or guides:
           </p>

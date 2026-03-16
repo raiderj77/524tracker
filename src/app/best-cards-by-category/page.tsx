@@ -137,7 +137,7 @@ export default function BestCardsByCategoryPage() {
           Best Credit Cards by Spend Category
         </h1>
         <p className="text-sm text-text-secondary mb-8">
-          Select a spending category to see the top 3 credit cards with the highest rewards rates. Updated March 2026.
+          Select a spending category to see the top 3 credit cards with the highest rewards rates. Last updated: March 16, 2026.
         </p>
 
         {/* Category selector */}

@@ -10,6 +10,7 @@ export const postBestCardsAfter524: BlogPost = {
     'best cards after 5/24, credit cards over 5/24, cards that bypass 5/24, amex cards after 5/24, capital one after 5/24, citi cards after 5/24',
   datePublished: '2026-03-15',
   dateModified: '2026-03-15',
+  lastUpdated: 'March 16, 2026',
   readTimeMinutes: 10,
   ctaText: 'Track Your 5/24 Status Free',
   ctaHref: '/',

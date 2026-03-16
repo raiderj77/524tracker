@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CardTrackerTool from '@/components/CardTrackerTool';
 
 export const metadata: Metadata = {
-  title: 'Credit Card Rule Tracker — Chase 5/24, Amex Lifetime, Citi 8/65, BofA 2/3/4',
+  title: 'Credit Card Rule Tracker | 524Tracker',
   description:
     'Free tool to track your credit card application history and instantly calculate your status across all major issuer rules. No account required.',
   keywords:
@@ -81,6 +81,7 @@ export default function CardTrackerPage() {
             Chase 5/24, Amex lifetime bonus, Citi 8/65, Bank of America 2/3/4, and Capital One&apos;s 2-card limit.
             No account required — all data stays in your browser.
           </p>
+          <p className="text-xs text-text-secondary mt-2">Last updated: March 16, 2026</p>
         </header>
 
         <CardTrackerTool />
@@ -95,7 +96,7 @@ export default function CardTrackerPage() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-gray-200">
-          <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Learn More</h2>
+          <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Learn More About Credit Card Rules</h2>
           <ul className="space-y-2 text-sm">
             <li>
               <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">

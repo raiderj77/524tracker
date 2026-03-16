@@ -4,6 +4,9 @@
 
 ## Main Tools
 - [Chase 5/24 Tracker](https://524tracker.com/): Track your Chase 5/24 card count and next eligibility date
+- [Card Tracker](https://524tracker.com/card-tracker): Log your full card application history and calculate status across Chase 5/24, Amex lifetime, Citi 8/65, BofA 2/3/4, and Capital One 2-card rules simultaneously
+- [Spend Tracker](https://524tracker.com/spend-tracker): Track welcome bonus minimum spend progress across all your cards — see days remaining, dollars left, and daily spend needed to hit each deadline
+- [Application Flowchart](https://524tracker.com/application-flowchart): Interactive decision tool that recommends what credit card to apply for next based on your 5/24 status, rewards preference, and existing cards
 - [Card Value Calculator](https://524tracker.com/card-value-calculator): Calculate the net value of a card after annual fee vs. benefits
 - [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the highest-earning card for dining, travel, groceries, gas, and more
 - [Top Cards](https://524tracker.com/top-cards): Best credit cards to apply for, optimized for points maximizers
