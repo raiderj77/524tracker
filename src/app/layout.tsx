@@ -75,10 +75,11 @@ export default function RootLayout({
           data-blockingmode="auto"
           strategy="beforeInteractive"
         />
-        <script
-          async
+        <Script
+          id="adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
           crossOrigin="anonymous"
+          strategy="lazyOnload"
         />
       </head>
       <body className="antialiased font-body">
