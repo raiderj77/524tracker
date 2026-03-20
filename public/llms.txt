@@ -11,6 +11,13 @@
 - [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the highest-earning card for dining, travel, groceries, gas, and more
 - [Top Cards](https://524tracker.com/top-cards): Best credit cards to apply for, optimized for points maximizers
 - [Rules Guide](https://524tracker.com/rules-guide): Complete explanation of all major bank credit card application rules
+- [Velocity Rule Checker](https://524tracker.com/velocity-checker): Check your eligibility across all bank velocity rules — Chase 5/24, Amex 2/90, Citi 8/65, BofA 2/3/4, and more
+- [Annual Fee Calculator](https://524tracker.com/annual-fee-calculator): Calculate whether a credit card annual fee is worth it based on your spending and credit usage
+- [Application Timing Calculator](https://524tracker.com/application-timing): Get optimal application dates and sequencing for your credit card wishlist
+- [Amex Popup Jail Estimator](https://524tracker.com/amex-popup-estimator): Estimate your risk of getting the Amex popup that blocks welcome bonuses
+- [Downgrade Guide](https://524tracker.com/downgrade-guide): Find product change and downgrade paths for premium credit cards by issuer
+- [Credit Pull Database](https://524tracker.com/credit-pull-database): Look up which credit bureau each bank pulls for every major credit card
+- [Hard Inquiry Tracker](https://524tracker.com/inquiry-tracker): Track hard inquiries per credit bureau and see where you stand vs inquiry-sensitive banks
 
 ## Blog
 - [Blog](https://524tracker.com/blog): Expert guides on credit card application rules, churning strategies, and bank-specific restrictions

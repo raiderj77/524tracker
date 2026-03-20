@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date('2026-03-15');
+  const newToolsModified = new Date('2026-03-19');
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: 'https://524tracker.com', lastModified },
@@ -19,6 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/spend-tracker', lastModified },
     { url: 'https://524tracker.com/application-flowchart', lastModified },
     { url: 'https://524tracker.com/blog', lastModified },
+    { url: 'https://524tracker.com/velocity-checker', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/annual-fee-calculator', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/application-timing', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/amex-popup-estimator', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/downgrade-guide', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/credit-pull-database', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/inquiry-tracker', lastModified: newToolsModified },
   ];
 
   const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({

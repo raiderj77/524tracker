@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import CardTrackerTool from '@/components/CardTrackerTool';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
   title: 'Credit Card Rule Tracker | 524Tracker',
@@ -120,6 +121,8 @@ export default function CardTrackerPage() {
             </li>
           </ul>
         </div>
+
+        <FinancialDisclaimer />
       </main>
     </>
   );

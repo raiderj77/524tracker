@@ -146,7 +146,7 @@ export default function HomePage() {
 
       {/* Featured Tools */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             href="/card-tracker"
             className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
@@ -160,6 +160,22 @@ export default function HomePage() {
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
                 All 5 issuer rules calculated from your application history
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/velocity-checker"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
+              V
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Velocity Checker
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Check eligibility across all 9 issuer velocity rules
               </p>
             </div>
           </Link>
@@ -180,11 +196,111 @@ export default function HomePage() {
             </div>
           </Link>
           <Link
+            href="/annual-fee-calculator"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
+              $
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Annual Fee Calculator
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Is your card&apos;s annual fee worth it?
+              </p>
+            </div>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          <Link
+            href="/application-timing"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              T
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Application Timing
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Optimal dates and sequence for your card wishlist
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/amex-popup-estimator"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              A
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Amex Popup Estimator
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Estimate your Amex popup jail risk
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/downgrade-guide"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              D
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Downgrade Guide
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Product change paths for premium cards
+              </p>
+            </div>
+          </Link>
+          <Link
+            href="/credit-pull-database"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              B
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Credit Pull Database
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Which bureau does each bank pull?
+              </p>
+            </div>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          <Link
+            href="/inquiry-tracker"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
+              H
+            </span>
+            <div>
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
+                Inquiry Tracker
+              </span>
+              <p className="text-xs text-text-secondary mt-0.5">
+                Monitor hard inquiries per credit bureau
+              </p>
+            </div>
+          </Link>
+          <Link
             href="/card-value-calculator"
             className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              $
+              C
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">

@@ -20,6 +20,13 @@ const ALL_URLS = [
   '/blog/citi-8-65-rule-explained',
   '/blog/bank-of-america-2-3-4-rule-explained',
   '/blog/how-to-check-5-24-status',
+  '/velocity-checker',
+  '/annual-fee-calculator',
+  '/application-timing',
+  '/amex-popup-estimator',
+  '/downgrade-guide',
+  '/credit-pull-database',
+  '/inquiry-tracker',
 ];
 
 export async function POST() {

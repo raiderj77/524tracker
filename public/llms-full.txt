@@ -231,6 +231,102 @@ Closing a card can temporarily reduce your score by 5-20 points by increasing yo
 
 ---
 
+## Velocity Rule Checker
+
+The Velocity Rule Checker at 524tracker.com/velocity-checker lets users enter their complete credit card application history and instantly check eligibility across all major bank velocity rules simultaneously. Rules checked include:
+
+- **Chase 5/24**: 5+ personal cards from any bank in 24 months = denial
+- **Chase 2/30**: 2+ Chase applications in 30 days = denial
+- **Amex 1/5**: 1+ Amex credit card in 5 days = denial
+- **Amex 2/90**: 2+ Amex credit cards in 90 days = denial
+- **Citi 1/8**: 1+ Citi application in 8 days = denial
+- **Citi 2/65**: 2+ Citi applications in 65 days = denial
+- **BofA 2/3/4**: 2 in 30 days, 3 in 12 months, or 4 in 24 months = denial
+- **Capital One 1/6**: 1+ Capital One approval in 6 months = denial
+- **Barclays 6/24**: 6+ accounts in 24 months = warning
+- **US Bank 1/60**: 1+ US Bank approval in 60 days = denial
+- **Wells Fargo**: 1+ WF card in 6 months = denial
+- **Discover**: 1+ Discover application in 12 months = denial
+
+Results show green (eligible), yellow (caution), or red (likely denied) per issuer with earliest eligible dates.
+
+---
+
+## Annual Fee Calculator
+
+The Annual Fee Calculator at 524tracker.com/annual-fee-calculator helps users determine whether a credit card's annual fee is worth paying. Users select from pre-populated popular cards (Chase Sapphire Reserve, Amex Platinum, Amex Gold, Capital One Venture X, etc.) or enter custom card data. The calculator factors in:
+
+- Annual credits the user actually uses (with yes/no toggles per credit)
+- Monthly spending by category (dining, groceries, gas, travel, other)
+- Card earning rates per category
+- Points/miles valuation (adjustable cents per point)
+
+The output shows: annual fee, credits used, rewards earned, and net value with a clear verdict.
+
+---
+
+## Application Timing Calculator
+
+The Application Timing Calculator at 524tracker.com/application-timing helps users plan the optimal sequence and dates for future credit card applications. Users input their application history and a wishlist of up to 5 cards. The tool calculates:
+
+- Recommended application order (Chase first as most restrictive, then Citi/Barclays, then Amex, etc.)
+- Earliest safe date for each application considering all velocity rules
+- Conflicts to avoid and warnings about 5/24 impact
+- Visual timeline of recommended application windows
+
+---
+
+## Amex Popup Jail Risk Estimator
+
+The Amex Popup Estimator at 524tracker.com/amex-popup-estimator estimates the risk of seeing the American Express popup that blocks welcome bonuses. The tool scores risk based on community data patterns including:
+
+- Number of Amex cards opened/closed recently
+- Average monthly spend across Amex cards
+- Time since last Amex application
+- Whether the user returned purchases to meet minimum spend
+
+Results show LOW, MEDIUM, or HIGH risk with specific recommendations to reduce popup likelihood.
+
+---
+
+## Downgrade Guide
+
+The Downgrade Guide at 524tracker.com/downgrade-guide shows available product change paths for premium credit cards. Users select their current card and see all downgrade options with:
+
+- Target card name and annual fee savings
+- Benefits lost and gained
+- Whether points/miles transfer to the new card
+- Timing requirements (typically 12 months minimum)
+
+Covers Chase (CSR, CSP, Ink), Amex (Platinum, Gold, Delta family), Capital One (Venture X, Venture), and Citi paths.
+
+---
+
+## Credit Bureau Pull Database
+
+The Credit Pull Database at 524tracker.com/credit-pull-database is a searchable reference showing which credit bureau(s) each bank pulls when you apply for a card. Data includes 29+ cards across 12 issuers with:
+
+- Bureau(s) pulled (Experian, Equifax, TransUnion)
+- State-specific variations
+- Notes on soft pulls for existing customers
+- Last verified dates
+
+Filterable by issuer, bureau, and card name. Useful for strategic bureau freeze planning.
+
+---
+
+## Hard Inquiry Tracker
+
+The Inquiry Tracker at 524tracker.com/inquiry-tracker lets users log hard inquiries and monitor their count per credit bureau. The dashboard shows:
+
+- Inquiry counts per bureau across 6-month, 12-month, and 24-month windows
+- Color-coded severity levels
+- Issuer sensitivity panel showing where the user stands vs known thresholds (Citi 6+ in 6mo, US Bank 5+ accounts in 12mo, Barclays 6+ in 24mo, etc.)
+
+All data stored in localStorage.
+
+---
+
 ## Data Privacy
 
 524Tracker stores all card application tracking data in the browser's localStorage only. No data is ever transmitted to any server. No account or login is required. Users can export their data as JSON for backup and portability.
