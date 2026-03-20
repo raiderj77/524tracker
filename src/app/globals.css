@@ -76,13 +76,3 @@ body {
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
-
-/*
- * Suppress Cookiebot consent dialog as LCP candidate.
- * contain:strict excludes the element from LCP candidate consideration.
- */
-#CybotCookiebotDialog,
-#CybotCookiebotDialogBodyUnderlay {
-  contain: strict;
-  content-visibility: auto;
-}
