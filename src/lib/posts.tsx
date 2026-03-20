@@ -8,6 +8,21 @@ import { postHowToCalculate524 } from './postHowToCalculate524';
 import { postBofa234 } from './postBofa234';
 import { postAmexLifetime } from './postAmexLifetime';
 import { postBofaRules } from './postBofaRules';
+import { postVelocityRules } from './postVelocityRules';
+import { postAmexPopup } from './postAmexPopup';
+import { postCsrWorthIt } from './postCsrWorthIt';
+import { postAmexPlatWorthIt } from './postAmexPlatWorthIt';
+import { postAmexVelocity } from './postAmexVelocity';
+import { postCitiAdvanced } from './postCitiAdvanced';
+import { postCapitalOneRules } from './postCapitalOneRules';
+import { postBestUnder524_2026 } from './postBestUnder524_2026';
+import { postDowngradeGuide } from './postDowngradeGuide';
+import { postChaseBureau } from './postChaseBureau';
+import { postBarclaysUsbWf } from './postBarclaysUsbWf';
+import { postAmexGoldWorthIt } from './postAmexGoldWorthIt';
+import { postHardInquiryImpact } from './postHardInquiryImpact';
+import { postOptimalTiming } from './postOptimalTiming';
+import { postBofaAdvanced } from './postBofaAdvanced';
 
 export interface BlogPost {
   slug: string;
@@ -1314,7 +1329,7 @@ const posts: BlogPost[] = [
   },
 ];
 
-const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234, postAmexLifetime, postBofaRules];
+const allPosts: BlogPost[] = [...posts, ...newPosts1to4, ...newPosts5to8, postBestCardsAfter524, postApplicationStrategy, postHowToCalculate524, postBofa234, postAmexLifetime, postBofaRules, postVelocityRules, postAmexPopup, postCsrWorthIt, postAmexPlatWorthIt, postAmexVelocity, postCitiAdvanced, postCapitalOneRules, postBestUnder524_2026, postDowngradeGuide, postChaseBureau, postBarclaysUsbWf, postAmexGoldWorthIt, postHardInquiryImpact, postOptimalTiming, postBofaAdvanced];
 
 export function getAllPosts(): BlogPost[] {
   return [...allPosts].sort(

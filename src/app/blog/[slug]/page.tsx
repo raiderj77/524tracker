@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPost } from '@/lib/posts';
+import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -147,6 +148,8 @@ export default async function BlogPostPage({
         <p className="text-xs text-text-secondary mt-8 italic">
           Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
         </p>
+
+        <FinancialDisclaimer />
       </article>
     </>
   );
