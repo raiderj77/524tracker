@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SpendTrackerTool from '@/components/SpendTrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
   title: 'Welcome Bonus Spend Tracker | 524Tracker',
@@ -106,6 +107,13 @@ export default function SpendTrackerPage() {
           <span className="mx-1">/</span>
           <span>Spend Tracker</span>
         </nav>
+
+        <AnswerBlock
+          what="A free tool to track minimum spend progress across all your credit cards with deadlines, daily targets, and progress bars."
+          who="Cardholders juggling multiple welcome bonus spend requirements who need to see exactly where they stand."
+          bottomLine="Add your cards and log spending to stay on track for every welcome bonus — always verify bonus terms directly with the issuer."
+          lastUpdated="2026-03-20"
+        />
 
         <header className="mb-8">
           <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-3">

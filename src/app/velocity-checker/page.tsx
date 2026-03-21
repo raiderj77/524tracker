@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import VelocityCheckerClient from '@/components/VelocityCheckerClient';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
   title: 'Credit Card Velocity Rule Checker — All Issuers | 524Tracker',
@@ -106,6 +107,13 @@ export default function VelocityCheckerPage() {
           <span className="mx-1">/</span>
           <span>Velocity Checker</span>
         </nav>
+
+        <AnswerBlock
+          what="A free tool to check your eligibility across all major bank velocity rules — Chase 5/24, Amex 2/90, Citi 8/65, BofA 2/3/4, and more."
+          who="Credit card applicants who want to confirm they meet every issuer's timing and frequency requirements before applying."
+          bottomLine="Enter your application history to see which velocity rules you pass or fail — always verify current rules directly with the issuer."
+          lastUpdated="2026-03-20"
+        />
 
         <header className="mb-8">
           <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-3">

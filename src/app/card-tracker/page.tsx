@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import CardTrackerTool from '@/components/CardTrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
   title: 'Credit Card Rule Tracker | 524Tracker',
@@ -73,8 +74,15 @@ export default function CardTrackerPage() {
           <span>Card Tracker</span>
         </nav>
 
+        <AnswerBlock
+          what="A free tool to log your credit card applications and instantly see your status across Chase 5/24, Amex lifetime, Citi 8/65, BofA 2/3/4, and Capital One rules."
+          who="Credit card enthusiasts tracking multiple issuer rules to plan their next application without risking a denial."
+          bottomLine="Log your cards below to see real-time eligibility across all major issuers — always verify current rules directly with the issuer."
+          lastUpdated="2026-03-20"
+        />
+
         <header className="mb-8">
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-3">
+          <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy dark:text-slate-100 mb-3">
             My Card Tracker — All Issuer Rules in One Place
           </h1>
           <p className="text-sm text-text-secondary max-w-2xl">
@@ -87,7 +95,7 @@ export default function CardTrackerPage() {
 
         <CardTrackerTool />
 
-        <div className="mt-8 bg-brand-light border border-gray-200 rounded-xl p-5">
+        <div className="mt-8 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-xl p-5">
           <p className="text-sm">
             Tracking your spend toward welcome bonuses?{' '}
             <Link href="/spend-tracker" className="text-brand-gold hover:text-amber-600 font-semibold">
@@ -96,8 +104,8 @@ export default function CardTrackerPage() {
           </p>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-200">
-          <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Learn More About Credit Card Rules</h2>
+        <div className="mt-10 pt-6 border-t border-gray-200 dark:border-slate-700">
+          <h2 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-3">Learn More About Credit Card Rules</h2>
           <ul className="space-y-2 text-sm">
             <li>
               <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">

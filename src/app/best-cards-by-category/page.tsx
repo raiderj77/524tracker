@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AnswerBlock from '@/components/AnswerBlock';
 
 interface CategoryCard {
   name: string;
@@ -128,12 +129,19 @@ export default function BestCardsByCategoryPage() {
       />
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <AnswerBlock
+          what="An interactive tool to find the best credit card for any spending category — gas, groceries, dining, travel, hotels, airlines, and more."
+          who="Anyone looking to maximize credit card rewards by matching the right card to their highest spending categories."
+          bottomLine="Select a category to see the top 3 cards ranked by rewards rate — always verify current offers and terms directly with the issuer."
+          lastUpdated="2026-03-20"
+        />
+
         {/* Affiliate disclosure */}
-        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 rounded-lg px-4 py-3">
+        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3">
           <strong>Affiliate Disclosure:</strong> 524Tracker may earn a commission when you apply for and are approved for a credit card through our affiliate links. This does not affect our editorial recommendations.
         </p>
 
-        <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">
+        <h1 className="font-display font-bold text-3xl text-brand-navy dark:text-slate-100 mb-2">
           Best Credit Cards by Spend Category
         </h1>
         <p className="text-sm text-text-secondary mb-8">
@@ -150,7 +158,7 @@ export default function BestCardsByCategoryPage() {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors min-h-[44px] ${
                 selected === cat.name
                   ? 'bg-brand-gold text-brand-navy'
-                  : 'bg-white border border-gray-200 text-text-primary hover:border-brand-gold'
+                  : 'bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-text-primary hover:border-brand-gold'
               }`}
             >
               {cat.name}
@@ -161,13 +169,13 @@ export default function BestCardsByCategoryPage() {
         {/* Results */}
         {activeCategory ? (
           <div className="space-y-4">
-            <h2 className="font-display font-bold text-xl text-brand-navy">
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100">
               Top 3 Cards for {activeCategory.name}
             </h2>
             {activeCategory.cards.map((card, i) => (
               <div
                 key={card.slug}
-                className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5"
+                className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-5"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
@@ -175,7 +183,7 @@ export default function BestCardsByCategoryPage() {
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-navy text-white text-xs font-bold">
                         {i + 1}
                       </span>
-                      <h3 className="font-display font-bold text-base text-brand-navy">
+                      <h3 className="font-display font-bold text-base text-brand-navy dark:text-slate-200">
                         {card.name}
                       </h3>
                     </div>
@@ -214,7 +222,7 @@ export default function BestCardsByCategoryPage() {
             </p>
           </div>
         ) : (
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-8 text-center">
             <p className="text-text-secondary">
               Select a category above to see the top credit cards for that spending type.
             </p>
@@ -224,7 +232,7 @@ export default function BestCardsByCategoryPage() {
         {/* Informational content */}
         <section className="mt-12 space-y-8">
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Are Credit Cards Categorized?</h2>
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100 mb-3">How Are Credit Cards Categorized?</h2>
             <p className="text-sm text-text-primary leading-relaxed mb-3">
               Credit cards earn rewards at different rates depending on where you spend. Most issuers assign merchant category codes (MCCs) to each transaction, and cards offer bonus multipliers for specific MCCs. For example, a grocery card earns elevated rewards at supermarkets because those merchants are classified under grocery MCCs. Understanding these categories helps you pick the right card for each type of spending.
             </p>
@@ -234,7 +242,7 @@ export default function BestCardsByCategoryPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Makes a Card the Best for a Category?</h2>
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100 mb-3">What Makes a Card the Best for a Category?</h2>
             <p className="text-sm text-text-primary leading-relaxed mb-3">
               We evaluate cards on three primary factors. <strong>Rewards rate</strong> is the most important — a card earning 5% cashback on gas is objectively better than one earning 2% for that specific category. <strong>Welcome bonus</strong> matters for the first year because a large sign-up bonus can offset an annual fee or provide exceptional one-time value. <strong>Annual fee</strong> affects the long-term equation — a high rewards rate means less if the annual fee eats into your earnings.
             </p>
@@ -244,7 +252,7 @@ export default function BestCardsByCategoryPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Evaluate Cards for Your Spending</h2>
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100 mb-3">How to Evaluate Cards for Your Spending</h2>
             <p className="text-sm text-text-primary leading-relaxed mb-3">
               Start by reviewing your last three months of credit card or bank statements to identify where your money actually goes. Most people overestimate dining spending and underestimate grocery spending. Once you know your top two or three categories by dollar volume, focus on maximizing rewards in those areas first.
             </p>
@@ -257,7 +265,7 @@ export default function BestCardsByCategoryPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Tips for Choosing the Right Card</h2>
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100 mb-3">Tips for Choosing the Right Card</h2>
             <ul className="list-disc pl-6 space-y-2 text-sm text-text-primary leading-relaxed">
               <li><strong>Check your 5/24 count first.</strong> If you are under Chase 5/24, prioritize Chase cards before opening cards from other issuers. Use the <a href="/" className="text-brand-gold hover:text-amber-600">524Tracker</a> to see your current count.</li>
               <li><strong>Watch for spending caps.</strong> Cards advertising high bonus rates often cap the bonus spending at a certain threshold. Make sure your actual spending in that category falls within the cap to get the full benefit.</li>
@@ -268,22 +276,22 @@ export default function BestCardsByCategoryPage() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Frequently Asked Questions</h2>
+            <h2 className="font-display font-bold text-xl text-brand-navy dark:text-slate-100 mb-3">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">How often are these recommendations updated?</h3>
+                <h3 className="font-bold text-base text-brand-navy dark:text-slate-200 mb-1">How often are these recommendations updated?</h3>
                 <p className="text-sm text-text-primary leading-relaxed">We review card recommendations monthly and update whenever a card changes its rewards structure, annual fee, or welcome bonus. The last update date is shown at the top of the page. Card issuers may change terms at any time, so always verify current offers directly with the issuer before applying.</p>
               </div>
               <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">Do business cards count toward Chase 5/24?</h3>
+                <h3 className="font-bold text-base text-brand-navy dark:text-slate-200 mb-1">Do business cards count toward Chase 5/24?</h3>
                 <p className="text-sm text-text-primary leading-relaxed">Most business cards from Chase, Amex, Capital One, and other issuers do not count toward your 5/24 count when approved. However, opening a Chase business card still requires you to be under 5/24 at the time of application. Business cards are flagged in our recommendations so you can plan your application strategy accordingly.</p>
               </div>
               <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">Should I get multiple cards in the same category?</h3>
+                <h3 className="font-bold text-base text-brand-navy dark:text-slate-200 mb-1">Should I get multiple cards in the same category?</h3>
                 <p className="text-sm text-text-primary leading-relaxed">It depends on spending caps. If your top grocery card caps bonus rewards at $6,000 per year and you spend $12,000 on groceries annually, a second grocery card for the overflow spending can make sense. Otherwise, it is usually better to diversify across categories to maximize total rewards from all your spending.</p>
               </div>
               <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">What if I do not see my preferred category listed?</h3>
+                <h3 className="font-bold text-base text-brand-navy dark:text-slate-200 mb-1">What if I do not see my preferred category listed?</h3>
                 <p className="text-sm text-text-primary leading-relaxed">Our categories cover the most common spending types. For niche categories like transit, home improvement, or recurring bills, the best approach is often a flat-rate 2% card or a rotating 5% category card that periodically covers your area of spending. Check the Everyday category for the best all-purpose options.</p>
               </div>
             </div>

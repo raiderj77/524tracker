@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
   title: 'Credit Card Application Rules Guide (2026)',
@@ -118,12 +119,18 @@ export default function RulesGuidePage() {
       />
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <AnswerBlock
+          what="A comprehensive guide to every major bank's credit card application rules — Chase 5/24, Amex lifetime, Citi 8/65, BofA 2/3/4, and more."
+          who="Anyone applying for credit cards who wants to understand bank-specific restrictions before submitting an application."
+          bottomLine="Know each bank's rules before you apply to avoid unnecessary denials — always verify current policies directly with the issuer."
+          lastUpdated="2026-03-20"
+        />
         <p className="text-xs text-text-secondary mb-2">Last updated: March 16, 2026</p>
-        <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-6">
+        <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy dark:text-slate-100 mb-6">
           Complete Credit Card Application Rules Guide: All Bank Limits Explained
         </h1>
 
-        <p className="text-base text-text-primary mb-8 bg-brand-light border border-gray-200 rounded-xl p-5 leading-relaxed">
+        <p className="text-base text-text-primary mb-8 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-xl p-5 leading-relaxed">
           Every major U.S. bank enforces specific rules limiting how many credit cards you can open and how often. The most impactful is Chase&apos;s 5/24 rule, which blocks applications if you&apos;ve opened 5+ accounts across all banks in 24 months. This guide covers Chase 5/24, Amex lifetime bonuses, Amex 2/90, Citi 8/65, Bank of America 2/3/4, Capital One velocity limits, and Discover, US Bank, and Barclays restrictions.
         </p>
 
@@ -135,19 +142,19 @@ export default function RulesGuidePage() {
 
         {/* Chase 5/24 */}
         <section className="mb-12" id="chase-524">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             What Is the Chase 5/24 Rule?
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             The Chase 5/24 rule is the most impactful credit card application restriction in the industry. Chase will automatically deny most credit card applications if you have opened 5 or more new personal credit accounts from any bank within the past 24 months. Approximately 23% of applicants hit this limit within their first 2 years of actively applying for cards.
           </p>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">What Counts Toward 5/24?</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-2">What Counts Toward 5/24?</h3>
           <ul className="list-disc pl-6 space-y-1 text-sm text-text-primary mb-4">
             <li>Personal credit cards from ANY bank (not just Chase)</li>
             <li>Store/retail credit cards opened at a store</li>
             <li>Authorized user cards (controversial — Chase sometimes makes exceptions via reconsideration)</li>
           </ul>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">What Does NOT Count Toward 5/24?</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-2">What Does NOT Count Toward 5/24?</h3>
           <ul className="list-disc pl-6 space-y-1 text-sm text-text-primary mb-4">
             <li>Most business credit cards (Chase Ink, Amex Business, Citi Business, etc.)</li>
             <li>Charge cards (Amex Platinum, Gold, Green)</li>
@@ -157,14 +164,14 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-secondary mb-4">
             <strong>How to check:</strong> Pull your credit report from annualcreditreport.com and count all new accounts opened in the last 24 months. Or use our <Link href="/#tracker" className="text-brand-gold hover:text-amber-600">free 5/24 tracker</Link> to calculate automatically.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Amex Lifetime */}
         <section className="mb-12" id="amex-lifetime">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Amex Once-Per-Lifetime Bonus Rule Explained
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -176,14 +183,14 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-secondary mb-4">
             <strong>Strategy:</strong> Track which Amex bonuses you&apos;ve received using our <Link href="/#tracker" className="text-brand-gold hover:text-amber-600">Amex bonus tracker</Link>. Prioritize cards with the highest welcome bonuses first, since you only get one shot.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Amex 2/90 */}
         <section className="mb-12" id="amex-290">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Amex 2/90 Rule: Two Cards in 90 Days
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -192,14 +199,14 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             For business cards, Amex enforces a softer 1/5 rule — wait at least 5 days between business card applications. The maximum business credit cards you can hold simultaneously is 5.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Citi 8/65 */}
         <section className="mb-12" id="citi-865">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Citi 8/65 Rule: Timing Your Citi Applications
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -211,14 +218,14 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-secondary mb-4">
             <strong>Strategy:</strong> Space Citi applications at least 8 days apart and limit yourself to 2 per 65 days. Close cards you want to churn at least 24 months before reapplying. Track your timing with our <Link href="/#tracker" className="text-brand-gold hover:text-amber-600">free tracker</Link>.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* BoA 2/3/4 */}
         <section className="mb-12" id="boa-234">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Bank of America 2/3/4 Rule
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -227,14 +234,14 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Customers with Preferred Rewards status (3-month average daily balance of $20,000+ across BoA/Merrill accounts) tend to have significantly better approval odds and may be treated more leniently with these limits.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Capital One */}
         <section className="mb-12" id="capital-one">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Capital One Application Rules
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -243,43 +250,43 @@ export default function RulesGuidePage() {
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Capital One business cards are tracked separately. Note that Capital One business cards do count toward Chase 5/24, unlike most other issuers&apos; business cards.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Discover, US Bank, Barclays */}
         <section className="mb-12" id="other-banks">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Discover, US Bank, and Barclays Rules
           </h2>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">Discover</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-2">Discover</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Discover only allows you to hold 1 Discover credit card at a time. To open a different Discover card, you must first close your existing one. You can also product change between Discover cards without closing.
           </p>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">US Bank</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-2">US Bank</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             US Bank is one of the more conservative issuers, generally approving only 1 new US Bank card per 6 months. Having an existing banking relationship with US Bank significantly improves approval odds for premium cards like the Altitude Reserve.
           </p>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">Barclays</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-2">Barclays</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Barclays generally limits approvals to 1 new Barclays card per 6 months. Barclays also considers your total number of recent inquiries and new accounts across all banks, making them sensitive to applicants with many recent applications.
           </p>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Which cards don't count */}
         <section className="mb-12" id="524-exclusions">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             Which Cards Don&apos;t Count Toward Chase 5/24?
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             Understanding which cards count and which don&apos;t is critical for staying under 5/24. Here&apos;s a reference table based on community data points as of March 2026:
           </p>
           <div className="overflow-x-auto mb-4">
-            <table className="w-full text-sm border border-gray-200 rounded-lg">
+            <table className="w-full text-sm border border-gray-200 dark:border-slate-700 rounded-lg">
               <thead>
                 <tr className="bg-brand-light">
                   <th className="text-left px-4 py-2 font-medium">Card Type</th>
@@ -287,26 +294,26 @@ export default function RulesGuidePage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Personal credit cards (any bank)</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Store/retail cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Authorized user cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes (usually)</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Chase Ink business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Amex business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Citi business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Capital One business cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Amex charge cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
-                <tr className="border-t border-gray-100"><td className="px-4 py-2">Product changes / upgrades</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Personal credit cards (any bank)</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Store/retail cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Authorized user cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes (usually)</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Chase Ink business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Amex business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Citi business cards</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Capital One business cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Amex charge cards</td><td className="px-4 py-2 text-brand-red font-medium">Yes</td></tr>
+                <tr className="border-t border-gray-100 dark:border-slate-700"><td className="px-4 py-2">Product changes / upgrades</td><td className="px-4 py-2 text-brand-green font-medium">No</td></tr>
               </tbody>
             </table>
           </div>
-          <div className="bg-brand-light border border-gray-200 rounded-lg p-4 text-xs text-text-secondary">
+          <div className="bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg p-4 text-xs text-text-secondary">
             Rules verified as of March 2026. Bank policies change without notice. Always verify with the card issuer before applying.
           </div>
         </section>
 
         {/* Application Order */}
         <section className="mb-12" id="application-order">
-          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
+          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">
             How to Maximize Approvals: Recommended Application Order
           </h2>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
@@ -343,7 +350,7 @@ export default function RulesGuidePage() {
               { q: 'What is the best order to apply for credit cards?', a: 'Start with Chase cards while under 5/24, mix in business cards (which don\'t count toward 5/24), then move to Amex, Citi, and other issuers after you\'ve maximized Chase approvals.' },
             ].map((item, i) => (
               <div key={i}>
-                <h3 className="font-display font-bold text-base text-brand-navy mb-2">{item.q}</h3>
+                <h3 className="font-display font-bold text-base text-brand-navy dark:text-slate-200 mb-2">{item.q}</h3>
                 <p className="text-sm text-text-primary leading-relaxed">{item.a}</p>
               </div>
             ))}
