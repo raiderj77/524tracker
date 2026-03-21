@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --brand-navy: #0A1628;
   --brand-gold: #F5A623;
@@ -28,10 +30,28 @@ html {
   scroll-behavior: smooth;
 }
 
+.dark {
+  --brand-light: #0f172a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+}
+
 body {
   background: var(--brand-light);
   color: var(--text-primary);
   font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 /* Focus ring styles (WCAG visible focus) */
