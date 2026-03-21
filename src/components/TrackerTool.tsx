@@ -13,6 +13,7 @@ import {
   getAnnualFeeDueDate,
 } from '@/lib/tracker';
 import HardInquiryTracker from './HardInquiryTracker';
+import EmailCapture from './EmailCapture';
 import { searchCards, type CardInfo } from '@/lib/cardList';
 
 const STORAGE_KEY = '524tracker-applications';
@@ -869,6 +870,16 @@ export default function TrackerTool() {
               })}
             </div>
           </div>
+
+          {/* Email Capture */}
+          <EmailCapture
+            headline="Track when your next Chase slot opens"
+            subtext="We'll email you when one of your 5/24 cards ages off — no manual tracking needed"
+            buttonText="Set Up My Alert"
+            source="524tracker-results"
+            leadMagnet="524-slot-alert"
+            variant="inline"
+          />
 
           {/* Card 5: Upcoming Drop-offs */}
           {dropoffs.length > 0 && (
