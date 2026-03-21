@@ -155,6 +155,8 @@ export default function TrackerTool() {
 
   // Editing
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [copiedSummary, setCopiedSummary] = useState(false);
+  const [copiedShare, setCopiedShare] = useState(false);
 
   // Live region
   const liveRef = useRef<HTMLDivElement>(null);
@@ -735,12 +737,45 @@ export default function TrackerTool() {
               <h3 className="font-display font-bold text-lg text-brand-navy">
                 Application Timeline
               </h3>
-              <button
-                onClick={handleExport}
-                className="text-sm text-brand-gold hover:text-amber-600 font-medium transition-colors min-h-[44px] px-3"
-              >
-                Export to CSV
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    const nextSlot = dropoffDate
+                      ? dropoffDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                      : 'N/A';
+                    const text = `My Chase 5/24 status: ${count524}/5 cards used. Next slot opens: ${nextSlot}. Checked at 524tracker.com`;
+                    navigator.clipboard.writeText(text).then(() => {
+                      setCopiedSummary(true);
+                      setTimeout(() => setCopiedSummary(false), 2000);
+                    });
+                  }}
+                  className="text-sm text-brand-gold hover:text-amber-600 font-medium transition-colors min-h-[44px] px-3"
+                >
+                  {copiedSummary ? '✓ Copied!' : 'Copy Summary'}
+                </button>
+                <button
+                  onClick={() => {
+                    const shareText = 'Check your Chase 5/24 status free at 524tracker.com';
+                    if (typeof navigator !== 'undefined' && navigator.share) {
+                      navigator.share({ title: '524 Tracker', text: shareText, url: 'https://524tracker.com' }).catch(() => {});
+                    } else {
+                      navigator.clipboard.writeText(shareText).then(() => {
+                        setCopiedShare(true);
+                        setTimeout(() => setCopiedShare(false), 2000);
+                      });
+                    }
+                  }}
+                  className="text-sm text-brand-gold hover:text-amber-600 font-medium transition-colors min-h-[44px] px-3"
+                >
+                  {copiedShare ? '✓ Copied!' : 'Share'}
+                </button>
+                <button
+                  onClick={handleExport}
+                  className="text-sm text-brand-gold hover:text-amber-600 font-medium transition-colors min-h-[44px] px-3"
+                >
+                  Export to CSV
+                </button>
+              </div>
             </div>
             <div className="space-y-2">
               {sorted.map((app) => {
