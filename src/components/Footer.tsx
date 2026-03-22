@@ -85,14 +85,14 @@ export default function Footer() {
               links.
             </p>
             <p className="text-sm text-gray-400 mt-4">
-              Built by an experienced web developer
+              Built by an experienced web professional
             </p>
           </div>
         </div>
 
         <div className="border-t border-brand-slate mt-8 pt-8 text-center">
           <p className="text-sm text-gray-500">
-            &copy; {currentYear} 524Tracker. All rights reserved.
+            &copy; {currentYear} Your Friendly Developer. All rights reserved.
           </p>
         </div>
       </div>

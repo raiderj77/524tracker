@@ -160,13 +160,13 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             href="/card-tracker"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
               5
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Card Tracker
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -176,13 +176,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/velocity-checker"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
               V
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Velocity Checker
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -192,13 +192,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/spend-tracker"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
               %
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Spend Tracker
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -208,13 +208,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/annual-fee-calculator"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
               $
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Annual Fee Calculator
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -226,13 +226,13 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
           <Link
             href="/application-timing"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               T
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Application Timing
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -242,13 +242,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/amex-popup-estimator"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               A
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Amex Popup Estimator
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -258,13 +258,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/downgrade-guide"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               D
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Downgrade Guide
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -274,13 +274,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/credit-pull-database"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               B
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Credit Pull Database
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -292,13 +292,13 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
           <Link
             href="/inquiry-tracker"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               H
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Inquiry Tracker
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -308,13 +308,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/card-value-calculator"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               C
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Card Value Calculator
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -324,13 +324,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/application-flowchart"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               &rarr;
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Flowchart
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -340,13 +340,13 @@ export default function HomePage() {
           </Link>
           <Link
             href="/rules-guide"
-            className="flex items-start gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700 text-brand-navy dark:text-slate-200 font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
               ?
             </span>
             <div>
-              <span className="font-display font-bold text-sm text-brand-navy dark:text-slate-100 group-hover:text-brand-gold transition-colors">
+              <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
                 Rules Guide
               </span>
               <p className="text-xs text-text-secondary mt-0.5">
@@ -365,22 +365,22 @@ export default function HomePage() {
 
       {/* Top Card Recommendations */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3">
+        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 rounded-lg px-4 py-3">
           <strong>Disclosure:</strong> 524Tracker may earn a commission when you
           apply for and are approved for a credit card through our affiliate
           links. This does not affect our editorial recommendations.
         </p>
-        <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-6">
+        <h2 className="font-display font-bold text-2xl text-brand-navy mb-6">
           Top Credit Cards to Consider in 2026
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuredCards.map((card) => (
             <div
               key={card.slug}
-              className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-5 flex flex-col"
+              className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex flex-col"
             >
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-display font-bold text-sm text-brand-navy dark:text-slate-100">
+                <h3 className="font-display font-bold text-sm text-brand-navy">
                   {card.name}
                 </h3>
               </div>

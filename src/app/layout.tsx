@@ -63,16 +63,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `
-  (function() {
-    try {
-      var s = localStorage.getItem('theme');
-      var m = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var t = s || (m ? 'dark' : 'light');
-      document.documentElement.classList.add(t);
-    } catch(e) {}
-  })();
-` }} />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />

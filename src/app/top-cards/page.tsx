@@ -77,7 +77,7 @@ export default function TopCardsPage() {
 
       <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Affiliate disclosure above fold */}
-        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3">
+        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 rounded-lg px-4 py-3">
           <strong>Affiliate Disclosure:</strong> 524Tracker may earn a commission when you apply for and are approved for a credit card through our affiliate links. This does not affect our editorial recommendations.
         </p>
 
@@ -89,7 +89,7 @@ export default function TopCardsPage() {
         />
 
         <p className="text-xs text-text-secondary mb-2">Last updated: March 16, 2026</p>
-        <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy dark:text-slate-100 mb-6">
+        <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-6">
           Best Credit Cards for Points Maximizers in 2026
         </h1>
 
@@ -99,7 +99,7 @@ export default function TopCardsPage() {
 
         {/* Comparison table */}
         <div className="overflow-x-auto mb-12">
-          <table className="w-full text-sm border border-gray-200 dark:border-slate-700 rounded-lg">
+          <table className="w-full text-sm border border-gray-200 rounded-lg">
             <thead>
               <tr className="bg-brand-navy text-white text-left">
                 <th className="px-3 py-2.5 font-medium">Card</th>
@@ -113,7 +113,7 @@ export default function TopCardsPage() {
             </thead>
             <tbody>
               {cards.map((card) => (
-                <tr key={card.slug} className="border-t border-gray-100 dark:border-slate-700 hover:bg-brand-light/50">
+                <tr key={card.slug} className="border-t border-gray-100 hover:bg-brand-light/50">
                   <td className="px-3 py-2.5 font-medium">{card.name}</td>
                   <td className="px-3 py-2.5 text-text-secondary">{card.bank}</td>
                   <td className="px-3 py-2.5 text-brand-green font-medium">{card.offer}</td>
@@ -146,7 +146,7 @@ export default function TopCardsPage() {
 
         {/* Chase section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">Why Chase Cards Should Come First</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Why Chase Cards Should Come First</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Chase cards should be your first priority if you&apos;re under 5/24. The Sapphire Preferred and Reserve are the foundation of most travel rewards strategies, while Ink Business cards let you earn valuable Ultimate Rewards points without counting toward 5/24. Chase Ultimate Rewards points are worth approximately 2 cents each when transferred to partners like Hyatt.
           </p>
@@ -157,7 +157,7 @@ export default function TopCardsPage() {
 
         {/* Amex section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">How American Express Cards Compare</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How American Express Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Amex cards offer some of the highest welcome bonuses in the industry, but remember the lifetime rule — you only get one shot at each card&apos;s bonus. Prioritize cards with the largest bonuses first. The Platinum and Gold cards are charge cards and don&apos;t count toward the 4-card credit limit. Amex Membership Rewards points are worth approximately 1.5–2 cents each.
           </p>
@@ -168,7 +168,7 @@ export default function TopCardsPage() {
 
         {/* Capital One section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">How Capital One Cards Compare</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Capital One Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             The Venture X offers premium lounge access and a $300 travel credit that effectively reduces its $395 annual fee to $95. Capital One limits you to 2 personal cards and generally 1 new approval per 6 months. Capital One miles are worth 1 cent each and transfer to a growing list of airline and hotel partners.
           </p>
@@ -179,7 +179,7 @@ export default function TopCardsPage() {
 
         {/* Citi section */}
         <section className="mb-10">
-          <h2 className="font-display font-bold text-2xl text-brand-navy dark:text-slate-100 mb-4">How Citi Cards Compare</h2>
+          <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Citi Cards Compare</h2>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             The Strata Premier is Citi&apos;s best travel card with 3x points on travel, dining, and groceries. Citi ThankYou points are worth approximately 1.5 cents each when transferred to partners. Remember the 8/65 rule: wait 8 days between applications and limit to 2 per 65 days. Citi&apos;s 24-month bonus restriction is more forgiving than Amex&apos;s lifetime rule.
           </p>

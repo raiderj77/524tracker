@@ -82,7 +82,7 @@ export default function CardTrackerPage() {
         />
 
         <header className="mb-8">
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy dark:text-slate-100 mb-3">
+          <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-3">
             My Card Tracker — All Issuer Rules in One Place
           </h1>
           <p className="text-sm text-text-secondary max-w-2xl">
@@ -95,7 +95,7 @@ export default function CardTrackerPage() {
 
         <CardTrackerTool />
 
-        <div className="mt-8 bg-brand-light border border-gray-200 dark:border-slate-700 rounded-xl p-5">
+        <div className="mt-8 bg-brand-light border border-gray-200 rounded-xl p-5">
           <p className="text-sm">
             Tracking your spend toward welcome bonuses?{' '}
             <Link href="/spend-tracker" className="text-brand-gold hover:text-amber-600 font-semibold">
@@ -104,8 +104,8 @@ export default function CardTrackerPage() {
           </p>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-200 dark:border-slate-700">
-          <h2 className="font-display font-bold text-lg text-brand-navy dark:text-slate-200 mb-3">Learn More About Credit Card Rules</h2>
+        <div className="mt-10 pt-6 border-t border-gray-200">
+          <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Learn More About Credit Card Rules</h2>
           <ul className="space-y-2 text-sm">
             <li>
               <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">
