@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(cd \"C:/Users/jason/empire/524tracker\" && npm run build 2>&1)",
-      "Bash(cd \"C:/Users/jason/empire/524tracker\" && npm run lint 2>&1)"
+      "Bash(cd \"C:/Users/jason/empire/524tracker\" && npm run lint 2>&1)",
+      "Bash(npm run:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(npx tsc:*)",
+      "Bash(find /c/Users/jason/empire/524tracker/src/lib -type f -name \"*.tsx\" -o -name \"*.ts\" | xargs wc -l | tail -1)",
+      "Bash(git restore:*)",
+      "Bash(openssl rand:*)",
+      "Bash(git commit:*)",
+      "Bash(find /c/Users/jason/empire/524tracker/content -name *.md -o -name *.mdx)",
+      "Bash(npx next:*)",
+      "Bash(curl:*)",
+      "Bash(nslookup:*)"
     ]
   }
 }
