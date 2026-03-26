@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import CreditPullClient from '@/components/CreditPullClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -113,6 +114,13 @@ export default function CreditPullDatabasePage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A searchable database showing which credit bureau (Experian, Equifax, or TransUnion) each bank pulls for every major credit card application."
+          who="Applicants who want to strategically freeze bureaus or concentrate hard inquiries on a single report."
+          bottomLine="Bureau pulls can vary by state and change over time — use this as a starting point and check recent data points before freezing."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

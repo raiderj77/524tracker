@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 interface Perk {
@@ -109,6 +110,13 @@ export default function CardValueCalculatorPage() {
           Should you keep or cancel your credit card at renewal? Enter your benefits and find out if the card is paying for itself.
         </p>
         <p className="text-xs text-text-secondary mb-0">Last updated: March 16, 2026</p>
+
+        <AnswerBlock
+          what="A calculator that totals your credit card perks, credits, and rewards earned against the annual fee to show the card's true net value."
+          who="Cardholders deciding whether to keep or cancel a premium credit card before the next annual fee hits."
+          bottomLine="Only count benefits you actually use — a card is worth keeping when net value is positive after subtracting the fee."
+          lastUpdated="2026-03-16"
+        />
 
         <form onSubmit={handleCalculate} className="space-y-6">
           {/* Card info */}

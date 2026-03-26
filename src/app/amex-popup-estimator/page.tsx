@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AmexPopupClient from '@/components/AmexPopupClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -113,6 +114,13 @@ export default function AmexPopupEstimatorPage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A free estimator that evaluates your risk of seeing the American Express popup that blocks welcome bonuses during the application process."
+          who="Credit card applicants considering a new Amex card who want to check their popup risk before wasting an application."
+          bottomLine="Check your popup risk factors before applying — this tool is for informational purposes only and cannot guarantee whether you will see the popup."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

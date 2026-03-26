@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ApplicationTimingClient from '@/components/ApplicationTimingClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -114,6 +115,13 @@ export default function ApplicationTimingPage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A timing calculator that factors in Chase 5/24, Citi 8/65, Amex 2/90, BofA 2/3/4, and other velocity rules to find your optimal application windows."
+          who="Applicants planning multiple credit card applications who need to space them correctly to avoid automatic denials."
+          bottomLine="Enter your recent application history to see when each issuer's window opens — rules change frequently, so always verify with the bank."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

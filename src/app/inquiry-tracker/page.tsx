@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import InquiryTrackerClient from '@/components/InquiryTrackerClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -113,6 +114,13 @@ export default function InquiryTrackerPage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A tracker for monitoring hard credit inquiries per bureau and evaluating your standing with inquiry-sensitive banks like Citi, US Bank, and Barclays."
+          who="Credit card applicants who need to know their inquiry counts before applying to banks with strict inquiry thresholds."
+          bottomLine="Track inquiries by bureau to avoid surprise denials — inquiries affect your score for 12 months and stay on your report for two years."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

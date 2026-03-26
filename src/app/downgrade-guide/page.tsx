@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import DowngradeGuideClient from '@/components/DowngradeGuideClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -113,6 +114,13 @@ export default function DowngradeGuidePage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A guide to credit card product change and downgrade paths for Chase, Amex, Capital One, and Citi, showing which no-fee alternatives are available."
+          who="Cardholders who want to stop paying an annual fee but keep their credit history, credit limit, and accumulated points."
+          bottomLine="Downgrading usually beats canceling — you keep your credit age and points while eliminating the fee."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnnualFeeCalcClient from '@/components/AnnualFeeCalcClient';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -118,6 +119,13 @@ export default function AnnualFeeCalculatorPage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 19, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="A calculator that compares your credit card annual fee against the credits, perks, and rewards you actually use to determine if the card is worth keeping."
+          who="Cardholders approaching their annual fee renewal date who need to decide whether to keep, downgrade, or cancel a premium credit card."
+          bottomLine="Enter your real usage to get an honest net-value number — do not count credits you would not naturally use."
+          lastUpdated="2026-03-19"
+        />
 
         <article className="space-y-12">
           <section>

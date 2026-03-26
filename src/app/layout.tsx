@@ -39,7 +39,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    'max-snippet': -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large' as const,
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     title: 'Chase 5/24 Tracker & Credit Card Rules | 524Tracker',

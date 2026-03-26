@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ApplicationFlowchart from '@/components/ApplicationFlowchart';
+import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 
 export const metadata: Metadata = {
@@ -117,6 +118,13 @@ export default function ApplicationFlowchartPage() {
           </p>
           <p className="text-xs text-text-secondary mt-2">Last updated: March 16, 2026</p>
         </header>
+
+        <AnswerBlock
+          what="An interactive flowchart that recommends which credit card to apply for next based on your 5/24 status, rewards goals, and existing card portfolio."
+          who="Credit card enthusiasts who want a data-driven recommendation for their next application instead of guessing."
+          bottomLine="Answer the questions to get a personalized recommendation — always verify current rules and offers directly with the issuer before applying."
+          lastUpdated="2026-03-16"
+        />
 
         <ApplicationFlowchart />
 
