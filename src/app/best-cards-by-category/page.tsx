@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import AnswerBlock from '@/components/AnswerBlock';
+import { getAffiliateUrl } from '@/lib/affiliateUrls';
 
 interface CategoryCard {
   name: string;
@@ -205,7 +206,7 @@ export default function BestCardsByCategoryPage() {
                     </span>
                   </div>
                   <a
-                    href={`#apply-${card.slug}`}
+                    href={getAffiliateUrl(card.slug)}
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
                     data-affiliate-card={card.name}

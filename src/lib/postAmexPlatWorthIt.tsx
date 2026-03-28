@@ -281,7 +281,7 @@ export const postAmexPlatWorthIt: BlogPost = {
         </ul>
         <p className="text-sm mb-3">
           If you match 3+ of these criteria, the Platinum likely delivers positive net value.{' '}
-          <a href="#apply-amex-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
+          <a href="https://www.americanexpress.com/us/credit-cards/card/platinum/" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
             Apply for the Amex Platinum &rarr;
           </a>
         </p>

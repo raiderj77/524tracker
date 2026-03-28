@@ -254,7 +254,7 @@ export const postCsrWorthIt: BlogPost = {
         </ul>
         <p className="text-sm mb-3">
           If you check 3 or more of the above, the CSR is likely worth the $550 annual fee.{' '}
-          <a href="#apply-chase-sapphire-reserve" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
+          <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/reserve" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
             Apply for the Chase Sapphire Reserve &rarr;
           </a>
         </p>

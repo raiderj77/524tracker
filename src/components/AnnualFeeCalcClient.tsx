@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { getAffiliateUrl } from '@/lib/affiliateUrls';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                             */
@@ -688,7 +689,7 @@ export default function AnnualFeeCalcClient() {
               {!isCustom && (
                 <>
                   <a
-                    href={`#apply-${activeCard.slug}`}
+                    href={getAffiliateUrl(activeCard.slug)}
                     rel="nofollow sponsored noopener noreferrer"
                     className="inline-block bg-brand-gold text-brand-navy font-body font-semibold px-8 py-3 rounded-lg text-sm hover:bg-amber-500 transition-colors shadow-md hover:shadow-lg"
                   >

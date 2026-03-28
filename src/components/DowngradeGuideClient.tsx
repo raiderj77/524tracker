@@ -523,7 +523,7 @@ export default function DowngradeGuideClient() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="#apply-compare"
+            href="/top-cards"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 bg-brand-gold text-brand-navy font-bold rounded-lg hover:bg-amber-500 transition-colors text-sm"
           >

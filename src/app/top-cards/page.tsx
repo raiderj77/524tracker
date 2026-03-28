@@ -21,21 +21,21 @@ export const metadata: Metadata = {
 };
 
 const cards = [
-  { name: 'Chase Sapphire Preferred', bank: 'Chase', offer: '60,000 UR points', impact: 'Counts', fee: '$95', bestFor: 'Travel beginners', slug: 'chase-sapphire-preferred' },
-  { name: 'Chase Sapphire Reserve', bank: 'Chase', offer: '60,000 UR points', impact: 'Counts', fee: '$550', bestFor: 'Frequent travelers', slug: 'chase-sapphire-reserve' },
-  { name: 'Chase Ink Business Preferred', bank: 'Chase', offer: '100,000 UR points', impact: 'Does NOT count', fee: '$95', bestFor: 'Business owners under 5/24', slug: 'chase-ink-business-preferred' },
-  { name: 'Chase Freedom Flex', bank: 'Chase', offer: '$200 bonus', impact: 'Counts', fee: '$0', bestFor: 'Rotating categories', slug: 'chase-freedom-flex' },
-  { name: 'Chase United Explorer', bank: 'Chase', offer: '60,000 miles', impact: 'Counts', fee: '$95', bestFor: 'United Airlines flyers', slug: 'chase-united-explorer' },
-  { name: 'Chase World of Hyatt', bank: 'Chase', offer: '60,000 points', impact: 'Counts', fee: '$95', bestFor: 'Hotel loyalty', slug: 'chase-world-of-hyatt' },
-  { name: 'Amex Platinum', bank: 'Amex', offer: '80,000 MR points', impact: 'Counts', fee: '$695', bestFor: 'Premium travel perks', slug: 'amex-platinum' },
-  { name: 'Amex Gold', bank: 'Amex', offer: '60,000 MR points', impact: 'Counts', fee: '$250', bestFor: 'Dining & groceries', slug: 'amex-gold' },
-  { name: 'Amex Blue Cash Preferred', bank: 'Amex', offer: '$350 bonus', impact: 'Counts', fee: '$95', bestFor: 'Grocery spending', slug: 'amex-blue-cash-preferred' },
-  { name: 'Amex Business Platinum', bank: 'Amex', offer: '120,000 MR points', impact: 'Does NOT count', fee: '$695', bestFor: 'Business travel', slug: 'amex-business-platinum' },
-  { name: 'Amex Hilton Aspire', bank: 'Amex', offer: '175,000 Hilton points', impact: 'Counts', fee: '$450', bestFor: 'Hilton Diamond status', slug: 'amex-hilton-aspire' },
-  { name: 'Capital One Venture X', bank: 'Capital One', offer: '75,000 miles', impact: 'Counts', fee: '$395', bestFor: 'Lounge access + value', slug: 'capital-one-venture-x' },
-  { name: 'Capital One Venture', bank: 'Capital One', offer: '75,000 miles', impact: 'Counts', fee: '$95', bestFor: 'Simple travel rewards', slug: 'capital-one-venture' },
-  { name: 'Citi Strata Premier', bank: 'Citi', offer: '75,000 TY points', impact: 'Counts', fee: '$95', bestFor: 'Flexible travel', slug: 'citi-strata-premier' },
-  { name: 'Citi Double Cash', bank: 'Citi', offer: '$200 bonus', impact: 'Counts', fee: '$0', bestFor: 'Flat-rate cashback', slug: 'citi-double-cash' },
+  { name: 'Chase Sapphire Preferred', bank: 'Chase', offer: '60,000 UR points', impact: 'Counts', fee: '$95', bestFor: 'Travel beginners', slug: 'chase-sapphire-preferred', url: 'https://creditcards.chase.com/travel-credit-cards/sapphire/preferred' },
+  { name: 'Chase Sapphire Reserve', bank: 'Chase', offer: '60,000 UR points', impact: 'Counts', fee: '$550', bestFor: 'Frequent travelers', slug: 'chase-sapphire-reserve', url: 'https://creditcards.chase.com/travel-credit-cards/sapphire/reserve' },
+  { name: 'Chase Ink Business Preferred', bank: 'Chase', offer: '100,000 UR points', impact: 'Does NOT count', fee: '$95', bestFor: 'Business owners under 5/24', slug: 'chase-ink-business-preferred', url: 'https://creditcards.chase.com/business-credit-cards/ink/business-preferred' },
+  { name: 'Chase Freedom Flex', bank: 'Chase', offer: '$200 bonus', impact: 'Counts', fee: '$0', bestFor: 'Rotating categories', slug: 'chase-freedom-flex', url: 'https://creditcards.chase.com/cash-back-credit-cards/freedom/flex' },
+  { name: 'Chase United Explorer', bank: 'Chase', offer: '60,000 miles', impact: 'Counts', fee: '$95', bestFor: 'United Airlines flyers', slug: 'chase-united-explorer', url: 'https://creditcards.chase.com/travel-credit-cards/united/explorer' },
+  { name: 'Chase World of Hyatt', bank: 'Chase', offer: '60,000 points', impact: 'Counts', fee: '$95', bestFor: 'Hotel loyalty', slug: 'chase-world-of-hyatt', url: 'https://creditcards.chase.com/travel-credit-cards/world-of-hyatt' },
+  { name: 'Amex Platinum', bank: 'Amex', offer: '80,000 MR points', impact: 'Counts', fee: '$695', bestFor: 'Premium travel perks', slug: 'amex-platinum', url: 'https://www.americanexpress.com/us/credit-cards/card/platinum/' },
+  { name: 'Amex Gold', bank: 'Amex', offer: '60,000 MR points', impact: 'Counts', fee: '$250', bestFor: 'Dining & groceries', slug: 'amex-gold', url: 'https://www.americanexpress.com/us/credit-cards/card/gold-card/' },
+  { name: 'Amex Blue Cash Preferred', bank: 'Amex', offer: '$350 bonus', impact: 'Counts', fee: '$95', bestFor: 'Grocery spending', slug: 'amex-blue-cash-preferred', url: 'https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/' },
+  { name: 'Amex Business Platinum', bank: 'Amex', offer: '120,000 MR points', impact: 'Does NOT count', fee: '$695', bestFor: 'Business travel', slug: 'amex-business-platinum', url: 'https://www.americanexpress.com/us/credit-cards/business/business-charge-cards/american-express-business-platinum-card-amex/' },
+  { name: 'Amex Hilton Aspire', bank: 'Amex', offer: '175,000 Hilton points', impact: 'Counts', fee: '$450', bestFor: 'Hilton Diamond status', slug: 'amex-hilton-aspire', url: 'https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/' },
+  { name: 'Capital One Venture X', bank: 'Capital One', offer: '75,000 miles', impact: 'Counts', fee: '$395', bestFor: 'Lounge access + value', slug: 'capital-one-venture-x', url: 'https://www.capitalone.com/credit-cards/venture-x/' },
+  { name: 'Capital One Venture', bank: 'Capital One', offer: '75,000 miles', impact: 'Counts', fee: '$95', bestFor: 'Simple travel rewards', slug: 'capital-one-venture', url: 'https://www.capitalone.com/credit-cards/venture/' },
+  { name: 'Citi Strata Premier', bank: 'Citi', offer: '75,000 TY points', impact: 'Counts', fee: '$95', bestFor: 'Flexible travel', slug: 'citi-strata-premier', url: 'https://www.citi.com/credit-cards/citi-strata-premier-credit-card' },
+  { name: 'Citi Double Cash', bank: 'Citi', offer: '$200 bonus', impact: 'Counts', fee: '$0', bestFor: 'Flat-rate cashback', slug: 'citi-double-cash', url: 'https://www.citi.com/credit-cards/citi-double-cash-credit-card' },
 ];
 
 export default function TopCardsPage() {
@@ -128,7 +128,7 @@ export default function TopCardsPage() {
                   <td className="px-3 py-2.5 text-text-secondary">{card.bestFor}</td>
                   <td className="px-3 py-2.5">
                     <a
-                      href={`#apply-${card.slug}`}
+                      href={card.url}
                       target="_blank"
                       rel="nofollow sponsored noopener noreferrer"
                       data-affiliate-card={card.name}

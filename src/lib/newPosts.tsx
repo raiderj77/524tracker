@@ -68,7 +68,7 @@ export const newPosts1to4: BlogPost[] = [
             Chase has never officially confirmed this rule. It was identified by the credit card community through thousands of data points collected on forums, blogs, and sites like r/churning beginning around 2015. The name &ldquo;5/24&rdquo; refers to the threshold: 5 new accounts within a 24-month rolling window.
           </p>
           <p className="text-sm mb-3">
-            The rule exists because Chase wants cardholders who will use their products long-term. Chase personal cards like the <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> and <a href="#apply-chase-freedom-unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> carry welcome bonuses worth $500&ndash;$1,000+ in travel value, so Chase restricts access to protect against applicants who open cards solely for bonuses.
+            The rule exists because Chase wants cardholders who will use their products long-term. Chase personal cards like the <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> and <a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> carry welcome bonuses worth $500&ndash;$1,000+ in travel value, so Chase restricts access to protect against applicants who open cards solely for bonuses.
           </p>
           <p className="text-sm">
             For informational purposes only &mdash; credit card approval decisions are made solely by the issuing bank.
@@ -109,7 +109,7 @@ export const newPosts1to4: BlogPost[] = [
             </table>
           </div>
           <p className="text-sm">
-            The key takeaway: Chase business cards are both exempt from 5/24 enforcement and do not count toward your 5/24 number. This makes them the most important &ldquo;free slot&rdquo; cards in any strategy. The <a href="#apply-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> alone typically offers 100,000 Ultimate Rewards points as a welcome bonus.
+            The key takeaway: Chase business cards are both exempt from 5/24 enforcement and do not count toward your 5/24 number. This makes them the most important &ldquo;free slot&rdquo; cards in any strategy. The <a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> alone typically offers 100,000 Ultimate Rewards points as a welcome bonus.
           </p>
         </section>
 
@@ -199,14 +199,14 @@ export const newPosts1to4: BlogPost[] = [
           </p>
           <h3 className="font-display font-bold text-base text-brand-navy mb-2">Priority Order for 5/24 Slots</h3>
           <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li><strong>Slot 1:</strong> <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a> &mdash; strong welcome bonus (typically 60,000&ndash;80,000 points), $95 annual fee, excellent for beginners</li>
-            <li><strong>Slot 2:</strong> Chase Freedom Flex or <a href="#apply-chase-freedom-unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> &mdash; $0 annual fee, earns Ultimate Rewards that transfer to your Sapphire card</li>
+            <li><strong>Slot 1:</strong> <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a> &mdash; strong welcome bonus (typically 60,000&ndash;80,000 points), $95 annual fee, excellent for beginners</li>
+            <li><strong>Slot 2:</strong> Chase Freedom Flex or <a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> &mdash; $0 annual fee, earns Ultimate Rewards that transfer to your Sapphire card</li>
             <li><strong>Slot 3:</strong> World of Hyatt or United Explorer &mdash; co-brand with outsized value in specific programs</li>
             <li><strong>Slot 4:</strong> Second co-brand (Southwest, IHG, Marriott) or fill based on travel goals</li>
           </ul>
           <h3 className="font-display font-bold text-base text-brand-navy mb-2">Business Cards Between Personal Apps</h3>
           <p className="text-sm mb-3">
-            Between each personal card application, apply for Chase Ink business cards. The <a href="#apply-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> earns 100,000 Ultimate Rewards points, does not count toward 5/24, and is not subject to 5/24 enforcement. Space applications 3+ months apart for best approval odds.
+            Between each personal card application, apply for Chase Ink business cards. The <a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> earns 100,000 Ultimate Rewards points, does not count toward 5/24, and is not subject to 5/24 enforcement. Space applications 3+ months apart for best approval odds.
           </p>
           <p className="text-sm">
             The &ldquo;one Sapphire&rdquo; rule: Chase only allows you to hold one Sapphire product at a time. If you have the Preferred, you cannot apply for the Reserve (and vice versa) until 48 months after your last Sapphire bonus. Plan accordingly.
@@ -283,7 +283,7 @@ export const newPosts1to4: BlogPost[] = [
             <div>
               <h3 className="font-display font-bold text-base text-brand-navy mb-2">Should I apply for Chase Sapphire Preferred or Reserve first?</h3>
               <p className="text-sm">
-                Most strategists recommend the <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> first due to its lower $95 annual fee and lower minimum spend requirement ($4,000 vs. $4,000 in 3 months). You cannot hold both simultaneously, and there is a 48-month cooldown between Sapphire bonuses. Choose based on your travel spending patterns and annual fee tolerance.
+                Most strategists recommend the <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> first due to its lower $95 annual fee and lower minimum spend requirement ($4,000 vs. $4,000 in 3 months). You cannot hold both simultaneously, and there is a 48-month cooldown between Sapphire bonuses. Choose based on your travel spending patterns and annual fee tolerance.
               </p>
             </div>
           </div>
@@ -370,7 +370,7 @@ export const newPosts1to4: BlogPost[] = [
             Amex&apos;s official terms state that you may not be eligible for a welcome bonus if you have or have had the same card product in the past. This is a permanent restriction with no time-based reset.
           </p>
           <p className="text-sm mb-3">
-            Unlike Citi&apos;s 24-month rule or Chase&apos;s 48-month Sapphire rule, the Amex lifetime rule never expires. If you earned the <a href="#apply-amex-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> welcome bonus in 2018, you are still ineligible for the Platinum bonus in 2026 &mdash; even if you closed the card years ago.
+            Unlike Citi&apos;s 24-month rule or Chase&apos;s 48-month Sapphire rule, the Amex lifetime rule never expires. If you earned the <a href="https://www.americanexpress.com/us/credit-cards/card/platinum/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> welcome bonus in 2018, you are still ineligible for the Platinum bonus in 2026 &mdash; even if you closed the card years ago.
           </p>
           <p className="text-sm">
             Amex enforces this through a pop-up notification during the application process and through their internal records of your card history.
@@ -408,7 +408,7 @@ export const newPosts1to4: BlogPost[] = [
             </table>
           </div>
           <p className="text-sm">
-            Since every bonus is a one-time opportunity, prioritize the highest-value bonuses first. The <a href="#apply-amex-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> and <a href="#apply-amex-gold" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Gold</a> are typically the most valuable starting points due to their high Membership Rewards bonuses and strong transfer partner ecosystems.
+            Since every bonus is a one-time opportunity, prioritize the highest-value bonuses first. The <a href="https://www.americanexpress.com/us/credit-cards/card/platinum/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> and <a href="https://www.americanexpress.com/us/credit-cards/card/gold-card/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Gold</a> are typically the most valuable starting points due to their high Membership Rewards bonuses and strong transfer partner ecosystems.
           </p>
         </section>
 
@@ -482,9 +482,9 @@ export const newPosts1to4: BlogPost[] = [
             Because each bonus can only be earned once, the application order determines your total lifetime value. Prioritize the highest-value bonuses first, then work down.
           </p>
           <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
-            <li><strong>Tier 1 (apply first):</strong> <a href="#apply-amex-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> (80,000&ndash;150,000 MR), <a href="#apply-amex-gold" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Gold</a> (60,000&ndash;90,000 MR)</li>
-            <li><strong>Tier 2:</strong> <a href="#apply-amex-hilton-aspire" target="_blank" rel="nofollow sponsored noopener noreferrer">Hilton Aspire</a>, <a href="#apply-amex-marriott-brilliant" target="_blank" rel="nofollow sponsored noopener noreferrer">Marriott Brilliant</a>, Delta Platinum</li>
-            <li><strong>Tier 3:</strong> <a href="#apply-amex-green" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Green</a>, Hilton Surpass, Delta Gold</li>
+            <li><strong>Tier 1 (apply first):</strong> <a href="https://www.americanexpress.com/us/credit-cards/card/platinum/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Platinum</a> (80,000&ndash;150,000 MR), <a href="https://www.americanexpress.com/us/credit-cards/card/gold-card/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Gold</a> (60,000&ndash;90,000 MR)</li>
+            <li><strong>Tier 2:</strong> <a href="https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/" target="_blank" rel="nofollow sponsored noopener noreferrer">Hilton Aspire</a>, <a href="https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/" target="_blank" rel="nofollow sponsored noopener noreferrer">Marriott Brilliant</a>, Delta Platinum</li>
+            <li><strong>Tier 3:</strong> <a href="https://www.americanexpress.com/us/credit-cards/card/green/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Green</a>, Hilton Surpass, Delta Gold</li>
             <li><strong>Tier 4:</strong> Blue Business Plus, Everyday Preferred, no-fee options</li>
           </ul>
           <p className="text-sm mb-3">
@@ -657,7 +657,7 @@ export const newPosts1to4: BlogPost[] = [
             The 8-day count starts from the date of your last Citi application, regardless of whether that application was approved or denied. To be safe, wait at least 9 full days between applications to account for any timing edge cases.
           </p>
           <p className="text-sm">
-            This rule applies to all Citi credit card products including personal cards, business cards, and co-branded cards like the <a href="#apply-citi-strata-premier" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Strata Premier</a> and Citi AAdvantage cards.
+            This rule applies to all Citi credit card products including personal cards, business cards, and co-branded cards like the <a href="https://www.citi.com/credit-cards/citi-strata-premier-credit-card" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Strata Premier</a> and Citi AAdvantage cards.
           </p>
         </section>
 
@@ -696,7 +696,7 @@ export const newPosts1to4: BlogPost[] = [
             What Is the Best Strategy for Citi ThankYou Points Cards?
           </h2>
           <p className="text-sm mb-3">
-            Citi&apos;s ThankYou Points ecosystem centers around the <a href="#apply-citi-strata-premier" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Strata Premier</a>, which earns ThankYou Points transferable to airline and hotel partners. The optimal approach accounts for both velocity rules and bonus eligibility windows.
+            Citi&apos;s ThankYou Points ecosystem centers around the <a href="https://www.citi.com/credit-cards/citi-strata-premier-credit-card" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Strata Premier</a>, which earns ThankYou Points transferable to airline and hotel partners. The optimal approach accounts for both velocity rules and bonus eligibility windows.
           </p>
           <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
             <li><strong>First application:</strong> Citi Strata Premier for its strong welcome bonus (typically 75,000 ThankYou Points)</li>

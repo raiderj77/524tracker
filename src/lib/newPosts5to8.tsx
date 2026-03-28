@@ -95,49 +95,49 @@ export const newPosts5to8: BlogPost[] = [
               <tbody>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">1</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a></td>
                   <td className="px-4 py-2">60,000 UR</td>
                   <td className="px-4 py-2">$95</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,105+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">2</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Ink Business Preferred*</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Ink Business Preferred*</a></td>
                   <td className="px-4 py-2">100,000 UR</td>
                   <td className="px-4 py-2">$95</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,905+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">3</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase World of Hyatt</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase World of Hyatt</a></td>
                   <td className="px-4 py-2">60,000 points</td>
                   <td className="px-4 py-2">$95</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,105+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">4</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-freedom-flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Flex</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Flex</a></td>
                   <td className="px-4 py-2">20,000 UR</td>
                   <td className="px-4 py-2">$0</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$400+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">5</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-freedom-unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Unlimited</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Unlimited</a></td>
                   <td className="px-4 py-2">20,000 UR</td>
                   <td className="px-4 py-2">$0</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$400+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">6</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-sapphire-reserve" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Reserve</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/sapphire/reserve" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Reserve</a></td>
                   <td className="px-4 py-2">60,000 UR</td>
                   <td className="px-4 py-2">$550</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$950+</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">7</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-united-explorer" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase United Explorer</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/united/explorer" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase United Explorer</a></td>
                   <td className="px-4 py-2">60,000 miles</td>
                   <td className="px-4 py-2">$95</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$785+</td>
@@ -165,7 +165,7 @@ export const newPosts5to8: BlogPost[] = [
             Why Should You Start with the Sapphire Preferred?
           </h2>
           <p className="text-sm mb-3">
-            The <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a> is the cornerstone of most Ultimate Rewards strategies. At $95 per year with a 60,000-point bonus (worth $1,200+ via travel partners), it delivers one of the strongest returns per dollar of any credit card in the market.
+            The <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a> is the cornerstone of most Ultimate Rewards strategies. At $95 per year with a 60,000-point bonus (worth $1,200+ via travel partners), it delivers one of the strongest returns per dollar of any credit card in the market.
           </p>
           <p className="text-sm mb-3">
             The Sapphire Preferred unlocks the ability to transfer Ultimate Rewards points to 14+ airline and hotel partners — including Hyatt, United, Southwest, and British Airways. Without a Sapphire or Ink Preferred card, your UR points are limited to cash back at a lower redemption rate.
@@ -180,16 +180,16 @@ export const newPosts5to8: BlogPost[] = [
             How Do Chase Business Cards Fit into the Strategy?
           </h2>
           <p className="text-sm mb-3">
-            Chase business cards — the <a href="#apply-chase-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a>, Ink Business Cash, and Ink Business Unlimited — are uniquely valuable because they do not count toward 5/24 and are not subject to the 5/24 restriction. You can apply for them even if you are over 5/24.
+            Chase business cards — the <a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a>, Ink Business Cash, and Ink Business Unlimited — are uniquely valuable because they do not count toward 5/24 and are not subject to the 5/24 restriction. You can apply for them even if you are over 5/24.
           </p>
           <p className="text-sm mb-3">
             This means you can weave business card applications between personal card applications without consuming any 5/24 slots. A common strategy:
           </p>
           <ol className="list-decimal pl-6 space-y-2 text-sm mb-4">
-            <li>Month 1: <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> (uses 1 of 5 slots)</li>
-            <li>Month 4: <a href="#apply-chase-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> (no slot used)</li>
-            <li>Month 7: <a href="#apply-chase-world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">World of Hyatt</a> (uses 1 of 5 slots)</li>
-            <li>Month 10: <a href="#apply-chase-freedom-flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Flex</a> (uses 1 of 5 slots)</li>
+            <li>Month 1: <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Sapphire Preferred</a> (uses 1 of 5 slots)</li>
+            <li>Month 4: <a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a> (no slot used)</li>
+            <li>Month 7: <a href="https://creditcards.chase.com/travel-credit-cards/world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">World of Hyatt</a> (uses 1 of 5 slots)</li>
+            <li>Month 10: <a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Flex</a> (uses 1 of 5 slots)</li>
           </ol>
           <p className="text-sm">
             This sequence earns 240,000+ points across four Chase cards while only consuming 3 of your 5 available slots. See the full <Link href="/blog/credit-card-application-order-strategy" className="text-brand-gold hover:text-amber-600">application order strategy guide</Link> for a complete 12-month plan.
@@ -201,7 +201,7 @@ export const newPosts5to8: BlogPost[] = [
             How Does the Ultimate Rewards Ecosystem Work?
           </h2>
           <p className="text-sm mb-3">
-            Chase Ultimate Rewards points are most valuable when you hold a premium card (Sapphire Preferred, Sapphire Reserve, or Ink Business Preferred) that unlocks transfer partners. Points earned on no-annual-fee cards like the <a href="#apply-chase-freedom-flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Flex</a> and <a href="#apply-chase-freedom-unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> can be pooled into one account and transferred to airline or hotel partners.
+            Chase Ultimate Rewards points are most valuable when you hold a premium card (Sapphire Preferred, Sapphire Reserve, or Ink Business Preferred) that unlocks transfer partners. Points earned on no-annual-fee cards like the <a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Flex</a> and <a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited" target="_blank" rel="nofollow sponsored noopener noreferrer">Freedom Unlimited</a> can be pooled into one account and transferred to airline or hotel partners.
           </p>
           <p className="text-sm mb-3">
             The Freedom Flex earns 5x on rotating quarterly categories, while the Freedom Unlimited earns 1.5x on everything. Neither card has an annual fee. When those points are combined with a Sapphire Preferred and transferred to Hyatt, they can be worth 2+ cents each — far more than the 1 cent per point cash back value.
@@ -387,7 +387,7 @@ export const newPosts5to8: BlogPost[] = [
               <tbody>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">Chase</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Ink Business Preferred</a></td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                 </tr>
@@ -405,13 +405,13 @@ export const newPosts5to8: BlogPost[] = [
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">Amex</td>
-                  <td className="px-4 py-2"><a href="#apply-amex-business-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer">Business Platinum</a></td>
+                  <td className="px-4 py-2"><a href="https://www.americanexpress.com/us/credit-cards/business/business-charge-cards/american-express-business-platinum-card-amex/" target="_blank" rel="nofollow sponsored noopener noreferrer">Business Platinum</a></td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">Amex</td>
-                  <td className="px-4 py-2"><a href="#apply-amex-business-gold" target="_blank" rel="nofollow sponsored noopener noreferrer">Business Gold</a></td>
+                  <td className="px-4 py-2"><a href="https://www.americanexpress.com/us/credit-cards/business/business-charge-cards/american-express-business-gold-card-amex/" target="_blank" rel="nofollow sponsored noopener noreferrer">Business Gold</a></td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                   <td className="px-4 py-2 text-brand-green font-medium">No</td>
                 </tr>
@@ -742,56 +742,56 @@ export const newPosts5to8: BlogPost[] = [
               <tbody>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">1</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Sapphire Preferred</a></td>
                   <td className="px-4 py-2">Chase</td>
                   <td className="px-4 py-2">5/24 (now 1/24)</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,200</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">2</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-ink-business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Ink Business Preferred</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/business-credit-cards/ink/business-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Ink Business Preferred</a></td>
                   <td className="px-4 py-2">Chase</td>
                   <td className="px-4 py-2">No 5/24 slot used</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$2,000</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">4</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-freedom-flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Flex</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/flex" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase Freedom Flex</a></td>
                   <td className="px-4 py-2">Chase</td>
                   <td className="px-4 py-2">5/24 (now 2/24), 2/30</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$400</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">5</td>
-                  <td className="px-4 py-2"><a href="#apply-amex-business-gold" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Business Gold</a></td>
+                  <td className="px-4 py-2"><a href="https://www.americanexpress.com/us/credit-cards/business/business-charge-cards/american-express-business-gold-card-amex/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Business Gold</a></td>
                   <td className="px-4 py-2">Amex</td>
                   <td className="px-4 py-2">No 5/24 slot used</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,400</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">7</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase World of Hyatt</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/world-of-hyatt" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase World of Hyatt</a></td>
                   <td className="px-4 py-2">Chase</td>
                   <td className="px-4 py-2">5/24 (now 3/24)</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,200</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">8</td>
-                  <td className="px-4 py-2"><a href="#apply-citi-premier" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a></td>
+                  <td className="px-4 py-2"><a href="https://www.citi.com/credit-cards/citi-strata-premier-credit-card" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a></td>
                   <td className="px-4 py-2">Citi</td>
                   <td className="px-4 py-2">5/24 (now 4/24), Citi 1/8</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$1,200</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">10</td>
-                  <td className="px-4 py-2"><a href="#apply-amex-business-platinum" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Business Platinum</a></td>
+                  <td className="px-4 py-2"><a href="https://www.americanexpress.com/us/credit-cards/business/business-charge-cards/american-express-business-platinum-card-amex/" target="_blank" rel="nofollow sponsored noopener noreferrer">Amex Business Platinum</a></td>
                   <td className="px-4 py-2">Amex</td>
                   <td className="px-4 py-2">No 5/24 slot used</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$2,600</td>
                 </tr>
                 <tr className="border-t border-gray-100">
                   <td className="px-4 py-2">12</td>
-                  <td className="px-4 py-2"><a href="#apply-chase-united-explorer" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase United Explorer</a></td>
+                  <td className="px-4 py-2"><a href="https://creditcards.chase.com/travel-credit-cards/united/explorer" target="_blank" rel="nofollow sponsored noopener noreferrer">Chase United Explorer</a></td>
                   <td className="px-4 py-2">Chase</td>
                   <td className="px-4 py-2">5/24 (now 5/24 — last slot)</td>
                   <td className="px-4 py-2 text-brand-green font-medium">$900</td>
@@ -858,7 +858,7 @@ export const newPosts5to8: BlogPost[] = [
             <li><strong>6/6 rule:</strong> Citi may deny applications if you have 6 or more hard inquiries (from any bank) in the past 6 months. This is a soft guideline, not a hard cutoff, but heavy application velocity can trigger Citi denials.</li>
           </ul>
           <p className="text-sm mb-3">
-            Citi personal cards (like the <a href="#apply-citi-premier" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a>) count toward 5/24 since they report to personal credit bureaus. Citi business cards do not report and do not count toward 5/24.
+            Citi personal cards (like the <a href="https://www.citi.com/credit-cards/citi-strata-premier-credit-card" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a>) count toward 5/24 since they report to personal credit bureaus. Citi business cards do not report and do not count toward 5/24.
           </p>
           <p className="text-sm">
             The best time to apply for a Citi personal card is once you have secured your highest-priority Chase cards and are willing to spend a 5/24 slot. For most applicants, this happens around month 8&ndash;10 of their application sequence.
@@ -1103,7 +1103,7 @@ export const newPosts5to8: BlogPost[] = [
           </p>
           <ul className="list-disc pl-6 space-y-1 text-sm mb-3">
             <li><strong>Apply for business cards</strong> — Chase Ink, Amex business, and Citi business cards do not count toward 5/24 and offer excellent bonuses</li>
-            <li><strong>Pick up non-Chase personal cards</strong> — Amex Gold, Amex Platinum, <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a>, and Capital One Venture X do not have 5/24-style restrictions</li>
+            <li><strong>Pick up non-Chase personal cards</strong> — Amex Gold, Amex Platinum, <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer">Citi Premier</a>, and Capital One Venture X do not have 5/24-style restrictions</li>
             <li><strong>Remove authorized user cards</strong> — If AU cards are inflating your count, request removal from the primary cardholder and dispute with credit bureaus</li>
             <li><strong>Plan your Chase applications</strong> — Decide which Chase cards you will target once you drop below 5/24, and have applications ready to submit</li>
           </ul>

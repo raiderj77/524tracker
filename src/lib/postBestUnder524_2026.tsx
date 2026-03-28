@@ -106,7 +106,7 @@ export const postBestUnder524_2026: BlogPost = {
           your first priority.
         </p>
         <p className="text-sm mb-3">
-          <a href="#apply-chase-sapphire-preferred" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
+          <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/preferred" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">
             Check the Chase Sapphire Preferred offer
           </a>
         </p>

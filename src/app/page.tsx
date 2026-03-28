@@ -29,6 +29,7 @@ const featuredCards = [
     offer: '60,000 bonus points after $4,000 spend in 3 months',
     countsToward524: true,
     slug: 'chase-sapphire-preferred',
+    url: 'https://creditcards.chase.com/travel-credit-cards/sapphire/preferred',
   },
   {
     name: 'Amex Gold',
@@ -37,6 +38,7 @@ const featuredCards = [
     offer: '60,000 Membership Rewards points after $6,000 spend in 6 months',
     countsToward524: true,
     slug: 'amex-gold',
+    url: 'https://www.americanexpress.com/us/credit-cards/card/gold-card/',
   },
   {
     name: 'Capital One Venture X',
@@ -45,6 +47,7 @@ const featuredCards = [
     offer: '75,000 bonus miles after $4,000 spend in 3 months',
     countsToward524: true,
     slug: 'capital-one-venture-x',
+    url: 'https://www.capitalone.com/credit-cards/venture-x/',
   },
   {
     name: 'Chase Ink Business Preferred',
@@ -53,6 +56,7 @@ const featuredCards = [
     offer: '100,000 bonus points after $8,000 spend in 3 months',
     countsToward524: false,
     slug: 'chase-ink-business-preferred',
+    url: 'https://creditcards.chase.com/business-credit-cards/ink/business-preferred',
   },
   {
     name: 'Citi Strata Premier',
@@ -61,6 +65,7 @@ const featuredCards = [
     offer: '75,000 bonus ThankYou Points after $4,000 spend in 3 months',
     countsToward524: true,
     slug: 'citi-strata-premier',
+    url: 'https://www.citi.com/credit-cards/citi-strata-premier-credit-card',
   },
   {
     name: 'Amex Platinum',
@@ -69,6 +74,7 @@ const featuredCards = [
     offer: '80,000 Membership Rewards points after $8,000 spend in 6 months',
     countsToward524: true,
     slug: 'amex-platinum',
+    url: 'https://www.americanexpress.com/us/credit-cards/card/platinum/',
   },
 ];
 
@@ -88,6 +94,11 @@ export default function HomePage() {
                 url: 'https://524tracker.com',
                 description:
                   'Free credit card application rules tracker covering Chase 5/24, Amex lifetime bonuses, Citi 8/65, and more.',
+              },
+              {
+                '@type': 'WebSite',
+                name: '524Tracker',
+                url: 'https://524tracker.com',
               },
               {
                 '@type': 'WebApplication',
@@ -402,7 +413,7 @@ export default function HomePage() {
               </p>
               <div className="mt-auto">
                 <a
-                  href={`#apply-${card.slug}`}
+                  href={card.url}
                   target="_blank"
                   rel="nofollow sponsored noopener noreferrer"
                   data-affiliate-card={card.name}
