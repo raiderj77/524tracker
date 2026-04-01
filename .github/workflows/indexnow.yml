@@ -1,0 +1,21 @@
+name: IndexNow Submit
+on:
+  push:
+    branches: [main]
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit to IndexNow
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "524tracker.com",
+              "key": "87381910892adbd2a6cd41321176dd27",
+              "keyLocation": "https://524tracker.com/87381910892adbd2a6cd41321176dd27.txt",
+              "urlList": ["https://524tracker.com/"]
+            }')
+          echo "IndexNow response: $RESPONSE"
+          exit 0
