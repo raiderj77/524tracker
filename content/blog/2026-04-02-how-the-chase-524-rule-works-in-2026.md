@@ -5,85 +5,65 @@ slug: "how-the-chase-524-rule-works-in-2026"
 description: ""
 status: published
 author: "Your Friendly Developer"
+reviewer: "Your Friendly Developer"
 ---
 
 # How the Chase 5/24 Rule Works in 2026
 =====================================================
 
-Are you planning to apply for a Chase credit card, but you're not sure if you're affected by the 5/24 rule? Don't worry, it's easier to understand than you think. The 5/24 rule states that you can't get most Chase credit cards if you've opened five or more new credit cards in the past 24 months.
+The Chase 5/24 rule is a crucial factor to consider when applying for Chase credit cards. **In 2026, if you have applied for five or more credit cards in the past 24 months, you'll be immediately rejected for most Chase credit cards**. But what happens if you're still below the five-card limit, or if you want to know more about the specifics of the rule? Let's break down how the Chase 5/24 rule works and what you need to know to navigate it.
 
-The 5/24 rule has been a major factor in the Chase credit card application process since 2016, and it's still in place today. If you're new to the world of travel rewards and personal finance, you might be wondering what this rule means for you and how it affects your credit card application options.
+## What is the Chase 5/24 Rule?
 
-### Understanding the 5/24 Rule
+The Chase 5/24 rule is a lending requirement that prevents individuals from applying for certain Chase credit cards if they've opened too many credit accounts in a short period. This rule is intended to prevent applicants from abusing the system by applying for multiple cards and then closing them soon after to boost their credit scores.
 
-The 5/24 rule is a simple count that Chase uses to determine whether you're eligible for their top-tier credit cards. Here's how it works:
+## How Does the Chase 5/24 Rule Work?
 
-*   **New credit card accounts**: Any new credit card accounts you open in the past 24 months are counted towards the 5/24 total.
-*   **Authorized user accounts**: If you're an authorized user on someone else's credit card account, those accounts are counted towards the 5/24 total.
-*   **Credit card applications in progress**: If you've already submitted an application for a Chase credit card or another bank's credit card, it's counted towards the 5/24 total when the application is approved (not when it was submitted).
+Here's a step-by-step explanation of how the rule works:
 
-### Calculating Your 5/24 Score
+### Tracking Your Credit Applications
 
-To determine how many new credit cards you've opened in the past 24 months, make a list of all the new credit cards you've opened and check their opening dates.
+Chase uses Equifax and TransUnion credit reports to track your credit applications. Each time you apply for a new credit account, it creates a hard inquiry on your credit report. If you've applied for five or more credit cards in the past 24 months, you'll be flagged as a high-risk applicant.
 
-*   Go to the credit card issuer's website and log in to your account.
-*   Check the account opening date to see when you first opened the account.
-*   Count up the number of new credit cards you've opened and the dates they were opened.
+### Exemptions to the Rule
 
-### Chase Credit Cards Affected by the 5/24 Rule
+While the Chase 5/24 rule is strict for most Chase credit cards, there are a few exceptions:
 
-Most Chase credit cards are subject to the 5/24 rule, including some of the most popular travel rewards credit cards around. These cards include:
+* **Chase Marriott credit cards**: These cards are exempt from the 5/24 rule and can be applied for even if you've opened five or more credit cards in the past 24 months.
+* **Chase business credit cards**: These cards are also exempt from the 5/24 rule, but only for the business owner; authorized users will still be subject to the rule.
+* **Authorized users**: If you're an authorized user on a credit card, you won't affect the main applicant's credit report.
 
-*   Chase Sapphire Reserve
-*   Chase Sapphire Preferred
-*   Ink Business Preferred Credit Card
-*   United Explorer Card
+## Understanding the 24-Month Period
 
-However, some Chase credit cards are exempt from the 5/24 rule, such as:
+The 24-month period for the Chase 5/24 rule starts from the date you applied for your first credit card. Each credit application, including authorized user accounts and credit card upgrades, counts towards the limit.
 
-*   Chase Freedom Unlimited
-*   Chase Freedom flex
+## How to Check Your Status
 
-These cards are often considered to be more accessible and suitable for individuals who have recently opened multiple credit cards.
+If you're unsure about your credit application status, you can:
 
-### Credit Score and the 5/24 Rule
+* Check your Equifax and TransUnion credit reports to see when you applied for credit cards in the past 24 months.
+* Use the Chase 5/24 tracker tool to monitor your status and get an estimate of your potential approval.
 
-While the 5/24 rule focuses on the number of credit cards you've opened in the past 24 months, your credit score plays a critical role in the approval process.
+## Frequently Asked Questions (FAQs)
 
-*   Credit score determines the terms and interest rates of your credit card.
-*   A higher credit score may affect the decision to approve your credit card application.
+### Q: How long does it take to reset the 24-month period?
 
-Chase credit cards usually require a good credit score to approve your credit card application. A good credit score can be 700+, but it may vary accordingly.
+A: The 24-month period resets automatically 24 months after your last credit application. You can apply for another credit card at the end of the 24-month period.
 
-### Applying for Chase Credit Cards
+### Q: Does a denied application count towards the 5/24 limit?
 
-If you're confident that you don't have five or more new credit cards in the past 24 months, you can go ahead and apply for a Chase credit card. However, be aware that Chase considers your entire application in your application.
+A: Yes, a denied application counts towards the 5/24 limit. However, this shouldn't affect your credit score.
 
-*   **Chase's underwriting process**: Chase uses an underwriting process to review applications. When you apply for a Chase credit card, they'll review your credit report and other information to determine your credit eligibility.
-*   **Application restrictions**: Some Chase credit cards have specific application restrictions, such as limits on the number of new credit cards you can open within a certain timeframe.
+### Q: Can I apply for a Chase credit card if I've had bank accounts with Chase?
 
-### Tips for Getting Approved for Chase Credit Cards
+A: Having a Chase bank account does not exempt you from the Chase 5/24 rule.
 
-If you're struggling to get approved for a Chase credit card due to the 5/24 rule or other factors, here are some tips to keep in mind:
+### Q: Can authorized users apply for Chase credit cards if they're not creditworthy?
 
-*   **Use your existing credit cards responsibly**: Keep your credit utilization low and pay your credit card bills on time.
-*   **Wait for 24 months to pass**: The 5/24 rule will automatically expire after 24 months, and you can apply for a new Chase credit card.
-*   **Explore other credit card options**: Consider applying for credit cards from other issuers, which may have different eligibility criteria or requirements.
+A: No, authorized users must meet the same creditworthiness requirements as the main applicant.
 
-### Managing the 5/24 Rule in 2026
+## Conclusion
 
-In conclusion, the 5/24 rule remains an essential component of the Chase credit card application process. We hope this article has provided a clear explanation and guidance on how to understand the 5/24 rule.
+Understanding the Chase 5/24 rule is crucial for anyone looking to apply for Chase credit cards. By knowing how the rule works, you can plan your credit applications strategically and increase your chances of approval. Always check your credit report and status before applying to avoid disappointment.
 
-### FAQ
-
-### Q: How long does the 5/24 rule last?
-A: The 5/24 rule applies for 24 months from the date of your most recent credit card application. Once the 24-month period has passed, the rule expires.
-
-### Q: Can I get a Chase credit card if I'm an authorized user?
-A: Yes, if you're an authorized user on someone else's credit card account, those accounts are counted towards the 5/24 total.
-
-### Q: What credit cards are exempt from the 5/24 rule?
-A: Some Chase credit cards, such as Chase Freedom Unlimited, Chase Freedom flex, and other bank-issued cards, are not subject to the 5/24 rule.
-
-### Q: Is the 5/24 rule the same for all credit card issuers?
-A: No, the 5/24 rule is a Chase-specific policy and may not apply to other credit card issuers. Other issuers may have different eligibility criteria or requirements.
+**To stay up-to-date with the latest information on Chase credit cards and other personal finance topics, visit 524tracker.com and sign up for our newsletter.**
