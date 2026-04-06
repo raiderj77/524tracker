@@ -46,3 +46,5 @@ data_sources/config/
 data_sources/cache/
 content/drafts/
 content/review-required/
+
+.vercel
