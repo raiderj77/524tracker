@@ -94,11 +94,13 @@ export default function HomePage() {
                 url: 'https://524tracker.com',
                 description:
                   'Free credit card application rules tracker covering Chase 5/24, Amex lifetime bonuses, Citi 8/65, and more.',
+                dateModified: '2026-04-07',
               },
               {
                 '@type': 'WebSite',
                 name: '524Tracker',
                 url: 'https://524tracker.com',
+                dateModified: '2026-04-07',
               },
               {
                 '@type': 'WebApplication',
@@ -113,6 +115,7 @@ export default function HomePage() {
                   priceCurrency: 'USD',
                 },
                 operatingSystem: 'All',
+                dateModified: '2026-04-07',
               },
               {
                 '@type': 'BreadcrumbList',
@@ -122,6 +125,53 @@ export default function HomePage() {
                     position: 1,
                     name: 'Home',
                     item: 'https://524tracker.com',
+                  },
+                ],
+                dateModified: '2026-04-07',
+              },
+              {
+                '@type': 'FAQPage',
+                dateModified: '2026-04-07',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'What is the Chase 5/24 rule?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The Chase 5/24 rule is an unofficial policy that prevents approval for most Chase credit cards if you have opened 5 or more personal credit cards from any bank in the past 24 months. Business cards from most issuers do not count toward the 5/24 limit, but Chase business cards do.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Which credit cards are subject to the Chase 5/24 rule?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Most Chase personal credit cards are subject to the 5/24 rule, including the Sapphire Preferred, Sapphire Reserve, Freedom Flex, Freedom Unlimited, and most co-branded cards. Some Chase business cards like the Ink series also require being under 5/24 to apply. Always verify current eligibility directly with Chase before applying.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'What is the Amex lifetime bonus rule?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'American Express limits welcome bonus eligibility to once per card product per lifetime. If you have previously received a welcome bonus on a specific Amex card, you are generally not eligible for the bonus again on that same card, even if you cancel and reapply. This is sometimes called the Amex once-per-lifetime rule.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How does the 524 Tracker help manage credit card applications?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The 524 Tracker lets you log your credit card applications with dates, calculate your current 5/24 count, track when cards age off the 24-month window, and monitor issuer-specific rules like Amex lifetime bonuses, Citi 8/65, and BofA 2/3/4. All data is stored locally in your browser — nothing is sent to any server.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Does checking my 5/24 status affect my credit score?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'No. The 524 Tracker only tracks application dates you manually enter — it does not access your credit report or perform any credit inquiry. Checking your own credit with a soft pull also does not affect your score, but actual credit card applications trigger hard inquiries that temporarily affect your score.',
+                    },
                   },
                 ],
               },
@@ -165,6 +215,11 @@ export default function HomePage() {
           lastUpdated="2026-03-20"
         />
       </div>
+
+      {/* Author attribution */}
+      <p className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-text-secondary mt-2">
+        Built by an experienced web professional
+      </p>
 
       {/* Featured Tools */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
