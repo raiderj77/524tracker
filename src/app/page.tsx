@@ -494,6 +494,100 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* GEO Content Sections */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+
+        <section aria-labelledby="geo-how-524-works">
+          <h2 id="geo-how-524-works" className="font-display font-bold text-2xl text-brand-navy mb-3">
+            How does the Chase 5/24 rule work?
+          </h2>
+          <p className="text-base text-text-primary font-medium mb-3">
+            Chase declines most credit card applications if you have opened 5 or more personal cards from any issuer in the past 24 months. Business cards from most issuers do not count toward your 5/24 total.
+          </p>
+          <p className="text-sm text-text-secondary leading-relaxed">
+            The rule is evaluated at the time you submit an application — not when the account opens. Cards age off automatically once their opening date crosses the 24-month mark, which means your count can drop without any action on your part. Authorized user accounts do count toward 5/24 in most cases, so factor those in when calculating your status. U.S. consumers held an average of 3.9 credit cards in 2024, according to Experian data, making strategic application planning important for anyone maximizing rewards.
+          </p>
+        </section>
+
+        <section aria-labelledby="geo-issuer-rules">
+          <h2 id="geo-issuer-rules" className="font-display font-bold text-2xl text-brand-navy mb-3">
+            What credit card issuer rules should I track?
+          </h2>
+          <p className="text-base text-text-primary font-medium mb-3">
+            Beyond Chase 5/24, major issuers have their own application restrictions: Amex limits welcome bonuses once per lifetime per card, Citi restricts applications within 8 days and 65 days, and Bank of America uses a 2/3/4 rule.
+          </p>
+          <p className="text-sm text-text-secondary leading-relaxed">
+            Tracking multiple issuer rules simultaneously is the core challenge of credit card optimization — a card that is perfect for your Chase slot may trigger an Amex or Citi restriction if applied for in the wrong sequence. Getting the order right determines whether you collect the full bonus. Rewards credit cards generated over $35 billion in sign-up bonuses and cash back in 2023, according to the Consumer Financial Protection Bureau, which illustrates why tracking these rules carefully is worth the effort.
+          </p>
+        </section>
+
+        <section aria-labelledby="geo-privacy">
+          <h2 id="geo-privacy" className="font-display font-bold text-2xl text-brand-navy mb-3">
+            Is my credit card application data private?
+          </h2>
+          <p className="text-base text-text-primary font-medium mb-3">
+            Yes — all application data you enter is stored locally in your browser using localStorage. No data is transmitted to any server, and clearing your browser data removes all stored information.
+          </p>
+          <p className="text-sm text-text-secondary leading-relaxed">
+            No account is required and no personal financial information is collected. Your card application history never leaves your device.
+          </p>
+        </section>
+
+        <section aria-labelledby="geo-timing">
+          <h2 id="geo-timing" className="font-display font-bold text-2xl text-brand-navy mb-3">
+            When is the best time to apply for Chase cards?
+          </h2>
+          <p className="text-base text-text-primary font-medium mb-3">
+            Apply for Chase cards when you are below 4/24 to leave a buffer, since each new application will temporarily push you higher. Plan applications to maximize cards approved before hitting 5/24.
+          </p>
+          <p className="text-sm text-text-secondary leading-relaxed">
+            The best strategy is to front-load Chase cards before branching into Amex or Citi, since Chase is the most restrictive about recent application velocity. Space applications at least 30 days apart to avoid triggering automated denial flags. Credit card rules change without notice — this tool provides estimates based on community knowledge from r/churning and similar sources. Always verify current terms and eligibility directly with the issuer before applying.
+          </p>
+        </section>
+
+        {/* Financial disclaimer */}
+        <div className="rounded-lg bg-amber-50 border border-amber-200 px-5 py-4 text-sm text-amber-900 leading-relaxed">
+          <strong>Disclaimer:</strong> This tool is for informational and educational purposes only. Credit card terms, eligibility rules, and approval odds change frequently. Always verify current rules directly with the card issuer before applying. This is not financial advice.
+        </div>
+
+        {/* Further Reading */}
+        <div>
+          <h2 className="font-display font-bold text-lg text-brand-navy mb-3">Further Reading</h2>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a
+                href="https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="text-brand-gold hover:text-amber-600 transition-colors"
+              >
+                Consumer Financial Protection Bureau — credit card resources
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.experian.com/blogs/ask-experian/credit-education/improving-credit/credit-card-tips/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="text-brand-gold hover:text-amber-600 transition-colors"
+              >
+                Experian — understanding credit card applications
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.reddit.com/r/churning/wiki/index"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="text-brand-gold hover:text-amber-600 transition-colors"
+              >
+                r/churning wiki — issuer application rules
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <FinancialDisclaimer />
     </>
   );
