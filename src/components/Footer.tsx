@@ -90,6 +90,24 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* DevelopVault promotional callout */}
+        <div className="mt-10 rounded-xl border border-brand-gold/30 bg-white/5 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <p className="font-display font-bold text-white text-base mb-1">Track Your Cards Like a Pro</p>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xl">
+              Our free Google Sheets 5/24 Tracker keeps your Chase eligibility, bonus progress, and annual fees organized in one place.
+            </p>
+          </div>
+          <a
+            href="https://www.etsy.com/shop/DevelopVault"
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
+            className="shrink-0 inline-flex items-center justify-center px-5 py-2.5 bg-brand-gold text-brand-navy font-semibold rounded-lg hover:bg-amber-400 transition-colors text-sm whitespace-nowrap min-h-[44px]"
+          >
+            Get It on Etsy &rarr;
+          </a>
+        </div>
+
         <div className="border-t border-brand-slate mt-8 pt-8 text-center">
           <p className="text-sm text-gray-500">
             &copy; {currentYear} Your Friendly Developer. All rights reserved.
