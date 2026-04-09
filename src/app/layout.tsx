@@ -106,6 +106,18 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script
+          id="ga4-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-308FHNWPPQ"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga4-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ');`,
+          }}
+        />
+        <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
