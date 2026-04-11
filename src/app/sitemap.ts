@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
+import { getAllMarkdownPosts } from '@/lib/blog-markdown';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date('2026-03-15');
@@ -29,10 +30,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/inquiry-tracker', lastModified: newToolsModified },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
-    url: `https://524tracker.com/blog/${post.slug}`,
-    lastModified: new Date(post.dateModified),
-  }));
+  const jsxPosts = getAllPosts();
+  const markdownPosts = getAllMarkdownPosts();
+  const markdownSlugs = new Set(markdownPosts.map((p) => p.slug));
+
+  const blogPages: MetadataRoute.Sitemap = [
+    ...markdownPosts.map((post) => ({
+      url: `https://524tracker.com/blog/${post.slug}`,
+      lastModified: post.date ? new Date(post.date) : lastModified,
+    })),
+    ...jsxPosts
+      .filter((post) => !markdownSlugs.has(post.slug))
+      .map((post) => ({
+        url: `https://524tracker.com/blog/${post.slug}`,
+        lastModified: new Date(post.dateModified),
+      })),
+  ];
 
   return [...staticPages, ...blogPages];
 }

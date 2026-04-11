@@ -76,3 +76,133 @@ body {
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
+
+/* ── Blog markdown prose ─────────────────────────────────────────────────── */
+.prose-blog {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 65ch;
+}
+
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4,
+.prose-blog h5,
+.prose-blog h6 {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--brand-navy);
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-blog h1 { font-size: 1.875rem; }
+.prose-blog h2 { font-size: 1.5rem; }
+.prose-blog h3 { font-size: 1.25rem; }
+.prose-blog h4 { font-size: 1.125rem; }
+
+.prose-blog p {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+.prose-blog a {
+  color: var(--brand-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-blog a:hover {
+  color: #d48a1a;
+}
+
+.prose-blog strong {
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.prose-blog em {
+  font-style: italic;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25em;
+}
+
+.prose-blog ul { list-style-type: disc; }
+.prose-blog ol { list-style-type: decimal; }
+
+.prose-blog li {
+  margin-bottom: 0.375em;
+}
+
+.prose-blog blockquote {
+  border-left: 4px solid var(--brand-gold);
+  padding-left: 1rem;
+  margin: 1.5em 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.prose-blog code {
+  background: #e8ecf5;
+  color: var(--brand-navy);
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+}
+
+.prose-blog pre {
+  background: var(--brand-navy);
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.25em;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-blog pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+.prose-blog hr {
+  border: none;
+  border-top: 1px solid #d1d9e8;
+  margin: 2em 0;
+}
+
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25em;
+  font-size: 0.9rem;
+}
+
+.prose-blog th {
+  background: var(--brand-navy);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-blog td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #d1d9e8;
+  vertical-align: top;
+}
+
+.prose-blog tr:nth-child(even) td {
+  background: #f5f7fd;
+}
