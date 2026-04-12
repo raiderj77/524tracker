@@ -201,7 +201,22 @@ export default function HomePage() {
             <span className="hidden sm:inline">&middot;</span>
             <span>All rules updated March 2026</span>
             <span className="hidden sm:inline">&middot;</span>
-            <span>No account required</span>
+            <span>Data stays in your browser</span>
+          </div>
+
+          <div className="grid grid-cols-3 gap-4 mt-12 max-w-lg mx-auto text-center">
+            <div>
+              <div className="text-2xl font-display font-bold text-brand-gold">11+</div>
+              <div className="text-xs text-gray-400 mt-0.5">Bank Rules Tracked</div>
+            </div>
+            <div>
+              <div className="text-2xl font-display font-bold text-brand-gold">100%</div>
+              <div className="text-xs text-gray-400 mt-0.5">Free Forever</div>
+            </div>
+            <div>
+              <div className="text-2xl font-display font-bold text-brand-gold">0</div>
+              <div className="text-xs text-gray-400 mt-0.5">Data Sent to Servers</div>
+            </div>
           </div>
         </div>
       </section>
@@ -226,9 +241,9 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             href="/card-tracker"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
               5
             </span>
             <div>
@@ -242,10 +257,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/velocity-checker"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
-              V
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -258,10 +275,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/spend-tracker"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
-              %
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -274,10 +293,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/annual-fee-calculator"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold font-display font-bold text-lg shrink-0">
-              $
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -292,10 +313,12 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
           <Link
             href="/application-timing"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              T
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -308,10 +331,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/amex-popup-estimator"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              A
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -324,10 +349,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/downgrade-guide"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              D
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -340,10 +367,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/credit-pull-database"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              B
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -358,10 +387,12 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
           <Link
             href="/inquiry-tracker"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              H
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -374,10 +405,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/card-value-calculator"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              C
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -390,10 +423,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/application-flowchart"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              &rarr;
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 012-2h2a2 2 0 012 2m0 0V9a2 2 0 012-2h2a2 2 0 012 2v2m0 0a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -406,10 +441,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/rules-guide"
-            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-brand-gold shadow-sm transition-colors group"
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-brand-navy/10 hover:border-brand-gold hover:shadow-md shadow-sm transition-all group"
           >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 text-brand-navy font-display font-bold text-lg shrink-0">
-              ?
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold/10 group-hover:text-brand-gold transition-all font-display font-bold text-lg shrink-0">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
             </span>
             <div>
               <span className="font-display font-bold text-sm text-brand-navy group-hover:text-brand-gold transition-colors">
@@ -431,10 +468,11 @@ export default function HomePage() {
 
       {/* Top Card Recommendations */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 rounded-lg px-4 py-3">
-          <strong>Disclosure:</strong> 524Tracker may earn a commission when you
+        <p className="text-xs text-text-secondary mb-6 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 flex items-start gap-2">
+          <span className="text-amber-500 shrink-0 mt-0.5">⚠</span>
+          <span><strong>Disclosure:</strong> 524Tracker may earn a commission when you
           apply for and are approved for a credit card through our affiliate
-          links. This does not affect our editorial recommendations.
+          links. This does not affect our editorial recommendations.</span>
         </p>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-6">
           Top Credit Cards to Consider in 2026
@@ -443,10 +481,10 @@ export default function HomePage() {
           {featuredCards.map((card) => (
             <div
               key={card.slug}
-              className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 flex flex-col"
+              className="bg-white rounded-2xl border border-brand-navy/10 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all p-5 flex flex-col"
             >
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-display font-bold text-sm text-brand-navy">
+                <h3 className="font-display font-bold text-base text-brand-navy leading-tight">
                   {card.name}
                 </h3>
               </div>
@@ -461,7 +499,7 @@ export default function HomePage() {
                   ? 'Counts toward 5/24'
                   : 'Does NOT count (business)'}
               </span>
-              <p className="text-xs text-text-secondary mb-2">{card.bank}</p>
+              <p className="text-xs font-medium text-brand-gold/80 uppercase tracking-wider mb-2">{card.bank}</p>
               <p className="text-sm text-text-primary mb-2">{card.benefit}</p>
               <p className="text-xs text-brand-green font-medium mb-4">
                 {card.offer}
@@ -495,10 +533,10 @@ export default function HomePage() {
       </section>
 
       {/* GEO Content Sections */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
         <section aria-labelledby="geo-how-524-works">
-          <h2 id="geo-how-524-works" className="font-display font-bold text-2xl text-brand-navy mb-3">
+          <h2 id="geo-how-524-works" className="font-display font-bold text-2xl text-brand-navy mb-3 pb-2 border-b border-brand-navy/10">
             How does the Chase 5/24 rule work?
           </h2>
           <p className="text-base text-text-primary font-medium mb-3">
@@ -510,7 +548,7 @@ export default function HomePage() {
         </section>
 
         <section aria-labelledby="geo-issuer-rules">
-          <h2 id="geo-issuer-rules" className="font-display font-bold text-2xl text-brand-navy mb-3">
+          <h2 id="geo-issuer-rules" className="font-display font-bold text-2xl text-brand-navy mb-3 pb-2 border-b border-brand-navy/10">
             What credit card issuer rules should I track?
           </h2>
           <p className="text-base text-text-primary font-medium mb-3">
@@ -522,7 +560,7 @@ export default function HomePage() {
         </section>
 
         <section aria-labelledby="geo-privacy">
-          <h2 id="geo-privacy" className="font-display font-bold text-2xl text-brand-navy mb-3">
+          <h2 id="geo-privacy" className="font-display font-bold text-2xl text-brand-navy mb-3 pb-2 border-b border-brand-navy/10">
             Is my credit card application data private?
           </h2>
           <p className="text-base text-text-primary font-medium mb-3">
@@ -534,7 +572,7 @@ export default function HomePage() {
         </section>
 
         <section aria-labelledby="geo-timing">
-          <h2 id="geo-timing" className="font-display font-bold text-2xl text-brand-navy mb-3">
+          <h2 id="geo-timing" className="font-display font-bold text-2xl text-brand-navy mb-3 pb-2 border-b border-brand-navy/10">
             When is the best time to apply for Chase cards?
           </h2>
           <p className="text-base text-text-primary font-medium mb-3">
