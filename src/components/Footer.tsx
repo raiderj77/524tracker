@@ -110,7 +110,7 @@ export default function Footer() {
 
         <div className="border-t border-brand-slate mt-8 pt-8 text-center">
           <p className="text-sm text-gray-500">
-            &copy; {currentYear} Your Friendly Developer. All rights reserved.
+            &copy; {currentYear} 524 Tracker. All rights reserved.
           </p>
         </div>
       </div>
