@@ -61,6 +61,28 @@ export default function CardTrackerPage() {
                     item: 'https://524tracker.com/card-tracker',
                   },
                 ],
+,
+              {
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'What is the Chase 5/24 rule?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Chase will not approve you if you have opened 5 or more credit cards in the last 24 months from any bank.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How do I track my credit card applications?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Enter the dates you applied for each card in this tracker to instantly see your eligibility across all major issuer rules.',
+                    },
+                  },
+                ],
+              }
               },
             ],
           }),
