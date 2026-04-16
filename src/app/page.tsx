@@ -138,7 +138,7 @@ export default function HomePage() {
                     name: 'What is the Chase 5/24 rule?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'The Chase 5/24 rule is an unofficial policy that prevents approval for most Chase credit cards if you have opened 5 or more personal credit cards from any bank in the past 24 months. Business cards from most issuers do not count toward the 5/24 limit, but Chase business cards do.',
+                      text: 'The Chase 5/24 rule is an unofficial policy that prevents approval for most Chase credit cards if you have opened 5 or more personal credit cards from any bank in the past 24 months. As one of the largest U.S. credit card issuers, Chase enforces this rule across most of its personal and many of its business card products, making it one of the most impactful application restrictions in the credit card rewards space. Business cards from most issuers do not count toward the 5/24 limit, but Chase business cards do.',
                     },
                   },
                   {
