@@ -53,6 +53,10 @@ export default function PrivacyPage() {
           <p>
             When you click an affiliate link on our site, the destination website (e.g., Chase, American Express, Capital One) may use cookies to track that you arrived via our referral. This tracking is governed by each issuer&apos;s privacy policy, not ours. We do not receive any personal information about you through affiliate links.
           </p>
+          <h3 className="font-bold text-base text-brand-navy mb-2">Cookiebot Consent Management</h3>
+          <p>
+            We use Cookiebot, a certified consent management platform (CMP), to manage cookie consent and track your preferences across the EU/EEA/UK. Cookiebot helps us comply with GDPR and other privacy regulations by obtaining your consent before placing certain cookies. Cookiebot&apos;s privacy practices are governed by <a href="https://www.cookiebot.com/en/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">Cookiebot&apos;s Privacy Policy</a>.
+          </p>
         </section>
 
         <section>
