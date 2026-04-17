@@ -88,13 +88,6 @@ export default function RootLayout({
 `,
           }}
         />
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-          data-blockingmode="auto"
-          strategy="beforeInteractive"
-        />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
