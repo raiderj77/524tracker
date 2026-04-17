@@ -10,8 +10,8 @@ export const newPosts5to8: BlogPost[] = [
       'Prioritize these Chase cards while under 5/24. Ranked by signup bonus value with the optimal application order strategy for 2026.',
     keywords: 'best chase cards to get under 5/24, chase card priority order, chase 5/24 strategy, best chase cards 2026',
     datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    lastUpdated: 'March 16, 2026',
+    dateModified: '2026-04-14',
+    lastUpdated: 'April 14, 2026',
     readTimeMinutes: 8,
     ctaText: "Check When You'll Be Under 5/24",
     ctaHref: '/',
@@ -54,6 +54,8 @@ export const newPosts5to8: BlogPost[] = [
         <p className="text-base bg-brand-light border border-gray-200 rounded-xl p-5">
           Your 5/24 slots are a limited resource. While under Chase&apos;s threshold, prioritize high-value personal cards that require 5/24 compliance — starting with the Sapphire Preferred or Reserve, then Freedom Flex and co-branded cards like the World of Hyatt. Business cards like the Ink Preferred can be added at any time since they do not count toward 5/24.
         </p>
+
+        <p className="text-xs text-gray-500 mt-2 mb-4">Last reviewed: April 2026 &middot; Information may change &mdash; verify with card issuers before applying</p>
 
         <p className="text-xs text-text-secondary mb-6 bg-brand-light border border-gray-200 rounded-lg px-4 py-3">
           <strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. We may receive compensation if you apply and are approved, at no additional cost to you. This does not affect our recommendations.
@@ -307,8 +309,8 @@ export const newPosts5to8: BlogPost[] = [
       "Business cards from Chase, Amex, Citi, and BoA don't count toward Chase 5/24. See the full list of non-reporting cards for 2026.",
     keywords: "cards that don't count toward chase 5/24, business cards 5/24, non-reporting business cards, 5/24 exceptions 2026",
     datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    lastUpdated: 'March 16, 2026',
+    dateModified: '2026-04-14',
+    lastUpdated: 'April 14, 2026',
     readTimeMinutes: 6,
     ctaText: 'Track Your Business Cards Free',
     ctaHref: '/',
@@ -351,6 +353,8 @@ export const newPosts5to8: BlogPost[] = [
         <p className="text-base bg-brand-light border border-gray-200 rounded-xl p-5">
           Most business credit cards from major issuers — including Chase, Amex, Citi, Bank of America, and Capital One — do not report to personal credit bureaus and therefore do not count toward Chase&apos;s 5/24 threshold. The key exceptions are some US Bank and Discover business cards, which may appear on personal credit reports. Knowing which cards are &ldquo;invisible&rdquo; to 5/24 is essential for maximizing welcome bonuses.
         </p>
+
+        <p className="text-xs text-gray-500 mt-2 mb-4">Last reviewed: April 2026 &middot; Information may change &mdash; verify with card issuers before applying</p>
 
         <section>
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="how-it-works">

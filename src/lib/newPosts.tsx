@@ -10,8 +10,8 @@ export const newPosts1to4: BlogPost[] = [
       'Chase 5/24 rejects applications if you opened 5+ cards in 24 months. Learn which cards are exempt, authorized user fixes, and optimal strategy.',
     keywords: 'chase 5/24 rule explained, chase 5/24, 5/24 rule, chase credit card rules, chase sapphire 5/24, ink business 5/24 exempt',
     datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    lastUpdated: 'March 16, 2026',
+    dateModified: '2026-04-14',
+    lastUpdated: 'April 14, 2026',
     readTimeMinutes: 12,
     ctaText: 'Track Your 5/24 Status Free',
     ctaHref: '/',
@@ -55,7 +55,7 @@ export const newPosts1to4: BlogPost[] = [
           The Chase 5/24 rule is an unofficial policy that automatically rejects credit card applications from anyone who has opened 5 or more new credit card accounts across all banks within the past 24 months. Understanding exactly which cards are subject to 5/24, which are exempt, and how to calculate your personal count is the foundation of every effective card strategy. This guide covers everything you need to know as of March 2026.
         </p>
 
-        <p className="text-xs text-gray-500 mt-2 mb-4">Last verified: March 2026 &middot; Rules may change &mdash; verify with Chase before applying</p>
+        <p className="text-xs text-gray-500 mt-2 mb-4">Last reviewed: April 2026 &middot; Rules may change &mdash; verify with Chase before applying</p>
 
         <section>
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="what-is-524">
@@ -315,8 +315,8 @@ export const newPosts1to4: BlogPost[] = [
       'Amex limits welcome bonuses to once per card per lifetime. Learn about NLL offers, pop-up jail, family card rules, and how to maximize bonus eligibility.',
     keywords: 'amex once per lifetime rule, amex lifetime bonus rule, amex popup jail, amex NLL offer, amex welcome bonus eligibility',
     datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    lastUpdated: 'March 16, 2026',
+    dateModified: '2026-04-14',
+    lastUpdated: 'April 14, 2026',
     readTimeMinutes: 8,
     ctaText: 'Track Your Amex Cards Free',
     ctaHref: '/',
@@ -360,7 +360,7 @@ export const newPosts1to4: BlogPost[] = [
           The Amex once-per-lifetime rule restricts welcome bonuses to one per card product per lifetime. Once you have earned a bonus on a specific Amex card &mdash; or in some cases, simply held the card &mdash; you are permanently ineligible for that same bonus again. Understanding NLL offers, pop-up jail, and the correct application order is essential for maximizing your Amex card value.
         </p>
 
-        <p className="text-xs text-gray-500 mt-2 mb-4">Last verified: March 2026 &middot; Rules may change &mdash; verify with American Express before applying</p>
+        <p className="text-xs text-gray-500 mt-2 mb-4">Last reviewed: April 2026 &middot; Rules may change &mdash; verify with American Express before applying</p>
 
         <section>
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="how-it-works">
@@ -569,8 +569,8 @@ export const newPosts1to4: BlogPost[] = [
       'Citi limits credit card applications to 1 per 8 days and 2 per 65 days. Learn the 1/8, 2/65, and 6/6 rules plus optimal timing for Citi cards.',
     keywords: 'citi 8/65 rule, citi 1/8 rule, citi 2/65 rule, citi application rules, citi credit card timing, citi 6/6 rule',
     datePublished: '2026-03-11',
-    dateModified: '2026-03-11',
-    lastUpdated: 'March 16, 2026',
+    dateModified: '2026-04-14',
+    lastUpdated: 'April 14, 2026',
     readTimeMinutes: 6,
     ctaText: 'Track Your Citi Applications Free',
     ctaHref: '/',
@@ -614,7 +614,7 @@ export const newPosts1to4: BlogPost[] = [
           The Citi 8/65 rule limits credit card applications to 1 per 8 days and 2 per 65 days. These velocity restrictions apply to all Citi card applications &mdash; personal and business. Combined with the 6/6 inquiry rule and the 24-month bonus restriction, timing your Citi applications correctly is essential for approval and bonus eligibility.
         </p>
 
-        <p className="text-xs text-gray-500 mt-2 mb-4">Last verified: March 2026 &middot; Rules may change &mdash; verify with Citi before applying</p>
+        <p className="text-xs text-gray-500 mt-2 mb-4">Last reviewed: April 2026 &middot; Rules may change &mdash; verify with Citi before applying</p>
 
         <section>
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="rules-overview">
