@@ -7,7 +7,7 @@
  */
 
 import { readFileSync, readdirSync, existsSync, statSync } from "fs";
-import { resolve, dirname, relative } from "path";
+import { resolve, dirname, relative, join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -40,11 +40,21 @@ function getFiles(dir, extensions) {
 // Rules
 // ---------------------------------------------------------------------------
 
+// About pages are exempt — real name required for AdSense E-E-A-T compliance per April 2026 decision.
+const PERSONAL_NAME_EXEMPT_FILES = [
+  join('src', 'app', 'about', 'page.tsx'),
+  join('src', 'app', 'about', 'jason-ramirez', 'page.tsx'),
+];
+
 /**
  * Check for personal name exposure.
- * The site owner's name must never appear in public content or code.
+ * The site owner's name must never appear in public content or code,
+ * except on About pages (see PERSONAL_NAME_EXEMPT_FILES above).
  */
 function checkPersonalName(file, lines) {
+  const rel = relative(ROOT, file);
+  if (PERSONAL_NAME_EXEMPT_FILES.some((exempt) => rel === exempt || rel.endsWith(exempt))) return;
+
   const namePattern = /\bJason\s+Ramirez\b/i;
   for (let i = 0; i < lines.length; i++) {
     if (namePattern.test(lines[i])) {

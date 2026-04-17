@@ -61,7 +61,7 @@ export default function CardTrackerPage() {
                     item: 'https://524tracker.com/card-tracker',
                   },
                 ],
-,
+              },
               {
                 '@type': 'FAQPage',
                 mainEntity: [
@@ -82,7 +82,6 @@ export default function CardTrackerPage() {
                     },
                   },
                 ],
-              }
               },
             ],
           }),
