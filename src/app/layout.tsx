@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { headers } from 'next/headers';
 import { Syne, DM_Sans } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -61,19 +62,34 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const gpcHeader = headersList.get('sec-gpc') === '1';
+
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
       <head>
-        <Script
-          id="consent-mode-defaults"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+        {/* Cookiebot CMP — Replace TRACKER524_CBID_PLACEHOLDER with real Cookiebot CBID from cookiebot.com */}
+        {!gpcHeader && (
+          <Script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+            data-blockingmode="auto"
+            strategy="beforeInteractive"
+          />
+        )}
+        {/* Google Consent Mode v2 — sets denied defaults before any tracking scripts load */}
+        {!gpcHeader && (
+          <Script
+            id="consent-mode-defaults"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
@@ -86,8 +102,32 @@ export default function RootLayout({
     'wait_for_update': 500
   });
 `,
-          }}
-        />
+            }}
+          />
+        )}
+        {!gpcHeader && (
+          <Script
+            id="gpc-auto-decline"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+        (function() {
+          try {
+            var gpcActive = !!navigator.globalPrivacyControl || document.cookie.indexOf('empire_gpc=1') !== -1;
+            if (!gpcActive) return;
+            if (window.Cookiebot && window.Cookiebot.decline) {
+              window.Cookiebot.decline();
+            } else {
+              window.addEventListener('CookiebotOnLoad', function() {
+                if (window.Cookiebot) window.Cookiebot.decline();
+              });
+            }
+          } catch(e) {}
+        })();
+      `,
+            }}
+          />
+        )}
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />

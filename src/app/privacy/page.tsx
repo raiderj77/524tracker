@@ -31,7 +31,7 @@ export default function PrivacyPage() {
       />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-sm">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Privacy Policy</h1>
-      <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last updated: March 16, 2026</p>
+      <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last updated: April 17, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
@@ -201,7 +201,7 @@ export default function PrivacyPage() {
                 <tr><td className="py-2 pr-4">Oregon</td><td className="py-2 pr-4">OCPA</td><td className="py-2 pr-4">Jul 2024</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
                 <tr><td className="py-2 pr-4">Tennessee</td><td className="py-2 pr-4">TIPA</td><td className="py-2 pr-4">Jul 2025</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
                 <tr><td className="py-2 pr-4">Minnesota</td><td className="py-2 pr-4">MNDPA</td><td className="py-2 pr-4">Jul 2025</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td className="py-2 pr-4">Maryland</td><td className="py-2 pr-4">MODPA</td><td className="py-2 pr-4">Oct 2025</td><td className="py-2">Access, delete, correct, opt-out; bans sale of sensitive data</td></tr>
+                <tr><td className="py-2 pr-4">Maryland</td><td className="py-2 pr-4">MODPA</td><td className="py-2 pr-4">Apr 2026</td><td className="py-2">Access, delete, correct, opt-out, portability; bans sale of sensitive data; honors GPC</td></tr>
                 <tr><td className="py-2 pr-4">Indiana</td><td className="py-2 pr-4">IDCPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
                 <tr><td className="py-2 pr-4">Kentucky</td><td className="py-2 pr-4">KYCPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
                 <tr><td className="py-2 pr-4">Rhode Island</td><td className="py-2 pr-4">RIDPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
@@ -213,11 +213,44 @@ export default function PrivacyPage() {
             We do not sell personal information to third parties. We do not engage in targeted
             advertising using sensitive personal information.
           </p>
+
+          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Global Privacy Control (GPC) Honoring</h3>
+          <p>
+            We honor the Global Privacy Control (GPC) browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. If you enable GPC in your browser, we will automatically decline non-essential cookies through Cookiebot and restrict advertising tracking on your device.
+          </p>
+
+          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">MODPA § 14-4604 Response Commitment</h3>
+          <p>
+            For Maryland residents exercising rights under the Maryland Online Data Privacy Act (MODPA), we commit to responding to valid requests within 45 days of receipt. This commitment applies separately from our GDPR 30-day response timeframe.
+          </p>
         </section>
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Handle Children&apos;s Privacy</h2>
           <p>Our service is not directed to individuals under 18. We do not knowingly collect personal information from children.</p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Google AdSense &amp; Advertising</h2>
+          <p>
+            524 Tracker uses Google AdSense to display advertisements. Google and its partners may use cookies to serve ads based on your prior visits to this site or other websites. You can opt out of personalized advertising at any time by visiting{' '}
+            <a href="https://myadcenter.google.com/personalizationoff" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">
+              Google My Ad Center (personalizationoff)
+            </a>
+            . Google&apos;s use of advertising cookies is also governed by{' '}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">
+              Google&apos;s Privacy Policy
+            </a>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Affiliate Disclosure</h2>
+          <p>
+            524 Tracker participates in affiliate programs with credit card issuers. We may earn a commission when you apply for and are approved for a card through our links. This does not affect our editorial recommendations. All affiliate links are marked with{' '}
+            <code className="text-xs bg-gray-100 px-1 rounded">rel=nofollow sponsored</code>.
+          </p>
         </section>
 
         <section>
