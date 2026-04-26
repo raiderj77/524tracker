@@ -62,6 +62,20 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: '524 Tracker',
+  url: 'https://524tracker.com',
+  logo: 'https://524tracker.com/logo.png',
+  description: 'Free credit card rule tracker for Chase 5/24, Amex lifetime bonuses, Citi 8/65, and 10+ bank application rules.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    url: 'https://524tracker.com/contact',
+  },
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -132,6 +146,10 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
         <link rel="dns-prefetch" href="https://adservice.google.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Script
           id="adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
