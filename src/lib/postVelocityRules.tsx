@@ -9,7 +9,7 @@ export const postVelocityRules: BlogPost = {
   keywords:
     'credit card velocity rules, churning rules by bank, credit card application limits, bank application rules, velocity rules churning',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 12,
   ctaText: 'Check All Velocity Rules Instantly',

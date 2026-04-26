@@ -9,7 +9,7 @@ export const postOptimalTiming: BlogPost = {
   keywords:
     'credit card application timing, when to apply for credit card, spacing credit card applications, application timing strategy 2026',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Calculate Your Optimal Timing',

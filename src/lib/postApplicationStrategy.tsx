@@ -9,7 +9,7 @@ export const postApplicationStrategy: BlogPost = {
   keywords:
     'credit card application strategy, credit card application order, best order to apply for credit cards, how to maximize credit card bonuses, credit card churning strategy',
   datePublished: '2026-03-15',
-  dateModified: '2026-03-15',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 16, 2026',
   readTimeMinutes: 10,
   ctaText: 'Track Your Applications Free',

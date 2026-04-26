@@ -9,7 +9,7 @@ export const postBarclaysUsbWf: BlogPost = {
   keywords:
     'barclays application rules, us bank application rules, wells fargo credit card rules, barclays 6/24, us bank 5/12, wells fargo velocity rules',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Check Your Status Across All Issuers',

@@ -9,7 +9,7 @@ export const postCitiAdvanced: BlogPost = {
   keywords:
     'citi 48 month rule, citi bonus clock reset, citi application timing, citi card rules advanced, citi family rules',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Check Your Citi Eligibility',

@@ -33,7 +33,7 @@ export default function RulesGuidePage() {
                 '@type': 'Article',
                 headline: 'Complete Credit Card Application Rules Guide: All Bank Limits Explained',
                 datePublished: '2026-03-01',
-                dateModified: '2026-03-09',
+                dateModified: new Date().toISOString().substring(0,10),
                 author: { '@type': 'Person', name: 'Experienced Web Developer', url: 'https://524tracker.com/about' },
                 publisher: { '@type': 'Organization', name: '524Tracker' },
               },

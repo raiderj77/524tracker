@@ -9,7 +9,7 @@ export const postBestUnder524_2026: BlogPost = {
   keywords:
     'best credit cards under 5/24 2026, which chase cards to get first 2026, 5/24 priority list 2026, best cards before 5/24',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 10,
   ctaText: 'Track Your 5/24 Count Free',

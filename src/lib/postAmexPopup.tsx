@@ -9,7 +9,7 @@ export const postAmexPopup: BlogPost = {
   keywords:
     'amex popup jail, amex popup box, how to avoid amex popup, amex popup escape, amex welcome bonus popup, american express popup',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 10,
   ctaText: 'Estimate Your Popup Risk Free',

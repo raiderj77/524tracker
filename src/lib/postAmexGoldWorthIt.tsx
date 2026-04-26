@@ -9,7 +9,7 @@ export const postAmexGoldWorthIt: BlogPost = {
   keywords:
     'is amex gold worth it, amex gold annual fee worth it 2026, amex gold card review 2026, amex gold benefits',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 8,
   ctaText: 'Calculate Your Card Value Free',

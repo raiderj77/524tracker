@@ -9,7 +9,7 @@ export const postDowngradeGuide: BlogPost = {
   keywords:
     'credit card downgrade guide, how to downgrade credit card, product change credit card, downgrade chase sapphire, downgrade amex platinum',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Find Your Downgrade Path',

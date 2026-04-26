@@ -9,7 +9,7 @@ export const postAmexLifetime: BlogPost = {
   keywords:
     'amex once per lifetime rule, amex lifetime bonus rule, amex lifetime rule update, amex welcome bonus eligibility, amex popup, amex lifetime rule 2026',
   datePublished: '2026-03-15',
-  dateModified: '2026-03-15',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 16, 2026',
   readTimeMinutes: 7,
   ctaText: 'Track Your Amex Cards Free',

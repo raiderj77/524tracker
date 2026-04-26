@@ -9,7 +9,7 @@ export const postAmexVelocity: BlogPost = {
   keywords:
     'amex 1/5 rule, amex 2/90 rule, amex application rules, american express velocity rules, amex card limits',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Check Your Amex Eligibility',

@@ -66,7 +66,7 @@ export default function InquiryTrackerPage() {
                   name: '524Tracker',
                 },
                 datePublished: '2026-03-19',
-                dateModified: '2026-03-19',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'BreadcrumbList',

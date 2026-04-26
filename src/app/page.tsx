@@ -94,13 +94,13 @@ export default function HomePage() {
                 url: 'https://524tracker.com',
                 description:
                   'Free credit card application rules tracker covering Chase 5/24, Amex lifetime bonuses, Citi 8/65, and more.',
-                dateModified: '2026-04-07',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'WebSite',
                 name: '524Tracker',
                 url: 'https://524tracker.com',
-                dateModified: '2026-04-07',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'WebApplication',
@@ -115,7 +115,7 @@ export default function HomePage() {
                   priceCurrency: 'USD',
                 },
                 operatingSystem: 'All',
-                dateModified: '2026-04-07',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'BreadcrumbList',
@@ -127,11 +127,11 @@ export default function HomePage() {
                     item: 'https://524tracker.com',
                   },
                 ],
-                dateModified: '2026-04-07',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'FAQPage',
-                dateModified: '2026-04-07',
+                dateModified: new Date().toISOString().substring(0,10),
                 mainEntity: [
                   {
                     '@type': 'Question',

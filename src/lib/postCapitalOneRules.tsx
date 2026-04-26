@@ -9,7 +9,7 @@ export const postCapitalOneRules: BlogPost = {
   keywords:
     'capital one application rules, capital one velocity rules, how many capital one cards can i have, capital one 3 bureau pull, capital one card limit',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 8,
   ctaText: 'Check All Issuer Rules',

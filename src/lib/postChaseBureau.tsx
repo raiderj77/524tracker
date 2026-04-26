@@ -9,7 +9,7 @@ export const postChaseBureau: BlogPost = {
   keywords:
     'which credit bureau does chase pull, chase credit bureau, chase hard pull, chase experian, strategic bureau freeze',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 8,
   ctaText: 'Look Up Any Bank&apos;s Bureau Pull',

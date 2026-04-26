@@ -9,7 +9,7 @@ export const postAmexPlatWorthIt: BlogPost = {
   keywords:
     'is amex platinum worth it, amex platinum annual fee worth it 2026, amex platinum review 2026, amex platinum benefits',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 10,
   ctaText: 'Calculate If Your Card Pays for Itself',

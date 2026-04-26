@@ -9,7 +9,7 @@ export const postHardInquiryImpact: BlogPost = {
   keywords:
     'hard inquiries credit cards, too many hard inquiries, credit card application inquiries, inquiry sensitive banks, how many inquiries is too many',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 8,
   ctaText: 'Track Your Inquiries Per Bureau',

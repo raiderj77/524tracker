@@ -9,7 +9,7 @@ export const postBofaAdvanced: BlogPost = {
   keywords:
     'bank of america 7/12 rule, bofa preferred rewards, bank of america application strategy, alaska companion fare, bofa advanced rules',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 8,
   ctaText: 'Check Your BofA Eligibility',

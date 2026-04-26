@@ -9,7 +9,7 @@ export const postCsrWorthIt: BlogPost = {
   keywords:
     'is chase sapphire reserve worth it, chase sapphire reserve annual fee worth it 2026, csr worth it, chase sapphire reserve review 2026',
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 20, 2026',
   readTimeMinutes: 9,
   ctaText: 'Calculate Your Card Value Free',

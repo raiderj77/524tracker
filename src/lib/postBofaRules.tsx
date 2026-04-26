@@ -9,7 +9,7 @@ export const postBofaRules: BlogPost = {
   keywords:
     'bank of america credit card rules, bofa credit card rules, bank of america 2/3/4 rule, bofa preferred rewards, bofa business card rules, bofa application limits',
   datePublished: '2026-03-15',
-  dateModified: '2026-03-15',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 16, 2026',
   readTimeMinutes: 7,
   ctaText: 'Track Your BofA Status Free',

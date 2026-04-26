@@ -71,7 +71,7 @@ export default function SpendTrackerPage() {
                   name: '524Tracker',
                 },
                 datePublished: '2026-03-15',
-                dateModified: '2026-03-15',
+                dateModified: new Date().toISOString().substring(0,10),
               },
               {
                 '@type': 'BreadcrumbList',

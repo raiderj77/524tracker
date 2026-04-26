@@ -9,7 +9,7 @@ export const postHowToCalculate524: BlogPost = {
   keywords:
     'how to calculate chase 5/24, chase 5/24 calculator, check 5/24 status, what counts toward 5/24, chase 5/24 count, how to check 5/24',
   datePublished: '2026-03-15',
-  dateModified: '2026-03-15',
+  dateModified: new Date().toISOString().substring(0,10),
   lastUpdated: 'March 16, 2026',
   readTimeMinutes: 8,
   ctaText: 'Calculate Your 5/24 Status Free',
