@@ -26,7 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com/application-timing', lastModified: newToolsModified },
     { url: 'https://524tracker.com/amex-popup-estimator', lastModified: newToolsModified },
     { url: 'https://524tracker.com/downgrade-guide', lastModified: newToolsModified },
-    { url: 'https://524tracker.com/credit-pull-database', lastModified: newToolsModified },
+    { url: 'https://524tracker.com/credit-pull-database', lastModified: new Date() },
+    { url: 'https://524tracker.com/credit-pull-database/analysis', lastModified: new Date() },
+    { url: 'https://524tracker.com/methodology', lastModified: new Date() },
+    { url: 'https://524tracker.com/submit-data-point', lastModified: new Date() },
     { url: 'https://524tracker.com/inquiry-tracker', lastModified: newToolsModified },
   ];
 
