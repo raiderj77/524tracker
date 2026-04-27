@@ -1,51 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-
-type Bureau = 'Experian' | 'Equifax' | 'TransUnion';
-
-interface PullData {
-  issuer: string;
-  card: string;
-  bureaus: Bureau[];
-  notes: string;
-  lastVerified: string;
-}
-
-const PULL_DATA: PullData[] = [
-  { issuer: 'Chase', card: 'Sapphire Preferred', bureaus: ['Experian'], notes: 'Most states; some states TU', lastVerified: 'March 2026' },
-  { issuer: 'Chase', card: 'Sapphire Reserve', bureaus: ['Experian'], notes: 'Most states; some states TU', lastVerified: 'March 2026' },
-  { issuer: 'Chase', card: 'Freedom Flex', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Chase', card: 'Freedom Unlimited', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Chase', card: 'Ink Preferred', bureaus: ['Experian'], notes: 'Business cards; most states', lastVerified: 'March 2026' },
-  { issuer: 'Chase', card: 'Ink Cash', bureaus: ['Experian'], notes: 'Business cards; most states', lastVerified: 'March 2026' },
-  { issuer: 'Amex', card: 'Platinum', bureaus: ['Experian'], notes: 'Soft pull for existing customers, hard for new', lastVerified: 'March 2026' },
-  { issuer: 'Amex', card: 'Gold', bureaus: ['Experian'], notes: 'Soft pull for existing customers', lastVerified: 'March 2026' },
-  { issuer: 'Amex', card: 'Blue Cash Preferred', bureaus: ['Experian'], notes: '', lastVerified: 'March 2026' },
-  { issuer: 'Amex', card: 'Delta SkyMiles Gold', bureaus: ['Experian'], notes: '', lastVerified: 'March 2026' },
-  { issuer: 'Citi', card: 'Strata Premier', bureaus: ['Experian', 'Equifax'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'Citi', card: 'Custom Cash', bureaus: ['Experian', 'Equifax'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'Citi', card: 'Double Cash', bureaus: ['Experian', 'Equifax'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'BofA', card: 'Customized Cash', bureaus: ['Experian', 'TransUnion'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'BofA', card: 'Premium Rewards', bureaus: ['Experian', 'TransUnion'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'BofA', card: 'Travel Rewards', bureaus: ['Experian', 'TransUnion'], notes: 'Varies by state', lastVerified: 'March 2026' },
-  { issuer: 'Capital One', card: 'Venture X', bureaus: ['Experian', 'Equifax', 'TransUnion'], notes: 'Pulls all 3 bureaus; cannot avoid with freeze', lastVerified: 'March 2026' },
-  { issuer: 'Capital One', card: 'Venture', bureaus: ['Experian', 'Equifax', 'TransUnion'], notes: 'Pulls all 3 bureaus', lastVerified: 'March 2026' },
-  { issuer: 'Capital One', card: 'SavorOne', bureaus: ['Experian', 'Equifax', 'TransUnion'], notes: 'Pulls all 3 bureaus', lastVerified: 'March 2026' },
-  { issuer: 'Barclays', card: 'AAdvantage Aviator Red', bureaus: ['TransUnion'], notes: 'Primarily TU', lastVerified: 'March 2026' },
-  { issuer: 'Barclays', card: 'JetBlue Plus', bureaus: ['TransUnion'], notes: 'Primarily TU', lastVerified: 'March 2026' },
-  { issuer: 'US Bank', card: 'Altitude Reserve', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'US Bank', card: 'Cash+', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Wells Fargo', card: 'Autograph', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Wells Fargo', card: 'Autograph Journey', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Wells Fargo', card: 'Active Cash', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Discover', card: 'it Cash Back', bureaus: ['Experian'], notes: 'Most states', lastVerified: 'March 2026' },
-  { issuer: 'Navy Federal', card: 'More Rewards', bureaus: ['TransUnion'], notes: 'Credit union', lastVerified: 'March 2026' },
-  { issuer: 'PenFed', card: 'Pathfinder', bureaus: ['Equifax'], notes: 'Credit union', lastVerified: 'March 2026' },
-];
-
-const ISSUERS = ['All', 'Chase', 'Amex', 'Citi', 'BofA', 'Capital One', 'Barclays', 'US Bank', 'Wells Fargo', 'Discover', 'Navy Federal', 'PenFed'] as const;
-const BUREAUS: ('All' | Bureau)[] = ['All', 'Experian', 'Equifax', 'TransUnion'];
+import { PULL_DATA, ISSUERS, BUREAUS, type Bureau } from '@/lib/pullData';
 
 const BUREAU_COLORS: Record<Bureau, string> = {
   Experian: 'bg-blue-100 text-blue-800 border-blue-200',
@@ -138,7 +94,7 @@ export default function CreditPullClient() {
               <th className="px-4 py-3 font-semibold whitespace-nowrap">Card</th>
               <th className="px-4 py-3 font-semibold whitespace-nowrap">Bureau(s)</th>
               <th className="px-4 py-3 font-semibold">Notes</th>
-              <th className="px-4 py-3 font-semibold whitespace-nowrap">Last Verified</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">Verification Status</th>
             </tr>
           </thead>
           <tbody>
@@ -181,8 +137,8 @@ export default function CreditPullClient() {
                     <td className="px-4 py-3 text-text-secondary text-xs">
                       {row.notes || '\u2014'}
                     </td>
-                    <td className="px-4 py-3 text-xs text-text-secondary whitespace-nowrap">
-                      {row.lastVerified}
+                    <td className="px-4 py-3 text-xs text-amber-700 whitespace-nowrap">
+                      Reference only
                     </td>
                   </tr>
                 );
