@@ -145,6 +145,9 @@ export default function RulesGuidePage() {
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
             What Is the Chase 5/24 Rule?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Chase&apos;s 5/24 rule auto-denies most credit-card applications when you&apos;ve opened five or more new personal accounts at any bank in the past 24 months. It applies to almost every Chase consumer card, counts personal cards from every issuer (not just Chase), and resets on a rolling basis as old accounts age past 24 months.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             The Chase 5/24 rule is the most impactful credit card application restriction in the industry. Chase will automatically deny most credit card applications if you have opened 5 or more new personal credit accounts from any bank within the past 24 months. Approximately 23% of applicants hit this limit within their first 2 years of actively applying for cards.
           </p>
@@ -172,8 +175,11 @@ export default function RulesGuidePage() {
         {/* Amex Lifetime */}
         <section className="mb-12" id="amex-lifetime">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Amex Once-Per-Lifetime Bonus Rule Explained
+            How Does the Amex Once-Per-Lifetime Bonus Rule Work?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> American Express limits each card&apos;s welcome bonus to one per person, ever. If you&apos;ve already earned the sign-up bonus on a specific Amex card &mdash; even on a closed account from years ago &mdash; you cannot earn it again. The restriction is per product, so a Platinum bonus and a Gold bonus are tracked separately.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             American Express restricts each card&apos;s welcome bonus to once per lifetime per person. If you have ever received the sign-up bonus on a specific Amex card — even if you closed that card years ago — you are permanently ineligible for that same card&apos;s bonus. This rule is enforced via the &ldquo;lifetime language&rdquo; in Amex application terms, which reads: &ldquo;Welcome offer not available to applicants who have or have had this Card.&rdquo;
           </p>
@@ -191,8 +197,11 @@ export default function RulesGuidePage() {
         {/* Amex 2/90 */}
         <section className="mb-12" id="amex-290">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Amex 2/90 Rule: Two Cards in 90 Days
+            What Is the Amex 2/90 Rule?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> The Amex 2/90 rule caps you at two new American Express personal credit cards approved in any rolling 90-day window. Charge cards (Platinum, Gold, Green) don&apos;t count, and there&apos;s a separate hard ceiling of four personal credit cards held simultaneously. Business credit cards follow the looser 1/5 rule instead.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             The Amex 2/90 rule limits you to a maximum of 2 new American Express personal credit card approvals within any rolling 90-day window. Charge cards (Platinum, Gold, Green) do not count toward this limit. Amex also enforces a hard cap of 4 personal credit cards held simultaneously.
           </p>
@@ -207,8 +216,11 @@ export default function RulesGuidePage() {
         {/* Citi 8/65 */}
         <section className="mb-12" id="citi-865">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Citi 8/65 Rule: Timing Your Citi Applications
+            How Does the Citi 8/65 Rule Work?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Citi 8/65 is two limits in one: only one Citi credit card approval every 8 days, and no more than two Citi approvals every 65 days. Both rules count Citi cards only. A separate 24-month bonus clock prevents you from re-earning the same card&apos;s welcome offer until two years after your last bonus.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             The Citi 8/65 rule is actually two separate restrictions working together. First, Citi will deny a new application if you were approved for a Citi card within the last 8 days. Second, Citi will deny you if you&apos;ve been approved for 2 or more Citi cards within the last 65 days. These rules apply to Citi cards only — they do not count cards from other banks.
           </p>
@@ -226,8 +238,11 @@ export default function RulesGuidePage() {
         {/* BoA 2/3/4 */}
         <section className="mb-12" id="boa-234">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Bank of America 2/3/4 Rule
+            What Is the Bank of America 2/3/4 Rule?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Bank of America&apos;s 2/3/4 rule caps you at two new BoA cards in 30 days, three in 12 months, and four in 24 months. The limits stack, and they apply only to BoA-issued cards. Preferred Rewards customers (≥$20K average daily balance across BoA/Merrill) often see softer enforcement and faster approvals.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             Bank of America enforces three overlapping velocity limits known as the 2/3/4 rule: a maximum of 2 BoA cards in any 30-day period, 3 BoA cards in any 12-month period, and 4 BoA cards in any 24-month period. These limits apply only to Bank of America cards, not cards from other issuers.
           </p>
@@ -242,8 +257,11 @@ export default function RulesGuidePage() {
         {/* Capital One */}
         <section className="mb-12" id="capital-one">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Capital One Application Rules
+            What Are Capital One&apos;s Application Rules?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Capital One generally approves only one new card per six months and limits you to two personal credit cards held at once. They pull all three credit bureaus on most applications, which spikes your inquiry count. Capital One business cards are tracked separately &mdash; but uniquely, they DO count toward Chase 5/24.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             Capital One enforces two main restrictions. First, they generally approve only 1 new Capital One card per 6 months. Second, they enforce a hard maximum of 2 personal Capital One credit cards at a time — you must close an existing card before being approved for a new one if you already hold 2.
           </p>
@@ -258,17 +276,20 @@ export default function RulesGuidePage() {
         {/* Discover, US Bank, Barclays */}
         <section className="mb-12" id="other-banks">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            Discover, US Bank, and Barclays Rules
+            What Are the Discover, US Bank, and Barclays Application Rules?
           </h2>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">Discover</h3>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Discover allows just one card at a time &mdash; you must close before opening another, though product changes are free. US Bank approves roughly one new card every six months and rewards existing banking relationships. Barclays uses a 6/24-style filter, weighing total recent inquiries and new accounts across all banks.
+          </p>
+          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">How Many Discover Cards Can You Hold at Once?</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Discover only allows you to hold 1 Discover credit card at a time. To open a different Discover card, you must first close your existing one. You can also product change between Discover cards without closing.
           </p>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">US Bank</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">What Is US Bank&apos;s Application Limit?</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             US Bank is one of the more conservative issuers, generally approving only 1 new US Bank card per 6 months. Having an existing banking relationship with US Bank significantly improves approval odds for premium cards like the Altitude Reserve.
           </p>
-          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">Barclays</h3>
+          <h3 className="font-display font-bold text-lg text-brand-navy mb-2">How Strict Is Barclays About Recent Inquiries?</h3>
           <p className="text-sm text-text-primary mb-4 leading-relaxed">
             Barclays generally limits approvals to 1 new Barclays card per 6 months. Barclays also considers your total number of recent inquiries and new accounts across all banks, making them sensitive to applicants with many recent applications.
           </p>
@@ -282,6 +303,9 @@ export default function RulesGuidePage() {
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
             Which Cards Don&apos;t Count Toward Chase 5/24?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Chase&apos;s 5/24 counter excludes most business credit cards (Chase Ink, Amex Business, Citi Business), Amex charge cards, credit-limit increases, and product changes on existing cards. It DOES include personal cards from every bank, store/retail cards, authorized-user accounts (usually), and Capital One business cards &mdash; the one notable business-card exception.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             Understanding which cards count and which don&apos;t is critical for staying under 5/24. Here&apos;s a reference table based on community data points as of March 2026:
           </p>
@@ -314,8 +338,11 @@ export default function RulesGuidePage() {
         {/* Application Order */}
         <section className="mb-12" id="application-order">
           <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">
-            How to Maximize Approvals: Recommended Application Order
+            What&apos;s the Best Order to Apply for Credit Cards?
           </h2>
+          <p className="text-base text-text-primary bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-5 leading-relaxed">
+            <strong>Quick answer:</strong> Apply Chase personal cards first while under 5/24, mix in business cards (Chase Ink, Amex Business, Citi Business) since they don&apos;t count, then move to high-value Amex bonuses given the lifetime rule. Save Citi, BoA, and Capital One for the middle, and finish with US Bank, Barclays, and Discover.
+          </p>
           <p className="text-base text-text-primary mb-4 leading-relaxed">
             The optimal application order prioritizes banks with the strictest rules first. Since Chase 5/24 counts cards from all banks, you should apply for Chase cards before any others. Here&apos;s the recommended sequence used by approximately 70% of experienced card enthusiasts:
           </p>

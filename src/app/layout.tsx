@@ -62,18 +62,77 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationJsonLd = {
+// Build-time stamp consumed by JSON-LD `dateModified`. Updated on every
+// deploy automatically so AI Overviews / SERP rich results know the page
+// graph is fresh without any manual bump.
+const SITE_DATE_MODIFIED = new Date().toISOString().slice(0, 10);
+
+const siteGraphJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: '524 Tracker',
-  url: 'https://524tracker.com',
-  logo: 'https://524tracker.com/logo.png',
-  description: 'Free credit card rule tracker for Chase 5/24, Amex lifetime bonuses, Citi 8/65, and 10+ bank application rules.',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer support',
-    url: 'https://524tracker.com/contact',
-  },
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://524tracker.com/#org',
+      name: '524 Tracker',
+      url: 'https://524tracker.com',
+      logo: 'https://524tracker.com/logo.png',
+      description:
+        'Free credit card rule tracker for Chase 5/24, Amex lifetime bonuses, Citi 8/65, and 10+ bank application rules.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        url: 'https://524tracker.com/contact',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://524tracker.com/#website',
+      url: 'https://524tracker.com',
+      name: '524 Tracker',
+      publisher: { '@id': 'https://524tracker.com/#org' },
+      inLanguage: 'en-US',
+      dateModified: SITE_DATE_MODIFIED,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://524tracker.com/blog?q={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'WebApplication',
+      '@id': 'https://524tracker.com/#webapp',
+      name: '524 Tracker',
+      url: 'https://524tracker.com',
+      description:
+        'Free, browser-based tracker for Chase 5/24, Amex lifetime bonus eligibility, Citi 8/65, Bank of America 2/3/4, Capital One velocity, and 10+ other credit-card application rules. All data stays in localStorage.',
+      applicationCategory: 'FinanceApplication',
+      applicationSubCategory: 'Credit card application rule tracker',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires JavaScript and HTML5 localStorage',
+      isAccessibleForFree: true,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      featureList: [
+        'Chase 5/24 status calculator with rolling-window drop-offs',
+        'Amex lifetime bonus eligibility check',
+        'Amex 2/90 velocity tracker',
+        'Citi 8/65 application spacing',
+        'Bank of America 2/3/4 limit tracker',
+        'Capital One 2-card limit',
+        'Hard inquiry tracker per credit bureau',
+        'Annual fee due-date alerts',
+        'CSV export of full application history',
+      ],
+      publisher: { '@id': 'https://524tracker.com/#org' },
+      dateModified: SITE_DATE_MODIFIED,
+    },
+  ],
 };
 
 export default async function RootLayout({
@@ -148,7 +207,7 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://adservice.google.com" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraphJsonLd) }}
         />
         <Script
           id="adsense"

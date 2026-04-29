@@ -2,7 +2,7 @@
 title: "How the Chase 5/24 Rule Works in 2026"
 date: "2026-04-02"
 slug: "how-the-chase-524-rule-works-in-2026"
-description: ""
+description: "How the Chase 5/24 rule works in 2026 — what counts toward your 24-month total, which cards are exempt, how to check your status, and how to plan applications around it."
 status: published
 author: "Your Friendly Developer"
 reviewer: "Your Friendly Developer"
@@ -10,65 +10,91 @@ reviewer: "Your Friendly Developer"
 
 # How the Chase 5/24 Rule Works in 2026
 
-Are you wondering whether the Chase 5/24 rule is still in effect in 2026? The short answer is yes, the Chase 5/24 rule remains an important part of Chase's credit card approval process, impacting millions of potential cardholders.
+The Chase 5/24 rule is the single most important credit card application restriction to understand if you want to earn welcome bonuses on Chase cards in 2026. It is not a public, written policy — Chase does not advertise it — but a decade of approval and denial data points from churning communities have established exactly how it operates. This guide walks through what the rule is, what counts toward it, how to check your status without applying, and how to plan around it without wasting an inquiry.
 
-Enacted in 2016 by JPMorgan Chase (Chase), the 5/24 rule restricts applicants from opening multiple new credit cards within the same time frame. In this post, we'll delve into the specifics of the Chase 5/24 rule, its implications, and how it affects your credit card opportunities.
+## What Is the Chase 5/24 Rule in Plain English?
 
-## What is the Chase 5/24 Rule?
+> **Quick answer:** The Chase 5/24 rule auto-denies most Chase credit-card applications when you have opened five or more new personal credit accounts at any bank in the past 24 months. The count is based on the date Chase pulls your credit, includes cards from every issuer (not just Chase), and resets on a rolling basis as old accounts age past 24 months.
 
-The Chase 5/24 rule restricts applicants from opening new Chase credit cards if they've already opened five new credit cards, including non-Chase cards, within the past 24 months (2 years). This policy was enacted to limit excessive credit inquiries and potential credit risks.
+In practice, the rule is enforced by Chase's underwriting system before a human ever reviews your file. If you are at or above 5/24, the application is almost always declined automatically, and reconsideration calls rarely overturn the decision. The 24-month window is calculated from the account-opening dates that appear on your credit report, not from when you applied.
 
-### Why Does the Chase 5/24 Rule Matter?
+## Which Cards Count Toward Chase 5/24?
 
-While other credit card issuers don't have a similar policy, understanding the 5/24 rule is crucial if you're planning to apply for a Chase credit card, especially those with lucrative rewards programs or benefits. This rule can dictate whether you're eligible to open a high-end credit card or qualify for sign-up bonuses.
+> **Quick answer:** Personal credit cards from every bank count, including store and retail cards. Authorized-user accounts also count by default, though Chase will sometimes exclude them on a reconsideration call. Most business credit cards do not count, with Capital One business cards being the most important exception.
 
-## How Does the Chase 5/24 Rule Define "New Credit" Cards?
+Here is the practical breakdown:
 
-In determining eligibility under the Chase 5/24 rule, only consumer credit products (non-business) count as "new credit" cards:
+**Counts toward 5/24:**
 
-* Credit cards from any issuer are considered, not just Chase
-* Store credit cards (e.g., Target, Walmart) are also included, as well as credit cards from other major issuers
-* Charge cards, which must be paid in full monthly, are not considered in this 5-year tally
-* Other credit products, such as a personal loan, mortgage, or auto loan, don't impact this rule
+- Personal credit cards from any issuer (Chase, Amex, Citi, BoA, Capital One, Wells Fargo, etc.)
+- Store/retail cards opened at point of sale (Target, Walmart, Best Buy)
+- Authorized-user cards added to someone else's account
+- Capital One business cards (the lone business-card exception, because Capital One reports them to your personal credit report)
 
-### What are the Consequences of Violating the Chase 5/24 Rule?
+**Does NOT count toward 5/24:**
 
-Applicants who have reached the 5/24 threshold in the past 24 months may face disapproval for new Chase credit cards or sign-up bonus eligibility. Although other factors still determine approval, meeting the 5/24 threshold increases the risk of disqualification.
+- Chase Ink business cards (Chase reports these only to your business profile)
+- Most other business cards (Amex Business, Citi Business, US Bank Business, BoA Business)
+- Amex charge cards (Platinum, Gold, Green) — these are not "credit accounts" in the traditional sense
+- Credit-limit increases on existing cards
+- Product changes (upgrading or downgrading a card you already hold)
 
-## Workaround Strategies for the 5/24 Rule
+## How Do I Check My 5/24 Count Without Applying?
 
-If the Chase 5/24 rule is holding you back, consider the following strategies to potentially bypass it:
+> **Quick answer:** Pull your free credit report from annualcreditreport.com and count every personal credit account opened in the last 24 months. Anything with an "open date" inside that rolling window adds to your total. You can also use the free [524 Tracker](/) to enter your applications once and have the math handled automatically, including future drop-off dates.
 
-* **Closed accounts are excluded**: Cards from which you've closed and had open in the past can be removed from the 5/24 tally.
-* **Older cards can help**: Cards opened over 24 months ago can be removed from the count.
-* **Look for issuer-specific offers**: Some credit cards offer exclusions to the Chase 5/24 rule for their own credit cards.
+A spreadsheet works fine — list every personal card by open date, exclude business cards (except Capital One business), and add authorized-user accounts unless you plan to ask Chase to exclude them. The number you get is your current 5/24 count.
 
-### Other Considerations
+## What Happens If I Apply While Over 5/24?
 
-Keep in mind that Chase still uses the same 5/24 rule for all new Chase credit card applications, including Chase co-branded cards.
+> **Quick answer:** Chase will almost always issue an automated denial citing "too many recently opened accounts." A hard inquiry posts to your credit report and stays for two years even though you were declined. Reconsideration call success rates for 5/24 denials are very low — usually only when authorized-user accounts pushed you over the line.
 
-## Conclusion and Next Steps
+The cost of a 5/24 denial is real: you lose an inquiry, you don't get the card, and you don't get the bonus. Always confirm you are at 4/24 or lower before applying for a Chase card you want.
 
-Understand the Chase 5/24 rule and its implications before applying for new credit cards. Since it affects eligibility and potential rewards, you can make better decisions by keeping this essential rule in mind.
+## How Long Until a Card Drops Off My 5/24?
 
-### Start Planning Your Credit Strategy
+> **Quick answer:** A card stops counting toward 5/24 exactly 24 months — 730 days — after its account-opening date. The drop-off is automatic on the rolling-window calendar; nothing you do speeds it up. Closing a card does not remove it from your 5/24 count any earlier.
 
-Ready to explore credit card possibilities beyond the Chase 5/24 rule? Visit our website, 524tracker.com, to learn about various travel rewards credit cards and develop personalized financial success strategies.
+This is the single biggest planning lever. If you are at 5/24 today, look at your oldest open date and count forward 24 months — that's the day you become 4/24 again and Chase becomes available. The 524 Tracker will surface this date for you so you don't have to do the calendar math.
 
-## FAQ
+## How Do I Plan Applications Around 5/24?
 
-### Q: What happens if I apply for multiple Chase credit cards on the same day?
+> **Quick answer:** Get your most-wanted Chase personal cards first, while you still have 5/24 slots available. Mix in business cards (Chase Ink, Amex Business, Citi Business) freely since they don't count. Save Amex personal cards, BoA, Citi, and Capital One for after you've maxed out Chase, since their bonuses are still available later but a missed Chase opportunity may not return for years.
 
-If you apply for multiple Chase credit cards simultaneously, all applications will be processed simultaneously. However, meeting the 5/24 threshold in the same day can still result in either approval or disapproval.
+A common sequence used by experienced applicants:
 
-### Q: Can the Chase 5/24 rule be bypassed?
+1. **Chase personal cards first** — Sapphire Preferred / Reserve, Freedom Flex, Freedom Unlimited, United, Hyatt
+2. **Business cards anytime** — these give you bonuses without consuming a 5/24 slot
+3. **Amex personal cards** — once your Chase wishlist is done; Amex's lifetime rule means each bonus is one-shot, so prioritize highest welcome offers
+4. **Citi, BoA, Capital One** — bank-specific velocity rules but no cross-issuer dependency
+5. **US Bank, Barclays, Discover** — leave for last; their rules are simpler and approvals are slower
 
-Workarounds such as closed accounts, non-Chase credit cards, and older cards can help mitigate the restriction, but there is no official method to completely bypass the Chase 5/24 rule.
+## Are There Any Workarounds to the 5/24 Rule?
 
-### Q: Does the Chase 5/24 rule apply to Chase business credit cards?
+> **Quick answer:** There is no clean bypass. The closest things to workarounds are: applying for Chase business cards (which don't count), removing authorized-user accounts via reconsideration, waiting for the oldest accounts to age off, or applying for the rare Chase card that sometimes ignores 5/24 (e.g., certain Chase Aeroplan and IHG product offers in past years).
 
-No, the Chase 5/24 rule only applies to consumer credit cards, not business or charge cards.
+Anyone selling a "5/24 hack" is selling smoke. The rule is enforced systematically and consistently — your only real tools are timing, business cards, and patience.
 
-### Q: Are all non-Chase credit cards included in the 5/24 rule?
+## Frequently Asked Questions
 
-Yes, all consumer-issued credit cards, including those from non-Chase issuers, contribute to the 5/24 tally.
+### Does the Chase 5/24 rule still apply in 2026?
+
+Yes. The rule has been in effect since 2016 and shows no sign of changing in 2026. Chase still applies it across virtually every personal credit card in their consumer lineup.
+
+### Do Chase business cards count toward 5/24?
+
+No. Chase Ink Cash, Ink Unlimited, Ink Preferred, and Ink Premier do not count toward 5/24, even though Chase issues them. They are a primary tool for staying under the limit while still earning bonuses.
+
+### Does being added as an authorized user count toward 5/24?
+
+By default, yes — authorized-user accounts appear on your credit report and the 5/24 system includes them. Some applicants have successfully had them excluded by calling Chase reconsideration and explaining they are not the primary cardholder, but it is not guaranteed.
+
+### What if I get an in-branch or pre-approved Chase offer?
+
+Pre-approved offers and in-branch business card pitches sometimes bypass the standard 5/24 underwriting check. They are not a reliable strategy, but if you receive a targeted offer, it may be worth trying even if you are over 5/24.
+
+### Is the Chase 5/24 rule the same for everyone?
+
+Effectively yes. Unlike Bank of America's Preferred Rewards softening or Amex's relationship-based decisions, Chase 5/24 is applied uniformly. Your existing Chase relationship, deposits, or spending history do not change the rule.
+
+This guide is for informational purposes only and does not constitute financial advice. Bank policies change without notice — always verify current terms with the issuer before applying.

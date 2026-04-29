@@ -1,104 +1,88 @@
 ---
-title: "What Is the Amex Lifetime Bonus Rule"
+title: "What Is the Amex Lifetime Bonus Rule?"
 date: "2026-04-15"
 slug: "what-is-the-amex-lifetime-bonus-rule"
-description: ""
+description: "What the Amex lifetime bonus rule is, how 'once per lifetime' is enforced, which cards it applies to, and how to plan Amex applications around it in 2026."
 status: published
 author: "Your Friendly Developer"
 reviewer: "Your Friendly Developer"
 ---
 
-## What Is the Amex Lifetime Bonus Rule
-### Understanding the Amex Credit Card Terms and Conditions
+# What Is the Amex Lifetime Bonus Rule?
 
-The American Express credit card offers an attractive option for those looking to maximize their rewards points. However, one aspect of the card has many cardholders scratching their heads: the lifetime bonus rule.
+American Express does not advertise its lifetime bonus rule, but it is one of the most consequential application rules in the entire credit card world. Get it wrong once and you can lose access to a $1,000+ welcome offer permanently. This guide explains exactly what the rule is, how Amex enforces it in 2026, which cards it covers, and how to plan applications so you never burn a lifetime bonus by accident.
 
-The Lifetime Bonus Rule means cardholders can only qualify for and earn one new bonus for a specific card or a card family within their lifetime. This applies to cards like the American Express Platinum or Gold cards. Once you've earned a new-bonus card, you'll no longer be eligible for future new-bonus offers on that particular card or family.
+## What Does the Amex Lifetime Bonus Rule Actually Say?
 
-### How the Lifetime Bonus Rule Works
+> **Quick answer:** The Amex lifetime bonus rule limits each Amex card's welcome bonus to one per person, ever. If you have already earned the welcome offer on a specific card — even on a closed account from years ago — Amex will deny you the bonus on that card if you reapply. The restriction is per product, so a Platinum bonus and a Gold bonus are tracked separately, and family-cobranded versions usually share a lineage.
 
-#### New-Bonus Cards vs. Traditional Cards
+The exact language Amex uses on application pages is the "lifetime language": *"Welcome offer not available to applicants who have or have had this Card."* When you click "Apply," Amex checks your account history. If you have ever held that specific card, you are flagged as bonus-ineligible and the application proceeds without the welcome offer attached.
 
-American Express cards can be categorized into two groups: New-bonus cards and traditional cards (previously called " legacy cards"). New-bonus cards are typically introduced as part of a card family and come with the promotion of earning a certain number of Membership Rewards points, for example 100,000 MR points, if you spend a set amount within a set timeframe.
+## How Does Amex Decide Which Cards Are "the Same Card"?
 
-#### Card Families
+> **Quick answer:** Amex tracks bonuses by card product family, not just by exact name. The Platinum Card, Gold Card, and Green Card each count as a single bonus event in their family — even across product changes, refreshes, and minor variants. Co-branded cards (Delta, Hilton, Marriott) usually share lineage with their predecessors but live under their own family clock.
 
-American Express has various card families, such as the Amex Platinum Membership, Amex Gold Charge Card, and Amex Green Charge Card. Each card family has unique benefits and the potential for earning new-bonus points.
+For example, if you held the old "Platinum Card" in 2018 and Amex relaunches a refreshed Platinum in 2026 with new benefits, you are still ineligible for the new welcome offer. The card is treated as the same product family. The same applies if you product-changed from Gold to Platinum and back — Amex sees both events.
 
-#### Earning and Redeeming Bonuses
+Co-branded cards (Delta SkyMiles Gold, Hilton Honors Aspire, Marriott Bonvoy Brilliant) follow the same rule but are tracked under their own family. Earning the Delta Gold bonus does not affect your Platinum or Hilton eligibility, but it does affect Delta Gold itself for life.
 
-To qualify for a bonus and reach 100,000 points or higher, cardholders typically need to complete certain tasks such as charging a specified amount within a predetermined period, usually 3-6 months.
+## Is There a 7-Year Reset?
 
-However, cardholders should note that bonuses earned from a new-bonus card are subject to a one-time redemption limit as stated by American Express's terms and conditions.
+> **Quick answer:** Community data points have suggested for years that Amex's lifetime restriction sometimes resets after roughly 7 years, but Amex has never officially confirmed this. Some applicants who closed cards 7+ years ago have successfully re-earned bonuses; others have been denied. Treat any 7-year reset as a possibility, not a plan.
 
-### Applying the Lifetime Bonus Rule to Amex Cards
+In practice, the safe assumption is that "lifetime" means lifetime. If you treat it that way, you will never be surprised. The 7-year resets that do happen are best treated as rare bonuses, not part of your strategy.
 
-#### Card Family Exclusions
+## Which Amex Cards Does the Lifetime Rule Apply To?
 
-It's essential to recognize that some Amex cards are not subject to the life-time bonus policy. Cards such as the American Express Delta SkyMiles cards adhere to separate qualification policies and have a distinct new bonus, while cards from other loyalty programs are also excluded from the lifetime bonus policy.
+> **Quick answer:** Effectively every U.S.-issued American Express card with a welcome offer is covered, including the Platinum, Gold, Green, Cash Magnet, Blue Cash family, Hilton family, Marriott Bonvoy Brilliant, and the Delta SkyMiles family. The wording on the application page is the authoritative source — if you see "Welcome offer not available to applicants who have or have had this Card," the lifetime rule applies.
 
-#### When to Expect the Lifetime Bonus
+Cards without a welcome offer at all (rare, but they exist) obviously have no lifetime restriction. And business cards from Amex follow the same rule as their personal counterparts — earning the Business Platinum bonus does not affect your personal Platinum eligibility, but it locks you out of the Business Platinum bonus for life.
 
-To determine which card's new bonus you'll qualify for in your lifetime, consider if a card falls under the traditional legacy cards or new-bonus cards category. The general approach is as follows:
-- Sign up for a card family, and you will qualify for that family's new bonus.
-- If, later in your lifetime, a new-bonus card in the same card family is introduced, you will not qualify for the new bonus as it counts as one new-bonus card, even if you've already qualified for the first one.
+## How Do I Check If I'm Still Eligible for an Amex Bonus?
 
-### What Cards Are Affected by the Lifetime Bonus Rule?
+> **Quick answer:** Log into your Amex account, open the application page for the card you want, and look for the lifetime language and any pop-up disclosure. If Amex has flagged you as ineligible, the page will explicitly say so before you submit. You can also call the Amex application status line and ask them to verify bonus eligibility for a specific card before you apply.
 
-Here are some cards affected by the American Express lifetime bonus policy, however this policy may be subject to change:
+The Amex pop-up (sometimes called "Amex Pop-up Jail") is a separate but related issue — it can suppress bonuses for reasons unrelated to the lifetime rule, such as having too many recent Amex cards or a low Amex relationship score. The [Amex Popup Jail Estimator](/amex-popup-estimator) walks through how popup risk is calculated.
 
-*   Amex Platinum Card
-*   Amex Gold Card
-*   Amex Green Card
-*   Amex Delta SkyMiles cards
-*   Amex Membership Rewards cards
+## How Should I Plan Amex Applications Around the Lifetime Rule?
 
-Check with Amex directly to verify your card's eligible terms and conditions.
+> **Quick answer:** Prioritize the Amex cards with the highest welcome offers first, because each is a one-shot. Track which bonuses you have already earned in a single source of truth — a spreadsheet or the [524 Tracker's](/) Amex bonus tracker — so you never reapply for a card you already received the bonus on. When in doubt, call Amex and ask before submitting.
 
-### Understanding Amex's Lifetime Bonus Policy
+A practical sequencing strategy:
 
-#### Important Points
+1. **Top-tier flagship bonuses first** — Platinum, Gold, Business Platinum when their welcome offers spike (typically 100K-175K points)
+2. **High-value co-brands** — Hilton Aspire, Marriott Brilliant, Delta Reserve when offers run elevated
+3. **Mid-tier bonuses** — Green, Delta Gold, Hilton Honors, Blue Cash Preferred
+4. **Low-tier or rare-bonus cards** — Cash Magnet, Blue Cash Everyday, Blue Business Plus
 
-While this bonus system makes it easy to start earning significant rewards for first-time cardholders, some cardholders are left wondering whether their bonus still qualifies in the future.
+Once a card has been earned, mark it done in your tracker. The bonus is gone for that product family forever (or at least 7 years if you're optimistic).
 
-Consider the following points:
-*   The limited-time offer nature of these points can create limited flexibility when attempting to maximize total earning potential.
-*   If your rewards become less accessible over time, cardholders may lose out on earnings opportunities that result in lower redemption value.
-*   If American Express introduces cards with the same new-bonus offer but with an extended timeline, and you've already qualified for the original lifetime bonus, American Express still counts that as one new-bonus card and will not allow a subsequent bonus to that card family.
+## What Happens If I Apply for a Card I'm Not Eligible For?
 
-### Tips to Maximize Your Rewards Earning
+> **Quick answer:** Amex will typically still approve the card itself but explicitly attach no welcome bonus. You get a hard inquiry, a new account on your credit report, and a card with no signup reward. The application page usually warns you before submission, but the warning is easy to miss.
 
-While understanding the lifetime bonus rule is crucial, there are several ways cardholders can continue maximizing their rewards:
-#### Multiple Card Families
+This is why so many applicants accidentally burn a slot — they apply expecting the bonus, get approved, and only later realize the bonus never posted. If you see any "may not be eligible" language on the application page, stop and verify with Amex before clicking submit.
 
-By holding a suite of cards from different card families, cardholders can earn a wide range of rewards points. When possible, cardholders should take advantage of rotating categories to maximize spending returns and balance overall value earned on multiple cards.
+## Frequently Asked Questions
 
-#### Earning Bonus Points
+### Does closing an Amex card reset the lifetime bonus?
 
-New bonus cards from various card families provide a more straightforward method of earning significant rewards and rewards potential.
+No. Closing the card has no effect on bonus eligibility under the lifetime rule. Amex's records of which welcome offers you have earned persist after the account is closed.
 
-#### Maximizing Earning Returns
+### Does product-changing from one Amex card to another count?
 
-To maximize return for each dollar spent, try focusing your spending on key areas:
-- Points redemption - 2X points on everyday expenses
-- Travel purchases 
-- Cashback or rewards points
+A product change is not a new application and does not earn a welcome bonus. But product-changing into a card and later out of it can sometimes affect your eligibility for that product's bonus in the future. Treat product changes as locking in your status on both cards.
 
-By mastering rewards earning and applying strategies to generate points and maximize the value of those points, cardholders may successfully mitigate the challenges of Amex lifetime bonus policies.
+### What if I never received the bonus the first time?
 
-### FAQ
-#### Q: What does the lifetime bonus rule mean?
+If your original application earned no welcome bonus (because of pop-up, a denial reversal, or other reason), Amex sometimes considers you still bonus-eligible. This is decided case-by-case and is best confirmed with an Amex representative before reapplying.
 
-A: The American Express Lifetime Bonus Rule is an Amex policy that prohibits cardholders from earning new-bonus offers on a specific card or card family in their lifetime.
+### Are Amex business and personal cards tracked separately?
 
-#### Q: Are new-bonus cards and legacy cards treated differently in this context?
+Yes. The personal Platinum and Business Platinum are separate products with separate lifetime clocks. Earning one does not affect your eligibility for the other.
 
-A: Yes, new-bonus cards can trigger lifetime bonuses while traditional legacy cards apply previously established rewards points.
+### Does the lifetime rule apply outside the US?
 
-#### Q: If I already met the bonus offer, but it isn't a lifetime bonus, will this still be counted towards my lifetime eligibility?
+Amex enforces lifetime-style rules in many other countries but the specific terms vary. This guide applies only to U.S.-issued American Express cards.
 
-A: No, cards that weren't previously subject to the one-new-bonus policy might become susceptible to that policy on later versions.
-
-#### Q: In case my card falls under the legacy card category, am I still subject to the lifetime bonus policy?
-
-A: Generally speaking, traditional cards are not limited by the lifetime bonus rule.
+This article is for informational purposes only and does not constitute financial advice. Amex policies and welcome offers change without notice — always verify the current terms on the application page before applying.
