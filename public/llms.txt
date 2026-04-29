@@ -41,6 +41,17 @@
 - [Optimal Application Timing 2026](https://524tracker.com/blog/optimal-credit-card-application-timing-2026): Exact spacing rules and a 12-month application calendar strategy
 - [BofA 7/12 Rule and Preferred Rewards](https://524tracker.com/blog/bank-of-america-7-12-rule-preferred-rewards): Advanced BofA strategies — the 7/12 cross-issuer rule and Alaska companion fare
 
+## 2026 Long-Form Cluster (Rewritten with AEO Answer Capsules)
+These 8 posts have been refactored for AI-overview retrieval — every H2 is a question and is followed by a 40-60 word answer capsule citing the relevant on-site tool.
+- [How the Chase 5/24 Rule Works in 2026](https://524tracker.com/blog/how-the-chase-524-rule-works-in-2026): Plain-English breakdown of the 24-month rolling window, what counts and what doesn't, and how to plan applications around 5/24
+- [What Is the Amex Lifetime Bonus Rule](https://524tracker.com/blog/what-is-the-amex-lifetime-bonus-rule): The once-per-product lifetime restriction explained, including per-card-family tracking, the unconfirmed 7-year reset, and which products are covered
+- [How to Track Your Credit Card Application History](https://524tracker.com/blog/how-to-track-your-credit-card-application-history): Exact data points to record per application and how to compute Chase 5/24, Amex 2/90, Citi 8/65, and BoA 2/3/4 from a single dataset
+- [Citi 8/65 Rule Explained for Credit Card Churners](https://524tracker.com/blog/citi-8-65-rule-explained-for-credit-card-churners): The actual 8-day approval clock + 65-day 2-card rolling cap + 24-month bonus eligibility clock — corrects widespread misinformation
+- [Bank of America 2/3/4 Rule Explained](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): The three stacking velocity limits (2 in 30 days, 3 in 12 months, 4 in 24 months) and how Preferred Rewards softens enforcement
+- [What Is Credit Card Churning and Is It Worth It?](https://524tracker.com/blog/what-is-credit-card-churning-and-is-it-worth-it): Modern churning playbook — who it works for, realistic earnings, real risks (shutdowns, clawbacks), and the application-rule constraints
+- [How Hard Inquiries Affect Your Credit Score](https://524tracker.com/blog/how-hard-inquiries-affect-your-credit-score): Real FICO impact, 24-month visibility, issuer sensitivity ranking, bureau distribution strategy, and strategic credit freeze tactics
+- [When to Cancel a Credit Card to Avoid the Annual Fee](https://524tracker.com/blog/when-to-cancel-a-credit-card-to-avoid-annual-fee): The 11-month rule, 30-day refund window, downgrade-don't-cancel default, retention call protocol, and concrete downgrade paths per issuer
+
 ## About
 - [About](https://524tracker.com/about): About this tool and how it works
 - [Privacy Policy](https://524tracker.com/privacy): All data stored locally in your browser — nothing sent to servers
