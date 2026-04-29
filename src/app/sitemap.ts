@@ -38,10 +38,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const markdownPosts = getAllMarkdownPosts();
   const markdownSlugs = new Set(markdownPosts.map((p) => p.slug));
 
+  // Posts that have been rewritten more recently than their original publish
+  // date — bump lastModified so search engines re-crawl them. Keyed by slug.
+  const rewrittenSlugLastModified: Record<string, Date> = {
+    'how-the-chase-524-rule-works-in-2026': new Date(),
+    'what-is-the-amex-lifetime-bonus-rule': new Date(),
+    'how-to-track-your-credit-card-application-history': new Date(),
+    'citi-8-65-rule-explained-for-credit-card-churners': new Date(),
+    'bank-of-america-2-3-4-rule-explained': new Date(),
+    'what-is-credit-card-churning-and-is-it-worth-it': new Date(),
+  };
+
   const blogPages: MetadataRoute.Sitemap = [
     ...markdownPosts.map((post) => ({
       url: `https://524tracker.com/blog/${post.slug}`,
-      lastModified: post.date ? new Date(post.date) : lastModified,
+      lastModified:
+        rewrittenSlugLastModified[post.slug] ??
+        (post.date ? new Date(post.date) : lastModified),
     })),
     ...jsxPosts
       .filter((post) => !markdownSlugs.has(post.slug))
