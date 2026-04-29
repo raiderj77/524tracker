@@ -49,6 +49,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'what-is-credit-card-churning-and-is-it-worth-it': new Date(),
     'how-hard-inquiries-affect-your-credit-score': new Date(),
     'when-to-cancel-a-credit-card-to-avoid-annual-fee': new Date(),
+    'best-credit-cards-for-travel-rewards-beginners': new Date(),
+    'best-no-annual-fee-travel-credit-cards-in-2026': new Date(),
+    'best-credit-cards-for-cash-back-in-2026': new Date(),
+    'best-credit-cards-for-hotel-rewards-in-2026': new Date(),
   };
 
   const blogPages: MetadataRoute.Sitemap = [

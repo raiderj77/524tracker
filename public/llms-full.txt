@@ -363,6 +363,22 @@ Focus: Real FICO impact (3-8 points, recovers 6-12 months), 24-month report visi
 URL: https://524tracker.com/blog/when-to-cancel-a-credit-card-to-avoid-annual-fee
 Focus: Decision rules for the 11-12 month window after account opening, 30-day fee refund window most issuers honor, downgrade-don't-cancel as the default playbook, concrete downgrade paths per issuer (Sapphire Reserve→Preferred→Freedom Flex, Platinum→Gold→Green, etc.), retention-call protocol, and points-forfeit gotchas (Chase UR, Amex MR vs co-branded).
 
+### Best Credit Cards for Travel Rewards Beginners (2026)
+URL: https://524tracker.com/blog/best-credit-cards-for-travel-rewards-beginners
+Focus: Conversion-focused beginner travel-card guide. Lead recommendation is the Chase Sapphire Preferred ($95, 60K-75K UR welcome). Compares against Capital One Venture X for premium, Sapphire Reserve for high-spend travelers, and Capital One VentureOne / Chase Freedom Unlimited as no-fee starters. Includes year-one expected value, application sequencing, and what to avoid (single-airline co-brands as a first card).
+
+### Best No Annual Fee Travel Credit Cards in 2026
+URL: https://524tracker.com/blog/best-no-annual-fee-travel-credit-cards-in-2026
+Focus: $0-fee travel card rankings. Lead pick is Capital One VentureOne (1.25x miles, 15+ transfer partners). Pairing strategy with premium Chase cards (Freedom Flex/Unlimited → Sapphire), best dining no-fee (SavorOne 3%), credit-builder pick (Discover it), and warning against no-fee airline co-brands.
+
+### Best Credit Cards for Cash Back in 2026
+URL: https://524tracker.com/blog/best-credit-cards-for-cash-back-in-2026
+Focus: Cash back card rankings by category. Lead overall is Citi Double Cash (2% everything, ThankYou conversion). Best grocery is Amex Blue Cash Preferred (6% up to $6K). Best dining no-fee is Capital One SavorOne. Best gas is Costco Anywhere Visa. Includes three-card combo recipes, annual-fee breakeven math, and travel-vs-cash-back framing.
+
+### Best Credit Cards for Hotel Rewards in 2026
+URL: https://524tracker.com/blog/best-credit-cards-for-hotel-rewards-in-2026
+Focus: Hotel co-brand card rankings. Lead overall is Amex Hilton Honors Aspire (Diamond status, free night, $400 resort credits, $200 airline credit). Best point value is Chase World of Hyatt (2-2.5 cents/point). Marriott pick is Bonvoy Brilliant. IHG pick is One Rewards Premier. Free-night-certificate strategy and pairing with airline programs explained.
+
 ---
 
 ## Data Privacy
