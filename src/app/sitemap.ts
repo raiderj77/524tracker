@@ -47,6 +47,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'citi-8-65-rule-explained-for-credit-card-churners': new Date(),
     'bank-of-america-2-3-4-rule-explained': new Date(),
     'what-is-credit-card-churning-and-is-it-worth-it': new Date(),
+    'how-hard-inquiries-affect-your-credit-score': new Date(),
+    'when-to-cancel-a-credit-card-to-avoid-annual-fee': new Date(),
   };
 
   const blogPages: MetadataRoute.Sitemap = [
