@@ -51,8 +51,14 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* Annual Fee Breakdown */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="annual-fee-breakdown">
-          The $250 Annual Fee Breakdown
+          How Does the $250 Amex Gold Annual Fee Break Down?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Amex Gold&apos;s $250 fee is offset by $120/year in
+          dining credits ($10/mo at Grubhub, Cheesecake Factory, Goldbelly, etc.) and $120/year in
+          Uber Cash. Effective net annual fee: <strong>$10</strong> if both credits are used.
+          That makes the Gold one of the lowest effective-fee mid-tier travel cards available. <a href="/annual-fee-calculator" className="text-brand-gold hover:text-amber-600 font-semibold">Run your numbers in the Annual Fee Calculator</a>.
+        </p>
         <p className="text-sm mb-3">
           The Amex Gold carries a $250 annual fee with no option to waive it. At face value, that sounds steep for a
           non-premium card. But unlike many annual-fee cards, the Gold comes with automatic statement credits that
@@ -81,8 +87,14 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* Dining Credit */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="dining-credit">
-          Dining Credit: $120 Per Year
+          How Does the Amex Gold $120 Dining Credit Work?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The dining credit is $10 per month as a statement credit
+          at select partners: Grubhub, Cheesecake Factory, Goldbelly, Wine.com, Milk Bar, and
+          select Shake Shack locations. The credit resets monthly and does not roll over. For most
+          urban cardholders, a single Grubhub order per month covers it effortlessly.
+        </p>
         <p className="text-sm mb-3">
           The Amex Gold&apos;s dining credit provides $10 per month as a statement credit when you spend at select
           dining partners. As of 2026, the list of participating merchants includes:
@@ -110,8 +122,15 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* Uber Cash */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="uber-cash">
-          Uber Cash: $120 Per Year
+          How Does the Amex Gold $120 Uber Cash Credit Work?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Gold deposits $10 in Uber Cash to your linked Uber
+          account each month, usable for Uber rides, Uber Eats, or Uber grocery delivery. Unused
+          balance does not roll over. In major cities the credit is essentially automatic; in
+          rural markets without reliable Uber service, the credit may go unused &mdash; shifting
+          the effective annual fee from $10 to $130.
+        </p>
         <p className="text-sm mb-3">
           The Gold provides $10 per month in Uber Cash, loaded automatically to your Uber account when linked. This
           can be used for Uber rides, Uber Eats orders, or even Uber grocery delivery in supported markets. Like the
@@ -132,8 +151,14 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* 4x Earning Rate */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="4x-earning-rate-math">
-          4x Earning Rate: Where the Real Value Lives
+          How Much Does the Amex Gold 4x Earning Rate Actually Earn?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Gold earns 4x Membership Rewards at U.S. restaurants
+          and U.S. supermarkets (up to $25K/yr on groceries), 3x on flights, and 1x elsewhere. At
+          1.8 cents per point in airline transfers, a moderate $1,600/mo spender earns ~56,400 MR
+          per year worth ~$1,015 &mdash; netting ~$1,005 after the $10 effective fee. <a href="https://www.americanexpress.com/us/credit-cards/card/gold-card/" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">Apply for the Amex Gold</a>.
+        </p>
         <p className="text-sm mb-3">
           Credits aside, the Amex Gold&apos;s 4x Membership Rewards earning rate on U.S. restaurants and U.S.
           supermarkets is the core of its value proposition. Here is what that looks like at different spending levels,
@@ -202,8 +227,15 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* When It's Worth It */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-gold-is-worth-it">
-          When the Amex Gold Is Worth It
+          When Is the Amex Gold Worth It?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Gold is worth it when you spend $200+/mo on dining
+          AND $300+/mo on groceries, can use both monthly credits passively (Grubhub or Uber
+          Eats), and transfer Membership Rewards to airline partners like ANA, Air France/KLM, or
+          Singapore for premium-cabin redemptions. Year-one net value typically exceeds $800
+          for an active dining/grocery household.
+        </p>
         <p className="text-sm mb-3">
           The Gold card delivers exceptional value when:
         </p>
@@ -218,8 +250,15 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* When It's Not Worth It */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-gold-is-not-worth-it">
-          When the Amex Gold Is Not Worth It
+          When Is the Amex Gold NOT Worth It?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Skip the Gold if your dining spend is under $100/month,
+          you don&apos;t use Uber, you prefer cash back to transferable points, or you shop
+          primarily at warehouse clubs (Costco, Sam&apos;s, BJ&apos;s &mdash; coded as wholesale,
+          not supermarkets). The Citi Strata Premier ($95) offers 3x on dining and groceries
+          without the credit-tracking overhead.
+        </p>
         <p className="text-sm mb-3">
           The Gold card loses its edge when:
         </p>
@@ -234,8 +273,15 @@ export const postAmexGoldWorthIt: BlogPost = {
       {/* Comparison */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="gold-vs-csp-vs-citi-premier">
-          Amex Gold vs Chase Sapphire Preferred vs Citi Strata Premier
+          Should I Get the Amex Gold, Chase Sapphire Preferred, or Citi Strata Premier?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Pick the Amex Gold for dining and grocery spend (4x beats
+          everyone). Pick the Chase Sapphire Preferred for general travel and Chase Travel
+          redemptions (1.25 cents/point floor + 5x on Chase Travel). Pick the Citi Strata Premier
+          for grocery + dining at $95 fee with no credit-tracking overhead. Active food spenders
+          almost always come out ahead with the Gold.
+        </p>
         <p className="text-sm mb-3">
           These three cards compete for the same spot in your wallet: the mid-tier flexible points earner. Here is
           how they compare head-to-head:

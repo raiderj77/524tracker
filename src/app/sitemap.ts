@@ -53,6 +53,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'best-no-annual-fee-travel-credit-cards-in-2026': new Date(),
     'best-credit-cards-for-cash-back-in-2026': new Date(),
     'best-credit-cards-for-hotel-rewards-in-2026': new Date(),
+    // Phase 6 — Worth-It JSX posts (rewritten with question H2s + ROI capsules)
+    'is-chase-sapphire-reserve-worth-it-2026': new Date(),
+    'is-amex-platinum-worth-it-2026': new Date(),
+    'amex-gold-worth-it-2026': new Date(),
   };
 
   const blogPages: MetadataRoute.Sitemap = [
@@ -66,7 +70,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((post) => !markdownSlugs.has(post.slug))
       .map((post) => ({
         url: `https://524tracker.com/blog/${post.slug}`,
-        lastModified: new Date(post.dateModified),
+        lastModified:
+          rewrittenSlugLastModified[post.slug] ??
+          new Date(post.dateModified),
       })),
   ];
 

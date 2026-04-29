@@ -52,8 +52,15 @@ export const postCsrWorthIt: BlogPost = {
       {/* The $550 Annual Fee Breakdown */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="annual-fee-breakdown">
-          The $550 Annual Fee Breakdown
+          How Does the $550 Chase Sapphire Reserve Annual Fee Break Down?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Reserve&apos;s $550 fee is anchored by a $300 annual
+          travel credit (auto-applies to almost any travel charge), bringing the effective fee
+          to $250. Add $25/yr amortized Global Entry, optional DashPass and Lyft Pink, and
+          Priority Pass lounge access, and the realistic recapture for an active traveler is
+          $400-$500 against the $550 fee.
+        </p>
         <p className="text-sm mb-3">
           Before evaluating whether the CSR is worth it, you need to understand what is included
           in the $550 annual fee. Not all of these benefits have equal real-world value &mdash;
@@ -126,8 +133,15 @@ export const postCsrWorthIt: BlogPost = {
       {/* Credits You Can Actually Use */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="credits-you-can-use">
-          Credits You Can Actually Use
+          Which Sapphire Reserve Credits Can I Actually Use?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The $300 travel credit is the only credit that
+          essentially uses itself &mdash; it auto-applies to any travel charge. Global Entry
+          (every 4 years) and DashPass work passively. Priority Pass and Lyft Pink only matter
+          if you actually use those services. Most users realistically recapture $360-$420 of
+          the $550 fee through the easy credits alone.
+        </p>
         <p className="text-sm mb-3">
           The biggest mistake in evaluating premium cards is counting every credit at face value.
           A $96 DashPass benefit is worth $0 if you never use DoorDash. Here is the honest
@@ -145,8 +159,15 @@ export const postCsrWorthIt: BlogPost = {
       {/* Rewards Math */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="rewards-math">
-          The Rewards Math: Light Traveler vs Heavy Traveler
+          Is the Sapphire Reserve Worth It for Light vs Heavy Travelers?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> A light traveler ($500/mo on travel and dining) earns
+          roughly $630 in points value yearly &mdash; net +$380 after the $550 fee with credits.
+          A heavy traveler ($2,000/mo) earns ~$1,350 in points, netting +$1,125/year. The Reserve
+          beats the no-fee 2% cash-back alternative cleanly only above ~$1,500/mo in bonus-category
+          spend. <a href="/annual-fee-calculator" className="text-brand-gold hover:text-amber-600 font-semibold">Run your numbers in the Annual Fee Calculator</a>.
+        </p>
         <p className="text-sm mb-3">
           The CSR earns 3x Ultimate Rewards points on travel and dining, 1x on everything else.
           Points are worth 1.5 cents each when redeemed through Chase Travel, or can be transferred
@@ -243,8 +264,14 @@ export const postCsrWorthIt: BlogPost = {
       {/* When the CSR Is Worth It */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-worth-it">
-          When the CSR Is Worth It
+          When Is the Chase Sapphire Reserve Worth It?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Reserve is worth it when you spend at least $1,500/mo
+          on travel and dining, fly enough to use Priority Pass lounges 4+ times per year, and
+          transfer points to airline or hotel partners (Hyatt routinely yields 2+ cents per point).
+          Heavy users see net annual value of $1,000-$1,500. <a href="https://creditcards.chase.com/travel-credit-cards/sapphire/reserve" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">Apply for the Sapphire Reserve</a>.
+        </p>
         <ul className="list-disc pl-5 text-sm space-y-2 mb-3">
           <li><strong>You spend $1,500+/month on travel and dining combined</strong> &mdash; the 3x earning rate meaningfully outperforms a flat-rate card at this level</li>
           <li><strong>You will use the $300 travel credit naturally</strong> &mdash; even one flight, hotel stay, or regular ride-share usage gets you there</li>
@@ -263,8 +290,15 @@ export const postCsrWorthIt: BlogPost = {
       {/* When It's Not Worth It */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-not-worth-it">
-          When the CSR Is Not Worth It
+          When Is the Sapphire Reserve NOT Worth It?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Skip the Reserve if your travel and dining spend is under
+          $800/month, you redeem points for cash back instead of transfers, or you never use
+          airport lounges. The Sapphire Preferred ($95) covers nearly the same earning categories
+          and transfer partners at one-sixth the fee &mdash; downgrading from Reserve to Preferred
+          is a free product change with no inquiry.
+        </p>
         <ul className="list-disc pl-5 text-sm space-y-2 mb-3">
           <li><strong>You spend less than $800/month on travel and dining</strong> &mdash; the 3x bonus categories do not generate enough extra value to justify the fee premium over the CSP</li>
           <li><strong>You do not travel enough to use the $300 credit</strong> &mdash; if you have to force travel spending to use this credit, it is not real savings</li>
@@ -282,8 +316,15 @@ export const postCsrWorthIt: BlogPost = {
       {/* CSR vs CSP */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="csr-vs-csp">
-          CSR vs CSP: Quick Comparison
+          Should I Get the Sapphire Reserve or Sapphire Preferred?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Get the Sapphire Preferred ($95) first unless your travel
+          and dining spend exceeds ~$1,200-$1,500/mo or you&apos;ll genuinely use Priority Pass.
+          Both cards earn transferable Ultimate Rewards points; the Reserve adds 1.5x point value
+          in Chase Travel, primary rental car coverage, and lounge access. Most applicants under
+          5/24 should start with the Preferred and upgrade later.
+        </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead className="bg-brand-light">

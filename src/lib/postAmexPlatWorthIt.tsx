@@ -57,8 +57,15 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* Every Credit Explained */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="every-credit-explained">
-          Every Amex Platinum Credit Explained
+          What Credits Does the Amex Platinum Actually Include?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Amex Platinum&apos;s $695 fee is offset by ~$1,309 in
+          stated credits: $200 Uber, $240 digital entertainment, $200 airline incidentals, $155
+          Walmart+, $189 CLEAR, $200 luxury hotels, $100 Saks, and $25/yr Global Entry. Realistic
+          recapture for a typical user lands at $400-$700; for active travelers using FHR
+          properties and lounges, $900+ is achievable.
+        </p>
         <p className="text-sm mb-3">
           The Amex Platinum&apos;s credit lineup has grown significantly over the years. Here is
           every credit, its face value, and what you need to know about actually using it.
@@ -155,8 +162,15 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* Credit Value Summary */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="which-credits-valuable">
-          Which Credits Are Actually Valuable?
+          Which Amex Platinum Credits Are Actually Worth Anything?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Easy credits ($465 face value): Uber, Digital
+          Entertainment, and Global Entry &mdash; nearly anyone uses these passively. Medium
+          credits ($544): Airline Incidental, Walmart+, CLEAR &mdash; require a bit of planning.
+          Hard credits ($300): FHR/THC luxury hotels and Saks &mdash; only active premium
+          travelers and Saks shoppers realize their face value.
+        </p>
         <p className="text-sm mb-3">
           Here is an honest assessment categorizing each credit by how easy it is for the average
           cardholder to use at face value.
@@ -242,8 +256,15 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* The Rewards Math */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="rewards-math">
-          The Rewards Math
+          How Much Do Amex Platinum Points Actually Earn?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Platinum earns 5x Membership Rewards on flights and
+          5x on prepaid hotels through Amex Travel, but only 1x on everything else. At 2 cents per
+          point in international airline transfers (ANA, Air France, Singapore), $1,000/mo in
+          flights generates $1,200/yr in travel value. The 1x base rate makes Platinum a poor
+          everyday card &mdash; pair it with the Amex Gold for dining/groceries.
+        </p>
         <p className="text-sm mb-3">
           Beyond credits, the Amex Platinum earns Membership Rewards points. The earning structure
           is focused on travel:
@@ -270,8 +291,14 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* When Worth It */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-worth-it">
-          When the Amex Platinum Is Worth $695
+          When Is the Amex Platinum Worth $695?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> The Platinum delivers positive net value when you fly 8+
+          times per year, naturally use $500+ in credits annually, book premium hotels through
+          FHR 1-2 times per year, and transfer points to international airline partners for
+          business or first-class redemptions. Heavy users see $1,000+ in net annual value. <a href="https://www.americanexpress.com/us/credit-cards/card/platinum/" target="_blank" rel="nofollow sponsored noopener noreferrer" className="text-brand-gold hover:text-amber-600 font-semibold">Apply for the Amex Platinum</a>.
+        </p>
         <ul className="list-disc pl-5 text-sm space-y-2 mb-3">
           <li><strong>You fly 8+ times per year</strong> &mdash; Centurion Lounge access, 5x on flights, airline credit, and CLEAR all compound in value for frequent flyers</li>
           <li><strong>You naturally use $500+ in credits annually</strong> &mdash; Uber, streaming, and airline incidentals are the easiest to use for most people</li>
@@ -290,8 +317,15 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* When to Downgrade */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="when-to-downgrade">
-          When You Should Cancel Instead
+          When Should I Cancel the Amex Platinum?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Cancel if you use less than $300 in credits annually, fly
+          fewer than 4 times per year, redeem MR points at 1 cent each, or have travel fatigue. The
+          Platinum cannot be downgraded to Gold (separate product families), but call retention
+          first &mdash; Amex frequently offers 30K-50K-point retention bonuses. Track downgrade
+          options in the [Downgrade Guide](/downgrade-guide).
+        </p>
         <ul className="list-disc pl-5 text-sm space-y-2 mb-3">
           <li><strong>You use fewer than $300 in credits annually</strong> &mdash; the effective fee exceeds $395, which is hard to justify on points alone</li>
           <li><strong>You fly fewer than 4 times per year</strong> &mdash; Centurion Lounge access, CLEAR, and airline credits lose most of their value</li>
@@ -314,8 +348,14 @@ export const postAmexPlatWorthIt: BlogPost = {
       {/* Platinum vs Gold */}
       <section>
         <h2 className="font-display font-bold text-2xl text-brand-navy mb-3" id="platinum-vs-gold">
-          Amex Platinum vs Amex Gold: Quick Comparison
+          Should I Get the Amex Platinum or the Amex Gold?
         </h2>
+        <p className="text-sm bg-brand-light/60 border-l-4 border-brand-gold rounded-r-lg p-4 mb-4">
+          <strong>Quick answer:</strong> Get the Amex Gold ($325) if you spend heavily on dining
+          and groceries (4x earning makes it the best dining card on the market). Get the Platinum
+          ($695) if you fly 8+ times per year and value Centurion Lounge access. Many active
+          travelers hold both &mdash; Gold for daily spend, Platinum for flights and lounges.
+        </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead className="bg-brand-light">
