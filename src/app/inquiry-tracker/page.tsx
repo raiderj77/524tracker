@@ -3,6 +3,7 @@ import Link from 'next/link';
 import InquiryTrackerClient from '@/components/InquiryTrackerClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Hard Inquiry Tracker — Monitor Credit Inquiries by Bureau | 524Tracker',
@@ -232,6 +233,7 @@ export default function InquiryTrackerPage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

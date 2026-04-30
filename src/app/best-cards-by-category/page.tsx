@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 import AnswerBlock from '@/components/AnswerBlock';
 import { getAffiliateUrl } from '@/lib/affiliateUrls';
 
@@ -299,6 +300,7 @@ export default function BestCardsByCategoryPage() {
           </div>
         </section>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </article>
     </>

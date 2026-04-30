@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ApplicationFlowchart from '@/components/ApplicationFlowchart';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Card Application Flowchart | 524Tracker',
@@ -207,7 +208,8 @@ export default function ApplicationFlowchartPage() {
             </div>
           </section>
 
-          <FinancialDisclaimer />
+          <AuthorAttribution />
+        <FinancialDisclaimer />
         </article>
       </div>
     </>

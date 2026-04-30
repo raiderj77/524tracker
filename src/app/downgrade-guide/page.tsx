@@ -3,6 +3,7 @@ import Link from 'next/link';
 import DowngradeGuideClient from '@/components/DowngradeGuideClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Credit Card Downgrade Guide — Product Change Options | 524Tracker',
@@ -241,6 +242,7 @@ export default function DowngradeGuidePage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

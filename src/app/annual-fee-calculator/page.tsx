@@ -3,6 +3,7 @@ import Link from 'next/link';
 import AnnualFeeCalcClient from '@/components/AnnualFeeCalcClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Credit Card Annual Fee Calculator — Is It Worth It? | 524Tracker',
@@ -262,6 +263,7 @@ export default function AnnualFeeCalculatorPage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

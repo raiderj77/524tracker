@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About — Your Friendly Developer',
-  description: 'The real story behind 524 Tracker. Built by Jason Ramirez, a self-taught developer and CADC-II counselor from Prunedale, California.',
+  description:
+    'The story behind 524 Tracker. Built by an experienced web professional with a background in credit rebuilding, self-taught development, and over a decade of personal finance research.',
   robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/about' },
   openGraph: {
     title: 'About — Your Friendly Developer',
-    description: 'The real story behind 524 Tracker. Built by Jason Ramirez, a self-taught developer and CADC-II counselor from Prunedale, California.',
+    description:
+      'The story behind 524 Tracker. Built by an experienced web professional with a background in credit rebuilding and personal finance.',
     url: 'https://524tracker.com/about',
     type: 'website',
   },
@@ -17,18 +19,16 @@ export default function AboutPage() {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Jason Ramirez',
-    jobTitle: 'Web Developer, CADC-II Counselor',
+    name: 'Experienced Web Professional',
+    jobTitle: 'Web Developer',
     worksFor: {
       '@type': 'Organization',
       name: 'Your Friendly Developer LLC',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Prunedale',
-      addressRegion: 'California',
+      url: 'https://524tracker.com',
     },
     url: 'https://524tracker.com/about',
+    description:
+      'Self-taught web developer with over a decade of experience in credit rebuilding, personal finance tools, and SEO.',
   };
 
   return (
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </h1>
 
         <div className="space-y-5 text-sm text-text-primary leading-relaxed">
-          <p>Hi. I&rsquo;m Jason Ramirez. This is why I built this.</p>
+          <p>This is why I built this.</p>
 
           <p>
             I&rsquo;m not going to pretend this started with a vision board or a business plan. It
@@ -116,10 +116,10 @@ export default function AboutPage() {
           </p>
 
           <p>
-            If you&rsquo;re looking for the guy behind these sites, it&rsquo;s me. A CADC-II
+            If you&rsquo;re looking for the person behind these sites, it&rsquo;s me. A CADC-II
             counselor, a self-taught web builder, a recovering addict with over twelve years of
-            sobriety, a guy who fixed his own credit and figured out his own taxes and is still
-            figuring out everything else one day at a time.
+            sobriety, a person who fixed their own credit and figured out their own taxes and is
+            still figuring out everything else one day at a time.
           </p>
 
           <p>
@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="space-y-5 text-sm text-text-primary leading-relaxed">
           <p>
             When I got sober in 2013 I had no credit. Not bad credit. No credit. I spent the next
-            several years rebuilding it from scratch &mdash; self-taught, no financial advisor, just
+            several years rebuilding it from scratch: self-taught, no financial advisor, just
             research and trial and error and a lot of patience. I learned the hard way how bank
             rules work, how credit card issuers think, and how to navigate a system that
             isn&rsquo;t designed to be transparent.
@@ -145,7 +145,7 @@ export default function AboutPage() {
 
           <p>
             I built 524 Tracker because I wished it had existed when I was starting over. The Chase
-            5/24 rule, the Amex lifetime bonus rules, the Citi timing windows &mdash; none of this
+            5/24 rule, the Amex lifetime bonus rules, the Citi timing windows. None of this
             is secret, but it&rsquo;s scattered across forums and subreddits and outdated blog
             posts. This puts it in one place.
           </p>
@@ -157,9 +157,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-sm text-text-secondary">
-          <p>Jason Ramirez</p>
           <p>Your Friendly Developer LLC</p>
-          <p>Prunedale, California</p>
         </div>
       </article>
     </>

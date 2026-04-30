@@ -3,6 +3,7 @@ import Link from 'next/link';
 import AmexPopupClient from '@/components/AmexPopupClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Amex Popup Jail Risk Estimator | 524Tracker',
@@ -244,6 +245,7 @@ export default function AmexPopupEstimatorPage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

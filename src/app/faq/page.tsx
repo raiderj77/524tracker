@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Credit Card Churning FAQ — 20 Questions Answered',
@@ -168,6 +169,7 @@ export default function FAQPage() {
           This tool tracks application dates and bank rules. It cannot guarantee approval or predict your credit score impact.
         </p>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </article>
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 import DataPointSubmissionForm from '@/components/DataPointSubmissionForm';
 
 export const metadata: Metadata = {
@@ -86,6 +87,7 @@ export default function SubmitDataPointPage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

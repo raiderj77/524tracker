@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SpendTrackerTool from '@/components/SpendTrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
@@ -205,7 +206,8 @@ export default function SpendTrackerPage() {
             </div>
           </section>
 
-          <FinancialDisclaimer />
+          <AuthorAttribution />
+        <FinancialDisclaimer />
         </article>
       </div>
     </>

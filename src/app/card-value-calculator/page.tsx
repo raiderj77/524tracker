@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 interface Perk {
   id: string;
@@ -423,6 +424,7 @@ export default function CardValueCalculatorPage() {
           </div>
         </section>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </article>
     </>

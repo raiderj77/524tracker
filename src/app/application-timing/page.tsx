@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ApplicationTimingClient from '@/components/ApplicationTimingClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Credit Card Application Timing Calculator | 524Tracker',
@@ -248,6 +249,7 @@ export default function ApplicationTimingPage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import CardTrackerTool from '@/components/CardTrackerTool';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
@@ -151,6 +152,7 @@ export default function CardTrackerPage() {
           </ul>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </main>
     </>

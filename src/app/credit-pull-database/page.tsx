@@ -3,6 +3,7 @@ import Link from 'next/link';
 import CreditPullClient from '@/components/CreditPullClient';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 
 export const metadata: Metadata = {
   title: 'Credit Bureau Pull Database — Community Reference for Credit Card Applications | 524Tracker',
@@ -253,6 +254,7 @@ export default function CreditPullDatabasePage() {
           </p>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </div>
     </>

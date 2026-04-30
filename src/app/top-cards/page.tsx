@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import AuthorAttribution from '@/components/AuthorAttribution';
 import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata: Metadata = {
@@ -194,6 +195,7 @@ export default function TopCardsPage() {
           </Link>
         </div>
 
+        <AuthorAttribution />
         <FinancialDisclaimer />
       </article>
     </>
