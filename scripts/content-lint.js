@@ -40,10 +40,11 @@ function getFiles(dir, extensions) {
 // Rules
 // ---------------------------------------------------------------------------
 
-// About pages are exempt — real name required for AdSense E-E-A-T compliance per April 2026 decision.
+// About and blog pages are exempt — real name required for AdSense E-E-A-T compliance per April 2026 decision.
 const PERSONAL_NAME_EXEMPT_FILES = [
   join('src', 'app', 'about', 'page.tsx'),
   join('src', 'app', 'about', 'jason-ramirez', 'page.tsx'),
+  join('src', 'app', 'blog', '[slug]', 'page.tsx'),
 ];
 
 /**

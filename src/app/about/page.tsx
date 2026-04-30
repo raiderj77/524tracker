@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About — Your Friendly Developer',
+  title: 'About Jason Ramirez — Your Friendly Developer',
   description:
-    'The story behind 524 Tracker. Built by an experienced web professional with a background in credit rebuilding, self-taught development, and over a decade of personal finance research.',
+    'The story behind 524 Tracker. Built by Jason Ramirez, Founder of Your Friendly Developer LLC, with a background in credit rebuilding, self-taught development, and over a decade of personal finance research.',
   robots: { index: true, follow: true, 'max-snippet': -1 },
   alternates: { canonical: 'https://524tracker.com/about' },
   openGraph: {
-    title: 'About — Your Friendly Developer',
+    title: 'About Jason Ramirez — Your Friendly Developer',
     description:
-      'The story behind 524 Tracker. Built by an experienced web professional with a background in credit rebuilding and personal finance.',
+      'The story behind 524 Tracker. Built by Jason Ramirez, Founder of Your Friendly Developer LLC, with a background in credit rebuilding and personal finance.',
     url: 'https://524tracker.com/about',
     type: 'website',
   },
@@ -19,8 +19,8 @@ export default function AboutPage() {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Experienced Web Professional',
-    jobTitle: 'Web Developer',
+    name: 'Jason Ramirez',
+    jobTitle: 'Founder of Your Friendly Developer',
     worksFor: {
       '@type': 'Organization',
       name: 'Your Friendly Developer LLC',
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </h1>
 
         <div className="space-y-5 text-sm text-text-primary leading-relaxed">
-          <p>This is why I built this.</p>
+          <p>Hi. I&rsquo;m Jason Ramirez. This is why I built this.</p>
 
           <p>
             I&rsquo;m not going to pretend this started with a vision board or a business plan. It
@@ -157,6 +157,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-sm text-text-secondary">
+          <p>Jason Ramirez</p>
           <p>Your Friendly Developer LLC</p>
         </div>
       </article>

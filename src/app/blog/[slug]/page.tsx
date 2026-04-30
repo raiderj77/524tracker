@@ -27,7 +27,7 @@ export async function generateMetadata({
       keywords: mdPost.keywords.length ? mdPost.keywords : undefined,
       robots: { index: true, follow: true, googleBot: { 'max-snippet': -1 } },
       alternates: { canonical: `https://524tracker.com/blog/${mdPost.slug}` },
-      authors: [{ name: 'Built by an experienced web professional' }],
+      authors: [{ name: 'Jason Ramirez', url: 'https://524tracker.com/about' }],
       openGraph: {
         type: 'article',
         title: mdPost.title,
@@ -52,7 +52,7 @@ export async function generateMetadata({
         url: `https://524tracker.com/blog/${jsxPost.slug}`,
         type: 'article',
       },
-      authors: [{ name: 'Built by an experienced web professional' }],
+      authors: [{ name: 'Jason Ramirez', url: 'https://524tracker.com/about' }],
     };
   }
 
@@ -79,9 +79,9 @@ export default async function BlogPostPage({
       url: `https://524tracker.com/blog/${mdPost.slug}`,
       mainEntityOfPage: `https://524tracker.com/blog/${mdPost.slug}`,
       author: {
-        '@type': 'Organization',
-        name: '524Tracker',
-        url: 'https://524tracker.com',
+        '@type': 'Person',
+        name: 'Jason Ramirez',
+        url: 'https://524tracker.com/about',
       },
       publisher: {
         '@type': 'Organization',
@@ -148,7 +148,11 @@ export default async function BlogPostPage({
                   {' · '}
                 </>
               )}
-              Built by an experienced web professional
+              By{' '}
+              <Link href="/about" className="hover:text-brand-gold transition-colors">
+                Jason Ramirez
+              </Link>
+              , Founder of Your Friendly Developer
             </p>
           </header>
 
@@ -259,8 +263,11 @@ export default async function BlogPostPage({
             {jsxPost.title}
           </h1>
           <p className="text-xs text-text-secondary">
-            Last updated: {jsxPost.lastUpdated} &middot; Built by an experienced web professional
-            &middot; {jsxPost.readTimeMinutes} min read
+            Last updated: {jsxPost.lastUpdated} &middot; By{' '}
+            <Link href="/about" className="hover:text-brand-gold transition-colors">
+              Jason Ramirez
+            </Link>
+            , Founder of Your Friendly Developer &middot; {jsxPost.readTimeMinutes} min read
           </p>
         </header>
 
