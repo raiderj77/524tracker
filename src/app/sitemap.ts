@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://524tracker.com', lastModified, priority: 1.0, changeFrequency: 'weekly' },
     // Rules Guide is the AEO/topic-cluster pillar page — bump to top priority.
     { url: 'https://524tracker.com/rules-guide', lastModified: new Date(), priority: 1.0, changeFrequency: 'weekly' },
+    { url: 'https://524tracker.com/chase-524', lastModified: new Date(), priority: 0.9, changeFrequency: 'weekly' },
     { url: 'https://524tracker.com/top-cards', lastModified },
     { url: 'https://524tracker.com/card-value-calculator', lastModified },
     { url: 'https://524tracker.com/best-cards-by-category', lastModified },
