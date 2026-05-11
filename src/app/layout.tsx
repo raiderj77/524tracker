@@ -146,16 +146,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
       <head>
-        {/* Cookiebot CMP — Replace TRACKER524_CBID_PLACEHOLDER with real Cookiebot CBID from cookiebot.com */}
-        {!gpcHeader && (
-          <Script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-            data-blockingmode="auto"
-            strategy="beforeInteractive"
-          />
-        )}
+        {/* CMP: Funding Choices auto-loads via AdSense for T1 sites */}
         {/* Google Consent Mode v2 — sets denied defaults before any tracking scripts load */}
         {!gpcHeader && (
           <Script
@@ -178,29 +169,7 @@ export default async function RootLayout({
             }}
           />
         )}
-        {!gpcHeader && (
-          <Script
-            id="gpc-auto-decline"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-        (function() {
-          try {
-            var gpcActive = !!navigator.globalPrivacyControl || document.cookie.indexOf('empire_gpc=1') !== -1;
-            if (!gpcActive) return;
-            if (window.Cookiebot && window.Cookiebot.decline) {
-              window.Cookiebot.decline();
-            } else {
-              window.addEventListener('CookiebotOnLoad', function() {
-                if (window.Cookiebot) window.Cookiebot.decline();
-              });
-            }
-          } catch(e) {}
-        })();
-      `,
-            }}
-          />
-        )}
+        {/* GPC enforcement handled by middleware setting consent denied via gpcHeader */}
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />

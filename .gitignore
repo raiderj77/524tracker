@@ -48,3 +48,4 @@ content/drafts/
 content/review-required/
 
 .vercel
+src/app/layout.tsx.bak.*
