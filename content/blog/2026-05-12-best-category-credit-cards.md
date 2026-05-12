@@ -52,6 +52,9 @@ For travel specifically, the [Chase Sapphire Preferred](https://creditcards.chas
 
 ## How do you build a card stack across categories?
 
+Start by mapping your actual spending to find where you bleed the most 1x. Pick one card to anchor each high-volume category, then fill gaps with a strong flat-rate card for everything else. A three-card stack covering groceries, travel, and a catch-all eliminates most dead zones without overcomplicating your wallet.
+
+
 A common approach is to identify your top two or three spending categories and assign a dedicated card to each. A simple three-card stack might look like this:
 
 - **Groceries and dining:** Amex Gold (4x on both)
