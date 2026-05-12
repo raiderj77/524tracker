@@ -46,7 +46,7 @@ For people who want no annual fee, the [Citi Double Cash](https://www.citi.com/c
 
 Gas is a category that often gets overlooked in favor of sexier travel rewards, but it adds up. The [Citi Strata Premier Card](https://www.citi.com/credit-cards/citi-strata-premier-credit-card) earns 3x on gas stations, air travel, hotels, restaurants, and groceries, making it one of the more versatile mid-tier cards available. At a $95 annual fee, it covers a wide surface area of everyday spending.
 
-For travel specifically, the [Chase Sapphire Preferred](https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred) earns 3x on dining, 2x on travel, and 5x on travel booked through Chase Travel. At a $95 annual fee, it remains a common starting point for people building a transferable points strategy. It is also worth noting that the Sapphire Preferred counts as one card toward your Chase 5/24 count, so timing your application relative to other Chase cards is something many people think carefully about.
+For travel specifically, the [Chase Sapphire Preferred](https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred) earns 3x on dining, 2x on travel, and 5x on travel booked through Chase Travel. At a $95 annual fee, it remains a common starting point for people building a transferable points strategy. It is also worth noting that the Sapphire Preferred counts as [one card toward your Chase 5/24 count](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-re/), so timing your application relative to other Chase cards is something many people think carefully about.
 
 ---
 
