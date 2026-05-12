@@ -10,7 +10,7 @@ reviewer: "Jason Ramirez, CADC-II"
 
 # Business Credit Cards and the 5/24 Rule: Which Issuers Don't Report
 
-**Most business credit cards do not show up on your personal credit report, which means they don't add to your Chase 5/24 count. The major issuers that follow this pattern include American Express, Chase, Citi, Bank of America, and Barclays. Capital One and Discover are the notable exceptions that do report business cards to personal bureaus.**
+**Most business credit cards do not show up on your personal credit report, which means they don't add to your Chase 5/24 count. The major issuers that follow this pattern include American Express, Chase, Citi, [Bank of America](/blog/bank-of-america-2-3-4-rule-explained/), and Barclays. Capital One and Discover are the notable exceptions that do report business cards to personal bureaus.**
 
 ---
 
@@ -51,7 +51,7 @@ One important nuance: even issuers that don't report business cards routinely wi
 
 Almost always, yes. Most issuers pull your personal credit report when you apply for a business card, even if they never report that card back to the bureaus afterward. That hard inquiry will appear on your personal report and can temporarily affect your score.
 
-The hard inquiry itself does not count toward 5/24. Chase counts new accounts, not inquiries. So a hard pull from an Amex business card application shows up on your Experian report, but it does not add a new tradeline, and it does not move your 5/24 counter. This distinction matters because some people conflate the two.
+The hard inquiry itself does not count toward 5/24. [Chase counts new accounts, not inquiries](/blog/how-the-chase-524-rule-works-in-2026/). So a hard pull from an Amex business card application shows up on your Experian report, but it does not add a new tradeline, and it does not move your 5/24 counter. This distinction matters because some people conflate the two.
 
 ---
 
