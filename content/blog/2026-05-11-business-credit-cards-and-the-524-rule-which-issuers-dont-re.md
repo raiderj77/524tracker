@@ -24,6 +24,9 @@ This is one of the most valuable mechanics in the hobby. You can hold multiple C
 
 ## Which issuers report business cards to personal bureaus and which don't?
 
+Amex, Chase, Citi, Bank of America, and Barclays generally do not report business card activity to your personal credit bureaus, keeping those accounts off your personal reports entirely. Capital One and Discover are the notable exceptions, reporting business cards to personal bureaus and potentially affecting your 5/24 count and personal utilization.
+
+
 The short answer: Amex, Chase, Citi, Bank of America, and Barclays generally do not report business card activity to personal bureaus. Capital One and Discover generally do.
 
 Here is a more complete breakdown based on [Doctor of Credit's maintained list](https://www.doctorofcredit.com/knowledge-base/list-of-business-credit-cards-that-do-not-report-to-personal-credit-bureaus/):
