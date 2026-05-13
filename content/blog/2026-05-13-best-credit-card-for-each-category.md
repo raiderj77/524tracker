@@ -16,7 +16,7 @@ reviewer: "Jason Ramirez, CADC-II"
 
 ## Which card is actually best for dining?
 
-**The American Express Gold Card earns 4x Membership Rewards at restaurants worldwide, which is the highest uncapped dining multiplier on a mainstream card.** If you value Amex points at 1.5-2 cents each through transfer partners, that's effectively 6-8% back on every meal. For cash-back purists, the Capital One Savor earns a flat 3% cash back on dining with no annual fee.
+**The American Express Gold Card earns 4x Membership Rewards at restaurants worldwide, which is [the highest uncapped dining multiplier on a mainstream card](/blog/deconstructing-the-amex-gold-card-how-its-dining-and-travel-/).** If you value Amex points at 1.5-2 cents each through transfer partners, that's effectively 6-8% back on every meal. For cash-back purists, the Capital One Savor earns a flat 3% cash back on dining with no annual fee.
 
 The Gold's $250 annual fee is real, but Amex offsets it with up to $120 in annual dining credits (split across Grubhub, Shake Shack, and a few others) and up to $120 in Uber Cash. If you use those credits consistently, the effective annual fee drops to around $10. That math only works if your lifestyle actually lines up with those specific vendors, so check the [current benefit terms on Amex's site](https://www.americanexpress.com/us/credit-cards/card/gold-card/) before assuming full redemption.
 
@@ -60,7 +60,7 @@ The Amex Blue Cash Preferred earns 6% on select U.S. streaming services, which l
 
 ## Should I just use one flat-rate card for everything?
 
-**A common approach is to use a 2% flat-rate card as a fallback for any category not covered by a bonus card.** The [Citi Double Cash](https://www.citi.com/credit-cards/citi-double-cash-credit-card) earns 1% when you buy and 1% when you pay, effectively 2% cash back, or it can be converted to Citi ThankYou points if you also hold the Citi Strata Premier.
+**A common approach is to use a [2% flat-rate card as a fallback for any category not covered](/blog/best-credit-cards-for-cash-back-in-2026/) by a bonus card.** The [Citi Double Cash](https://www.citi.com/credit-cards/citi-double-cash-credit-card) earns 1% when you buy and 1% when you pay, effectively 2% cash back, or it can be converted to Citi ThankYou points if you also hold the Citi Strata Premier.
 
 The math is straightforward: if your bonus card earns 3x or more, use it. If you're in an uncovered category, 2% flat beats leaving points on the table. Many people find that three to four well-chosen cards cover 90% of their spending at elevated rates without the mental overhead of a 10-card wallet.
 
@@ -68,7 +68,7 @@ The math is straightforward: if your bonus card earns 3x or more, use it. If you
 
 ## What's the fastest way to build a category-optimized setup?
 
-Start with your actual spending data. Pull three months of bank and credit card statements, sort by merchant category, and identify your top three spending buckets. Then match those buckets to the cards above. A common starting point is the Amex Gold for dining and groceries, the Sapphire Reserve or Venture X for travel, and the Citi Double Cash as a catch-all. That three-card setup covers the majority of household categories at 2x or better on nearly everything.
+Start with your actual spending data. Pull three months of bank and credit card statements, sort by merchant category, and [identify your top three spending buckets](/blog/best-category-credit-cards/). Then match those buckets to the cards above. A common starting point is the Amex Gold for dining and groceries, the Sapphire Reserve or Venture X for travel, and the Citi Double Cash as a catch-all. That three-card setup covers the majority of household categories at 2x or better on nearly everything.
 
 If you're tracking your 5/24 count, the Amex cards don't add to your Chase slot count, which makes the Gold a logical early pickup before burning a Chase slot on the Sapphire Reserve.
 
