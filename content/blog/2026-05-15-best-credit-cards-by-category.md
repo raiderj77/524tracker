@@ -64,7 +64,7 @@ On the airline side, the [Delta SkyMiles Reserve American Express Card](https://
 
 ## How should these cards actually stack together?
 
-A common setup among points enthusiasts looks something like this: Amex Gold for dining and groceries (4x MR), Chase Sapphire Reserve or Capital One Venture X for travel (3x UR or 2-10x miles), and Citi Double Cash for everything else (2% back or ThankYou points). That three-card stack covers most spend categories at above-baseline rates without requiring you to juggle a dozen cards.
+A common setup among points enthusiasts looks something like this: Amex Gold for dining and groceries (4x MR), Chase Sapphire Reserve or Capital One Venture X for travel (3x UR or 2-10x miles), and Citi Double Cash for everything else (2% back or ThankYou points). That three-card stack [covers most spend categories at above-baseline rates](/blog/best-category-credit-cards/) without requiring you to juggle a dozen cards.
 
 The goal is not to have the most cards. It is to have no dollar earning 1x when a better option is available. Running through your actual monthly spend categories and mapping them to card earn rates takes about 20 minutes and tends to surface a few obvious gaps worth fixing.
 
