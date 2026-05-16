@@ -10,7 +10,7 @@ reviewer: "Jason Ramirez, CADC-II"
 
 # Best Credit Cards for Each Spending Category (A Points Nerd's Breakdown)
 
-**The short answer:** No single card dominates every category. A well-built wallet pairs a strong flat-rate card for miscellaneous spend with category-specific cards that earn 3x-5x on groceries, dining, travel, gas, and more. The cards below are the ones that actually move the needle on earning rates right now.
+**The short answer:** No single card dominates every category. [A well-built wallet pairs a strong flat-rate card](/blog/best-category-credit-cards/) for miscellaneous spend with category-specific cards that earn 3x-5x on groceries, dining, travel, gas, and more. The cards below are the ones that actually move the needle on earning rates right now.
 
 ---
 
@@ -54,7 +54,7 @@ For those already holding the **Amex Business Gold**, it offers 4x on the two ca
 
 ---
 
-## What's the best card for everything else?
+## What's the [best card for everything else](/blog/best-credit-cards-by-category/)?
 
 Flat-rate cards exist to catch the spend that doesn't fit a bonus category. A common approach is to use one of these as the default swipe for anything that doesn't trigger a category bonus.
 
@@ -66,7 +66,7 @@ For Amex collectors, the **Blue Business Plus** earns 2x Membership Rewards on a
 
 ## How do you actually build a card stack around this?
 
-A common approach is to anchor the wallet around one transferable points currency and fill category gaps with no-annual-fee cards. For example: Amex Gold for groceries and dining, a Chase Sapphire product for travel and Chase-ecosystem earning, a flat-rate card for everything else, and a co-branded card only if you have genuine loyalty to a specific airline or hotel brand.
+A common approach is to [anchor the wallet around one transferable points currency](/blog/best-credit-card-for-each-category/) and fill category gaps with no-annual-fee cards. For example: Amex Gold for groceries and dining, a Chase Sapphire product for travel and Chase-ecosystem earning, a flat-rate card for everything else, and a co-branded card only if you have genuine loyalty to a specific airline or hotel brand.
 
 The math matters more than brand loyalty. Running your actual monthly spend through each card's earn rate, then comparing against your typical redemption value, will tell you more than any generic ranking list. Tools like [Award Wallet](https://awardwallet.com/) and [Point.me](https://www.point.me/) can help track balances and find redemption options across programs once the points start stacking up.
 
