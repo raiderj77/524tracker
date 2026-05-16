@@ -34,6 +34,9 @@ For Chase points, the **Chase Sapphire Reserve** earns 3x on dining and all trav
 
 ## What's the best card for travel purchases?
 
+The Chase Sapphire Reserve is the default answer for most people, earning 3x on a broad travel category and backing it with best-in-class trip delay and cancellation protections. If you live in a specific airline or hotel ecosystem, a co-branded card often beats it on category earnings within that brand.
+
+
 This depends heavily on what counts as "travel" to you and which airline or hotel ecosystem you prefer.
 
 The **Chase Sapphire Reserve** earns 3x on travel after the $300 annual travel credit is exhausted, and that travel credit is broad enough to cover everything from parking to Airbnb. The [Priority Pass lounge access](https://www.prioritypass.com/) and trip delay/cancellation protections add real value beyond the earn rate.
