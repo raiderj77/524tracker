@@ -45,6 +45,9 @@ A few commonly used paths:
 
 ## Are there any restrictions I need to know about?
 
+Yes, and the most important one is the 12-month holding period. Chase, Amex, and Citi all typically require you to hold a card for at least a year before approving a product change. Beyond that, you can only downgrade within the same card family, and some premium cards have no eligible downgrade targets at all.
+
+
 Yes, and ignoring them is how people end up with a declined product change request.
 
 The most consistent rule across issuers is the **12-month holding period**. Chase, Amex, and Citi all typically require you to have held the card for at least a year before they will approve a downgrade. Trying to downgrade a Sapphire Preferred at month 10 to avoid the annual fee will usually get rejected.
