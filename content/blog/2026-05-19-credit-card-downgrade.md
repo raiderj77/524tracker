@@ -16,7 +16,7 @@ reviewer: "Jason Ramirez, CADC-II"
 
 ## Why would I downgrade instead of just canceling?
 
-Canceling a card nukes the credit limit and, eventually, the account age from your credit profile. Downgrading keeps both intact. For anyone managing a thin file or protecting a long average account age, that distinction matters more than the $95 you save by canceling.
+[Canceling a card nukes the credit limit and, eventually](/blog/when-to-cancel-a-credit-card-to-avoid-annual-fee/), the account age from your credit profile. Downgrading keeps both intact. For anyone managing a thin file or protecting a long average account age, that distinction matters more than the $95 you save by canceling.
 
 There is also the points angle. Canceling a Chase Sapphire Preferred or Reserve before you transfer or spend your Ultimate Rewards balance can result in forfeited points. Downgrading to the [Chase Freedom Flex or Freedom Unlimited](https://creditcards.chase.com) keeps those points alive in the UR ecosystem, even though the no-fee cards cannot transfer to airline and hotel partners on their own.
 
@@ -32,7 +32,7 @@ This is one of the core reasons downgrading is a standard move in the points hob
 
 ## Which cards are actually worth downgrading to?
 
-The best downgrade targets are no-annual-fee cards that still earn transferable points or useful cash back. Parking a card on a dead product wastes the account.
+The best downgrade targets are [no-annual-fee cards that still earn transferable points or useful cash back](/blog/best-no-annual-fee-travel-credit-cards-in-2026/). Parking a card on a dead product wastes the account.
 
 A few commonly used paths:
 
