@@ -56,6 +56,9 @@ Many people find it useful to [track both numbers separately](/blog/how-to-track
 
 ## What can I actually do to manage inquiry count strategically?
 
+Spread applications across bureaus so no single report looks hammered. Citi and Barclays often pull Equifax, Chase pulls Experian, Amex pulls Experian or TransUnion depending on state. Targeting different bureaus per application cycle lets you keep individual inquiry counts lower, which matters most for lenders who set hard bureau-specific thresholds.
+
+
 A few concrete tactics that come up repeatedly in the points community:
 
 **Time bureau targeting.** Citi and Barclays tend to pull Equifax in most states. Chase typically pulls Experian. American Express often pulls Experian or TransUnion. Knowing which bureau each issuer pulls in your state (check the [Doctor of Credit bureau pull database](https://www.doctorofcredit.com/which-credit-bureau-do-credit-card-issuers-pull/)) lets you spread inquiries across bureaus rather than stacking them on one.
