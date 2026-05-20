@@ -16,7 +16,7 @@ reviewer: "Jason Ramirez, CADC-II"
 
 ## Does the number of hard inquiries actually hurt my credit score?
 
-Yes, but probably less than you fear. Each hard inquiry typically drops your [FICO score](https://www.myfico.com/credit-education/credit-reports/credit-checks-and-inquiries) by fewer than 5 points, and inquiries account for only about 10% of your total FICO calculation. The real damage is cumulative and contextual, not per-inquiry.
+Yes, but probably less than you fear. [Each hard inquiry typically drops your](/blog/how-hard-inquiries-affect-your-credit-score/) [FICO score](https://www.myfico.com/credit-education/credit-reports/credit-checks-and-inquiries) by fewer than 5 points, and inquiries account for only about 10% of your total FICO calculation. The real damage is cumulative and contextual, not per-inquiry.
 
 FICO groups multiple inquiries for the same loan type (mortgage, auto, student loan) made within a 45-day window and counts them as a single inquiry. Credit card applications do not get this rate-shopping treatment. Each card application is its own hit. So three card applications in a month equals three separate dings, not one. That said, FICO scores only factor in inquiries from the past 12 months, and inquiries fall off your report entirely after 24 months.
 
@@ -50,7 +50,7 @@ This is where it gets interesting for anyone optimizing a points strategy. Inqui
 
 For Chase specifically, the 5/24 rule counts new accounts, not inquiries. You could have 12 inquiries and zero new accounts and still be under 5/24. Conversely, you could have 2 inquiries and 5 new accounts and be over 5/24. The two metrics move together when you are approved for cards, but they diverge when you apply and get denied or when you have authorized user accounts added.
 
-Many people find it useful to track both numbers separately. A clean inquiry count with a high new account count tells a different story than the reverse.
+Many people find it useful to [track both numbers separately](/blog/how-to-track-your-credit-card-application-history/). A clean inquiry count with a high new account count tells a different story than the reverse.
 
 ---
 
