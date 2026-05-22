@@ -65,7 +65,7 @@ When Pay Yourself Back is running at 1.5 cpp for grocery or dining purchases, it
 
 A common framework is to estimate your realistic redemption rate, not the theoretical ceiling. If you know you will use transfer partners regularly, 1.8-2.0 cpp is a reasonable working assumption. If you will mostly use the travel portal, use 1.5 cpp as your baseline.
 
-Run the numbers against your actual spend. The Sapphire Reserve earns 3x on travel and dining, 10x on hotels and car rentals booked through Chase, and 1x on everything else. At 1.5 cpp, that 3x dining category returns an effective 4.5% back on dining. At 2.0 cpp, it is 6.0%. Neither number is abstract once you multiply it against your real annual spend in those categories.
+Run the numbers against your actual spend. The Sapphire Reserve earns [3x on travel and dining, 10x on hotels and car rentals](/blog/best-credit-card-for-each-category/) booked through Chase, and 1x on everything else. At 1.5 cpp, that 3x dining category returns an [effective 4.5% back on dining](/blog/best-credit-cards-by-category/). At 2.0 cpp, it is 6.0%. Neither number is abstract once you multiply it against your real annual spend in those categories.
 
 The $550 annual fee with a $300 travel credit nets to $250 out of pocket for most cardholders. Whether the points math justifies that cost is a personal calculation, but the inputs are concrete enough to actually run it.
 
