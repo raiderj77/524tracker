@@ -16,6 +16,9 @@ reviewer: "Jason Ramirez, CADC-II"
 
 ## What does Chase itself guarantee?
 
+Chase guarantees 1.5 cents per point when you redeem through the Ultimate Rewards travel portal, making that your hard floor. Book $900 in travel on 60,000 points, no transfer partner math required. It is a reliable baseline, but treating it as your ceiling leaves serious value on the table.
+
+
 Chase guarantees 1.5 cents per point (cpp) when you book travel through the Chase Ultimate Rewards portal with the Sapphire Reserve. That is the floor, not the ceiling.
 
 That 1.5x multiplier is baked into the card's core value proposition. If you have 60,000 points sitting in your account, Chase will let you book $900 worth of flights, hotels, or car rentals without any transfer partner math involved. It is straightforward, predictable, and honestly not bad for a no-fuss redemption. The problem is that stopping here leaves a significant amount of value on the table for anyone willing to do a little extra work.
@@ -46,6 +49,9 @@ Some frequently cited high-value pairings:
 ---
 
 ## Are there redemptions where points are worth less than 1.5 cpp?
+
+Yes, cash back and statement credits return only 1.0 cpp, cutting your effective value by a third compared to the portal floor. Gift cards land somewhere between 1.0 and 1.25 cpp depending on the brand. Paying a $550 annual fee while redeeming at 1.0 cpp is a fast way to destroy the math on this card.
+
 
 Yes, and this trips up a lot of people. Cash back, gift cards, and statement credits through the Ultimate Rewards portal typically return 1.0 cpp or less.
 
