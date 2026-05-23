@@ -16,6 +16,9 @@ reviewer: "Jason Ramirez, CADC-II"
 
 ## What do you actually get for $550?
 
+You get a card that nets closer to $250 after the $300 travel credit resets each cardmember year. Stack in the $100 Global Entry credit, Priority Pass lounge access, and 3x on travel and dining, and the effective cost drops further for anyone who actually uses those benefits consistently.
+
+
 The core benefits stack is more generous than the sticker price suggests once you account for the credits. The [$300 annual travel credit](https://creditcards.chase.com/travel-credit-cards/sapphire/reserve) resets every cardmember year and applies automatically to a broad range of travel purchases, effectively bringing your out-of-pocket cost down to $250 for anyone who travels even occasionally. Stack on the $5 monthly DoorDash credit (through 2027) and the $10 monthly Peloton credit, and the theoretical offset climbs higher, though credits you would not have used anyway are not really savings.
 
 The non-credit benefits that hold real value for most people:
@@ -67,6 +70,9 @@ The caveat: Priority Pass coverage varies a lot by airport. Major hubs like JFK,
 ---
 
 ## Who should probably skip the Reserve?
+
+Skip it if you cannot reliably spend $300 on travel annually, since the credit that makes the math work simply will not trigger. Amex Platinum holders already have lounge access and Global Entry covered, making the Reserve redundant on its strongest benefits and hard to justify at full freight.
+
 
 A few profiles where many people find the Preferred or a different card makes more sense:
 
