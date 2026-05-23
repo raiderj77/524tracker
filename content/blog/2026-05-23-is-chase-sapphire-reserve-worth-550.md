@@ -22,7 +22,7 @@ The non-credit benefits that hold real value for most people:
 
 - **Priority Pass Select membership** with unlimited visits plus two guests per lounge visit
 - **3x points on travel and dining** (after the travel credit is exhausted)
-- **1.5 cents per point minimum redemption** through the Chase Travel portal, making your 3x effectively a 4.5% return on travel and dining
+- **[1.5 cents per point minimum redemption](/blog/how-much-are-chase-sapphire-reserve-points-worth/)** through the Chase Travel portal, making your 3x effectively a 4.5% return on travel and dining
 - **Primary rental car insurance**, which can save $15-30 per rental day compared to the counter upsell
 - **Global Entry or TSA PreCheck credit** ($100 every four years)
 - **Trip delay and cancellation insurance** with meaningful coverage limits
