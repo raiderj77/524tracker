@@ -63,7 +63,7 @@ A common approach is to product-change the CSR to a Chase Freedom Flex or Freedo
 
 For someone new to transfers, targeting 1.8 to 2 cpp is a reasonable and achievable goal without deep expertise in award booking. Going after 3+ cpp sweet spots requires knowing specific programs, watching availability, and sometimes being flexible on dates and routing.
 
-A 60,000-point welcome bonus at 2 cpp is $1,200 in travel value. At 1.5 cpp through the portal, it's $900. The difference between those two outcomes is learning one or two transfer partners well, which is exactly the kind of thing that makes this hobby worth the time investment.
+A 60,000-point welcome bonus at 2 cpp is $1,200 in travel value. At [1.5 cpp through the portal, it's $900](/blog/how-much-are-chase-sapphire-reserve-points-worth/). The difference between those two outcomes is learning one or two transfer partners well, which is exactly the kind of thing that makes this hobby worth the time investment.
 
 The points themselves are not complicated. The strategy around when to transfer, where to transfer, and what to book is where the nuance lives. Start with Hyatt if you stay in hotels, or United/Aeroplan if you want to fly internationally. Both programs are beginner-accessible and have enough documented sweet spots that you don't need to be an expert to get meaningfully above 1.5 cpp on your first redemption.
 
