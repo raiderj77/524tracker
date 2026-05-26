@@ -37,6 +37,9 @@ The catch is that availability, routing rules, and surcharge policies change. Wh
 
 ## Is the 1.5 cpp portal rate ever the smarter move?
 
+Yes, the portal wins more often than the transfer-partner crowd admits. For domestic economy flights, budget hotels, and car rentals, partners rarely beat 1.5 cpp by enough to justify the complexity. If saver availability is spotty or fees eat the savings, booking through the portal is simply the cleaner, faster choice.
+
+
 Yes, more often than people admit. For domestic economy flights, budget hotels, and car rentals, transfer partners rarely beat the portal by enough to justify the extra complexity.
 
 If you're booking a $250 domestic round-trip that costs 16,667 points through the portal, you'd need to find an award that uses fewer than 16,667 points AND has no fees AND has available dates to come out ahead. For short domestic hops, that's harder than it sounds. A common approach is to use the portal for domestic economy and cash-priced hotels, and save transfers for international business class or Hyatt properties where the gap between cash price and points cost is widest.
