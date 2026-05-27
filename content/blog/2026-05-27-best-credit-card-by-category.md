@@ -9,7 +9,7 @@ author: "Your Friendly Developer LLC"
 
 # Best Credit Card by Category: Where to Put Every Dollar You Spend
 
-**The short answer:** No single card wins every category. A common approach is anchoring with a strong flat-rate card, then layering category-specific cards on top. The Chase Sapphire Preferred earns 3x on dining, the Amex Gold earns 4x there, and a card like the Citi Double Cash floors your baseline at 2% everywhere else. Stack intentionally.
+**The short answer:** [No single card wins every category](/blog/best-credit-cards-by-category/). A common approach is anchoring with a strong flat-rate card, then layering category-specific cards on top. The Chase Sapphire Preferred earns 3x on dining, the Amex Gold earns 4x there, and a card like the Citi Double Cash floors your baseline at 2% everywhere else. Stack intentionally.
 
 ---
 
@@ -49,13 +49,13 @@ The [Citi Double Cash](https://www.citi.com/credit-cards/citi-double-cash-credit
 
 For gas specifically, the [Citi Costco Anywhere Visa](https://www.citi.com/credit-cards/citi-costco-anywhere-visa-credit-card) earns 4% on eligible gas worldwide (up to $7,000/year, then 1%). If you drive a lot, that 4% on gas is competitive with almost anything else on the market.
 
-The [Wells Fargo Autograph](https://creditcards.wellsfargo.com/autograph-visa-credit-card/) earns 3x on gas, restaurants, travel, transit, streaming, and phone plans with no annual fee. It is a legitimate Swiss Army knife card for people who want solid category bonuses without another annual fee to justify.
+The [Wells Fargo Autograph](https://creditcards.wellsfargo.com/autograph-visa-credit-card/) earns 3x on gas, restaurants, travel, transit, streaming, and phone plans with no annual fee. It is a legitimate Swiss Army knife card for people who want [solid category bonuses without another annual fee to justify](/blog/best-credit-cards-for-each-category/).
 
 ---
 
 ## How do I actually build a card stack that makes sense?
 
-A practical framework many people use: one premium travel card for the lounge access and travel credits, one strong dining and grocery card, one no-annual-fee catch-all for everything else. Three cards cover the majority of spending categories without the cognitive overhead of managing eight different cards.
+A practical framework many people use: one premium travel card for the lounge access and travel credits, [one strong dining and grocery card, one no-annual-fee catch-all](/blog/best-credit-card-for-each-category/) for everything else. Three cards cover the majority of spending categories without the cognitive overhead of managing eight different cards.
 
 The sequencing matters as much as the selection. If you are under 5/24, the conventional wisdom in the hobby is to lock in Chase cards first, then fill gaps with Amex, Citi, or Capital One products. Amex in particular is known for being generous with approvals even at higher card counts, but their own internal limits and once-per-lifetime bonus rules mean timing still matters.
 
