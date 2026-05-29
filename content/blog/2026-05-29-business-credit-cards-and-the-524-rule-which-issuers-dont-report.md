@@ -37,6 +37,9 @@ The practical implication: if you open a Chase Ink Business Preferred, an Amex B
 
 ## Does the hard pull still happen even if the card doesn't report?
 
+Yes, the hard inquiry still hits your personal credit report at application even when the card itself never appears afterward. The pull is part of underwriting, not reporting. So your 5/24 count stays clean, but your score may dip slightly from the inquiry, which fades within a year.
+
+
 Yes, the hard inquiry still hits your personal credit report at application. The card account itself just does not appear afterward.
 
 This is a distinction that trips up a lot of people. When you apply for an Amex Business Gold, Amex pulls your personal credit (usually Experian). That inquiry shows up. But once approved, the account -- the credit limit, the payment history, the utilization -- does not get added as a tradeline to your personal report. The inquiry counts for score purposes, but the account does not count toward 5/24.
@@ -78,6 +81,9 @@ This is not a loophole or a gray area. Sole proprietorships are a recognized leg
 ---
 
 ## Does non-reporting mean the account is totally invisible?
+
+Not entirely. Most issuers will report serious delinquencies, typically 90 or more days late, to personal bureaus even on business cards. Capital One reports all business card activity regardless. Pay on time and avoid Capital One business cards if you want the account kept off your personal report completely.
+
 
 Not completely. A few scenarios where business card activity can surface on your personal report:
 
