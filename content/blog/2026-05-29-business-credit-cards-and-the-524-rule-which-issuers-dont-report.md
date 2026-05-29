@@ -51,11 +51,11 @@ Because business cards from non-reporting issuers let you accumulate sign-up bon
 
 Here is a concrete example of how this plays out. Say you are sitting at 3/24. You could:
 
-1. Open Chase Sapphire Preferred (4/24)
+1. [Open Chase Sapphire Preferred](/blog/best-credit-card-by-category/) (4/24)
 2. Open Chase Ink Business Cash -- does not add to count, still 4/24
 3. Open Chase Ink Business Unlimited -- still 4/24
 4. Open one more personal card (5/24)
-5. Now pivot to Amex Business Platinum, Amex Business Gold, Citi AA Business -- none of these add to your count
+5. Now pivot to [Amex Business Platinum, Amex Business Gold, Citi AA Business](/blog/best-credit-cards-by-category/) -- none of these add to your count
 
 By the time your oldest card from step one ages off in 24 months, you could have collected five or six sign-up bonuses while technically never going above 5/24 from Chase's perspective on the personal side.
 
@@ -91,7 +91,7 @@ For the overwhelming majority of on-time payers, the non-reporting issuers stay 
 
 ## What is the actual strategic takeaway here?
 
-Business cards from Amex, Chase, Citi, Bank of America, and Barclays are effectively free moves from a 5/24 perspective. They let you keep earning sign-up bonuses -- often 75,000 to 150,000 points or more per card -- without eating into the limited personal slots that Chase's ecosystem demands.
+[Business cards from Amex, Chase, Citi, Bank of America, and Barclays](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-re/) are effectively free moves from a 5/24 perspective. They let you keep earning sign-up bonuses -- often 75,000 to 150,000 points or more per card -- without eating into the limited personal slots that Chase's ecosystem demands.
 
 The sequencing discipline that many experienced points collectors follow is straightforward: get Chase-eligible personal cards while you can, layer in Chase business cards (which also do not report), then use non-reporting business cards from other issuers to keep the bonus train moving. Capital One business cards get evaluated on their own merits with the full awareness that they cost you a slot.
 
