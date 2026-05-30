@@ -27,7 +27,7 @@ Most business cards do *not* add to your 5/24 count, with one significant except
 
 Capital One is the well-known exception. Capital One business cards [report to personal credit bureaus](https://www.doctorofcredit.com/small-business-credit-cards-that-do-not-report-to-personal-credit-bureaus/), which means a Capital One Spark card opened last year will sit on your personal report and count against your 5/24 status. Discover business cards also report to personal bureaus. If you are trying to preserve slots, this distinction matters enormously when you are planning which business cards to apply for.
 
-The practical upside here is significant. Many people build substantial points balances through Chase Ink cards, Amex business cards, and Citi business products without burning through their 5/24 slots, because those cards never touch the personal report.
+The practical upside here is significant. Many people build substantial points balances through [Chase Ink cards, Amex business cards, and Citi business products](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-re/) without burning through their 5/24 slots, because those cards never touch the personal report.
 
 ---
 
