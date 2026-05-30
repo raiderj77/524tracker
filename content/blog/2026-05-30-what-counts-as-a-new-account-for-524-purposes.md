@@ -59,6 +59,9 @@ Amex business charge cards, like the Business Platinum or Business Gold, follow 
 
 ## What does NOT count toward 5/24?
 
+Business cards from Chase, Amex, Citi, Barclays, and Bank of America do not count because they are not reported to personal credit bureaus. Debit cards, prepaid cards, installment loans, credit limit increases, and product changes are also excluded. Only new revolving personal credit card accounts appearing on your personal report matter.
+
+
 To make the list concrete:
 
 - Business credit cards from Chase, Amex, Citi, Barclays, Bank of America (not reported to personal bureaus)
