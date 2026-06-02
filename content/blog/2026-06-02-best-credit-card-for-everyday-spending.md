@@ -61,7 +61,7 @@ The Blue Business Plus is a particularly popular move here because it's a busine
 
 If you're already in the Chase ecosystem: Freedom Unlimited, paired with a Sapphire or Ink card to unlock transfers. If you want a standalone premium card with strong everyday earning: Venture X. If you want no annual fee and Amex points: Blue Business Plus.
 
-There's no universal winner. A common approach is to audit your monthly spending, identify your biggest non-bonus category, and pick the card that earns the most on that dollar amount. The best everyday card is the one that makes your baseline spending work harder, not the one with the flashiest welcome bonus.
+There's no universal winner. A common approach is to audit your monthly spending, identify your biggest non-bonus category, and [pick the card that earns the most on that dollar amount](/blog/best-credit-card-for-each-category/). The best everyday card is the one that makes your baseline spending work harder, not the one with the flashiest welcome bonus.
 
 ## Frequently asked questions
 
