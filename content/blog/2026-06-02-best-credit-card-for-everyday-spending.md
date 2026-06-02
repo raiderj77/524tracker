@@ -31,6 +31,9 @@ But here's the catch: those cash-back dollars are static. A 2% return is 2%. If 
 
 ## Which transferable points card is best for non-bonus spending?
 
+The Chase Freedom Unlimited is the strongest everyday earner for most people already holding a Sapphire or Ink card. Its 1.5x on non-bonus purchases converts to full Ultimate Rewards points when paired with a premium Chase card, making it a quiet workhorse that punches well above its no-annual-fee weight.
+
+
 The [Chase Freedom Unlimited](https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited) is the go-to answer for a lot of people already in the Chase ecosystem. It earns 1.5x on everything, plus 3x on dining and drugstores. When you pair it with a card that carries the Chase Ultimate Rewards portal or transfer partners (like the Sapphire Preferred or Ink Preferred), those 1.5x points become transferable to United, Hyatt, Southwest, and others. Suddenly 1.5x on everyday spend is worth significantly more than 1.5 cents if you're booking Hyatt properties at 2 cents per point or better.
 
 The [Capital One Venture X](https://www.capitalone.com/credit-cards/venture-x/) earns 2x miles on all purchases, with a $395 annual fee offset by a $300 annual travel credit (through Capital One Travel) and 10,000 bonus miles on each account anniversary. The math works out to a card that effectively pays for itself before you swipe it once, and 2x on everything with access to [Capital One's transfer partners](https://www.capitalone.com/learn-grow/money-management/travel-miles-transfer-partners/) including Air Canada Aeroplan, Turkish Airlines, and Avianca LifeMiles is a genuinely strong setup.
