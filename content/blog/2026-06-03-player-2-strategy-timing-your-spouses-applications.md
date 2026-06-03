@@ -33,7 +33,7 @@ The same logic applies across issuers. American Express referral bonuses on card
 
 ## When should Player 2 start applying?
 
-A common approach is to wait until Player 1 has already secured the cards with the highest welcome offers and longest eligibility restrictions. This serves two purposes. First, Player 1 absorbs any approval friction, application timing risk, and minimum spend pressure early. Second, Player 2 enters the game with a clearer picture of which cards are worth burning a 5/24 slot on.
+A common approach is to wait until Player 1 has already secured the [cards with the highest welcome offers](/blog/best-credit-cards-for-each-category/) and longest eligibility restrictions. This serves two purposes. First, Player 1 absorbs any approval friction, application timing risk, and minimum spend pressure early. Second, Player 2 enters the game with a clearer picture of [which cards are worth burning a 5/24 slot on](/blog/what-counts-as-a-new-account-for-524-purposes/).
 
 If Player 1 applied for the Chase Sapphire Preferred in January, many people find it useful to have Player 2 apply around the 6-to-12-month mark. This staggers minimum spend deadlines so the household is not trying to hit $8,000 or $10,000 in combined spend across two new cards simultaneously.
 
@@ -43,7 +43,7 @@ One important timing note: Chase's [48-month rule on Sapphire products](https://
 
 ## How do you handle minimum spend without overspending?
 
-This is where coordination either pays off or creates stress. The most common approach is to front-load normal household expenses onto whichever new card has the nearest spend deadline. Groceries, utilities, insurance premiums, and subscription services are the usual levers.
+This is where coordination either pays off or creates stress. The most common approach is to front-load normal household expenses onto whichever new card has the nearest spend deadline. [Groceries, utilities, insurance premiums, and subscription services](/blog/best-credit-cards-by-category/) are the usual levers.
 
 Some households use a shared spreadsheet or an app like [AwardWallet](https://awardwallet.com/) to track both players' cards, spend progress, and bonus deadlines in one place. AwardWallet supports multiple users under a household view, which removes the guesswork around who owes what to which card by when.
 
