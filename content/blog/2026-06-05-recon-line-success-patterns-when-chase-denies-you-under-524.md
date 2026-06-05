@@ -9,13 +9,13 @@ author: "Your Friendly Developer LLC"
 
 # Chase Recon Line Success Patterns When You Get Denied Under 5/24
 
-**The short version:** Calling the Chase reconsideration line after a 5/24 denial rarely reverses the decision, because 5/24 is a hard policy filter, not a judgment call. That said, a meaningful number of people do report success when the denial has a secondary reason alongside 5/24, or when they can demonstrate the rep misread their file. Knowing which scenarios are worth the call saves you time and a potential hard inquiry headache.
+**The short version:** Calling the Chase reconsideration line after a 5/24 denial rarely reverses the decision, because 5/24 is a hard policy filter, not a judgment call. That said, a meaningful number of people do report success when the denial has a secondary reason alongside 5/24, or when they can demonstrate the rep misread their file. Knowing which scenarios are worth the call saves you time and [a potential hard inquiry headache](/blog/how-many-hard-inquiries-is-too-many/).
 
 ---
 
 ## Does calling recon actually work for 5/24 denials?
 
-Rarely for a pure 5/24 block, but more often than you'd expect when the denial letter lists additional reasons. If Chase's system flagged you solely because you're at 5 or more new cards in 24 months, the rep cannot override that policy. But denial letters frequently cite two or three reasons, and those secondary factors are negotiable.
+Rarely for a pure 5/24 block, but more often than you'd expect when the denial letter lists additional reasons. If Chase's system flagged you solely because [you're at 5 or more new cards in 24 months](/blog/how-the-chase-524-rule-works-in-2026/), the rep cannot override that policy. But denial letters frequently cite two or three reasons, and those secondary factors are negotiable.
 
 The reconsideration line numbers most people use are **1-888-270-2127** (new applications) and **1-800-432-3117** (existing cardholders). Some data points on [Reddit's r/CreditCards](https://www.reddit.com/r/CreditCards/) and [Doctor of Credit's forums](https://www.doctorofcredit.com/forums/) consistently show that reps have no override authority on the 5/24 count itself. What they can do is re-evaluate credit limit allocation, income verification, and relationship history.
 
@@ -25,7 +25,7 @@ The reconsideration line numbers most people use are **1-888-270-2127** (new app
 
 The adverse action letter is your script. Read every reason code before you pick up the phone.
 
-Chase is required under the [Fair Credit Reporting Act](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act) to give you specific reasons for denial. A letter that says "too many recently opened accounts" is a 5/24 flag. A letter that also says "insufficient income relative to existing credit lines" or "too many recent inquiries" is giving you something to work with. Those second and third reasons are where recon calls earn their keep.
+Chase is required under the [Fair Credit Reporting Act](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act) to give you specific reasons for denial. A letter that says "[too many recently opened accounts](/blog/what-counts-as-a-new-account-for-524-purposes/)" is a 5/24 flag. A letter that also says "insufficient income relative to existing credit lines" or "too many recent inquiries" is giving you something to work with. Those second and third reasons are where recon calls earn their keep.
 
 ---
 
