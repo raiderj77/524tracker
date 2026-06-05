@@ -23,6 +23,9 @@ The reconsideration line numbers most people use are **1-888-270-2127** (new app
 
 ## What does a denial letter actually tell you before you call?
 
+Your denial letter is a pre-call cheat sheet. Chase must list specific reason codes under the Fair Credit Reporting Act, so read each one carefully before dialing. A code citing too many new accounts signals a 5/24 issue, while utilization or income flags point to arguments you can actually counter on the recon line.
+
+
 The adverse action letter is your script. Read every reason code before you pick up the phone.
 
 Chase is required under the [Fair Credit Reporting Act](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act) to give you specific reasons for denial. A letter that says "[too many recently opened accounts](/blog/what-counts-as-a-new-account-for-524-purposes/)" is a 5/24 flag. A letter that also says "insufficient income relative to existing credit lines" or "too many recent inquiries" is giving you something to work with. Those second and third reasons are where recon calls earn their keep.
@@ -42,6 +45,9 @@ The highest-reported success rates come from three situations: authorized user a
 ---
 
 ## How should you structure the actual call?
+
+Lead with the specific reason codes from your denial letter, not a general plea. State each cited reason, then offer a factual rebuttal for any you can dispute, such as an authorized user account inflating your count. Ask open-ended questions, let the rep pull up your file, and avoid interrupting while they review.
+
 
 Be specific, stay calm, and lead with facts rather than frustration. Reps respond to documentation, not appeals to loyalty.
 
