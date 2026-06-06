@@ -33,6 +33,9 @@ The cards that have historically been reported as not subject to the 5/24 check 
 
 ## Did anything about 5/24 actually change in 2024?
 
+The underlying 5/24 rule itself did not change in 2024. What shifted was the context around it: elevated Chase welcome offers, notably the Sapphire Preferred hitting 100k points publicly, made slot management more consequential than it had been in years, pushing more people to actively track their position.
+
+
 The underlying rule did not change. What changed was the landscape around it. Three things are worth tracking.
 
 **The Chase Sapphire Preferred 100k offer.** In mid-2024, Chase ran an elevated [100,000-point welcome offer on the Sapphire Preferred](https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred), the highest publicly available offer on that card in years. For anyone sitting at 4/24, the calculus of burning a 5/24 slot became more straightforward. A 100k UR offer versus a 60k or 75k offer is a meaningful difference in points currency, and many people who had been holding slots for other cards reconsidered their sequencing.
