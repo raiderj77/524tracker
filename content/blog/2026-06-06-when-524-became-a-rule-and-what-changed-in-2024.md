@@ -9,7 +9,7 @@ author: "Your Friendly Developer LLC"
 
 # When Did Chase 5/24 Become a Rule, and What Changed in 2024?
 
-Chase's 5/24 rule has been enforced since roughly mid-2015, when it quietly rolled out for a handful of co-branded cards before expanding to nearly the entire Chase portfolio by 2016. It was never officially announced. In 2024, the rule itself did not change, but several shifts in Chase's product lineup and application behavior changed how it affects real-world strategy.
+[Chase's 5/24 rule has been enforced since roughly mid-2015](/blog/how-the-chase-524-rule-works-in-2026/), when it quietly rolled out for a handful of co-branded cards before expanding to nearly the entire Chase portfolio by 2016. It was never officially announced. In 2024, the rule itself did not change, but several shifts in Chase's product lineup and application behavior changed how it affects real-world strategy.
 
 ---
 
@@ -47,7 +47,7 @@ The underlying rule did not change. What changed was the landscape around it. Th
 
 A common approach is to prioritize Chase cards first before opening accounts with issuers that have no equivalent restriction. American Express, Capital One, Citi, and Barclays all have their own rules, but none of them use a rolling 24-month new-account count across all issuers the way Chase does.
 
-Many people find that a practical sequence looks something like this: exhaust Chase personal and business cards while staying under 5/24, then open freely with other issuers once you've collected the Chase cards you want. The Ink Business Preferred, Ink Business Cash, and Ink Business Unlimited are frequently cited as the workhorses of this phase because they earn Ultimate Rewards without consuming personal 5/24 slots.
+Many people find that a practical sequence looks something like this: exhaust Chase personal and business cards while staying under 5/24, then open freely with other issuers once you've collected the Chase cards you want. The [Ink Business Preferred, Ink Business Cash, and Ink Business Unlimited](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-re/) are frequently cited as the workhorses of this phase because they earn Ultimate Rewards without consuming personal 5/24 slots.
 
 The complication in 2024 is that Ink approvals became less predictable. Where someone might have expected to open a new Ink every three to four months, the new pattern from data points suggests waiting longer between applications and keeping total open Ink cards lower than before.
 
