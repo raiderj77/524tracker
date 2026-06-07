@@ -66,7 +66,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Long We Retain Data</h2>
-          <p>localStorage data persists in your browser until you clear it — you can delete it at any time through your browser settings. We do not set any first-party cookies. Google AdSense cookies are retained for up to 13 months per Google&apos;s policies. Affiliate network cookies typically expire within 7–90 days depending on the issuer program. Vercel server logs (containing IP addresses) are retained for up to 30 days.</p>
+          <p>localStorage data persists in your browser until you clear it — you can delete it at any time through your browser settings. We do not set any first-party cookies. If display ads are enabled, Google AdSense cookies are retained for up to 13 months per Google&apos;s policies. Affiliate network cookies typically expire within 7–90 days depending on the issuer program. Vercel server logs (containing IP addresses) are retained for up to 30 days.</p>
         </section>
 
         <section>
@@ -248,7 +248,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Affiliate Disclosure</h2>
           <p>
-            524 Tracker participates in affiliate programs with credit card issuers. We may earn a commission when you apply for and are approved for a card through our links. This does not affect our editorial recommendations. All affiliate links are marked with{' '}
+            524Tracker may include affiliate links from credit card issuers and their affiliate networks. We may earn a commission when you apply for and are approved for a card through our links. This does not affect our editorial recommendations. All affiliate links are marked with{' '}
             <code className="text-xs bg-gray-100 px-1 rounded">rel=nofollow sponsored</code>.
           </p>
         </section>

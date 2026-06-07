@@ -160,7 +160,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-bold text-base text-brand-navy mb-1">Do you accept advertising or sponsored content?</h3>
-              <p>524Tracker displays ads through Google AdSense and earns commissions through credit card affiliate links. Advertising and affiliate relationships never influence our rule documentation, tracker calculations, or editorial recommendations. For advertising inquiries, email <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a>.</p>
+              <p>524Tracker may display ads through Google AdSense and may earn commissions through credit card affiliate links when those links are active. Advertising and affiliate relationships never influence our rule documentation, tracker calculations, or editorial recommendations. For advertising inquiries, email <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a>.</p>
             </div>
           </div>
         </section>

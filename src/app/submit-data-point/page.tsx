@@ -65,6 +65,7 @@ export default function SubmitDataPointPage() {
             </Link>{' '}
             to understand how submissions are reviewed and verified before being added to the database.
           </p>
+          <p className="text-sm text-gray-500 mt-2">Last reviewed: April 2026</p>
         </header>
 
         <div className="mb-8 bg-brand-light border border-gray-200 rounded-xl p-5">
