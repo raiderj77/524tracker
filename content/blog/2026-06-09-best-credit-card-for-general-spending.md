@@ -17,7 +17,7 @@ author: "Your Friendly Developer LLC"
 
 The right card comes down to three things: the earn rate on unbonused spend, whether the currency is transferable or locked in, and whether the annual fee math works out after credits. A 2% cash-back card and a 2x transferable-points card look identical on paper until you move those points to a partner like Air Canada Aeroplan or Turkish Miles&Smiles and suddenly your "2 cents per dollar" becomes 4 or 5 cents per dollar in first-class value.
 
-Most people in this hobby treat general-spend cards as the catch-all slot in their wallet. Groceries go on the Amex Gold, dining goes on the Chase Sapphire Reserve, gas goes somewhere else entirely. What's left over -- the random Amazon order, the dentist bill, the Costco run that doesn't trigger a bonus -- that's where your general-spend card earns its keep. Over a year of $2,000 a month in unbonused spend, the difference between a 1.5x and a 2x card is 6,000 points. At even a modest 1.5 cents per point, that's $90.
+Most people in this hobby treat general-spend cards as [the catch-all slot in their wallet](/blog/best-credit-card-for-everyday-spending/). Groceries go on the Amex Gold, dining goes on the Chase Sapphire Reserve, gas goes somewhere else entirely. What's left over -- the random Amazon order, the dentist bill, the Costco run that doesn't trigger a bonus -- that's where your general-spend card earns its keep. Over a year of $2,000 a month in unbonused spend, the difference between a 1.5x and a 2x card is 6,000 points. At even a modest 1.5 cents per point, that's $90.
 
 ---
 
