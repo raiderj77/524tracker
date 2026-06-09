@@ -59,6 +59,9 @@ The $50,000 cap is the limiting factor. For most people that's plenty. Heavy spe
 
 ## The bottom line
 
+The Venture X wins for most people chasing transferable points on unbonused spend, delivering 2x Capital One miles with an annual fee that effectively zeroes out. Slot-conscious Chase collectors should lean on the Freedom Unlimited instead, and existing Amex business cardholders may find better synergy staying within that ecosystem.
+
+
 For most people who are past their Chase card priorities and want to maximize every dollar of unbonused spend, the Venture X at 2x transferable miles with a net-zero annual fee is the strongest option available right now. If you're protecting 5/24 slots, the Freedom Unlimited at 1.5x UR keeps you in the Chase ecosystem at a cost. And if you're a business card holder already in the Amex world, the Blue Business Plus at 2x MR with no fee deserves a spot in your wallet.
 
 ## Frequently asked questions
