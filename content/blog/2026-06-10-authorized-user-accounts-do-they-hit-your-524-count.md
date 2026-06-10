@@ -15,7 +15,7 @@ author: "Your Friendly Developer LLC"
 
 ## Does Chase automatically count authorized user cards toward 5/24?
 
-Yes, in most cases Chase's automated system counts AU accounts the same way it counts accounts you opened yourself. The system reads your credit report and tallies new accounts opened in the past 24 months, and it typically cannot distinguish between a card you applied for and one where someone simply added you as a user.
+Yes, in most cases Chase's automated system counts AU accounts the same way it counts accounts you opened yourself. The system reads your credit report and [tallies new accounts opened in the past 24 months](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-report/), and it typically [cannot distinguish between a card you applied for](/blog/what-counts-as-a-new-account-for-524-purposes/) and one where someone simply added you as a user.
 
 This is one of the more frustrating quirks of the rule. You could be sitting at 4/24, get added as an AU on a family member's card, and suddenly find yourself flagged as 5/24 before you even submitted an application. The automated underwriting system does not care about intent or ownership.
 
