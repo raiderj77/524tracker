@@ -9,7 +9,7 @@ author: "Your Friendly Developer LLC"
 
 # Chase Ink Business Cash vs Ink Business Unlimited: Which Should You Apply for First?
 
-**The short answer:** Apply for the Ink Business Cash first if your spending skews toward office supplies, internet, cable, or phone bills. Apply for the Ink Business Unlimited first if you want a flat-rate card that requires zero category tracking. Both earn Ultimate Rewards points when paired with a premium Chase card, so the "better" card is almost entirely a function of where you actually spend money.
+**The short answer:** Apply for the Ink Business Cash first if your spending skews toward office supplies, internet, cable, or phone bills. Apply for the Ink Business Unlimited first if you want a [flat-rate card that requires zero category tracking](/blog/best-credit-card-for-everyday-spending/). Both earn Ultimate Rewards points when paired with a premium Chase card, so the "better" card is almost entirely a function of where you actually spend money.
 
 ---
 
@@ -27,7 +27,7 @@ The Unlimited, by contrast, is a workhorse. It does not reward you for spending 
 
 Occasionally, but usually not by enough to override the category fit. Both cards have historically offered welcome bonuses in the range of $750 cash back (75,000 Ultimate Rewards points when transferred from a premium card) after meeting a spending threshold, though [current offers fluctuate](https://creditcards.chase.com/business-credit-cards/ink) and you should always verify the live offer before applying.
 
-The more important point is that both cards are within Chase's 5/24 count, and both will add to your count if approved. That means the opportunity cost of applying for either card is the same. The welcome bonus difference between them at any given moment is rarely significant enough to override your long-term earning potential from category fit.
+The more important point is that [both cards are within Chase's 5/24 count](/blog/business-credit-cards-and-the-524-rule-which-issuers-dont-re/), and both will add to your count if approved. That means the opportunity cost of applying for either card is the same. The welcome bonus difference between them at any given moment is rarely significant enough to override your long-term earning potential from category fit.
 
 If one card is running a higher bonus than the other, that is a legitimate tiebreaker. But do not contort your spending habits around a temporary elevated offer.
 
@@ -39,7 +39,7 @@ Both cards become significantly more powerful when paired with a card that unloc
 
 With a premium card, those same points can transfer to partners like Hyatt, United, Southwest, or Air France/Flying Blue. A common approach is to pool all points earned on the no-annual-fee Ink cards into the Sapphire Reserve for maximum flexibility. In that context, the 5x earning on the Cash card on telecom and office supply spending is genuinely exceptional.
 
-If you already hold a Sapphire Preferred or Reserve, the Ink Business Cash is often the more compelling first Ink card because its 5x categories complement the Sapphire's own bonus categories (travel and dining) without overlapping them. The Unlimited fills gaps, but the Cash fills gaps in higher-value categories.
+If you already hold a Sapphire Preferred or Reserve, the Ink Business Cash is often the more compelling first Ink card because its [5x categories complement the Sapphire's own bonus categories](/blog/best-credit-cards-by-category/) (travel and dining) without overlapping them. The Unlimited fills gaps, but the Cash fills gaps in higher-value categories.
 
 ---
 
