@@ -39,6 +39,9 @@ This trips people up constantly. The soft-pull check that powers the pre-qualify
 
 ## What information in the pre-approval offer actually matters?
 
+Focus on three things: the bonus amount, the annual fee language, and the offer code or reservation number. If your targeted bonus beats the public offer, that gap is real money worth acting on. The offer code also helps confirm you are redeeming a specific targeted pull, not a generic landing page.
+
+
 Focus on three things: the bonus amount, the annual fee language, and the offer code or reservation number. Everything else is boilerplate.
 
 The bonus amount is the most important variable. If the pre-approval offer shows a higher bonus than what is publicly listed on Chase's website, that is a meaningful signal. For example, if the public Sapphire Preferred offer is 60,000 points but your in-account offer shows 80,000 points, applying through that personalized link is worth doing. Always screenshot the offer before clicking through, because the elevated bonus can sometimes disappear if you navigate away and return. The annual fee language matters because some targeted offers include a first-year annual fee waiver that is not part of the standard public offer. Read the terms in the offer carefully before assuming the fee structure matches what you have seen elsewhere. The reservation number or offer code on a mailer should be entered exactly as printed. This is what ties you to the specific offer terms and, in many cases, is what keeps the initial check as a soft pull rather than triggering the hard inquiry prematurely.
