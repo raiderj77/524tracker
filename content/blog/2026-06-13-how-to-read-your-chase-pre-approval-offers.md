@@ -9,7 +9,7 @@ author: "Your Friendly Developer LLC"
 
 # How to Read Your Chase Pre-Approval Offers
 
-Chase pre-approval offers are soft-pull signals that you likely meet the basic credit criteria for a card, but they are not guarantees of approval. Knowing how to find them, what the language actually means, and how they interact with 5/24 can save you a hard inquiry and help you sequence your application strategy more intelligently.
+Chase pre-approval offers are soft-pull signals that you likely meet the basic credit criteria for a card, but they are not guarantees of approval. Knowing how to find them, what the language actually means, and how they interact with 5/24 can [save you a hard inquiry and help you sequence](/blog/how-hard-inquiries-affect-your-credit-score/) your application strategy more intelligently.
 
 ---
 
