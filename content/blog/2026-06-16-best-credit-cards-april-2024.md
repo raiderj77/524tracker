@@ -43,6 +43,9 @@ The [Ink Business Cash](https://creditcards.chase.com/business-credit-cards/ink/
 
 ## Is there anything outside Chase and Amex worth a slot right now?
 
+Yes, the Capital One Venture X card stands out with its generous sign-up bonus of 75,000 miles after $4,000 spend in three months. Despite the $395 annual fee, perks like a $300 travel credit and 10,000 anniversary miles make it worthwhile.
+
+
 A few cards outside the big two ecosystems are worth considering depending on your travel goals. The [Capital One Venture X](https://creditcards.capitalone.com/venture-x-credit-card/) at 75,000 miles after $4,000 in three months is one of the stronger all-around offers available. The $395 annual fee is offset by a $300 annual travel credit through Capital One Travel and 10,000 anniversary miles, which many people value at roughly $100. If you transfer to Turkish Miles&Smiles or Air Canada Aeroplan, the miles can punch well above their face value.
 
 The [Bilt Mastercard](https://www.biltrewards.com/card) remains worth holding if you pay rent, earning 1x on rent payments with no transaction fee, up to 100,000 points per year. Bilt's transfer partners include Hyatt, United, and American, and the program has been adding partners steadily. It won't win on a welcome offer since there isn't one, but as a long-term hold it earns a slot for renters.
