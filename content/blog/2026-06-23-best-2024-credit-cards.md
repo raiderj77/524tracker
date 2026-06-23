@@ -45,6 +45,9 @@ Transfer partners improved meaningfully in 2024. Capital One now transfers to [T
 
 ## Are there any business cards worth adding in 2024?
 
+Yes, the Amex Business Platinum offers significant rewards for high spenders with a 1.5x multiplier on $5,000+ purchases and select categories. Despite a hefty $695 annual fee, it provides valuable credits for Dell, Indeed, and Adobe services.
+
+
 The [Amex Business Platinum](https://www.americanexpress.com/us/credit-cards/card/business-platinum-card/) is a heavy hitter for high spenders, specifically because of the 1.5x multiplier on purchases of $5,000 or more and on select business categories. The $695 annual fee is steep, but the card comes with up to $400 in U.S. Dell credits, up to $360 in Indeed credits, up to $150 in Adobe credits, and a 35% Pay With Points rebate when booking through Amex Travel in a confirmed cabin. For people who already use those services, the credits can flip the effective annual fee negative.
 
 The [Ink Business Preferred](https://creditcards.chase.com/business-credit-cards/ink/preferred) remains a strong Chase business card with 3x on travel, shipping, advertising on social media and search engines, and internet/cable/phone services up to $150,000 per year. The 100,000-point welcome bonus seen periodically in 2024 is one of the highest publicly available Chase offers and transfers directly to Hyatt, United, and Southwest, among others.
