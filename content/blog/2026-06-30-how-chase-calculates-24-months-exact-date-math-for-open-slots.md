@@ -25,6 +25,9 @@ The practical implication: your "drop date" is the same calendar date, two years
 
 ## Does the account have to be closed before it drops off?
 
+No, the account does not need to be closed for it to drop off the 5/24 calculation. Chase looks at when the account was opened, not its current status or closure date. Keeping a card open past 24 months doesn't extend how long it counts.
+
+
 No. Account status is irrelevant. Chase is looking at when the account was *opened*, not whether it is still open, and not when it was closed.
 
 This surprises a lot of people who assume closing a card early will accelerate their drop below 5/24. It will not. Conversely, keeping a card open past the 24-month mark does not extend how long it counts against you. The opening date is the only variable Chase's automated system reads for this calculation. Data points shared consistently across communities like [r/churning](https://www.reddit.com/r/churning/) confirm that closed accounts still count until the 24-month window passes.
@@ -32,6 +35,9 @@ This surprises a lot of people who assume closing a card early will accelerate t
 ---
 
 ## Which accounts actually count toward 5/24?
+
+Personal credit cards from any issuer typically count towards the 5/24 rule. Business cards usually do not, as they rarely appear on your personal credit report. Only new accounts visible on your personal report are considered.
+
 
 Most personal credit cards from any issuer count. Business cards from most major issuers do not, because they typically do not appear on your personal credit report.
 
