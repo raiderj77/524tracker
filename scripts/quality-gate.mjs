@@ -31,7 +31,11 @@ assert.doesNotMatch(llms, /524tracker\.com\/blog|top-cards|best-cards-by-categor
 assert.match(markdownLoader, /return \[\];/);
 assert.match(markdownLoader, /return null;/);
 
-assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === 'true'/);
+assert.match(layout, /NEXT_PUBLIC_CONSENT_PLATFORM_ENABLED === 'true'/);
+assert.match(layout, /consentPlatformEnabled && process\.env\.NEXT_PUBLIC_ADSENSE_ENABLED/);
+assert.match(layout, /consentPlatformEnabled && process\.env\.NEXT_PUBLIC_ANALYTICS_ENABLED/);
+assert.match(layout, /consentPlatformEnabled &&/);
+assert.match(layout, /analyticsEnabled &&/);
 assert.match(layout, /adsenseEnabled &&/);
 assert.match(layout, /data-cookieconsent="marketing"/);
 assert.match(layout, /data-cookieconsent="statistics"/);
@@ -40,6 +44,7 @@ assert.doesNotMatch(layout, /microsoft-clarity|clarity\.ms/);
 assert.doesNotMatch(layout, /SearchAction|new Date\(\).*dateModified/);
 assert.match(privacy, /has not been approved to show AdSense ads/);
 assert.match(privacy, /advertising script is currently\s+disabled/);
+assert.match(privacy, /Cookiebot is also disabled/);
 
 const ignored = [
   join('src', 'app', 'blog'),

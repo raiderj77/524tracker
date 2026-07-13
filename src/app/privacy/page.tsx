@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           <p>
             Credit-card details you enter into the tracking tools are processed and stored in your
             browser. 524Tracker does not intentionally transmit those entries to its servers. The
-            website still uses ordinary hosting, security, consent, and optional analytics services,
+            website still uses ordinary hosting and security services,
             which can process technical information such as an IP address and browser details.
           </p>
         </section>
@@ -38,15 +38,15 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Cookies and analytics</h2>
           <p className="mb-3">
-            Cookiebot stores your consent choice. Google Analytics (measurement ID G-308FHNWPPQ) is
-            configured to load only after analytics consent. If enabled, it may process pages viewed,
-            approximate location, device and browser information, referral source, and interaction
-            data. It is not configured to receive the contents of your tracker entries.
+            Google Analytics (measurement ID G-308FHNWPPQ) is configured as a possible future
+            analytics provider but is currently disabled. Cookiebot is also disabled because a
+            domain-valid consent configuration has not yet been completed for 524tracker.com. The
+            site therefore does not currently load optional analytics or consent-provider scripts.
           </p>
           <p>
-            Consent Mode defaults advertising and analytics storage to denied. We also honor the
-            Global Privacy Control signal by keeping non-essential storage denied and asking
-            Cookiebot to decline optional cookies.
+            Consent Mode defaults advertising and analytics storage to denied. A Global Privacy
+            Control signal also keeps non-essential storage denied. If analytics is enabled later,
+            it will require the consent platform and will not be configured to receive tracker entries.
           </p>
         </section>
 
@@ -55,8 +55,9 @@ export default function PrivacyPage() {
           <p>
             Google AdSense is configured as a possible future advertising provider, but 524Tracker
             has not been approved to show AdSense ads and the advertising script is currently
-            disabled. We will update this policy before enabling advertising. Advertising storage
-            will remain consent-controlled if ads are enabled later.
+            disabled. Code now requires both explicit AdSense approval and an enabled, domain-valid
+            consent platform before the advertising script can load. We will update this policy
+            before enabling advertising.
           </p>
         </section>
 
@@ -86,8 +87,8 @@ export default function PrivacyPage() {
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Retention and security</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Tracker data remains in your browser until you remove it or the browser removes it.</li>
-            <li>Cookiebot retains consent preferences according to its configured consent period.</li>
-            <li>Google and Vercel retain service data under their settings, contracts, and policies.</li>
+            <li>Cookiebot and Google Analytics are currently disabled and do not receive site visits.</li>
+            <li>Vercel retains hosting and security data under its settings, contracts, and policies.</li>
           </ul>
           <p className="mt-3">
             The site uses HTTPS and security headers. No website or third-party service can guarantee
@@ -98,8 +99,8 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Your choices and rights</h2>
           <p>
-            You can change optional-cookie choices through the Cookiebot banner, enable Global Privacy
-            Control, clear browser data, or use browser privacy controls. Depending on where you live,
+            You can enable Global Privacy Control, clear browser data, or use browser privacy controls.
+            If optional services are enabled later, a consent control will be provided. Depending on where you live,
             you may also have rights to access, correct, delete, or restrict personal information that
             we control. Browser-local tracker data is controlled by you and is not available for us to
             retrieve. We do not sell personal information.

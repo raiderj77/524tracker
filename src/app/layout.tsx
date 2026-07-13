@@ -131,7 +131,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsenseEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
+  const consentPlatformEnabled =
+    process.env.NEXT_PUBLIC_CONSENT_PLATFORM_ENABLED === 'true';
+  const analyticsEnabled =
+    consentPlatformEnabled && process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+  const adsenseEnabled =
+    consentPlatformEnabled && process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
 
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
@@ -166,29 +171,33 @@ export default function RootLayout({
 `,
           }}
         />
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
-          data-blockingmode="auto"
-          strategy="beforeInteractive"
-        />
-        <Script
-          id="gpc-auto-decline"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.addEventListener('CookiebotOnLoad', function () {
-                try {
-                  var gpcActive = !!navigator.globalPrivacyControl ||
-                    document.cookie.indexOf('empire_gpc=1') !== -1;
-                  if (gpcActive && window.Cookiebot) window.Cookiebot.decline();
-                } catch (e) {}
-              });
-            `,
-          }}
-        />
-        <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
+        {consentPlatformEnabled && (
+          <>
+            <Script
+              id="Cookiebot"
+              src="https://consent.cookiebot.com/uc.js"
+              data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+              data-blockingmode="auto"
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="gpc-auto-decline"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.addEventListener('CookiebotOnLoad', function () {
+                    try {
+                      var gpcActive = !!navigator.globalPrivacyControl ||
+                        document.cookie.indexOf('empire_gpc=1') !== -1;
+                      if (gpcActive && window.Cookiebot) window.Cookiebot.decline();
+                    } catch (e) {}
+                  });
+                `,
+              }}
+            />
+            <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
+          </>
+        )}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
@@ -203,20 +212,24 @@ export default function RootLayout({
             data-cookieconsent="marketing"
           />
         )}
-        <Script
-          id="ga4-loader"
-          src="https://www.googletagmanager.com/gtag/js?id=G-308FHNWPPQ"
-          strategy="afterInteractive"
-          data-cookieconsent="statistics"
-        />
-        <Script
-          id="ga4-config"
-          strategy="afterInteractive"
-          data-cookieconsent="statistics"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ', { anonymize_ip: true });`,
-          }}
-        />
+        {analyticsEnabled && (
+          <>
+            <Script
+              id="ga4-loader"
+              src="https://www.googletagmanager.com/gtag/js?id=G-308FHNWPPQ"
+              strategy="afterInteractive"
+              data-cookieconsent="statistics"
+            />
+            <Script
+              id="ga4-config"
+              strategy="afterInteractive"
+              data-cookieconsent="statistics"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ', { anonymize_ip: true });`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="antialiased font-body">
         <Header />
