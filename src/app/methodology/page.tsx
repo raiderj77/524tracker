@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const datePublished = '2026-04-26';
-const dateModified = new Date().toISOString().substring(0, 10);
+const dateModified = '2026-07-13';
 
 export default function MethodologyPage() {
   const articleSchema = {
@@ -139,11 +139,9 @@ export default function MethodologyPage() {
 
             <ol className="list-decimal list-inside space-y-3 text-base text-text-primary mb-6 ml-2">
               <li>
-                <strong>Submission:</strong> A cardholder submits a data point using our{' '}
-                <Link href="/submit-data-point" className="text-brand-gold hover:text-amber-600 font-semibold">
-                  submission form
-                </Link>
-                . They report the issuer, card, bureau pulled, state, application date, and source of knowledge.
+                <strong>Submission:</strong> A future intake system would collect the issuer, card,
+                bureau pulled, state, application date, and source of knowledge. Public submissions
+                are paused until secure storage, moderation, retention, and abuse controls are ready.
               </li>
               <li>
                 <strong>Review:</strong> Each submission is manually reviewed for completeness and plausibility before being added to the verification queue.
@@ -252,19 +250,17 @@ export default function MethodologyPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Help Improve This Database</h2>
+            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Verify Before You Apply</h2>
             <p className="text-base text-text-primary leading-relaxed mb-4">
-              The most useful thing you can do after reading this page is submit your own data point. If you recently applied for a credit card and checked your credit report, you know exactly which bureau was pulled, which state you applied from, and which card it was for. That is a real data point.
+              524Tracker is not currently accepting community submissions. Until a secure intake
+              and moderation workflow is ready, no form should ask you to send application details
+              to this site.
             </p>
             <p className="text-base text-text-primary leading-relaxed mb-4">
-              Submissions are anonymous. No name or email required. We ask only for the issuer, card, bureau pulled, state, application month and year, and your source of knowledge.
+              Before applying, check the issuer&apos;s current terms and compare multiple recent,
+              state-specific reports from the public sources above. A single community report is
+              not enough to predict which bureau an issuer will use for your application.
             </p>
-            <Link
-              href="/submit-data-point"
-              className="inline-flex items-center px-5 py-2.5 bg-brand-gold text-brand-navy font-semibold rounded-lg hover:bg-amber-400 transition-colors text-sm"
-            >
-              Submit a data point &rarr;
-            </Link>
           </section>
 
         </article>

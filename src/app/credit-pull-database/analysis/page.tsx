@@ -380,11 +380,11 @@ export default function CreditPullAnalysisPage() {
               <a href="https://www.reddit.com/r/CreditCards/" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">
                 r/CreditCards
               </a>{' '}
-              before you freeze anything. If you recently applied and saw which bureau was pulled, consider{' '}
-              <Link href="/submit-data-point" className="text-brand-gold hover:text-amber-600 font-semibold">
-                submitting a data point
+              before you freeze anything. The site is not currently accepting community submissions; read the{' '}
+              <Link href="/methodology" className="text-brand-gold hover:text-amber-600 font-semibold">
+                methodology and limitations
               </Link>{' '}
-              to help improve this database.
+              before using any reported pull pattern.
             </p>
           </section>
 

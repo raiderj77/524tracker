@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: '/blog/:path*', destination: '/rules-guide', permanent: true },
       { source: '/top-cards', destination: '/card-value-calculator', permanent: true },
       { source: '/best-cards-by-category', destination: '/card-value-calculator', permanent: true },
+      { source: '/submit-data-point', destination: '/methodology', permanent: true },
     ];
   },
   async headers() {

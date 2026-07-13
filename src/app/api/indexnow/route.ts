@@ -24,7 +24,6 @@ const ALL_URLS = [
   '/credit-pull-database',
   '/credit-pull-database/analysis',
   '/methodology',
-  '/submit-data-point',
   '/inquiry-tracker',
 ];
 
