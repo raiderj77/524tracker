@@ -21,11 +21,14 @@ const header = read('src/components/Header.tsx');
 const llms = read('public/llms.txt');
 const privacy = read('src/app/privacy/page.tsx');
 const markdownLoader = read('src/lib/blog-markdown.ts');
+const submissionRoute = read('src/app/api/submit-data-point/route.ts');
 
 assert.match(config, /source: '\/blog\/:path\*'.*destination: '\/rules-guide'.*permanent: true/);
 assert.match(config, /source: '\/top-cards'.*destination: '\/card-value-calculator'/);
 assert.match(config, /source: '\/best-cards-by-category'.*destination: '\/card-value-calculator'/);
+assert.match(config, /source: '\/submit-data-point'.*destination: '\/methodology'.*permanent: true/);
 assert.doesNotMatch(sitemap, /\/blog|top-cards|best-cards-by-category/);
+assert.doesNotMatch(sitemap, /submit-data-point/);
 assert.doesNotMatch(header, /\/blog|top-cards|best-cards-by-category/);
 assert.doesNotMatch(llms, /524tracker\.com\/blog|top-cards|best-cards-by-category/);
 assert.match(markdownLoader, /return \[\];/);
@@ -45,6 +48,9 @@ assert.doesNotMatch(layout, /SearchAction|new Date\(\).*dateModified/);
 assert.match(privacy, /has not been approved to show AdSense ads/);
 assert.match(privacy, /advertising script is currently\s+disabled/);
 assert.match(privacy, /Cookiebot is also disabled/);
+assert.match(submissionRoute, /status: 410/);
+assert.doesNotMatch(submissionRoute, /req\.json|console\.log|JSON\.stringify/);
+assert.ok(existsSync(join(root, 'public', 'logo.svg')), 'Organization logo must exist');
 
 const ignored = [
   join('src', 'app', 'blog'),

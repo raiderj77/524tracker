@@ -74,7 +74,7 @@ const siteGraphJsonLd = {
       '@id': 'https://524tracker.com/#org',
       name: '524 Tracker',
       url: 'https://524tracker.com',
-      logo: 'https://524tracker.com/logo.png',
+      logo: 'https://524tracker.com/logo.svg',
       description:
         'Free credit card rule tracker for Chase 5/24, Amex lifetime bonuses, Citi 8/65, and 10+ bank application rules.',
       contactPoint: {

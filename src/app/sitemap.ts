@@ -24,7 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/credit-pull-database',
     '/credit-pull-database/analysis',
     '/methodology',
-    '/submit-data-point',
     '/inquiry-tracker',
   ];
 

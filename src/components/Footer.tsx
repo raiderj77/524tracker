@@ -11,7 +11,6 @@ const siteLinks = [
   { href: '/downgrade-guide', label: 'Downgrade Guide' },
   { href: '/credit-pull-database', label: 'Credit Pull Database' },
   { href: '/methodology', label: 'Data Methodology' },
-  { href: '/submit-data-point', label: 'Submit a Data Point' },
   { href: '/inquiry-tracker', label: 'Inquiry Tracker' },
   { href: '/application-flowchart', label: 'Flowchart' },
   { href: '/rules-guide', label: 'Rules Guide' },

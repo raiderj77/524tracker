@@ -115,11 +115,11 @@ export default function CreditPullDatabasePage() {
           </h1>
           <p className="text-sm text-text-secondary max-w-2xl">
             A starting reference for which bureau each major bank pulls when you apply for a credit card.
-            Patterns compiled from public community sources. Help us build a more accurate database by{' '}
-            <Link href="/submit-data-point" className="text-brand-gold hover:text-amber-600 font-semibold">
-              submitting a verified data point
-            </Link>
-            .
+            Patterns compiled from public community sources. Read the{' '}
+            <Link href="/methodology" className="text-brand-gold hover:text-amber-600 font-semibold">
+              sourcing and verification methodology
+            </Link>{' '}
+            before relying on an entry.
           </p>
           <div className="flex flex-wrap gap-3 mt-3">
             <Link href="/methodology" className="text-xs text-brand-gold hover:text-amber-600 underline underline-offset-2">
@@ -204,11 +204,11 @@ export default function CreditPullDatabasePage() {
           <p className="text-sm text-amber-800 leading-relaxed">
             This is a starting reference compiled from publicly known patterns. Bank pull behavior changes
             frequently and varies by state. Verify current behavior with the bank before relying on this data.
-            Help us build a more accurate database -{' '}
-            <Link href="/submit-data-point" className="font-semibold underline underline-offset-2 hover:text-amber-900">
-              submit a verified data point below
-            </Link>
-            .
+            The site is not currently accepting community submissions; see the{' '}
+            <Link href="/methodology" className="font-semibold underline underline-offset-2 hover:text-amber-900">
+              methodology and source limitations
+            </Link>{' '}
+            for safer ways to verify a pull pattern.
           </p>
         </div>
 
