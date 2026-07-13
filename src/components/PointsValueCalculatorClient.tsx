@@ -193,7 +193,7 @@ export default function PointsValueCalculatorClient() {
                 How to Read This
               </p>
               <p className="text-xs text-amber-900 leading-relaxed">
-                The cents-per-point value shows what each point is "worth" in this specific redemption. Higher is better. We compare your redemption against that program's typical valuation range based on real-world redemption data from July 2026. Because valuations shift with program devaluations and travel pricing, this is a point-in-time estimate, not a guarantee.
+                The cents-per-point value shows what each point is &ldquo;worth&rdquo; in this specific redemption. Higher is better. We compare your redemption against that program&apos;s typical valuation range based on real-world redemption data from July 2026. Because valuations shift with program devaluations and travel pricing, this is a point-in-time estimate, not a guarantee.
               </p>
             </div>
           </div>

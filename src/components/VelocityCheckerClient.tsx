@@ -109,10 +109,6 @@ function formatDate(dateStr: string): string {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
-function formatDateObj(d: Date): string {
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
-
 /** Find earliest date when count drops below limit by computing when the oldest relevant card exits the window. */
 function computeNextEligibleDate(
   relevantDates: string[],
@@ -154,15 +150,6 @@ function computeNextEligibleDateMonths(
 function runAllRules(apps: CardApplication[]): IssuerResults[] {
   const now = new Date();
   now.setHours(0, 0, 0, 0);
-
-  // Helper to filter apps by issuer and date window
-  const appsInWindow = (issuer: Issuer | null, windowStart: Date, excludeBiz = false, auOnly = false) =>
-    apps.filter((a) => {
-      if (issuer && a.issuer !== issuer) return false;
-      if (excludeBiz && a.cardType === 'business') return false;
-      if (auOnly && !a.isAuthorizedUser) return false;
-      return parseDate(a.date) >= windowStart;
-    });
 
   // Personal cards from all issuers (for 5/24 style rules)
   // AU cards count. Business cards from CapOne and Discover count. Other biz cards don't.

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { headers } from 'next/headers';
 import { Syne, DM_Sans } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
 // Build-time stamp consumed by JSON-LD `dateModified`. Updated on every
 // deploy automatically so AI Overviews / SERP rich results know the page
 // graph is fresh without any manual bump.
-const SITE_DATE_MODIFIED = new Date().toISOString().slice(0, 10);
+const SITE_DATE_MODIFIED = '2026-07-12';
 
 const siteGraphJsonLd = {
   '@context': 'https://schema.org',
@@ -92,14 +91,6 @@ const siteGraphJsonLd = {
       publisher: { '@id': 'https://524tracker.com/#org' },
       inLanguage: 'en-US',
       dateModified: SITE_DATE_MODIFIED,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://524tracker.com/blog?q={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
     },
     {
       '@type': 'WebApplication',
@@ -135,25 +126,22 @@ const siteGraphJsonLd = {
   ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const gpcHeader = headersList.get('sec-gpc') === '1';
+  const adsenseEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
 
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
       <head>
-        {/* CMP: Funding Choices auto-loads via AdSense for T1 sites */}
-        {/* Google Consent Mode v2 — sets denied defaults before any tracking scripts load */}
-        {!gpcHeader && (
-          <Script
-            id="consent-mode-defaults"
-            strategy="beforeInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+        {/* Consent defaults load before the CMP and all measurement tags. */}
+        <Script
+          id="consent-mode-defaults"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
@@ -161,46 +149,72 @@ export default async function RootLayout({
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
     'analytics_storage': 'denied',
-    'functionality_storage': 'granted',
+    'functionality_storage': 'denied',
     'personalization_storage': 'denied',
+    'security_storage': 'granted',
     'wait_for_update': 500
   });
+  if (navigator.globalPrivacyControl || document.cookie.indexOf('empire_gpc=1') !== -1) {
+    gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'personalization_storage': 'denied'
+    });
+  }
 `,
-            }}
-          />
-        )}
-        {/* GPC enforcement handled by middleware setting consent denied via gpcHeader */}
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+          }}
+        />
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="a9a99ccb-4863-4e33-a895-a6d5642f408d"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
+        <Script
+          id="gpc-auto-decline"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('CookiebotOnLoad', function () {
+                try {
+                  var gpcActive = !!navigator.globalPrivacyControl ||
+                    document.cookie.indexOf('empire_gpc=1') !== -1;
+                  if (gpcActive && window.Cookiebot) window.Cookiebot.decline();
+                } catch (e) {}
+              });
+            `,
+          }}
+        />
+        <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
-        <link rel="dns-prefetch" href="https://adservice.google.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraphJsonLd) }}
         />
-        <Script
-          id="adsense"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        {adsenseEnabled && (
+          <Script
+            id="adsense"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7171402107622932"
+            crossOrigin="anonymous"
+            strategy="lazyOnload"
+            data-cookieconsent="marketing"
+          />
+        )}
         <Script
           id="ga4-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-308FHNWPPQ"
           strategy="afterInteractive"
+          data-cookieconsent="statistics"
         />
         <Script
           id="ga4-config"
           strategy="afterInteractive"
+          data-cookieconsent="statistics"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ');`,
-          }}
-        />
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vsqobt7va0");`,
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ', { anonymize_ip: true });`,
           }}
         />
       </head>

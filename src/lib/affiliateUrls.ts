@@ -40,11 +40,11 @@ const affiliateUrls: Record<string, string> = {
   'us-bank-altitude-connect': 'https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html',
 
   // Fallbacks
-  'compare': '/top-cards',
+  'compare': '/card-value-calculator',
 };
 
 export function getAffiliateUrl(slug: string): string {
-  return affiliateUrls[slug] || `/top-cards`;
+  return affiliateUrls[slug] || `/card-value-calculator`;
 }
 
 export default affiliateUrls;

@@ -130,7 +130,7 @@ export default function MethodologyPage() {
           <section>
             <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Verification Will Work</h2>
             <p className="text-base text-text-primary leading-relaxed mb-4">
-              We are building a community submission system. The goal is to move every entry from "publicly reported pattern" to "verified by multiple independent data points."
+              We are building a community submission system. The goal is to move every entry from &ldquo;publicly reported pattern&rdquo; to &ldquo;verified by multiple independent data points.&rdquo;
             </p>
 
             <p className="text-base text-text-primary leading-relaxed mb-4">
@@ -149,18 +149,18 @@ export default function MethodologyPage() {
                 <strong>Review:</strong> Each submission is manually reviewed for completeness and plausibility before being added to the verification queue.
               </li>
               <li>
-                <strong>Corroboration threshold:</strong> An entry needs at least three independent matching data points before it moves from "reference only" to "community verified." Independent means different submitters, ideally from different time periods.
+                <strong>Corroboration threshold:</strong> An entry needs at least three independent matching data points before it moves from &ldquo;reference only&rdquo; to &ldquo;community verified.&rdquo; Independent means different submitters, ideally from different time periods.
               </li>
               <li>
                 <strong>Conflict flagging:</strong> If submissions conflict with existing entries (for example, a state that was previously reported as Experian now consistently shows TransUnion), the entry is flagged as disputed pending further data points.
               </li>
               <li>
-                <strong>Date-stamping:</strong> Verified entries will carry a "last confirmed" date so you can see how recently the pattern was corroborated.
+                <strong>Date-stamping:</strong> Verified entries will carry a &ldquo;last confirmed&rdquo; date so you can see how recently the pattern was corroborated.
               </li>
             </ol>
 
             <p className="text-base text-text-primary leading-relaxed">
-              We have not reached that verification threshold for any entry yet. That is why every row currently shows "Reference only." We are being transparent about where we are in the process.
+              We have not reached that verification threshold for any entry yet. That is why every row currently shows &ldquo;Reference only.&rdquo; We are being transparent about where we are in the process.
             </p>
           </section>
 
@@ -179,7 +179,7 @@ export default function MethodologyPage() {
 
             <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Soft vs. hard pull confusion</h3>
             <p className="text-base text-text-primary leading-relaxed mb-4">
-              Community reports sometimes conflate soft pulls and hard pulls. American Express commonly does a soft pull for existing cardholders and a hard pull for new applicants. If a community member reports "Amex pulled Experian" without specifying whether they were an existing customer, the data point may not apply to your situation. We flag known soft/hard distinctions in the Notes column.
+              Community reports sometimes conflate soft pulls and hard pulls. American Express commonly does a soft pull for existing cardholders and a hard pull for new applicants. If a community member reports &ldquo;Amex pulled Experian&rdquo; without specifying whether they were an existing customer, the data point may not apply to your situation. We flag known soft/hard distinctions in the Notes column.
             </p>
 
             <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Product-level variation</h3>

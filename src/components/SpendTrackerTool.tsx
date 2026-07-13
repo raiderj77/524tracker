@@ -164,9 +164,12 @@ export default function SpendTrackerTool() {
   useEffect(() => {
     if (mountedRef.current) {
       saveCards(cards);
-      setShowSaved(true);
-      const t = setTimeout(() => setShowSaved(false), 2000);
-      return () => clearTimeout(t);
+      const showTimer = setTimeout(() => setShowSaved(true), 0);
+      const hideTimer = setTimeout(() => setShowSaved(false), 2000);
+      return () => {
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+      };
     }
   }, [cards]);
 

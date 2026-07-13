@@ -15,7 +15,7 @@ const siteLinks = [
   { href: '/inquiry-tracker', label: 'Inquiry Tracker' },
   { href: '/application-flowchart', label: 'Flowchart' },
   { href: '/rules-guide', label: 'Rules Guide' },
-  { href: '/top-cards', label: 'Top Cards' },
+  { href: '/card-value-calculator', label: 'Card Value Calculator' },
   { href: '/faq', label: 'FAQ' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Service' },
@@ -84,9 +84,8 @@ export default function Footer() {
             <h2 className="text-white font-display font-bold text-lg mb-4">Disclaimer</h2>
             <p className="text-sm text-gray-400 leading-relaxed">
               Credit card application tracking is for informational purposes only. Always
-              verify rules directly with card issuers before applying. This site may earn a
-              commission when you apply for and are approved for a credit card through our
-              links.
+              verify rules and current offers directly with card issuers before applying. Some
+              outbound links may be sponsored or eligible for referral compensation when disclosed.
             </p>
             <p className="text-sm text-gray-400 mt-4">
               Built by an experienced web professional
@@ -113,7 +112,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-brand-slate mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             &copy; {currentYear} 524 Tracker. All rights reserved.
           </p>
         </div>
