@@ -1,274 +1,124 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: '524Tracker privacy policy — how we handle your data, including localStorage usage, AdSense cookies, and affiliate link tracking.',
-  keywords: 'privacy policy, 524tracker privacy, data handling, localStorage, cookie policy',
-  robots: { index: true, follow: true, 'max-snippet': -1 },
+  description:
+    'How 524Tracker handles browser-local tracker data, analytics consent, server logs, affiliate links, and privacy requests.',
   alternates: { canonical: 'https://524tracker.com/privacy' },
-  openGraph: {
-    title: 'Privacy Policy — 524Tracker',
-    description: '524Tracker privacy policy — how we handle your data, including localStorage usage and cookies.',
-    url: 'https://524tracker.com/privacy',
-    type: 'website',
-  },
 };
 
 export default function PrivacyPage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: 'Privacy Policy — 524Tracker',
-            description: '524Tracker privacy policy — how we handle your data, including localStorage usage, AdSense cookies, and affiliate link tracking.',
-            url: 'https://524tracker.com/privacy',
-          }),
-        }}
-      />
-    <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-sm">
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Privacy Policy</h1>
-      <p className="text-xs text-text-secondary mb-8">Effective Date: January 1, 2026 | Last updated: April 17, 2026</p>
+      <p className="text-xs text-text-secondary mb-8">Effective January 1, 2026 | Last reviewed July 12, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Who Is the Data Controller?</h2>
-          <p>524Tracker (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website at 524tracker.com. For privacy inquiries, contact us at <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">privacy@524tracker.com</a>.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Data We Collect</h2>
-          <h3 className="font-bold text-base text-brand-navy mb-2">Tracker Data (localStorage)</h3>
-          <p className="mb-3">
-            <strong>We do not collect, store, or transmit your credit card application data.</strong> All tracker data (card names, dates, statuses) is stored locally in your browser using localStorage and is never sent to our servers. This data exists only on your device and can be deleted at any time by clearing your browser data.
-          </p>
-          <h3 className="font-bold text-base text-brand-navy mb-2">Advertising Cookies (Third Party)</h3>
-          <p className="mb-3">
-            We use Google AdSense to display advertisements. Google may use cookies and similar technologies to serve ads based on your prior visits to this or other websites. Google&apos;s use of advertising cookies is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">Google&apos;s Privacy Policy</a>. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">Google Ads Settings</a>.
-          </p>
-          <h3 className="font-bold text-base text-brand-navy mb-2">Affiliate Link Tracking (Third Party)</h3>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">The short version</h2>
           <p>
-            When you click an affiliate link on our site, the destination website (e.g., Chase, American Express, Capital One) may use cookies to track that you arrived via our referral. This tracking is governed by each issuer&apos;s privacy policy, not ours. We do not receive any personal information about you through affiliate links.
+            Credit-card details you enter into the tracking tools are processed and stored in your
+            browser. 524Tracker does not intentionally transmit those entries to its servers. The
+            website still uses ordinary hosting, security, consent, and optional analytics services,
+            which can process technical information such as an IP address and browser details.
           </p>
-          <h3 className="font-bold text-base text-brand-navy mb-2">Cookiebot Consent Management</h3>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Tracker data</h2>
           <p>
-            We use Cookiebot, a certified consent management platform (CMP), to manage cookie consent and track your preferences across the EU/EEA/UK. Cookiebot helps us comply with GDPR and other privacy regulations by obtaining your consent before placing certain cookies. Cookiebot&apos;s privacy practices are governed by <a href="https://www.cookiebot.com/en/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">Cookiebot&apos;s Privacy Policy</a>.
+            Card names, application dates, spending entries, inquiry dates, and similar tool inputs
+            are saved in browser localStorage on your device. No account is required. You can remove
+            this data by using a tool&apos;s reset control or clearing site data in your browser. Clearing
+            browser data, changing devices, or using private browsing may permanently remove it.
           </p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Lawful Basis for Processing</h2>
-          <p>For advertising cookies, our lawful basis is legitimate interest for users in jurisdictions where opt-out consent applies, and explicit consent for users in the EU/EEA/UK where opt-in consent is required under GDPR.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Long We Retain Data</h2>
-          <p>localStorage data persists in your browser until you clear it — you can delete it at any time through your browser settings. We do not set any first-party cookies. If display ads are enabled, Google AdSense cookies are retained for up to 13 months per Google&apos;s policies. Affiliate network cookies typically expire within 7–90 days depending on the issuer program. Vercel server logs (containing IP addresses) are retained for up to 30 days.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Third Parties Receive Data</h2>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>Google AdSense — advertising</li>
-            <li>Vercel — website hosting</li>
-            <li>Credit card affiliate networks (CJ Affiliate, direct issuer programs) — referral tracking</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How International Data Transfers Work</h2>
-          <p>Third-party services (Google, Vercel) may process data in the United States and other countries. These transfers are protected by Standard Contractual Clauses and other appropriate safeguards.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Are Your Rights Under GDPR?</h2>
-          <p className="mb-2">If you are in the EU/EEA/UK, you have the right to:</p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>Access, rectify, or erase your personal data</li>
-            <li>Restrict or object to processing</li>
-            <li>Data portability</li>
-            <li>Withdraw consent at any time</li>
-            <li>Lodge a complaint with your supervisory authority</li>
-          </ul>
-          <p className="mt-2">Since we do not store your tracker data on our servers, there is no personal data for us to access, rectify, or delete. Your tracker data is entirely under your control in your browser.</p>
-        </section>
-
-        <section id="california-privacy" aria-labelledby="california-heading">
-          <h2 id="california-heading" className="font-display font-bold text-xl text-brand-navy mb-3">California Privacy Rights (CCPA/CPRA)</h2>
-
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Cookies and analytics</h2>
           <p className="mb-3">
-            If you are a California resident, the California Consumer Privacy Act (CCPA) as amended
-            by the California Privacy Rights Act (CPRA) grants you specific rights regarding your
-            personal information. These rights are effective as of January 1, 2026.
+            Cookiebot stores your consent choice. Google Analytics (measurement ID G-308FHNWPPQ) is
+            configured to load only after analytics consent. If enabled, it may process pages viewed,
+            approximate location, device and browser information, referral source, and interaction
+            data. It is not configured to receive the contents of your tracker entries.
           </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Information We Collect</h3>
-          <p className="mb-2">In the past 12 months we have collected the following categories of personal information:</p>
-          <ul className="list-disc pl-6 space-y-1 mb-3">
-            <li><strong>Identifiers:</strong> IP address, browser type, device identifiers via analytics and advertising.</li>
-            <li><strong>Internet or network activity:</strong> Pages visited, tracker tool usage (rule lookups, card inputs), time on site.</li>
-            <li><strong>Financial information (user-entered):</strong> Credit card application data, hard inquiry dates, and card values entered into our tracking tools. This data is stored locally in your browser only and is never transmitted to our servers.</li>
-            <li><strong>Inferred data:</strong> Interests inferred from browsing behavior via advertising and affiliate partners.</li>
-          </ul>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Sensitive Personal Information</h3>
-          <p className="mb-3">
-            As of January 1, 2026, California law defines financial account data as sensitive personal
-            information. <strong>524 Tracker stores all credit card application tracking data
-            locally in your browser (localStorage) only.</strong> This data is never transmitted to
-            our servers, never stored in any database we control, never sold, and never shared.
-            You have complete control over this data and may clear it at any time by clearing your
-            browser&apos;s local storage.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Data Minimization</h3>
-          <p className="mb-3">
-            We collect only the minimum personal information necessary to operate this service.
-            All credit card tracking inputs remain on your device. We do not collect personal
-            financial information beyond what you voluntarily enter into browser-local tools.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">How We Use Your Information</h3>
-          <ul className="list-disc pl-6 space-y-1 mb-3">
-            <li>To display advertising through Google AdSense</li>
-            <li>To serve relevant credit card recommendations through affiliate partners</li>
-            <li>To analyze aggregate site traffic and improve tool accuracy via analytics</li>
-            <li>To maintain site security and prevent fraud</li>
-          </ul>
-          <p className="mb-3">
-            We do not sell your personal information. Sharing data with advertising partners
-            may constitute &ldquo;sharing&rdquo; under CPRA — you may opt out using the methods below.
-            Financial tracking data entered into our tools never reaches advertising systems.
-          </p>
-          <p className="mb-3">
-            <strong>Disclaimer:</strong> 524 Tracker is an informational tool only. Credit card
-            application rules displayed on this site are based on publicly available information
-            and may not reflect current issuer policies. This tool does not constitute financial
-            advice. Always verify current rules directly with the card issuer before applying.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Your Rights as a California Resident</h3>
-          <ul className="list-disc pl-6 space-y-1 mb-3">
-            <li><strong>Right to Know:</strong> Request disclosure of personal information collected in the past 12 months.</li>
-            <li><strong>Right to Delete:</strong> Request deletion of personal information we hold. Note: tool tracking data is stored only in your browser and can be deleted by clearing local storage.</li>
-            <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
-            <li><strong>Right to Opt-Out:</strong> Opt out of sharing personal information for advertising. We honor Global Privacy Control (GPC) signals automatically.</li>
-            <li><strong>Right to Limit Use of Sensitive Information:</strong> Direct us to limit use of sensitive financial information to necessary service functions.</li>
-            <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of these rights.</li>
-          </ul>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Do Not Sell or Share My Personal Information</h3>
-          <p className="mb-3">
-            To opt out of sharing for advertising purposes, use a{' '}
-            <a href="https://globalprivacycontrol.org/" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">Global Privacy Control (GPC)</a>-enabled
-            browser, or contact us via the <a href="/contact" className="text-brand-gold hover:text-amber-600">Contact page</a>.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">How to Submit a Request</h3>
-          <p className="mb-3">Contact us via the <a href="/contact" className="text-brand-gold hover:text-amber-600">Contact page</a>. We will respond within 45 days. Identity verification may be required.</p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Data Retention</h3>
-          <p>Analytics data is retained for 26 months. Server logs are retained for 90 days. Credit card tracking data is stored only in your browser&apos;s local storage and is never retained by us.</p>
-        </section>
-
-        <section id="state-privacy" aria-labelledby="state-heading">
-          <h2 id="state-heading" className="font-display font-bold text-xl text-brand-navy mb-3">Additional U.S. State Privacy Rights</h2>
-          <p className="mb-3">
-            Residents of the following states have privacy rights similar to California&apos;s CCPA/CPRA.
-            To exercise your rights, contact us via the <a href="/contact" className="text-brand-gold hover:text-amber-600">Contact page</a>.
-            We will respond within the timeframe required by your state&apos;s law.
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="border-b border-gray-300">
-                  <th className="text-left py-2 pr-4 font-bold">State</th>
-                  <th className="text-left py-2 pr-4 font-bold">Law</th>
-                  <th className="text-left py-2 pr-4 font-bold">Effective</th>
-                  <th className="text-left py-2 font-bold">Key Rights</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr><td className="py-2 pr-4">Colorado</td><td className="py-2 pr-4">CPA</td><td className="py-2 pr-4">Jul 2023</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td className="py-2 pr-4">Connecticut</td><td className="py-2 pr-4">CTDPA</td><td className="py-2 pr-4">Jul 2023</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td className="py-2 pr-4">Virginia</td><td className="py-2 pr-4">VCDPA</td><td className="py-2 pr-4">Jan 2023</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Texas</td><td className="py-2 pr-4">TDPSA</td><td className="py-2 pr-4">Jul 2024</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Florida</td><td className="py-2 pr-4">FDBR</td><td className="py-2 pr-4">Jul 2024</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Montana</td><td className="py-2 pr-4">MTCPA</td><td className="py-2 pr-4">Oct 2024</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Oregon</td><td className="py-2 pr-4">OCPA</td><td className="py-2 pr-4">Jul 2024</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td className="py-2 pr-4">Tennessee</td><td className="py-2 pr-4">TIPA</td><td className="py-2 pr-4">Jul 2025</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Minnesota</td><td className="py-2 pr-4">MNDPA</td><td className="py-2 pr-4">Jul 2025</td><td className="py-2">Access, delete, correct, opt-out, portability</td></tr>
-                <tr><td className="py-2 pr-4">Maryland</td><td className="py-2 pr-4">MODPA</td><td className="py-2 pr-4">Apr 2026</td><td className="py-2">Access, delete, correct, opt-out, portability; bans sale of sensitive data; honors GPC</td></tr>
-                <tr><td className="py-2 pr-4">Indiana</td><td className="py-2 pr-4">IDCPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Kentucky</td><td className="py-2 pr-4">KYCPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-                <tr><td className="py-2 pr-4">Rhode Island</td><td className="py-2 pr-4">RIDPA</td><td className="py-2 pr-4">Jan 2026</td><td className="py-2">Access, delete, correct, opt-out</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-4">
-            We honor Global Privacy Control (GPC) signals from all states that require it.
-            We do not sell personal information to third parties. We do not engage in targeted
-            advertising using sensitive personal information.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">Global Privacy Control (GPC) Honoring</h3>
           <p>
-            We honor the Global Privacy Control (GPC) browser signal as a universal opt-out of targeted advertising, data sale, and data sharing. If you enable GPC in your browser, we will automatically decline non-essential cookies through Cookiebot and restrict advertising tracking on your device.
-          </p>
-
-          <h3 className="font-bold text-base text-brand-navy mt-4 mb-2">MODPA § 14-4604 Response Commitment</h3>
-          <p>
-            For Maryland residents exercising rights under the Maryland Online Data Privacy Act (MODPA), we commit to responding to valid requests within 45 days of receipt. This commitment applies separately from our GDPR 30-day response timeframe.
+            Consent Mode defaults advertising and analytics storage to denied. We also honor the
+            Global Privacy Control signal by keeping non-essential storage denied and asking
+            Cookiebot to decline optional cookies.
           </p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Handle Children&apos;s Privacy</h2>
-          <p>Our service is not directed to individuals under 18. We do not knowingly collect personal information from children.</p>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Advertising status</h2>
+          <p>
+            Google AdSense is configured as a possible future advertising provider, but 524Tracker
+            has not been approved to show AdSense ads and the advertising script is currently
+            disabled. We will update this policy before enabling advertising. Advertising storage
+            will remain consent-controlled if ads are enabled later.
+          </p>
         </section>
 
         <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Google AdSense &amp; Advertising</h2>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Hosting and server logs</h2>
           <p>
-            524 Tracker uses Google AdSense to display advertisements. Google and its partners may use cookies to serve ads based on your prior visits to this site or other websites. You can opt out of personalized advertising at any time by visiting{' '}
-            <a href="https://myadcenter.google.com/personalizationoff" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">
-              Google My Ad Center (personalizationoff)
+            Vercel hosts the site and may process request information such as IP address, user agent,
+            requested URL, timestamps, and security events in infrastructure logs. We do not promise
+            a fixed deletion date for provider logs because actual retention depends on the service
+            plan, security needs, backups, and legal obligations. See Vercel&apos;s privacy documentation
+            for its current practices.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">External and sponsored links</h2>
+          <p>
+            The site links to banks, credit bureaus, marketplaces, and other external services. Some
+            links may be sponsored or eligible for a referral commission and are labeled where
+            appropriate. The destination can receive ordinary referral and request data after you
+            choose to follow a link. Its own privacy policy governs any information you provide there.
+            524Tracker does not append your browser-local tracker entries to outbound links.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Retention and security</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Tracker data remains in your browser until you remove it or the browser removes it.</li>
+            <li>Cookiebot retains consent preferences according to its configured consent period.</li>
+            <li>Google and Vercel retain service data under their settings, contracts, and policies.</li>
+          </ul>
+          <p className="mt-3">
+            The site uses HTTPS and security headers. No website or third-party service can guarantee
+            absolute security.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Your choices and rights</h2>
+          <p>
+            You can change optional-cookie choices through the Cookiebot banner, enable Global Privacy
+            Control, clear browser data, or use browser privacy controls. Depending on where you live,
+            you may also have rights to access, correct, delete, or restrict personal information that
+            we control. Browser-local tracker data is controlled by you and is not available for us to
+            retrieve. We do not sell personal information.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Contact and updates</h2>
+          <p>
+            For a privacy request, email{' '}
+            <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">
+              privacy@524tracker.com
             </a>
-            . Google&apos;s use of advertising cookies is also governed by{' '}
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-amber-600">
-              Google&apos;s Privacy Policy
-            </a>
-            .
+            . We may update this policy when services or practices change. See the{' '}
+            <Link href="/terms" className="text-brand-gold hover:text-amber-600">Terms of Service</Link>{' '}
+            for financial-information limitations.
           </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Affiliate Disclosure</h2>
-          <p>
-            524Tracker may include affiliate links from credit card issuers and their affiliate networks. We may earn a commission when you apply for and are approved for a card through our links. This does not affect our editorial recommendations. All affiliate links are marked with{' '}
-            <code className="text-xs bg-gray-100 px-1 rounded">rel=nofollow sponsored</code>.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Our Financial Information Disclaimer</h2>
-          <p>524Tracker provides informational tools and content about credit card application rules. Nothing on this site constitutes financial, legal, or credit advice. Card recommendations may include affiliate links from which we earn a commission if you apply and are approved. Always review the issuer&apos;s terms before applying for any credit card.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Changes to This Policy</h2>
-          <p>We may update this policy periodically. Changes will be posted on this page with an updated effective date.</p>
-        </section>
-
-        <section>
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Contact Us About Privacy</h2>
-          <p>For privacy-related inquiries: <a href="mailto:privacy@524tracker.com" className="text-brand-gold hover:text-amber-600">privacy@524tracker.com</a></p>
         </section>
       </div>
     </article>
-    </>
   );
 }

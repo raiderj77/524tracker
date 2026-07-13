@@ -285,12 +285,6 @@ const steps: Record<string, Step> = {
   },
 };
 
-const stepOrder = [
-  'start',
-  'under524_rewards', 'under524_travel', 'under524_cashback', 'under524_notsure',
-  'over524_amex', 'over524_which_amex', 'over524_amex_bonuses', 'over524_capone',
-];
-
 function getStepNumber(history: string[]): number {
   return history.length;
 }

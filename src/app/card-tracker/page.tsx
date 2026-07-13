@@ -135,18 +135,18 @@ export default function CardTrackerPage() {
               </Link>
             </li>
             <li>
-              <Link href="/blog/credit-card-application-strategy" className="text-brand-gold hover:text-amber-600">
-                Credit Card Application Strategy &rarr;
+              <Link href="/application-timing" className="text-brand-gold hover:text-amber-600">
+                Application Timing Calculator &rarr;
               </Link>
             </li>
             <li>
-              <Link href="/blog/how-to-calculate-chase-5-24" className="text-brand-gold hover:text-amber-600">
-                How to Calculate Your 5/24 Status &rarr;
+              <Link href="/chase-524" className="text-brand-gold hover:text-amber-600">
+                Chase 5/24 Guide &rarr;
               </Link>
             </li>
             <li>
-              <Link href="/blog/best-cards-after-5-24" className="text-brand-gold hover:text-amber-600">
-                Best Cards After 5/24 &rarr;
+              <Link href="/rules-guide" className="text-brand-gold hover:text-amber-600">
+                Complete Bank Rules Guide &rarr;
               </Link>
             </li>
           </ul>

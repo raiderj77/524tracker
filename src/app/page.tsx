@@ -21,63 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-const featuredCards = [
-  {
-    name: 'Chase Sapphire Preferred',
-    bank: 'Chase',
-    benefit: 'Top travel rewards card with 3x on dining and 2x on travel worldwide.',
-    offer: '60,000 bonus points after $4,000 spend in 3 months',
-    countsToward524: true,
-    slug: 'chase-sapphire-preferred',
-    url: 'https://creditcards.chase.com/travel-credit-cards/sapphire/preferred',
-  },
-  {
-    name: 'Amex Gold',
-    bank: 'American Express',
-    benefit: 'Best dining rewards card with 4x at restaurants and supermarkets.',
-    offer: '60,000 Membership Rewards points after $6,000 spend in 6 months',
-    countsToward524: true,
-    slug: 'amex-gold',
-    url: 'https://www.americanexpress.com/us/credit-cards/card/gold-card/',
-  },
-  {
-    name: 'Capital One Venture X',
-    bank: 'Capital One',
-    benefit: 'Premium travel card with lounge access and $300 travel credit.',
-    offer: '75,000 bonus miles after $4,000 spend in 3 months',
-    countsToward524: true,
-    slug: 'capital-one-venture-x',
-    url: 'https://www.capitalone.com/credit-cards/venture-x/',
-  },
-  {
-    name: 'Chase Ink Business Preferred',
-    bank: 'Chase',
-    benefit: 'Top business card with 3x on travel, shipping, and advertising.',
-    offer: '100,000 bonus points after $8,000 spend in 3 months',
-    countsToward524: false,
-    slug: 'chase-ink-business-preferred',
-    url: 'https://creditcards.chase.com/business-credit-cards/ink/business-preferred',
-  },
-  {
-    name: 'Citi Strata Premier',
-    bank: 'Citi',
-    benefit: 'Strong travel card with 3x on travel, dining, and groceries.',
-    offer: '75,000 bonus ThankYou Points after $4,000 spend in 3 months',
-    countsToward524: true,
-    slug: 'citi-strata-premier',
-    url: 'https://www.citi.com/credit-cards/citi-strata-premier-credit-card',
-  },
-  {
-    name: 'Amex Platinum',
-    bank: 'American Express',
-    benefit: 'Premium card with global lounge access and elite travel benefits.',
-    offer: '80,000 Membership Rewards points after $8,000 spend in 6 months',
-    countsToward524: true,
-    slug: 'amex-platinum',
-    url: 'https://www.americanexpress.com/us/credit-cards/card/platinum/',
-  },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -94,13 +37,13 @@ export default function HomePage() {
                 url: 'https://524tracker.com',
                 description:
                   'Free credit card application rules tracker covering Chase 5/24, Amex lifetime bonuses, Citi 8/65, and more.',
-                dateModified: new Date().toISOString().substring(0,10),
+                dateModified: '2026-07-12',
               },
               {
                 '@type': 'WebSite',
                 name: '524Tracker',
                 url: 'https://524tracker.com',
-                dateModified: new Date().toISOString().substring(0,10),
+                dateModified: '2026-07-12',
               },
               {
                 '@type': 'WebApplication',
@@ -115,7 +58,7 @@ export default function HomePage() {
                   priceCurrency: 'USD',
                 },
                 operatingSystem: 'All',
-                dateModified: new Date().toISOString().substring(0,10),
+                dateModified: '2026-07-12',
               },
               {
                 '@type': 'BreadcrumbList',
@@ -466,72 +409,6 @@ export default function HomePage() {
         <TrackerTool />
       </div>
 
-      {/* Top Card Recommendations */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-xs text-text-secondary mb-6 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 flex items-start gap-2">
-          <span className="text-amber-500 shrink-0 mt-0.5">⚠</span>
-          <span><strong>Disclosure:</strong> 524Tracker may earn a commission when you
-          apply for and are approved for a credit card through our affiliate
-          links. This does not affect our editorial recommendations.</span>
-        </p>
-        <h2 className="font-display font-bold text-2xl text-brand-navy mb-6">
-          Top Credit Cards to Consider in 2026
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {featuredCards.map((card) => (
-            <div
-              key={card.slug}
-              className="bg-white rounded-2xl border border-brand-navy/10 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all p-5 flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-display font-bold text-base text-brand-navy leading-tight">
-                  {card.name}
-                </h3>
-              </div>
-              <span
-                className={`inline-flex items-center self-start px-2 py-0.5 rounded-full text-[10px] font-medium mb-2 ${
-                  card.countsToward524
-                    ? 'bg-amber-100 text-amber-800'
-                    : 'bg-purple-100 text-purple-800'
-                }`}
-              >
-                {card.countsToward524
-                  ? 'Counts toward 5/24'
-                  : 'Does NOT count (business)'}
-              </span>
-              <p className="text-xs font-medium text-brand-gold/80 uppercase tracking-wider mb-2">{card.bank}</p>
-              <p className="text-sm text-text-primary mb-2">{card.benefit}</p>
-              <p className="text-xs text-brand-green font-medium mb-4">
-                {card.offer}
-              </p>
-              <div className="mt-auto">
-                <a
-                  href={card.url}
-                  target="_blank"
-                  rel="nofollow sponsored noopener noreferrer"
-                  data-affiliate-card={card.name}
-                  data-affiliate-bank={card.bank}
-                  className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-brand-gold text-brand-navy font-semibold rounded-lg hover:bg-amber-400 transition-colors text-sm min-h-[44px]"
-                >
-                  Apply Now
-                </a>
-                <p className="text-[10px] text-text-secondary mt-2 text-center">
-                  We may earn a commission if you apply and are approved.
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-6">
-          <Link
-            href="/top-cards"
-            className="text-sm text-brand-gold hover:text-amber-600 font-medium transition-colors"
-          >
-            View all top card recommendations &rarr;
-          </Link>
-        </div>
-      </section>
-
       {/* GEO Content Sections */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
@@ -597,7 +474,7 @@ export default function HomePage() {
                 href="https://www.consumerfinance.gov/consumer-tools/credit-cards/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="text-brand-gold hover:text-amber-600 transition-colors"
+                className="text-amber-800 hover:text-amber-950 transition-colors"
               >
                 Consumer Financial Protection Bureau — credit card resources
               </a>
@@ -607,7 +484,7 @@ export default function HomePage() {
                 href="https://www.experian.com/blogs/ask-experian/credit-education/improving-credit/credit-card-tips/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="text-brand-gold hover:text-amber-600 transition-colors"
+                className="text-amber-800 hover:text-amber-950 transition-colors"
               >
                 Experian — understanding credit card applications
               </a>
@@ -617,7 +494,7 @@ export default function HomePage() {
                 href="https://www.reddit.com/r/churning/wiki/index"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="text-brand-gold hover:text-amber-600 transition-colors"
+                className="text-amber-800 hover:text-amber-950 transition-colors"
               >
                 r/churning wiki — issuer application rules
               </a>

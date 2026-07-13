@@ -1,64 +1,24 @@
-# 524 Tracker
+# 524Tracker
 
-> Free credit card application rules tracker for points and miles enthusiasts. Track Chase 5/24 status, Amex lifetime bonus eligibility, Citi 8/65 rules, Bank of America 2/3/4 restrictions, and more — all stored locally in your browser, never sent to any server.
+> Browser-based tools for organizing credit-card application dates, annual fees, inquiries, and commonly reported issuer application rules.
 
-## Main Tools
-- [Chase 5/24 Tracker](https://524tracker.com/): Track your Chase 5/24 card count and next eligibility date
-- [Card Tracker](https://524tracker.com/card-tracker): Log your full card application history and calculate status across Chase 5/24, Amex lifetime, Citi 8/65, BofA 2/3/4, and Capital One 2-card rules simultaneously
-- [Spend Tracker](https://524tracker.com/spend-tracker): Track welcome bonus minimum spend progress across all your cards — see days remaining, dollars left, and daily spend needed to hit each deadline
-- [Application Flowchart](https://524tracker.com/application-flowchart): Interactive decision tool that recommends what credit card to apply for next based on your 5/24 status, rewards preference, and existing cards
-- [Card Value Calculator](https://524tracker.com/card-value-calculator): Calculate the net value of a card after annual fee vs. benefits
-- [Best Cards by Category](https://524tracker.com/best-cards-by-category): Find the highest-earning card for dining, travel, groceries, gas, and more
-- [Top Cards](https://524tracker.com/top-cards): Best credit cards to apply for, optimized for points maximizers
-- [Rules Guide](https://524tracker.com/rules-guide): Complete explanation of all major bank credit card application rules
-- [Velocity Rule Checker](https://524tracker.com/velocity-checker): Check your eligibility across all bank velocity rules — Chase 5/24, Amex 2/90, Citi 8/65, BofA 2/3/4, and more
-- [Annual Fee Calculator](https://524tracker.com/annual-fee-calculator): Calculate whether a credit card annual fee is worth it based on your spending and credit usage
-- [Application Timing Calculator](https://524tracker.com/application-timing): Get optimal application dates and sequencing for your credit card wishlist
-- [Amex Popup Jail Estimator](https://524tracker.com/amex-popup-estimator): Estimate your risk of getting the Amex popup that blocks welcome bonuses
-- [Downgrade Guide](https://524tracker.com/downgrade-guide): Find product change and downgrade paths for premium credit cards by issuer
-- [Credit Pull Database](https://524tracker.com/credit-pull-database): Look up which credit bureau each bank pulls for every major credit card
-- [Hard Inquiry Tracker](https://524tracker.com/inquiry-tracker): Track hard inquiries per credit bureau and see where you stand vs inquiry-sensitive banks
+## Core tools
+- [Chase 5/24 Tracker](https://524tracker.com/): Calculate a rolling 24-month card count from dates entered in your browser
+- [Card Tracker](https://524tracker.com/card-tracker): Organize card application history locally on your device
+- [Spend Tracker](https://524tracker.com/spend-tracker): Track welcome-offer spending progress locally
+- [Velocity Checker](https://524tracker.com/velocity-checker): Compare dates with commonly reported issuer timing rules
+- [Annual Fee Calculator](https://524tracker.com/annual-fee-calculator): Compare an annual fee with benefits you value
+- [Card Value Calculator](https://524tracker.com/card-value-calculator): Estimate annual net card value from your own assumptions
+- [Inquiry Tracker](https://524tracker.com/inquiry-tracker): Organize hard-inquiry dates by bureau
 
-## Blog
-- [Blog](https://524tracker.com/blog): Expert guides on credit card application rules, churning strategies, and bank-specific restrictions
-- [Chase 5/24 Rule: Complete Guide](https://524tracker.com/blog/chase-5-24-rule-explained): Everything you need to know about Chase's 5/24 rule — what counts, what doesn't, and how to check your status
-- [Amex Lifetime Bonus Rule: Complete Guide](https://524tracker.com/blog/amex-lifetime-bonus-rule-explained): The Amex lifetime rule means you can only earn a welcome bonus on each card once per lifetime
-- [Citi 8/65 Rule: Complete Guide](https://524tracker.com/blog/citi-8-65-rule-explained): The Citi 8/65 rule limits you to 1 Citi card every 8 days and 2 every 65 days
-- [Bank of America 2/3/4 Rule: Complete Guide](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): BoA limits approvals to 2 in 30 days, 3 in 12 months, and 4 in 24 months
-- [Credit Card Velocity Rules: Complete Guide](https://524tracker.com/blog/credit-card-velocity-rules-explained): Every issuer's application limits — Chase 5/24, Amex 2/90, Citi 8/65, BofA 2/3/4, and 5 more banks
-- [Amex Popup Jail Explained](https://524tracker.com/blog/amex-popup-jail-explained): What triggers the Amex popup, how to escape, and how to estimate your risk
-- [Is the Chase Sapphire Reserve Worth It?](https://524tracker.com/blog/is-chase-sapphire-reserve-worth-it-2026): Honest math on the $550 annual fee — when it pays for itself and when it doesn't
-- [Is the Amex Platinum Worth It?](https://524tracker.com/blog/is-amex-platinum-worth-it-2026): Breaking down $695 annual fee vs $1,400+ in credits — the real value calculation
-- [Amex Application Rules: 1/5 and 2/90](https://524tracker.com/blog/amex-1-5-rule-2-90-rule-explained): Every Amex velocity rule including credit card limits and charge card exceptions
-- [Citi Advanced Rules: 48-Month Trap](https://524tracker.com/blog/citi-application-rules-advanced): The 48-month bonus clock reset trap, family card rules, and timing strategies
-- [Capital One Application Rules](https://524tracker.com/blog/capital-one-application-rules): 3-bureau pulls, 2 consumer card limit, and why CapOne business cards count toward 5/24
-- [Best Cards Under 5/24 in 2026](https://524tracker.com/blog/best-credit-cards-under-5-24-2026): Priority-ranked list of the best cards to get before crossing the 5/24 threshold
-- [Credit Card Downgrade Guide](https://524tracker.com/blog/credit-card-downgrade-guide-2026): When to downgrade vs cancel, how points transfer, and every major downgrade path
-- [Which Bureau Does Chase Pull?](https://524tracker.com/blog/which-credit-bureau-does-chase-pull): Chase's primary bureau by state and how to use strategic bureau freezes
-- [Barclays, US Bank, Wells Fargo Rules](https://524tracker.com/blog/barclays-us-bank-wells-fargo-application-rules): The underrated velocity limits — Barclays 6/24, US Bank 5/12, Wells Fargo 48-month rule
-- [Is the Amex Gold Worth It?](https://524tracker.com/blog/amex-gold-worth-it-2026): $120 dining + $120 Uber + 4x groceries — the math on the $250 annual fee
-- [Hard Inquiry Impact on Applications](https://524tracker.com/blog/credit-card-hard-inquiry-impact): How each issuer views inquiries differently and how to manage inquiry distribution
-- [Optimal Application Timing 2026](https://524tracker.com/blog/optimal-credit-card-application-timing-2026): Exact spacing rules and a 12-month application calendar strategy
-- [BofA 7/12 Rule and Preferred Rewards](https://524tracker.com/blog/bank-of-america-7-12-rule-preferred-rewards): Advanced BofA strategies — the 7/12 cross-issuer rule and Alaska companion fare
+## Reference and trust pages
+- [Rules Guide](https://524tracker.com/rules-guide): Plain-language overview of commonly reported application rules
+- [Methodology](https://524tracker.com/methodology): How community data points and limitations are handled
+- [Privacy Policy](https://524tracker.com/privacy): Browser-local storage, analytics consent, hosting, and advertising status
+- [Terms of Service](https://524tracker.com/terms): Important accuracy and financial-information limitations
 
-## 2026 Long-Form Cluster (Rewritten with AEO Answer Capsules)
-These 8 posts have been refactored for AI-overview retrieval — every H2 is a question and is followed by a 40-60 word answer capsule citing the relevant on-site tool.
-- [How the Chase 5/24 Rule Works in 2026](https://524tracker.com/blog/how-the-chase-524-rule-works-in-2026): Plain-English breakdown of the 24-month rolling window, what counts and what doesn't, and how to plan applications around 5/24
-- [What Is the Amex Lifetime Bonus Rule](https://524tracker.com/blog/what-is-the-amex-lifetime-bonus-rule): The once-per-product lifetime restriction explained, including per-card-family tracking, the unconfirmed 7-year reset, and which products are covered
-- [How to Track Your Credit Card Application History](https://524tracker.com/blog/how-to-track-your-credit-card-application-history): Exact data points to record per application and how to compute Chase 5/24, Amex 2/90, Citi 8/65, and BoA 2/3/4 from a single dataset
-- [Citi 8/65 Rule Explained for Credit Card Churners](https://524tracker.com/blog/citi-8-65-rule-explained-for-credit-card-churners): The actual 8-day approval clock + 65-day 2-card rolling cap + 24-month bonus eligibility clock — corrects widespread misinformation
-- [Bank of America 2/3/4 Rule Explained](https://524tracker.com/blog/bank-of-america-2-3-4-rule-explained): The three stacking velocity limits (2 in 30 days, 3 in 12 months, 4 in 24 months) and how Preferred Rewards softens enforcement
-- [What Is Credit Card Churning and Is It Worth It?](https://524tracker.com/blog/what-is-credit-card-churning-and-is-it-worth-it): Modern churning playbook — who it works for, realistic earnings, real risks (shutdowns, clawbacks), and the application-rule constraints
-- [How Hard Inquiries Affect Your Credit Score](https://524tracker.com/blog/how-hard-inquiries-affect-your-credit-score): Real FICO impact, 24-month visibility, issuer sensitivity ranking, bureau distribution strategy, and strategic credit freeze tactics
-- [When to Cancel a Credit Card to Avoid the Annual Fee](https://524tracker.com/blog/when-to-cancel-a-credit-card-to-avoid-annual-fee): The 11-month rule, 30-day refund window, downgrade-don't-cancel default, retention call protocol, and concrete downgrade paths per issuer
-
-## About
-- [About](https://524tracker.com/about): About this tool and how it works
-- [Privacy Policy](https://524tracker.com/privacy): All data stored locally in your browser — nothing sent to servers
-- [Terms of Service](https://524tracker.com/terms): Terms of use
-
-## Key Facts
-- All tracking data stored in browser localStorage only — never transmitted to any server
-- No account or login required
-- Free to use, supported by advertising and card affiliate links
-- Rules based on community knowledge from r/churning — always verify with card issuer before applying
+## Important limitations
+- Issuer rules and card terms can change without notice and are not approval guarantees.
+- Verify current terms directly with the issuer before making a financial decision.
+- Tracker entries are stored in browser localStorage and can be lost when browser data is cleared.
+- The site has not been approved for Google AdSense and does not currently load AdSense ads.

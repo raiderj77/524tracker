@@ -6,7 +6,7 @@
  * Exit code 1 on failure, 0 on pass.
  */
 
-import { readFileSync, readdirSync, existsSync, statSync } from "fs";
+import { readFileSync, readdirSync, existsSync } from "fs";
 import { resolve, dirname, relative, join } from "path";
 import { fileURLToPath } from "url";
 

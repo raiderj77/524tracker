@@ -2,6 +2,9 @@
   "name": "524tracker",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "postcss": "8.5.18"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,16 +12,13 @@
     "lint": "eslint",
     "lint:content": "node scripts/content-lint.js",
     "lint:predeploy": "node scripts/predeploy-check.js",
-    "prebuild": "npm run lint:predeploy && npm run lint:content"
+    "test:quality": "node scripts/quality-gate.mjs",
+    "prebuild": "npm run test:quality && npm run lint:predeploy && npm run lint:content"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
-    "next": "16.1.6",
+    "next": "^16.2.10",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "remark": "^15.0.1",
-    "remark-gfm": "^4.0.1",
-    "remark-html": "^16.0.1"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -26,7 +26,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "^16.2.10",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

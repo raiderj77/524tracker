@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import type { ReactNode } from 'react';
 import type { BlogPost } from './posts';
 
 export const newPosts1to4: BlogPost[] = [

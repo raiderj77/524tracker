@@ -8,11 +8,8 @@ const navLinks = [
   { href: '/spend-tracker', label: 'Spend Tracker' },
   { href: '/application-flowchart', label: 'Flowchart' },
   { href: '/rules-guide', label: 'Rules Guide' },
-  { href: '/top-cards', label: 'Top Cards' },
   { href: '/card-value-calculator', label: 'Card Value' },
-  { href: '/best-cards-by-category', label: 'Best Cards' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ];
 
@@ -30,7 +27,7 @@ export default function Header() {
       <header className="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-slate">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2 group" aria-label="524Tracker Home">
+            <Link href="/" className="flex items-center gap-2 group">
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-gold text-brand-navy font-display font-bold text-sm">
                 CT
               </span>

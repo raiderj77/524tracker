@@ -130,7 +130,7 @@ export default function ContactPage() {
             <li><Link href="/" className="text-brand-gold hover:text-amber-600 font-medium">5/24 Tracker</Link> — Log your card applications and see your eligibility across all major bank rules in real time.</li>
             <li><Link href="/rules-guide" className="text-brand-gold hover:text-amber-600 font-medium">Bank Rules Guide</Link> — Detailed documentation of every tracked bank rule with last-verified dates.</li>
             <li><Link href="/card-value-calculator" className="text-brand-gold hover:text-amber-600 font-medium">Card Value Calculator</Link> — Determine whether a credit card is worth keeping by comparing the annual fee against benefits you actually use.</li>
-            <li><Link href="/best-cards-by-category" className="text-brand-gold hover:text-amber-600 font-medium">Best Cards by Category</Link> — Find the top cards for gas, groceries, dining, travel, and more.</li>
+            <li><Link href="/card-value-calculator" className="text-brand-gold hover:text-amber-600 font-medium">Card Value Calculator</Link> — Compare an annual fee with the benefits you personally use.</li>
             <li><Link href="/faq" className="text-brand-gold hover:text-amber-600 font-medium">FAQ</Link> — Answers to the 20 most common questions about credit card application rules and the tracker tool.</li>
           </ul>
         </section>
@@ -160,7 +160,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-bold text-base text-brand-navy mb-1">Do you accept advertising or sponsored content?</h3>
-              <p>524Tracker may display ads through Google AdSense and may earn commissions through credit card affiliate links when those links are active. Advertising and affiliate relationships never influence our rule documentation, tracker calculations, or editorial recommendations. For advertising inquiries, email <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a>.</p>
+              <p>524Tracker is not currently approved to display Google AdSense ads, and advertising is disabled. Some outbound links may be eligible for referral compensation when clearly disclosed. For business inquiries, email <a href="mailto:contact@524tracker.com" className="text-brand-gold hover:text-amber-600">contact@524tracker.com</a>.</p>
             </div>
           </div>
         </section>

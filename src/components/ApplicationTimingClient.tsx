@@ -155,10 +155,6 @@ function addMonths(d: Date, months: number): Date {
   return r;
 }
 
-function maxDate(...dates: Date[]): Date {
-  return new Date(Math.max(...dates.map((d) => d.getTime())));
-}
-
 /* ------------------------------------------------------------------ */
 /*  Sequencing Algorithm                                              */
 /* ------------------------------------------------------------------ */
@@ -188,7 +184,7 @@ function calculateTimeline(
   for (let i = 0; i < sorted.length; i++) {
     const wish = sorted[i];
     const warnings: string[] = [];
-    let earliest = new Date(today);
+    const earliest = new Date(today);
 
     // Helper: apps for a specific issuer within a window from a candidate date
     const issuerAppsInWindow = (issuer: Issuer, candidateDate: Date, windowDays: number) =>
