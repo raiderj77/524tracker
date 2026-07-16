@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { getAffiliateUrl } from '@/lib/affiliateUrls';
+import { PrintResultsButton } from './PrintResultsButton';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                             */
@@ -618,8 +619,11 @@ export default function AnnualFeeCalcClient() {
 
       {/* ---- Results ---- */}
       {showResults && (
-        <div className="bg-white border border-gray-200 rounded-xl p-5 sm:p-6">
-          <h2 className="font-display font-bold text-xl text-brand-navy mb-4">Annual Value Breakdown</h2>
+        <div data-printable-results className="bg-white border border-gray-200 rounded-xl p-5 sm:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <h2 className="font-display font-bold text-xl text-brand-navy">Annual Value Breakdown</h2>
+            <PrintResultsButton />
+          </div>
 
           {/* Breakdown Table */}
           <div className="space-y-3 mb-6">

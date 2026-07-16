@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { PrintResultsButton } from './PrintResultsButton';
 
 interface FormData {
   cardsOpen: number;
@@ -341,7 +342,10 @@ export default function AmexPopupClient() {
 
       {/* Results */}
       {result && (
-        <div className="space-y-6">
+        <div data-printable-results className="space-y-6">
+          <div className="flex justify-end">
+            <PrintResultsButton />
+          </div>
           {/* Risk Indicator */}
           <div
             className={`${riskStyles[result.level].bg} ${riskStyles[result.level].border} border-2 rounded-xl p-6 text-center`}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { PrintResultsButton } from './PrintResultsButton';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                             */
@@ -760,8 +761,11 @@ export default function VelocityCheckerClient() {
 
       {/* ---- Results Dashboard ---- */}
       {results && (
-        <div className="space-y-4">
-          <h2 className="font-display font-bold text-2xl text-brand-navy">Velocity Rule Results</h2>
+        <div data-printable-results className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="font-display font-bold text-2xl text-brand-navy">Velocity Rule Results</h2>
+            <PrintResultsButton />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {results.map((issuerResult) => (
               <div

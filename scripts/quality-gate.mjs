@@ -22,6 +22,8 @@ const llms = read('public/llms.txt');
 const privacy = read('src/app/privacy/page.tsx');
 const markdownLoader = read('src/lib/blog-markdown.ts');
 const submissionRoute = read('src/app/api/submit-data-point/route.ts');
+const printButton = read('src/components/PrintResultsButton.tsx');
+const printStyles = read('src/app/globals.css');
 
 assert.match(config, /source: '\/blog\/:path\*'.*destination: '\/rules-guide'.*permanent: true/);
 assert.match(config, /source: '\/top-cards'.*destination: '\/card-value-calculator'/);
@@ -51,6 +53,23 @@ assert.match(privacy, /Cookiebot is also disabled/);
 assert.match(submissionRoute, /status: 410/);
 assert.doesNotMatch(submissionRoute, /req\.json|console\.log|JSON\.stringify/);
 assert.ok(existsSync(join(root, 'public', 'logo.svg')), 'Organization logo must exist');
+assert.match(printButton, /window\.print\(\)/);
+assert.doesNotMatch(printButton, /fetch\(|sendBeacon|localStorage|sessionStorage/);
+assert.match(printStyles, /body:has\(\[data-printable-results\]\) \*/);
+for (const component of [
+  'VelocityCheckerClient.tsx',
+  'ApplicationTimingClient.tsx',
+  'AmexPopupClient.tsx',
+  'PointsValueCalculatorClient.tsx',
+  'AnnualFeeCalcClient.tsx',
+  'CardTrackerTool.tsx',
+  'SpendTrackerTool.tsx',
+  'TrackerTool.tsx',
+]) {
+  const source = read(`src/components/${component}`);
+  assert.match(source, /data-printable-results/);
+  assert.match(source, /PrintResultsButton/);
+}
 
 const ignored = [
   join('src', 'app', 'blog'),

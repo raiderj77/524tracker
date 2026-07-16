@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { PrintResultsButton } from './PrintResultsButton';
 
 // ─── Types ────────────────────────────────────────────────────
 interface TrackedCard {
@@ -447,8 +448,11 @@ export default function CardTrackerTool() {
       </div>
 
       {/* ─── Results Dashboard ─────────────────────────────── */}
-      <section aria-label="Rule status dashboard">
-        <h2 className="font-display font-bold text-xl text-brand-navy mb-4">Your Rule Status</h2>
+      <section data-printable-results aria-label="Rule status dashboard">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h2 className="font-display font-bold text-xl text-brand-navy">Your Rule Status</h2>
+          <PrintResultsButton />
+        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ruleResults.map((r) => (
             <RuleCard key={r.name} result={r} />
