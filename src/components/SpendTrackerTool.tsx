@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Link from 'next/link';
+import { PrintResultsButton } from './PrintResultsButton';
 
 // ─── Types ────────────────────────────────────────────────────
 interface SpendCard {
@@ -285,7 +286,10 @@ export default function SpendTrackerTool() {
 
       {/* ─── Summary Dashboard ─────────────────────────────── */}
       {activeCards.length > 0 && (
-        <section aria-label="Spend tracker summary">
+        <section data-printable-results aria-label="Spend tracker summary">
+          <div className="flex justify-end mb-3">
+            <PrintResultsButton />
+          </div>
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
               <p className="text-3xl font-bold tabular-nums text-brand-navy">{activeCards.length}</p>

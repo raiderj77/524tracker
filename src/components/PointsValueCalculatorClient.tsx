@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { pointsMilesValuations, getProgramByName, formatCents } from '@/lib/pointsMilesData';
+import { PrintResultsButton } from './PrintResultsButton';
 
 interface VerdictResult {
   verdict: string;
@@ -146,7 +147,10 @@ export default function PointsValueCalculatorClient() {
 
         {/* Results */}
         {result && (
-          <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200 space-y-5">
+          <div data-printable-results className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200 space-y-5">
+            <div className="flex justify-end">
+              <PrintResultsButton />
+            </div>
             {/* Verdict Card */}
             <div className={`p-4 rounded-lg border-2 border-gray-200 bg-white`}>
               <p className={`text-lg font-bold ${result.verdict.color}`}>

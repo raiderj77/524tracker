@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { PrintResultsButton } from './PrintResultsButton';
 import {
   type CardApplication,
   get524Count,
@@ -544,7 +545,10 @@ export default function TrackerTool() {
 
       {/* Dashboard - only show when applications exist */}
       {applications.length > 0 && (
-        <div className="space-y-6">
+        <div data-printable-results className="space-y-6">
+          <div className="flex justify-end">
+            <PrintResultsButton label="Print Tracker Results" />
+          </div>
           {/* Top row: 5/24 + Amex */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Card 1: Chase 5/24 Status */}
