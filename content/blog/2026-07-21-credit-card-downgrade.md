@@ -13,6 +13,9 @@ Downgrading a card keeps the account open but swaps it for a no-fee or lower-fee
 
 ## Does Downgrading Help My 5/24 Count?
 
+No, downgrading does not help your 5/24 count. Chase tracks the account open date rather than the current card type, so a downgrade from Sapphire Preferred to Freedom Unlimited still counts as an original open date.
+
+
 No. Downgrading does not help your 5/24 count at all. Chase counts every personal card opened in the last 24 months, no matter what happens to it later.
 
 Here's the thing that trips people up. Chase looks at the account open date, not the current product name. If you opened a Chase Sapphire Preferred 15 months ago and downgrade it today to a Chase Freedom Unlimited, that account still shows as opened 15 months ago. It still counts toward your 5/24 total.
