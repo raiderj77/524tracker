@@ -1,120 +1,69 @@
 import Link from 'next/link';
 
-const siteLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/card-tracker', label: 'Card Tracker' },
-  { href: '/velocity-checker', label: 'Velocity Checker' },
+const toolLinks = [
+  { href: '/', label: '5/24 Date Tracker' },
   { href: '/spend-tracker', label: 'Spend Tracker' },
-  { href: '/annual-fee-calculator', label: 'Annual Fee Calculator' },
-  { href: '/application-timing', label: 'Application Timing' },
-  { href: '/amex-popup-estimator', label: 'Amex Popup Estimator' },
-  { href: '/downgrade-guide', label: 'Downgrade Guide' },
-  { href: '/credit-pull-database', label: 'Credit Pull Database' },
-  { href: '/methodology', label: 'Data Methodology' },
-  { href: '/inquiry-tracker', label: 'Inquiry Tracker' },
-  { href: '/application-flowchart', label: 'Flowchart' },
-  { href: '/rules-guide', label: 'Rules Guide' },
   { href: '/card-value-calculator', label: 'Card Value Calculator' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/privacy', label: 'Privacy Policy' },
-  { href: '/terms', label: 'Terms of Service' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
 ];
 
-const sisterSites = [
-  { href: 'https://fibertools.app', label: 'FiberTools' },
-  { href: 'https://mindchecktools.com', label: 'MindCheck Tools' },
-  { href: 'https://flipmycase.com', label: 'FlipMyCase' },
-  { href: 'https://creatorrevenuecalculator.com', label: 'Creator Revenue Calculator' },
-  { href: 'https://contractextract.com', label: 'ContractExtract' },
-  { href: 'https://medicalbillreader.com', label: 'Medical Bill Reader' },
-  { href: 'https://taxbreaktools.com', label: 'TaxBreakTools' },
-  { href: 'https://aibusinessalternative.com', label: 'AI Business Alternative' },
+const trustLinks = [
+  { href: '/chase-524', label: 'Unofficial 5/24 Guide' },
+  { href: '/rules-guide', label: 'Evidence Guide' },
+  { href: '/editorial-policy', label: 'Editorial & Sourcing Policy' },
+  { href: '/methodology', label: 'Data Methodology' },
+  { href: '/about', label: 'About the Publisher' },
+  { href: '/contact', label: 'Corrections & Contact' },
+  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/accessibility', label: 'Accessibility' },
+  { href: '/terms', label: 'Terms of Service' },
 ];
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-brand-navy text-gray-300 mt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Site links */}
-          <div>
-            <h2 className="text-white font-display font-bold text-lg mb-4">524Tracker</h2>
-            <nav aria-label="Footer navigation">
-              <ul className="space-y-2">
-                {siteLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-brand-gold transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-
-          {/* Sister sites */}
-          <div>
-            <h2 className="text-white font-display font-bold text-lg mb-4">More Empire Tools</h2>
-            <ul className="space-y-2">
-              {sisterSites.map((site) => (
-                <li key={site.href}>
-                  <a
-                    href={site.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gray-400 hover:text-brand-gold transition-colors"
-                  >
-                    {site.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Disclaimer */}
-          <div>
-            <h2 className="text-white font-display font-bold text-lg mb-4">Disclaimer</h2>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Credit card application tracking is for informational purposes only. Always
-              verify rules and current offers directly with card issuers before applying. Some
-              outbound links may be sponsored or eligible for referral compensation when disclosed.
-            </p>
-            <p className="text-sm text-gray-400 mt-4">
-              Built by an experienced web professional
-            </p>
-          </div>
+    <footer className="mt-16 bg-brand-navy text-gray-300">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
+        <div>
+          <h2 className="mb-4 font-display text-lg font-bold text-white">Private tools</h2>
+          <ul className="space-y-2">
+            {toolLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-sm text-gray-300 hover:text-brand-gold">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        {/* DevelopVault promotional callout */}
-        <div className="mt-10 rounded-xl border border-brand-gold/30 bg-white/5 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <p className="font-display font-bold text-white text-base mb-1">Track Your Cards Like a Pro</p>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-xl">
-              Our free Google Sheets 5/24 Tracker keeps your Chase eligibility, bonus progress, and annual fees organized in one place.
-            </p>
-          </div>
-          <a
-            href="https://www.etsy.com/shop/DevelopVault"
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
-            className="shrink-0 inline-flex items-center justify-center px-5 py-2.5 bg-brand-gold text-brand-navy font-semibold rounded-lg hover:bg-amber-400 transition-colors text-sm whitespace-nowrap min-h-[44px]"
-          >
-            Get It on Etsy &rarr;
-          </a>
+        <div>
+          <h2 className="mb-4 font-display text-lg font-bold text-white">Trust & transparency</h2>
+          <ul className="space-y-2">
+            {trustLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-sm text-gray-300 hover:text-brand-gold">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <div className="border-t border-brand-slate mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            &copy; {currentYear} 524 Tracker. All rights reserved.
+        <div>
+          <h2 className="mb-4 font-display text-lg font-bold text-white">Financial-information notice</h2>
+          <p className="text-sm leading-relaxed text-gray-300">
+            524Tracker is an independent date organizer. It is not affiliated with Chase or any
+            card issuer, and it does not provide financial advice, credit counseling, eligibility
+            decisions, or approval guarantees.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">
+            Published and maintained by{' '}
+            <Link href="/about" className="underline underline-offset-2 hover:text-brand-gold">
+              Jason Ramirez
+            </Link>
+            .
           </p>
         </div>
+      </div>
+      <div className="border-t border-brand-slate px-4 py-6 text-center text-sm text-gray-400">
+        &copy; {new Date().getUTCFullYear()} 524Tracker. Issuer names are trademarks of their owners.
       </div>
     </footer>
   );

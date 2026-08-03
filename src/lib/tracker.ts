@@ -1,4 +1,5 @@
-import { bankRules, type BankRule } from './bankRules';
+import { bankRules, type BankRule } from './bankRules.ts';
+import { parseLocalDate, shiftCalendarMonths, startOfLocalDay } from './dateMath.ts';
 
 export interface CardApplication {
   id: string;
@@ -8,6 +9,7 @@ export interface CardApplication {
   status: 'approved' | 'denied' | 'pending';
   isBusinessCard: boolean;
   isAuthorizedUser?: boolean;
+  reportsToPersonalCredit?: boolean;
   amexBonusReceived?: boolean;
   annualFee?: number;
   cardOpenDate?: string; // ISO date string, defaults to applicationDate
@@ -33,53 +35,116 @@ export interface BankEligibility {
   eligible: boolean;
 }
 
+export function parseStoredApplications(raw: string | null): CardApplication[] {
+  if (!raw) return [];
+
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed.flatMap((value): CardApplication[] => {
+      if (!value || typeof value !== 'object') return [];
+      const candidate = value as Record<string, unknown>;
+      const status = candidate.status;
+      const applicationDate = candidate.applicationDate;
+      const cardOpenDate = candidate.cardOpenDate;
+
+      if (
+        typeof candidate.id !== 'string' ||
+        candidate.id.trim() === '' ||
+        typeof candidate.cardName !== 'string' ||
+        candidate.cardName.trim() === '' ||
+        typeof candidate.bank !== 'string' ||
+        candidate.bank.trim() === '' ||
+        typeof applicationDate !== 'string' ||
+        parseLocalDate(applicationDate) === null ||
+        (status !== 'approved' && status !== 'denied' && status !== 'pending') ||
+        (cardOpenDate !== undefined &&
+          cardOpenDate !== '' &&
+          (typeof cardOpenDate !== 'string' || parseLocalDate(cardOpenDate) === null))
+      ) {
+        return [];
+      }
+
+      return [
+        {
+          id: candidate.id,
+          cardName: candidate.cardName.trim(),
+          bank: candidate.bank.trim(),
+          applicationDate,
+          status,
+          isBusinessCard: candidate.isBusinessCard === true,
+          isAuthorizedUser: candidate.isAuthorizedUser === true,
+          reportsToPersonalCredit: candidate.reportsToPersonalCredit === true,
+          amexBonusReceived: candidate.amexBonusReceived === true,
+          annualFee:
+            typeof candidate.annualFee === 'number' && Number.isFinite(candidate.annualFee)
+              ? candidate.annualFee
+              : undefined,
+          cardOpenDate: typeof cardOpenDate === 'string' && cardOpenDate ? cardOpenDate : undefined,
+        },
+      ];
+    });
+  } catch {
+    return [];
+  }
+}
+
 // Whether a card counts toward Chase 5/24
-function countsToward524(app: CardApplication, countAuthorizedUsers: boolean): boolean {
+export function countsToward524(app: CardApplication, countAuthorizedUsers: boolean): boolean {
   if (app.status !== 'approved') return false;
-  if (app.isBusinessCard) return false;
+  if (app.isBusinessCard && app.reportsToPersonalCredit !== true) return false;
   if (!countAuthorizedUsers && app.isAuthorizedUser) return false;
   return true;
 }
 
+function accountDate(app: CardApplication): Date | null {
+  return parseLocalDate(app.cardOpenDate || app.applicationDate);
+}
+
+export function get524ReferenceDate(app: CardApplication): Date | null {
+  const opened = accountDate(app);
+  return opened ? shiftCalendarMonths(opened, 24) : null;
+}
+
 export function get524Count(
   applications: CardApplication[],
-  countAuthorizedUsers: boolean = true
+  countAuthorizedUsers: boolean = true,
+  referenceDate: Date = new Date()
 ): number {
-  const now = new Date();
-  const windowStart = new Date(now);
-  windowStart.setDate(windowStart.getDate() - 730);
+  const now = startOfLocalDay(referenceDate);
+  const windowStart = shiftCalendarMonths(now, -24);
 
   return applications.filter((app) => {
     if (!countsToward524(app, countAuthorizedUsers)) return false;
-    const appDate = new Date(app.applicationDate);
-    return appDate >= windowStart && appDate <= now;
+    const opened = accountDate(app);
+    return opened !== null && opened > windowStart && opened <= now;
   }).length;
 }
 
 export function get524DropoffDate(
   applications: CardApplication[],
-  countAuthorizedUsers: boolean = true
+  countAuthorizedUsers: boolean = true,
+  referenceDate: Date = new Date()
 ): Date | null {
-  const now = new Date();
-  const windowStart = new Date(now);
-  windowStart.setDate(windowStart.getDate() - 730);
+  const now = startOfLocalDay(referenceDate);
+  const windowStart = shiftCalendarMonths(now, -24);
 
   const qualifying = applications
     .filter((app) => {
       if (!countsToward524(app, countAuthorizedUsers)) return false;
-      const appDate = new Date(app.applicationDate);
-      return appDate >= windowStart && appDate <= now;
+      const opened = accountDate(app);
+      return opened !== null && opened > windowStart && opened <= now;
     })
     .sort(
       (a, b) =>
-        new Date(a.applicationDate).getTime() - new Date(b.applicationDate).getTime()
+        (accountDate(a)?.getTime() ?? 0) - (accountDate(b)?.getTime() ?? 0)
     );
 
   if (qualifying.length === 0) return null;
 
-  const oldest = new Date(qualifying[0].applicationDate);
-  const dropoff = new Date(oldest);
-  dropoff.setDate(dropoff.getDate() + 730);
+  const dropoff = get524ReferenceDate(qualifying[0]);
+  if (!dropoff) return null;
 
   if (dropoff <= now) return null;
   return dropoff;
@@ -90,39 +155,39 @@ export function get524CountOnDate(
   targetDate: Date,
   countAuthorizedUsers: boolean = true
 ): number {
-  const windowStart = new Date(targetDate);
-  windowStart.setDate(windowStart.getDate() - 730);
+  const normalizedTarget = startOfLocalDay(targetDate);
+  const windowStart = shiftCalendarMonths(normalizedTarget, -24);
 
   return applications.filter((app) => {
     if (!countsToward524(app, countAuthorizedUsers)) return false;
-    const appDate = new Date(app.applicationDate);
-    return appDate >= windowStart && appDate <= targetDate;
+    const opened = accountDate(app);
+    return opened !== null && opened > windowStart && opened <= normalizedTarget;
   }).length;
 }
 
 export function get524Dropoffs(
   applications: CardApplication[],
-  countAuthorizedUsers: boolean = true
+  countAuthorizedUsers: boolean = true,
+  referenceDate: Date = new Date()
 ): { cardName: string; dropoffDate: Date; countAfter: number }[] {
-  const now = new Date();
-  const windowStart = new Date(now);
-  windowStart.setDate(windowStart.getDate() - 730);
+  const now = startOfLocalDay(referenceDate);
+  const windowStart = shiftCalendarMonths(now, -24);
 
   const qualifying = applications
     .filter((app) => {
       if (!countsToward524(app, countAuthorizedUsers)) return false;
-      const appDate = new Date(app.applicationDate);
-      return appDate >= windowStart && appDate <= now;
+      const opened = accountDate(app);
+      return opened !== null && opened > windowStart && opened <= now;
     })
     .sort(
       (a, b) =>
-        new Date(a.applicationDate).getTime() - new Date(b.applicationDate).getTime()
+        (accountDate(a)?.getTime() ?? 0) - (accountDate(b)?.getTime() ?? 0)
     );
 
   const dropoffs: { cardName: string; dropoffDate: Date; countAfter: number }[] = [];
   for (let i = 0; i < qualifying.length; i++) {
-    const dropoffDate = new Date(qualifying[i].applicationDate);
-    dropoffDate.setDate(dropoffDate.getDate() + 730);
+    const dropoffDate = get524ReferenceDate(qualifying[i]);
+    if (!dropoffDate) continue;
     if (dropoffDate > now) {
       const countAfter = get524CountOnDate(applications, dropoffDate, countAuthorizedUsers);
       dropoffs.push({
@@ -150,6 +215,16 @@ export function checkBankRule(
       resetDate: null,
       message: 'Lifetime rules are tracked per-card in the Amex Bonus Tracker.',
     };
+  }
+
+  if (rule.ruleCode === '5/24 reference' && !checkDate) {
+    const count = get524Count(applications);
+    const resetDate = count >= rule.maxApplications ? get524DropoffDate(applications) : null;
+    const violated = count >= rule.maxApplications;
+    const message = violated
+      ? `${rule.ruleName}: ${count}/${rule.maxApplications} — at or above the reported threshold.${resetDate ? ` Reference date: ${resetDate.toLocaleDateString()}.` : ''}`
+      : `${rule.ruleName}: ${count}/${rule.maxApplications} — below the reported threshold.`;
+    return { violated, count, resetDate, message };
   }
 
   if (rule.windowDays === 0) {
@@ -187,8 +262,8 @@ export function checkBankRule(
   }
 
   const message = violated
-    ? `${rule.ruleName}: ${count}/${rule.maxApplications} — limit reached. ${resetDate ? `Eligible again after ${resetDate.toLocaleDateString()}.` : ''}`
-    : `${rule.ruleName}: ${count}/${rule.maxApplications} — eligible.`;
+    ? `${rule.ruleName}: ${count}/${rule.maxApplications} — at or above the reported threshold.${resetDate ? ` Reference date: ${resetDate.toLocaleDateString()}.` : ''}`
+    : `${rule.ruleName}: ${count}/${rule.maxApplications} — below the reported threshold.`;
 
   return { violated, count, resetDate, message };
 }
@@ -219,7 +294,12 @@ export function getEligibleBanks(applications: CardApplication[]): BankEligibili
 
   for (const bank of banks) {
     const rules = bankRules
-      .filter((r) => r.bank === bank && !r.isLifetime && r.windowDays > 0)
+      .filter(
+        (r) =>
+          r.bank === bank &&
+          !r.isLifetime &&
+          (r.windowDays > 0 || r.ruleCode === '5/24 reference')
+      )
       .map((rule) => {
         const result = checkBankRule(applications, rule);
         return {
@@ -275,22 +355,34 @@ export function exportToCSV(applications: CardApplication[]): string {
     'Application Date',
     'Status',
     'Business Card',
+    'Authorized User',
+    'Appears on Personal Credit Report',
     'Amex Bonus Received',
     'Annual Fee',
     'Card Open Date',
   ];
-  const rows = sortByDate(applications).map((app) => [
-    `"${app.cardName}"`,
-    `"${app.bank}"`,
-    app.applicationDate,
-    app.status,
-    app.isBusinessCard ? 'Yes' : 'No',
-    app.amexBonusReceived ? 'Yes' : 'No',
-    app.annualFee != null ? `$${app.annualFee}` : '',
-    app.cardOpenDate || '',
-  ]);
+  const rows = sortByDate(applications).map((app) =>
+    [
+      app.cardName,
+      app.bank,
+      app.applicationDate,
+      app.status,
+      app.isBusinessCard ? 'Yes' : 'No',
+      app.isAuthorizedUser ? 'Yes' : 'No',
+      app.reportsToPersonalCredit === true ? 'Yes' : 'No',
+      app.amexBonusReceived ? 'Yes' : 'No',
+      app.annualFee != null ? `$${app.annualFee}` : '',
+      app.cardOpenDate || '',
+    ].map(escapeCSVCell)
+  );
 
   return [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+}
+
+export function escapeCSVCell(value: string): string {
+  let text = value;
+  if (/^[\t\r\n ]*[=+\-@]/.test(text)) text = `'${text}`;
+  return `"${text.replaceAll('"', '""')}"`;
 }
 
 export function getAnnualFeeDueDate(app: CardApplication): Date | null {

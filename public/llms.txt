@@ -1,24 +1,25 @@
 # 524Tracker
 
-> Browser-based tools for organizing credit-card application dates, annual fees, inquiries, and commonly reported issuer application rules.
+> Independent browser-based tools for organizing credit-card dates and user-entered values. 524Tracker is not affiliated with Chase or any issuer and does not provide financial advice or approval predictions.
 
-## Core tools
-- [Chase 5/24 Tracker](https://524tracker.com/): Calculate a rolling 24-month card count from dates entered in your browser
-- [Card Tracker](https://524tracker.com/card-tracker): Organize card application history locally on your device
-- [Spend Tracker](https://524tracker.com/spend-tracker): Track welcome-offer spending progress locally
-- [Velocity Checker](https://524tracker.com/velocity-checker): Compare dates with commonly reported issuer timing rules
-- [Annual Fee Calculator](https://524tracker.com/annual-fee-calculator): Compare an annual fee with benefits you value
-- [Card Value Calculator](https://524tracker.com/card-value-calculator): Estimate annual net card value from your own assumptions
-- [Inquiry Tracker](https://524tracker.com/inquiry-tracker): Organize hard-inquiry dates by bureau
+## Maintained tools
+- [Unofficial 5/24 Date Tracker](https://524tracker.com/): Counts user-entered account dates in a calendar-based 24-month reference window
+- [Spend Tracker](https://524tracker.com/spend-tracker): Tracks a user-entered welcome-offer spending target locally
+- [Card Value Calculator](https://524tracker.com/card-value-calculator): Subtracts a user-entered annual fee from user-entered benefit and rewards values
 
-## Reference and trust pages
-- [Rules Guide](https://524tracker.com/rules-guide): Plain-language overview of commonly reported application rules
-- [Methodology](https://524tracker.com/methodology): How community data points and limitations are handled
-- [Privacy Policy](https://524tracker.com/privacy): Browser-local storage, analytics consent, hosting, and advertising status
-- [Terms of Service](https://524tracker.com/terms): Important accuracy and financial-information limitations
+## Evidence and trust
+- [Unofficial 5/24 Guide](https://524tracker.com/chase-524): Explains the community shorthand and its limits
+- [Credit-Card Application Evidence Guide](https://524tracker.com/rules-guide): Separates issuer terms, government guidance, and community observations
+- [Editorial & Sourcing Policy](https://524tracker.com/editorial-policy): Evidence labels, corrections, commercial independence, and review policy
+- [Methodology](https://524tracker.com/methodology): Limits of the retired credit-pull reference dataset
+- [About](https://524tracker.com/about): Public publisher identity and background
+- [Privacy Policy](https://524tracker.com/privacy): Browser-local entries, hosting logs, optional services, and user-initiated exports
+- [Accessibility Statement](https://524tracker.com/accessibility): Supported interactions, known limitations, and barrier reporting
+- [Full AI Reference](https://524tracker.com/llms-full.txt): Detailed scope, evidence hierarchy, privacy limits, and canonical links
 
 ## Important limitations
-- Issuer rules and card terms can change without notice and are not approval guarantees.
-- Verify current terms directly with the issuer before making a financial decision.
-- Tracker entries are stored in browser localStorage and can be lost when browser data is cleared.
-- The site has not been approved for Google AdSense and does not currently load AdSense ads.
+- “5/24” is treated as a community-observed Chase application practice, not a published or guaranteed Chase policy.
+- A reference count cannot determine eligibility, approval odds, welcome-offer eligibility, or credit-score impact.
+- Verify current product and offer terms directly with the issuer.
+- Tracker entries stay in browser localStorage by default and can be lost when browser data is cleared.
+- Analytics, consent, and AdSense scripts are disabled by default and require explicit readiness flags.

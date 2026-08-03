@@ -1,272 +1,122 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
+import { buildPageMetadata } from '@/lib/siteMetadata';
 
-export const metadata: Metadata = {
-  title: 'Database Methodology — How Credit Bureau Pull Data Is Sourced | 524Tracker',
+export const metadata = buildPageMetadata({
+  title: 'Calculation Methodology',
   description:
-    'How the 524Tracker credit bureau pull database is built: public community sources, known issuer patterns, and our verification roadmap. Honest about what we have and what we do not.',
-  keywords:
-    'credit bureau pull methodology, credit pull data sources, doctorofcredit, flyertalk credit pulls, community credit card data',
-  robots: { index: true, follow: true, 'max-snippet': -1 },
-  alternates: { canonical: 'https://524tracker.com/methodology' },
-  openGraph: {
-    title: 'Database Methodology — How Credit Bureau Pull Data Is Sourced',
-    description:
-      'How the 524Tracker credit bureau pull database is built, its limitations, and how community verification will work.',
-    url: 'https://524tracker.com/methodology',
-    type: 'article',
-  },
-};
+    'See exactly how 524Tracker handles dates, account types, authorized-user entries, uncertainty, sources, and privacy.',
+  path: '/methodology',
+  type: 'article',
+});
 
-const datePublished = '2026-04-26';
-const dateModified = '2026-07-13';
+const reviewed = '2026-08-02';
 
 export default function MethodologyPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Database Methodology: How Credit Bureau Pull Data Is Sourced',
-    description:
-      'How the 524Tracker credit bureau pull database is built: public community sources, known issuer patterns, and our verification roadmap.',
+    headline: '524Tracker calculation methodology',
+    description: 'How the unofficial 5/24 date tracker calculates a reference count and communicates uncertainty.',
     url: 'https://524tracker.com/methodology',
-    datePublished,
-    dateModified,
-    author: {
-      '@type': 'Organization',
-      name: '524Tracker',
-      url: 'https://524tracker.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: '524Tracker',
-      url: 'https://524tracker.com',
-    },
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://524tracker.com' },
-      { '@type': 'ListItem', position: 2, name: 'Methodology', item: 'https://524tracker.com/methodology' },
-    ],
+    datePublished: '2026-04-26',
+    dateModified: reviewed,
+    author: { '@type': 'Person', name: 'Jason Ramirez', url: 'https://524tracker.com/about' },
+    publisher: { '@type': 'Organization', name: '524Tracker', url: 'https://524tracker.com' },
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <nav className="text-xs text-text-secondary mb-6">
-          <Link href="/" className="text-brand-gold hover:text-amber-600">Home</Link>
-          <span className="mx-1">/</span>
-          <Link href="/credit-pull-database" className="text-brand-gold hover:text-amber-600">Credit Pull Database</Link>
-          <span className="mx-1">/</span>
-          <span>Methodology</span>
-        </nav>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <header className="mb-10">
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-brand-navy mb-4">
-            Database Methodology
+          <h1 className="mb-4 font-display text-3xl font-bold text-brand-navy">
+            Calculation methodology
           </h1>
-          <p className="text-base text-text-secondary leading-relaxed">
-            How the credit bureau pull database is built, what its limitations are, and how we plan to improve it through community verification.
+          <p className="text-base leading-relaxed text-text-primary">
+            524Tracker performs date arithmetic on information a visitor enters. It does not
+            access credit reports, issuer systems, underwriting models, or approval data.
           </p>
-          <p className="text-xs text-text-secondary mt-3">
-            Published {datePublished} &middot; Updated {dateModified} &middot; Built by an experienced web professional
-          </p>
+          <p className="mt-3 text-xs text-text-secondary">Reviewed: August 2, 2026</p>
         </header>
 
-        <article className="space-y-10 prose-guide">
-
+        <div className="space-y-10">
           <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Why We Built This Database</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The single most frustrating part of optimizing a credit card application strategy is not knowing which bureau a bank will pull. That information determines whether a strategic freeze will work, where your inquiries will concentrate, and how many reports you can keep clean for future applications.
-            </p>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The information exists, scattered across forum threads, data point logs, and cardholder agreements. We wanted one place to look it up. So we built this database.
-            </p>
-            <p className="text-base text-text-primary leading-relaxed">
-              The honest caveat: the data we launched with is a starting point. It reflects publicly known patterns, not a proprietary dataset we collected ourselves. That is what this page explains.
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">What the count means</h2>
+            <p className="text-sm leading-relaxed text-text-primary">
+              The count is a personal reference: the number of approved entries whose selected
+              account-open date falls after the date 24 calendar months before today and no later
+              than today. It is not an issuer-calculated count and does not represent eligibility.
             </p>
           </section>
 
           <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Data Is Currently Sourced</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The current 29 entries in the database were compiled from three types of public sources:
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Community forums and data point threads</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The credit card hobbyist community has spent years logging which bureau each bank pulled for specific cards and states. The most reliable aggregations live in:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-base text-text-primary mb-6 ml-2">
-              <li>
-                <strong>r/CreditCards</strong> on Reddit, particularly the DataPoints megathread and wiki. Community members report their actual application results including which bureau was pulled and in which state.
-              </li>
-              <li>
-                <strong>FlyerTalk</strong>, specifically the Credit Card Comparison forum. This community skews toward travel rewards and has extensive issuer-specific threads with pull data going back years.
-              </li>
-              <li>
-                <strong>Doctor of Credit (doctorofcredit.com)</strong>, which maintains issuer-specific pages with community-reported data points organized by card and state.
-              </li>
-            </ul>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Cardholder agreements and issuer disclosures</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Some issuers disclose their credit bureau preferences in application terms or cardholder agreements. These are not always specific to the card product and may not reflect current practice, but they provide a baseline.
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">What this means for accuracy</h3>
-            <p className="text-base text-text-primary leading-relaxed">
-              The patterns in this database represent what has been most commonly reported. They are not the result of our own application testing, and they have not been independently verified through a structured process. Treat every entry as a starting reference, not a guarantee.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">How Verification Will Work</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              We are building a community submission system. The goal is to move every entry from &ldquo;publicly reported pattern&rdquo; to &ldquo;verified by multiple independent data points.&rdquo;
-            </p>
-
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The verification roadmap works like this:
-            </p>
-
-            <ol className="list-decimal list-inside space-y-3 text-base text-text-primary mb-6 ml-2">
-              <li>
-                <strong>Submission:</strong> A future intake system would collect the issuer, card,
-                bureau pulled, state, application date, and source of knowledge. Public submissions
-                are paused until secure storage, moderation, retention, and abuse controls are ready.
-              </li>
-              <li>
-                <strong>Review:</strong> Each submission is manually reviewed for completeness and plausibility before being added to the verification queue.
-              </li>
-              <li>
-                <strong>Corroboration threshold:</strong> An entry needs at least three independent matching data points before it moves from &ldquo;reference only&rdquo; to &ldquo;community verified.&rdquo; Independent means different submitters, ideally from different time periods.
-              </li>
-              <li>
-                <strong>Conflict flagging:</strong> If submissions conflict with existing entries (for example, a state that was previously reported as Experian now consistently shows TransUnion), the entry is flagged as disputed pending further data points.
-              </li>
-              <li>
-                <strong>Date-stamping:</strong> Verified entries will carry a &ldquo;last confirmed&rdquo; date so you can see how recently the pattern was corroborated.
-              </li>
-            </ol>
-
-            <p className="text-base text-text-primary leading-relaxed">
-              We have not reached that verification threshold for any entry yet. That is why every row currently shows &ldquo;Reference only.&rdquo; We are being transparent about where we are in the process.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Known Limitations</h2>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">State variance</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Bureau pull behavior varies significantly by state for many issuers. Chase pulls Experian in most states but TransUnion in others. Citi splits between Experian and Equifax depending on your state. The database currently shows the most commonly reported pattern without state-level granularity. This is a limitation we intend to address as more state-specific data points come in.
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Policy changes</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Banks change their bureau preferences without announcement. A pattern that was accurate six months ago may not be accurate today. High-volume issuers like Chase and Citi are particularly prone to regional adjustments. Any data older than six months should be treated with extra skepticism, especially if your application outcome depends on it.
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Soft vs. hard pull confusion</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Community reports sometimes conflate soft pulls and hard pulls. American Express commonly does a soft pull for existing cardholders and a hard pull for new applicants. If a community member reports &ldquo;Amex pulled Experian&rdquo; without specifying whether they were an existing customer, the data point may not apply to your situation. We flag known soft/hard distinctions in the Notes column.
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Product-level variation</h3>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Different cards from the same issuer can pull different bureaus. The database tracks pull patterns at the card level where possible, but some issuers show inconsistency even within a single product. Treat issuer-level generalizations as rough guides only.
-            </p>
-
-            <h3 className="font-display font-semibold text-lg text-brand-navy mb-2">Credit union and small bank gaps</h3>
-            <p className="text-base text-text-primary leading-relaxed">
-              The database currently covers 11 major issuers. Credit unions and regional banks are largely absent because community data is sparse. Navy Federal and PenFed are included as the largest credit unions, but hundreds of smaller institutions are not represented.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Why This Matters for Credit Card Applications</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              A hard inquiry typically costs 2 to 5 points on your credit score, and the inquiry remains on your report for two years. For most people applying for one card at a time, this is not a major concern.
-            </p>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              For people who apply for multiple cards in a short window, which is a common strategy for earning sign-up bonuses, the bureau question becomes more important. Concentrating all your inquiries on a single bureau means the other two bureaus look completely clean. A bank that pulls only TransUnion will not see the four Experian inquiries you accumulated over the past three months.
-            </p>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              A strategic bureau freeze makes this possible. You freeze the bureaus you want to keep clean, apply only with issuers that pull the unfrozen bureau, and unfreeze when you need to apply with a different issuer. Done carefully, this approach can let you apply for more cards with less total visible inquiry load.
-            </p>
-            <p className="text-base text-text-primary leading-relaxed">
-              Getting the freeze strategy wrong means a denial if the bank cannot pull the bureau it wants. That is why accuracy in this database matters, and why we are transparent about the current state of the data.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Public Sources Referenced</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              The following publicly available resources informed the initial database entries. These are the best places to check for current, state-specific data points before making application decisions:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-base text-text-primary ml-2">
-              <li>
-                <a
-                  href="https://www.reddit.com/r/CreditCards/wiki/index"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-gold hover:text-amber-600"
-                >
-                  r/CreditCards wiki and DataPoints threads
-                </a>{' '}
-                - Community-reported application results organized by issuer
-              </li>
-              <li>
-                <a
-                  href="https://www.flyertalk.com/forum/credit-card-programs-discussion/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-gold hover:text-amber-600"
-                >
-                  FlyerTalk Credit Card Programs forum
-                </a>{' '}
-                - Issuer-specific threads with data points going back years
-              </li>
-              <li>
-                <a
-                  href="https://www.doctorofcredit.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand-gold hover:text-amber-600"
-                >
-                  Doctor of Credit (doctorofcredit.com)
-                </a>{' '}
-                - Structured issuer pages with community data points and state breakdowns
-              </li>
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Date handling</h2>
+            <ul className="list-disc space-y-3 pl-6 text-sm leading-relaxed text-text-primary">
+              <li>The account-open date is used when supplied; otherwise the application date is a fallback.</li>
+              <li>Dates are parsed as local calendar dates to avoid UTC day shifts.</li>
+              <li>The reference date is the entered date shifted forward by 24 calendar months.</li>
+              <li>End-of-month dates are clamped to the last valid day of the target month.</li>
+              <li>Issuer reporting and internal treatment may use a different date or boundary.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-display font-bold text-2xl text-brand-navy mb-4">Verify Before You Apply</h2>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              524Tracker is not currently accepting community submissions. Until a secure intake
-              and moderation workflow is ready, no form should ask you to send application details
-              to this site.
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Account-type controls</h2>
+            <p className="mb-4 text-sm leading-relaxed text-text-primary">
+              The tracker does not assume that every business or authorized-user account receives
+              the same treatment.
             </p>
-            <p className="text-base text-text-primary leading-relaxed mb-4">
-              Before applying, check the issuer&apos;s current terms and compare multiple recent,
-              state-specific reports from the public sources above. A single community report is
-              not enough to predict which bureau an issuer will use for your application.
+            <ul className="list-disc space-y-3 pl-6 text-sm leading-relaxed text-text-primary">
+              <li>A business entry counts only when the visitor marks that it appears on a personal credit report.</li>
+              <li>An authorized-user entry can be included or excluded with the visible toggle.</li>
+              <li>Only entries marked approved are included in the reference count.</li>
+              <li>Visitors should compare entries with all relevant consumer credit reports.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Known limitations</h2>
+            <p className="text-sm leading-relaxed text-text-primary">
+              Chase does not publish “5/24” as a guaranteed policy. Product coverage, exceptions,
+              account reporting, authorized-user treatment, date boundaries, preapproval results,
+              and underwriting can vary. A below-threshold display is not an approval signal; an
+              at-or-above-threshold display is not a denial prediction.
             </p>
           </section>
 
-        </article>
+          <section>
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Privacy and exports</h2>
+            <p className="text-sm leading-relaxed text-text-primary">
+              Tracker entries are designed to remain in this browser&apos;s local storage during
+              ordinary use. Printing, copying, sharing, exporting, browser synchronization,
+              extensions, device backups, and clearing storage are controlled outside the site and
+              can move, retain, or erase information. Do not enter account numbers or other secrets.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Sources and corrections</h2>
+            <p className="text-sm leading-relaxed text-text-primary">
+              The site prefers current issuer and regulator sources for factual claims. Community
+              observations are labeled as such. See the{' '}
+              <Link href="/editorial-policy" className="font-semibold text-brand-gold underline underline-offset-2">
+                editorial policy
+              </Link>{' '}
+              for the evidence hierarchy and the{' '}
+              <Link href="/contact" className="font-semibold text-brand-gold underline underline-offset-2">
+                contact page
+              </Link>{' '}
+              for corrections.
+            </p>
+          </section>
+        </div>
 
         <FinancialDisclaimer />
-      </div>
+      </article>
     </>
   );
 }

@@ -1,22 +1,29 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+  useSyncExternalStore,
+} from 'react';
 import { PrintResultsButton } from './PrintResultsButton';
 import {
   type CardApplication,
   get524Count,
   get524DropoffDate,
   get524Dropoffs,
-  getEligibleBanks,
+  get524ReferenceDate,
   sortByDate,
   generateId,
   exportToCSV,
-  getAnnualFeeDueDate,
+  parseStoredApplications,
 } from '@/lib/tracker';
-import HardInquiryTracker from './HardInquiryTracker';
 import { searchCards, type CardInfo } from '@/lib/cardList';
 
 const STORAGE_KEY = '524tracker-applications';
+const subscribeToHydration = () => () => {};
 
 const banks = [
   'Chase',
@@ -34,8 +41,7 @@ const banks = [
 function loadApplications(): CardApplication[] {
   if (typeof window === 'undefined') return [];
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
+    return parseStoredApplications(localStorage.getItem(STORAGE_KEY));
   } catch {
     return [];
   }
@@ -66,7 +72,11 @@ function daysUntil(date: Date): number {
 }
 
 function todayISO(): string {
-  return new Date().toISOString().split('T')[0];
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 // SVG Progress Circle
@@ -130,7 +140,8 @@ function ProgressCircle({
 
 export default function TrackerTool() {
   const [applications, setApplications] = useState<CardApplication[]>(loadApplications);
-  const mountedRef = useRef(false);
+  const hydrated = useSyncExternalStore(subscribeToHydration, () => true, () => false);
+  const previousApplicationsRef = useRef(applications);
   const [countAU, setCountAU] = useState(true);
 
   // Form state
@@ -139,12 +150,13 @@ export default function TrackerTool() {
   const [appDate, setAppDate] = useState(todayISO());
   const [status, setStatus] = useState<'approved' | 'denied' | 'pending'>('approved');
   const [isBusiness, setIsBusiness] = useState(false);
-  const [amexBonus, setAmexBonus] = useState(false);
-  const [annualFee, setAnnualFee] = useState('');
+  const [isAuthorizedUser, setIsAuthorizedUser] = useState(false);
+  const [reportsToPersonalCredit, setReportsToPersonalCredit] = useState(false);
   const [cardOpenDate, setCardOpenDate] = useState('');
 
   // Autocomplete
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(-1);
   const suggestionsRef = useRef<HTMLUListElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestions = useMemo<CardInfo[]>(() => {
@@ -167,17 +179,13 @@ export default function TrackerTool() {
     }
   }, []);
 
-  // Mark component as mounted (for SSR hydration)
+  // State initializes from browser storage, while visible data stays empty until hydration.
+  // Save only after a user action changes the initialized state.
   useEffect(() => {
-    mountedRef.current = true;
-  }, []);
-
-  // Save whenever applications change
-  useEffect(() => {
-    if (mountedRef.current) {
-      saveApplications(applications);
-    }
-  }, [applications]);
+    if (!hydrated || previousApplicationsRef.current === applications) return;
+    saveApplications(applications);
+    previousApplicationsRef.current = applications;
+  }, [applications, hydrated]);
 
   // Close suggestions on click outside
   useEffect(() => {
@@ -189,6 +197,7 @@ export default function TrackerTool() {
         !inputRef.current.contains(e.target as Node)
       ) {
         setShowSuggestions(false);
+        setActiveSuggestionIndex(-1);
       }
     }
     document.addEventListener('mousedown', handleClick);
@@ -199,14 +208,44 @@ export default function TrackerTool() {
     setCardName(card.name);
     setBank(card.bank);
     setIsBusiness(card.isBusiness);
+    setReportsToPersonalCredit(false);
     setShowSuggestions(false);
+    setActiveSuggestionIndex(-1);
+  }
+
+  function handleAutocompleteKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Escape') {
+      setShowSuggestions(false);
+      setActiveSuggestionIndex(-1);
+      return;
+    }
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if (suggestions.length === 0) return;
+      event.preventDefault();
+      setShowSuggestions(true);
+      setActiveSuggestionIndex((current) => {
+        if (event.key === 'ArrowDown') return current < suggestions.length - 1 ? current + 1 : 0;
+        return current > 0 ? current - 1 : suggestions.length - 1;
+      });
+      return;
+    }
+
+    if (
+      event.key === 'Enter' &&
+      showSuggestions &&
+      activeSuggestionIndex >= 0 &&
+      suggestions[activeSuggestionIndex]
+    ) {
+      event.preventDefault();
+      selectSuggestion(suggestions[activeSuggestionIndex]);
+    }
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!cardName.trim()) return;
 
-    const feeValue = annualFee !== '' ? parseFloat(annualFee) : undefined;
     const openDateValue = cardOpenDate || undefined;
 
     if (editingId) {
@@ -220,8 +259,8 @@ export default function TrackerTool() {
                 applicationDate: appDate,
                 status,
                 isBusinessCard: isBusiness,
-                amexBonusReceived: bank === 'American Express' ? amexBonus : undefined,
-                annualFee: feeValue,
+                isAuthorizedUser,
+                reportsToPersonalCredit: isBusiness ? reportsToPersonalCredit : true,
                 cardOpenDate: openDateValue,
               }
             : app
@@ -237,13 +276,13 @@ export default function TrackerTool() {
         applicationDate: appDate,
         status,
         isBusinessCard: isBusiness,
-        amexBonusReceived: bank === 'American Express' ? amexBonus : undefined,
-        annualFee: feeValue,
+        isAuthorizedUser,
+        reportsToPersonalCredit: isBusiness ? reportsToPersonalCredit : true,
         cardOpenDate: openDateValue,
       };
       setApplications((prev) => [...prev, newApp]);
       const newCount = get524Count([...applications, newApp], countAU);
-      announce(`Added ${cardName.trim()}. You are now ${newCount}/24.`);
+      announce(`Added ${cardName.trim()}. Your current 24-month reference count is ${newCount} out of 5.`);
     }
 
     resetForm();
@@ -255,10 +294,12 @@ export default function TrackerTool() {
     setAppDate(todayISO());
     setStatus('approved');
     setIsBusiness(false);
-    setAmexBonus(false);
-    setAnnualFee('');
+    setIsAuthorizedUser(false);
+    setReportsToPersonalCredit(false);
     setCardOpenDate('');
     setEditingId(null);
+    setShowSuggestions(false);
+    setActiveSuggestionIndex(-1);
   }
 
   function startEdit(app: CardApplication) {
@@ -268,9 +309,11 @@ export default function TrackerTool() {
     setAppDate(app.applicationDate);
     setStatus(app.status);
     setIsBusiness(app.isBusinessCard);
-    setAmexBonus(app.amexBonusReceived ?? false);
-    setAnnualFee(app.annualFee != null ? String(app.annualFee) : '');
+    setIsAuthorizedUser(app.isAuthorizedUser ?? false);
+    setReportsToPersonalCredit(app.reportsToPersonalCredit ?? !app.isBusinessCard);
     setCardOpenDate(app.cardOpenDate ?? '');
+    setShowSuggestions(false);
+    setActiveSuggestionIndex(-1);
     document.getElementById('app-form')?.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -294,23 +337,12 @@ export default function TrackerTool() {
   }
 
   // Computed values
-  const count524 = get524Count(applications, countAU);
-  const dropoffDate = get524DropoffDate(applications, countAU);
-  const dropoffs = get524Dropoffs(applications, countAU);
-  const eligibility = getEligibleBanks(applications);
-  const sorted = sortByDate(applications);
-
-  // Amex cards
-  const amexCards = applications.filter(
-    (a) => a.bank === 'American Express' && a.status === 'approved'
-  );
-  const amex90Count = amexCards.filter((a) => {
-    const d = new Date(a.applicationDate);
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - 90);
-    return d >= cutoff && !a.isBusinessCard;
-  }).length;
-
+  const visibleApplications = hydrated ? applications : [];
+  const count524 = get524Count(visibleApplications, countAU);
+  const dropoffDate = get524DropoffDate(visibleApplications, countAU);
+  const dropoffs = get524Dropoffs(visibleApplications, countAU);
+  const sorted = sortByDate(visibleApplications);
+  const suggestionsOpen = showSuggestions && suggestions.length > 0;
   return (
     <section id="tracker" className="py-8">
       {/* ARIA live region */}
@@ -318,9 +350,9 @@ export default function TrackerTool() {
 
       {/* Privacy banner */}
       <div className="bg-brand-navy/5 border border-brand-slate/20 rounded-xl p-4 mb-8 text-sm text-text-secondary">
-        <strong className="text-text-primary">Your data is private.</strong> All
-        application data is saved locally in your browser using localStorage.
-        Nothing is sent to any server.
+        <strong className="text-text-primary">Your entries stay in this browser by default.</strong>{' '}
+        Application data is saved in localStorage and is not intentionally sent to 524Tracker
+        servers. Printing, exporting, copying, or sharing is initiated only when you choose it.
       </div>
 
       {/* Application Input Form */}
@@ -346,30 +378,54 @@ export default function TrackerTool() {
                 id="card-name"
                 type="text"
                 value={cardName}
-                onChange={(e) => setCardName(e.target.value)}
-                onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setCardName(value);
+                  setShowSuggestions(value.trim().length >= 2);
+                  setActiveSuggestionIndex(0);
+                }}
+                onFocus={() => {
+                  if (suggestions.length > 0) {
+                    setShowSuggestions(true);
+                    setActiveSuggestionIndex(0);
+                  }
+                }}
+                onKeyDown={handleAutocompleteKeyDown}
                 placeholder="e.g. Chase Sapphire Preferred"
                 required
                 autoComplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={suggestionsOpen}
+                aria-controls="card-name-suggestions"
+                aria-activedescendant={
+                  suggestionsOpen && activeSuggestionIndex >= 0
+                    ? `card-name-suggestion-${activeSuggestionIndex}`
+                    : undefined
+                }
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
               />
-              {showSuggestions && suggestions.length > 0 && (
+              {suggestionsOpen && (
                 <ul
+                  id="card-name-suggestions"
                   ref={suggestionsRef}
                   className="absolute z-20 left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-56 overflow-y-auto"
                   role="listbox"
                 >
                   {suggestions.map((card, i) => (
                     <li
-                      key={i}
+                      id={`card-name-suggestion-${i}`}
+                      key={`${card.bank}-${card.name}-${i}`}
                       role="option"
-                      aria-selected={false}
-                      className="px-3 py-2.5 text-sm hover:bg-brand-light cursor-pointer flex justify-between items-center min-h-[44px]"
-                      onClick={() => selectSuggestion(card)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') selectSuggestion(card);
+                      aria-selected={activeSuggestionIndex === i}
+                      className={`flex min-h-[44px] cursor-pointer items-center justify-between px-3 py-2.5 text-sm ${
+                        activeSuggestionIndex === i ? 'bg-brand-light' : 'hover:bg-brand-light'
+                      }`}
+                      onMouseEnter={() => setActiveSuggestionIndex(i)}
+                      onMouseDown={(event) => {
+                        event.preventDefault();
+                        selectSuggestion(card);
                       }}
-                      tabIndex={0}
                     >
                       <span>{card.name}</span>
                       <span className="text-xs text-text-secondary ml-2">
@@ -418,6 +474,7 @@ export default function TrackerTool() {
                 value={appDate}
                 onChange={(e) => setAppDate(e.target.value)}
                 max={todayISO()}
+                required
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
               />
             </div>
@@ -427,7 +484,7 @@ export default function TrackerTool() {
               <legend className="block text-sm font-medium text-text-primary mb-1">
                 Status
               </legend>
-              <div className="flex gap-4 items-center h-[44px]">
+              <div className="flex min-h-[44px] flex-wrap items-center gap-x-4 gap-y-2">
                 {[
                   { value: 'approved' as const, icon: '\u2705', label: 'Approved' },
                   { value: 'denied' as const, icon: '\u274C', label: 'Denied' },
@@ -459,57 +516,47 @@ export default function TrackerTool() {
               <input
                 type="checkbox"
                 checked={isBusiness}
-                onChange={(e) => setIsBusiness(e.target.checked)}
+                onChange={(e) => {
+                  setIsBusiness(e.target.checked);
+                  if (!e.target.checked) setReportsToPersonalCredit(false);
+                }}
                 className="w-4 h-4 accent-brand-gold rounded"
               />
               <span>Business card</span>
-              <span className="text-xs text-text-secondary" title="Most business cards do NOT count toward Chase 5/24">
-                (?)
-              </span>
             </label>
 
-            {bank === 'American Express' && (
+            <label className="flex items-center gap-2 text-sm cursor-pointer min-h-[44px]">
+              <input
+                type="checkbox"
+                checked={isAuthorizedUser}
+                onChange={(e) => setIsAuthorizedUser(e.target.checked)}
+                className="w-4 h-4 accent-brand-gold rounded"
+              />
+              <span>Authorized-user account</span>
+            </label>
+
+            {isBusiness && (
               <label className="flex items-center gap-2 text-sm cursor-pointer min-h-[44px]">
                 <input
                   type="checkbox"
-                  checked={amexBonus}
-                  onChange={(e) => setAmexBonus(e.target.checked)}
+                  checked={reportsToPersonalCredit}
+                  onChange={(e) => setReportsToPersonalCredit(e.target.checked)}
                   className="w-4 h-4 accent-brand-gold rounded"
                 />
-                <span>Received welcome bonus</span>
+                <span>Appears on my personal credit report</span>
               </label>
             )}
+
           </div>
 
-          {/* Annual Fee & Card Open Date */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label
-                htmlFor="annual-fee"
-                className="block text-sm font-medium text-text-primary mb-1"
-              >
-                Annual Fee (optional)
-              </label>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-secondary">$</span>
-                <input
-                  id="annual-fee"
-                  type="number"
-                  min="0"
-                  step="1"
-                  value={annualFee}
-                  onChange={(e) => setAnnualFee(e.target.value)}
-                  placeholder="e.g. 95"
-                  className="w-full pl-7 pr-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
-                />
-              </div>
-            </div>
+          {/* Account-open date */}
+          <div className="max-w-md">
             <div>
               <label
                 htmlFor="card-open-date"
                 className="block text-sm font-medium text-text-primary mb-1"
               >
-                Card Open Date (optional)
+                Account Open Date (recommended)
               </label>
               <input
                 id="card-open-date"
@@ -519,7 +566,9 @@ export default function TrackerTool() {
                 max={todayISO()}
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
               />
-              <p className="text-[10px] text-text-secondary mt-0.5">Defaults to application date if blank</p>
+              <p className="text-[10px] text-text-secondary mt-0.5">
+                Used for the 24-month count; falls back to application date if blank.
+              </p>
             </div>
           </div>
 
@@ -544,27 +593,24 @@ export default function TrackerTool() {
       </div>
 
       {/* Dashboard - only show when applications exist */}
-      {applications.length > 0 && (
+      {visibleApplications.length > 0 && (
         <div data-printable-results className="space-y-6">
           <div className="flex justify-end">
             <PrintResultsButton label="Print Tracker Results" />
           </div>
-          {/* Top row: 5/24 + Amex */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Card 1: Chase 5/24 Status */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
               <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
-                Chase 5/24 Status
+                Unofficial 5/24 Reference Count
               </h3>
               <div className="flex items-center gap-6">
                 <ProgressCircle
                   count={count524}
                   max={5}
-                  label={`Chase 5/24 status: ${count524} out of 5 cards`}
+                  label={`Unofficial 24-month reference count: ${count524} out of 5 accounts`}
                 />
                 <div className="flex-1 space-y-2">
                   <p className="text-sm font-medium">
-                    You are{' '}
+                    Reference count:{' '}
                     <span
                       className="text-lg font-bold tabular-nums"
                       style={{
@@ -576,17 +622,17 @@ export default function TrackerTool() {
                               : 'var(--brand-red)',
                       }}
                     >
-                      {count524}/24
+                      {count524}/5
                     </span>
                   </p>
                   <p className="text-xs text-text-secondary">
                     {count524 < 5
-                      ? `You can open ${5 - count524} more personal card${5 - count524 !== 1 ? 's' : ''} and remain under 5/24.`
-                      : 'You are at or over 5/24. Chase will likely deny new card applications.'}
+                      ? 'This is below the commonly reported threshold. It does not show eligibility or approval odds.'
+                      : 'This meets or exceeds the commonly reported threshold. Only Chase can make an application decision.'}
                   </p>
                   {dropoffDate && (
                     <p className="text-xs text-text-secondary">
-                      Next drop-off:{' '}
+                      Next 24-month reference date:{' '}
                       <strong>
                         {dropoffDate.toLocaleDateString('en-US', {
                           month: 'short',
@@ -607,147 +653,24 @@ export default function TrackerTool() {
                     onChange={(e) => setCountAU(e.target.checked)}
                     className="w-3.5 h-3.5 accent-brand-gold rounded"
                   />
-                  Count authorized user cards toward 5/24
+                  Include accounts marked “authorized user” in this reference count
                 </label>
               </div>
-            </div>
-
-            {/* Card 2: Amex Bonus Tracker */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-              <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
-                Amex Bonus Tracker
-              </h3>
-              {amexCards.length > 0 ? (
-                <>
-                  <ul className="space-y-2 mb-4">
-                    {amexCards.map((app) => (
-                      <li
-                        key={app.id}
-                        className="flex items-center justify-between text-sm"
-                      >
-                        <span>{app.cardName}</span>
-                        <span
-                          className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                            app.amexBonusReceived
-                              ? 'bg-green-100 text-green-800'
-                              : 'bg-blue-100 text-blue-800'
-                          }`}
-                        >
-                          {app.amexBonusReceived
-                            ? 'Bonus Received'
-                            : 'Eligible for Bonus'}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  {amexCards.some((a) => a.amexBonusReceived) && (
-                    <p className="text-xs text-brand-red font-medium">
-                      Amex lifetime rule: You cannot earn the welcome bonus again
-                      on cards where you already received it.
-                    </p>
-                  )}
-                  <div className="mt-3 pt-3 border-t border-gray-100">
-                    <p className="text-xs text-text-secondary">
-                      2/90 Status:{' '}
-                      <span
-                        className={`font-semibold ${amex90Count >= 2 ? 'text-brand-red' : 'text-brand-green'}`}
-                      >
-                        {amex90Count}/2
-                      </span>{' '}
-                      personal Amex cards in past 90 days
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <p className="text-sm text-text-secondary">
-                  No Amex cards tracked yet. Add an American Express application above.
-                </p>
-              )}
-            </div>
           </div>
 
-          {/* Card 3: Bank-by-Bank Eligibility */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 overflow-x-auto">
-            <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
-              Bank-by-Bank Eligibility
-            </h3>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-200 text-left">
-                  <th className="pb-2 font-medium text-text-secondary">Bank</th>
-                  <th className="pb-2 font-medium text-text-secondary">Rule</th>
-                  <th className="pb-2 font-medium text-text-secondary">Count</th>
-                  <th className="pb-2 font-medium text-text-secondary">Status</th>
-                  <th className="pb-2 font-medium text-text-secondary">
-                    Next Eligible
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {eligibility.map((bankEl) =>
-                  bankEl.rules.map((ruleCheck, i) => (
-                    <tr
-                      key={`${bankEl.bank}-${i}`}
-                      className="border-b border-gray-50"
-                    >
-                      {i === 0 && (
-                        <td
-                          className="py-2 font-medium align-top"
-                          rowSpan={bankEl.rules.length}
-                        >
-                          {bankEl.bank}
-                        </td>
-                      )}
-                      <td className="py-2 text-text-secondary">
-                        {ruleCheck.rule.ruleCode}
-                      </td>
-                      <td className="py-2 tabular-nums">
-                        {ruleCheck.count}/{ruleCheck.rule.maxApplications}
-                      </td>
-                      <td className="py-2">
-                        {ruleCheck.violated ? (
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                            Ineligible
-                          </span>
-                        ) : ruleCheck.count >= ruleCheck.rule.maxApplications - 1 ? (
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
-                            Approaching Limit
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                            Eligible
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-2 text-xs text-text-secondary">
-                        {ruleCheck.resetDate
-                          ? ruleCheck.resetDate.toLocaleDateString('en-US', {
-                              month: 'short',
-                              day: 'numeric',
-                              year: 'numeric',
-                            })
-                          : '—'}
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Card 4: Application Timeline */}
+          {/* Application timeline */}
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center justify-between mb-4">
+            <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <h3 className="font-display font-bold text-lg text-brand-navy">
-                Application Timeline
+                Entered Account History
               </h3>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => {
                     const nextSlot = dropoffDate
                       ? dropoffDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
                       : 'N/A';
-                    const text = `My Chase 5/24 status: ${count524}/5 cards used. Next slot opens: ${nextSlot}. Checked at 524tracker.com`;
+                    const text = `My unofficial 24-month reference count: ${count524}/5. Next reference date: ${nextSlot}. This is not an eligibility result. Checked at 524tracker.com`;
                     navigator.clipboard.writeText(text).then(() => {
                       setCopiedSummary(true);
                       setTimeout(() => setCopiedSummary(false), 2000);
@@ -759,7 +682,7 @@ export default function TrackerTool() {
                 </button>
                 <button
                   onClick={() => {
-                    const shareText = 'Check your Chase 5/24 status free at 524tracker.com';
+                    const shareText = 'Organize an unofficial Chase 5/24 reference count free at 524tracker.com';
                     if (typeof navigator !== 'undefined' && navigator.share) {
                       navigator.share({ title: '524 Tracker', text: shareText, url: 'https://524tracker.com' }).catch(() => {});
                     } else {
@@ -783,13 +706,11 @@ export default function TrackerTool() {
             </div>
             <div className="space-y-2">
               {sorted.map((app) => {
-                const dropoff524 = new Date(app.applicationDate);
-                dropoff524.setDate(dropoff524.getDate() + 730);
+                const dropoff524 = get524ReferenceDate(app);
                 const countsFor524 =
-                  app.status === 'approved' && !app.isBusinessCard;
-                const feeDue = getAnnualFeeDueDate(app);
-                const feeDays = feeDue ? daysUntil(feeDue) : null;
-
+                  app.status === 'approved' &&
+                  (!app.isBusinessCard || app.reportsToPersonalCredit === true) &&
+                  (countAU || !app.isAuthorizedUser);
                 return (
                   <div
                     key={app.id}
@@ -822,9 +743,9 @@ export default function TrackerTool() {
                       </div>
                       <div className="text-xs text-text-secondary mt-0.5">
                         {formatDate(app.applicationDate)}
-                        {countsFor524 && dropoff524 > new Date() && (
+                      {countsFor524 && dropoff524 && dropoff524 > new Date() && (
                           <span className="ml-2">
-                            &middot; Drops off 5/24 on{' '}
+                            &middot; 24-month reference date:{' '}
                             {dropoff524.toLocaleDateString('en-US', {
                               month: 'short',
                               day: 'numeric',
@@ -832,23 +753,9 @@ export default function TrackerTool() {
                             })}
                           </span>
                         )}
-                        {feeDue && feeDays != null ? (
-                          <span className="ml-2">
-                            &middot; Fee ${app.annualFee} due{' '}
-                            <span className={
-                              feeDays < 30 ? 'text-brand-red font-medium' :
-                              feeDays < 60 ? 'text-brand-gold font-medium' :
-                              'text-brand-green'
-                            }>
-                              in {feeDays} days
-                            </span>
-                          </span>
-                        ) : app.annualFee != null && app.annualFee <= 0 ? (
-                          <span className="ml-2">&middot; No annual fee</span>
-                        ) : null}
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="flex items-center gap-1">
                       <button
                         onClick={() => startEdit(app)}
                         className="p-2 text-text-secondary hover:text-brand-gold rounded min-w-[44px] min-h-[44px] flex items-center justify-center"
@@ -874,11 +781,11 @@ export default function TrackerTool() {
             </div>
           </div>
 
-          {/* Card 5: Upcoming Drop-offs */}
+          {/* Upcoming reference dates */}
           {dropoffs.length > 0 && (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
               <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
-                Upcoming 5/24 Drop-offs
+                Upcoming 24-Month Reference Dates
               </h3>
               <div className="space-y-3">
                 {dropoffs.slice(0, 3).map((d, i) => (
@@ -889,7 +796,7 @@ export default function TrackerTool() {
                     <div>
                       <p className="text-sm font-medium">{d.cardName}</p>
                       <p className="text-xs text-text-secondary">
-                        Drops off{' '}
+                        Reference date{' '}
                         {d.dropoffDate.toLocaleDateString('en-US', {
                           month: 'long',
                           day: 'numeric',
@@ -902,7 +809,7 @@ export default function TrackerTool() {
                         {daysUntil(d.dropoffDate)} days
                       </p>
                       <p className="text-xs text-text-secondary">
-                        You&apos;ll be {d.countAfter}/5
+                        Reference count after date: {d.countAfter}/5
                       </p>
                     </div>
                   </div>
@@ -913,66 +820,13 @@ export default function TrackerTool() {
         </div>
       )}
 
-      {/* Upcoming Annual Fees */}
-      {applications.length > 0 && (() => {
-        const upcomingFees = applications
-          .map((app) => {
-            const due = getAnnualFeeDueDate(app);
-            if (!due) return null;
-            const days = daysUntil(due);
-            if (days > 90) return null;
-            return { cardName: app.cardName, fee: app.annualFee!, dueDate: due, days };
-          })
-          .filter((x): x is { cardName: string; fee: number; dueDate: Date; days: number } => x !== null)
-          .sort((a, b) => a.days - b.days);
-
-        return (
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mt-6">
-            <h3 className="font-display font-bold text-lg text-brand-navy mb-4">
-              Upcoming Annual Fees
-            </h3>
-            {upcomingFees.length > 0 ? (
-              <div className="space-y-3">
-                {upcomingFees.map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0">
-                    <div>
-                      <p className="text-sm font-medium">{item.cardName}</p>
-                      <p className="text-xs text-text-secondary">
-                        Due {item.dueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm font-bold tabular-nums">${item.fee}</p>
-                      <p className={`text-xs font-medium tabular-nums ${
-                        item.days < 30 ? 'text-brand-red' :
-                        item.days < 60 ? 'text-brand-gold' :
-                        'text-brand-green'
-                      }`}>
-                        {item.days} days
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="text-sm text-text-secondary">
-                No annual fees due in the next 90 days.
-              </p>
-            )}
-          </div>
-        );
-      })()}
-
-      {/* Hard Inquiry Tracker */}
-      <HardInquiryTracker />
-
       {/* Informational disclaimer */}
       <div className="mt-8 p-4 border border-gray-200 rounded-xl text-xs text-text-secondary leading-relaxed">
-        <strong>Disclaimer:</strong> This tool tracks application dates and
-        applies published bank rules. It cannot guarantee approval or predict
-        your credit score impact. Rules verified as of March 2026. Bank policies
-        change without notice. Always verify with the card issuer before
-        applying.
+        <strong>Important:</strong> This tool compares dates with an unofficial,
+        community-reported application pattern. Chase does not publish or guarantee the
+        5/24 shorthand. The count cannot determine eligibility, predict approval or credit-score
+        impact, or confirm how Chase will classify an account. Review your credit reports and the
+        exact current issuer terms before applying. This is not financial advice.
       </div>
     </section>
   );

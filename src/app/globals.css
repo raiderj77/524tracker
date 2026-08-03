@@ -3,8 +3,8 @@
 :root {
   --brand-navy: #0A1628;
   --brand-gold: #F5A623;
-  --brand-green: #00C48C;
-  --brand-red: #FF4D4F;
+  --brand-green: #067647;
+  --brand-red: #B42318;
   --brand-slate: #1E2D4A;
   --brand-light: #F0F4FF;
   --text-primary: #0A1628;
@@ -66,6 +66,21 @@ body {
   outline: 3px solid var(--brand-gold);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* Gold is a brand accent, but it is too light for small text on white. */
+main a.text-brand-gold,
+main a:not([class*="bg-"]) {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+main a.text-brand-gold {
+  color: #824500;
+}
+
+main a.text-brand-gold:hover {
+  color: #5f3200;
 }
 
 /* Skip nav */

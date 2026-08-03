@@ -1,34 +1,22 @@
-import type { Metadata } from 'next';
+import Link from 'next/link';
+import { buildPageMetadata } from '@/lib/siteMetadata';
 
-export const metadata: Metadata = {
-  title: 'About Jason Ramirez — Your Friendly Developer',
+export const metadata = buildPageMetadata({
+  title: 'About Jason Ramirez',
   description:
-    'The story behind 524 Tracker. Built by Jason Ramirez, Founder of Your Friendly Developer LLC, with a background in credit rebuilding, self-taught development, and over a decade of personal finance research.',
-  robots: { index: true, follow: true, 'max-snippet': -1 },
-  alternates: { canonical: 'https://524tracker.com/about' },
-  openGraph: {
-    title: 'About Jason Ramirez — Your Friendly Developer',
-    description:
-      'The story behind 524 Tracker. Built by Jason Ramirez, Founder of Your Friendly Developer LLC, with a background in credit rebuilding and personal finance.',
-    url: 'https://524tracker.com/about',
-    type: 'website',
-  },
-};
+    'Meet Jason Ramirez, the independent publisher and developer of 524Tracker, and review the site’s scope, qualifications, and editorial safeguards.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jason Ramirez',
-    jobTitle: 'Founder of Your Friendly Developer',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Your Friendly Developer LLC',
-      url: 'https://524tracker.com',
-    },
+    jobTitle: 'Independent publisher and web developer',
     url: 'https://524tracker.com/about',
     description:
-      'Self-taught web developer with over a decade of experience in credit rebuilding, personal finance tools, and SEO.',
+      'Independent web developer and publisher of 524Tracker. Jason is not a financial adviser, credit counselor, lender, or issuer representative.',
   };
 
   return (
@@ -37,128 +25,83 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="font-display font-bold text-3xl text-brand-navy dark:text-white mb-6">
-          About Your Friendly Developer
-        </h1>
-
-        <div className="space-y-5 text-sm text-text-primary leading-relaxed">
-          <p>Hi. I&rsquo;m Jason Ramirez. This is why I built this.</p>
-
-          <p>
-            I&rsquo;m not going to pretend this started with a vision board or a business plan. It
-            started in a storage shed in Salinas in 2013, when I was thirty-seven years old with
-            nothing to my name and nowhere to be.
+      <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <header className="mb-10">
+          <h1 className="mb-4 font-display text-3xl font-bold text-brand-navy">
+            About the publisher
+          </h1>
+          <p className="text-base leading-relaxed text-text-primary">
+            524Tracker is independently published and maintained by Jason Ramirez, a self-taught
+            web developer who builds practical browser-based tools.
           </p>
+          <p className="mt-3 text-xs text-text-secondary">Reviewed: August 2, 2026</p>
+        </header>
 
-          <p>
-            I&rsquo;d been homeless for two years. Living out of my truck, sleeping in a shed behind
-            my son&rsquo;s grandmother&rsquo;s house. The last two years of my drinking and using
-            looked like that. On September 27th, 2013, I got sober. Got a bed in a treatment
-            facility. That&rsquo;s where my life actually started.
-          </p>
+        <div className="space-y-10">
+          <section aria-labelledby="publisher-role">
+            <h2 id="publisher-role" className="mb-3 font-display text-2xl font-bold text-brand-navy">
+              Publisher role and qualifications
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed text-text-primary">
+              <p>
+                Jason designs, codes, tests, and edits this site. His relevant qualification for
+                this project is software development and maintaining a transparent calculation
+                method. He has personal experience rebuilding credit, but personal experience is
+                not a professional finance credential.
+              </p>
+              <p>
+                Jason also holds a CADC-II counseling credential. That credential is public for
+                identity transparency, but it is unrelated to credit-card underwriting or
+                financial advice and is not presented as authority for this site&apos;s financial
+                information.
+              </p>
+              <p>
+                Jason is not a financial adviser, credit counselor, lender, attorney, tax
+                professional, or representative of Chase or another card issuer.
+              </p>
+            </div>
+          </section>
 
-          <p>
-            What nobody tells you about early recovery is how broke it is. Not just financially
-            broke, though that too. Broke in every way. No credit. No savings. No plan. No idea
-            what retirement even meant for someone like me. I was going to work until I died. That
-            was the whole plan.
-          </p>
+          <section aria-labelledby="site-scope">
+            <h2 id="site-scope" className="mb-3 font-display text-2xl font-bold text-brand-navy">
+              What 524Tracker does
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed text-text-primary">
+              <p>
+                The primary tool organizes dates a visitor enters and shows a calendar-based
+                24-month reference count. The phrase “5/24” describes a community-observed Chase
+                application practice. Chase does not publish it as a guaranteed approval policy.
+              </p>
+              <p>
+                The site cannot determine eligibility, predict approval, interpret a credit
+                report, or tell a visitor whether to open, close, keep, or change an account.
+                Issuers make their own decisions under current terms and applicable law.
+              </p>
+            </div>
+          </section>
 
-          <p>Then I got my first laptop.</p>
-
-          <p>
-            I&rsquo;d been working at the treatment center where I got sober. Went from client to
-            overnight staff when my old counselor, who had become the director, offered me the job.
-            He saw something in me I couldn&rsquo;t see yet. I walked through that door feeling like
-            a complete fraud. I walked through it anyway.
-          </p>
-
-          <p>
-            On my days off I started trying to figure out how to make money online. I tried probably
-            a hundred different things over the next thirteen years. None of them worked. Not because
-            the ideas were bad, because I&rsquo;m an addict, and addicts chase shiny objects.
-            I&rsquo;d start something, get excited about something else, abandon the first thing,
-            chase the new thing. Repeat. For over a decade.
-          </p>
-
-          <p>
-            What finally changed it wasn&rsquo;t willpower. It was everything I&rsquo;d learned in
-            recovery, and in the mental health field working with clients, and fixing my own credit
-            from scratch without anyone&rsquo;s help, and figuring out the tax system after years of
-            not filing, and slowly, painfully, teaching myself SEO, then content strategy, then AI
-            and LLM optimization, then UI design that actual humans enjoy using.
-          </p>
-
-          <p>
-            Thirteen years of self-education. Every skill on these sites I learned the hard way
-            because I had to.
-          </p>
-
-          <p>
-            I built these tools because people like me needed them and couldn&rsquo;t afford them.
-            People who are starting over. People who are broke and scared and trying to figure out a
-            system that was never explained to them. People who need real information without the
-            paywall, without the condescension, without the assumption that they already know what
-            they&rsquo;re doing.
-          </p>
-
-          <p>
-            I still work a full-time job. I&rsquo;m pursuing my Bachelor of Social Work with plans
-            for my MSW. I take photos. And when I get home or get done with school work, I come
-            here. This is the other thing that turns me on and settles me down at the same time.
-            There&rsquo;s something about building something useful that hits different when you
-            spent years building nothing.
-          </p>
-
-          <p>
-            Your Friendly Developer is my LLC. I am the developer. This is my work.
-          </p>
-
-          <p>
-            If you&rsquo;re looking for the person behind these sites, it&rsquo;s me. A CADC-II
-            counselor, a self-taught web builder, a recovering addict with over twelve years of
-            sobriety, a person who fixed their own credit and figured out their own taxes and is
-            still figuring out everything else one day at a time.
-          </p>
-
-          <p>
-            I&rsquo;m not a corporation. I&rsquo;m not a content farm. I&rsquo;m one person who
-            lived a lot of the things these tools are about.
-          </p>
-
-          <p>That&rsquo;s why I built them.</p>
-        </div>
-
-        <h2 className="font-display font-bold text-xl text-brand-navy dark:text-white mt-12 mb-4">
-          About 524 Tracker
-        </h2>
-
-        <div className="space-y-5 text-sm text-text-primary leading-relaxed">
-          <p>
-            When I got sober in 2013 I had no credit. Not bad credit. No credit. I spent the next
-            several years rebuilding it from scratch: self-taught, no financial advisor, just
-            research and trial and error and a lot of patience. I learned the hard way how bank
-            rules work, how credit card issuers think, and how to navigate a system that
-            isn&rsquo;t designed to be transparent.
-          </p>
-
-          <p>
-            I built 524 Tracker because I wished it had existed when I was starting over. The Chase
-            5/24 rule, the Amex lifetime bonus rules, the Citi timing windows. None of this
-            is secret, but it&rsquo;s scattered across forums and subreddits and outdated blog
-            posts. This puts it in one place.
-          </p>
-
-          <p>
-            Everything here is for informational purposes only. Always verify rules directly with
-            the card issuer before you apply. This is not financial advice.
-          </p>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-sm text-text-secondary">
-          <p>Jason Ramirez</p>
-          <p>Your Friendly Developer LLC</p>
+          <section aria-labelledby="safeguards">
+            <h2 id="safeguards" className="mb-3 font-display text-2xl font-bold text-brand-navy">
+              Editorial safeguards
+            </h2>
+            <ul className="list-disc space-y-3 pl-6 text-sm leading-relaxed text-text-primary">
+              <li>Official issuer and regulator sources are preferred for factual claims.</li>
+              <li>Community observations are labeled and never presented as guaranteed policy.</li>
+              <li>Pages show a review date and material corrections are welcomed.</li>
+              <li>Recommendation and affiliate-card pages are not currently published.</li>
+            </ul>
+            <p className="mt-5 text-sm text-text-primary">
+              Read the complete{' '}
+              <Link href="/editorial-policy" className="font-semibold text-brand-gold underline underline-offset-2">
+                editorial and sourcing policy
+              </Link>{' '}
+              or{' '}
+              <Link href="/contact" className="font-semibold text-brand-gold underline underline-offset-2">
+                submit a correction
+              </Link>
+              .
+            </p>
+          </section>
         </div>
       </article>
     </>

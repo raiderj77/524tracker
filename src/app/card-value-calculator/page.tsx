@@ -29,7 +29,7 @@ export default function CardValueCalculatorPage() {
   const [annualFee, setAnnualFee] = useState('');
   const [perks, setPerks] = useState<Perk[]>(defaultPerks);
   const [rewardsEarned, setRewardsEarned] = useState('');
-  const [valuePerPoint, setValuePerPoint] = useState('0.01');
+  const [valuePerPoint, setValuePerPoint] = useState('');
   const [calculated, setCalculated] = useState(false);
 
   function addPerk() {
@@ -56,7 +56,7 @@ export default function CardValueCalculatorPage() {
     setAnnualFee('');
     setPerks(defaultPerks);
     setRewardsEarned('');
-    setValuePerPoint('0.01');
+    setValuePerPoint('');
     setCalculated(false);
   }
 
@@ -87,7 +87,7 @@ export default function CardValueCalculatorPage() {
                 url: 'https://524tracker.com/card-value-calculator',
                 applicationCategory: 'FinanceApplication',
                 description:
-                  'Calculate whether your credit card is worth keeping at renewal by comparing annual fee vs benefits received.',
+                  'Compare a user-entered annual fee with user-entered benefit and reward values.',
                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
                 operatingSystem: 'All',
               },
@@ -108,15 +108,15 @@ export default function CardValueCalculatorPage() {
           Card Value Calculator
         </h1>
         <p className="text-sm text-text-secondary mb-8">
-          Should you keep or cancel your credit card at renewal? Enter your benefits and find out if the card is paying for itself.
+          Enter an annual fee and your own benefit assumptions to see the arithmetic in one place.
         </p>
-        <p className="text-xs text-text-secondary mb-0">Last updated: March 16, 2026</p>
+        <p className="text-xs text-text-secondary mb-0">Reviewed: August 2, 2026</p>
 
         <AnswerBlock
-          what="A calculator that totals your credit card perks, credits, and rewards earned against the annual fee to show the card's true net value."
-          who="Cardholders deciding whether to keep or cancel a premium credit card before the next annual fee hits."
-          bottomLine="Only count benefits you actually use — a card is worth keeping when net value is positive after subtracting the fee."
-          lastUpdated="2026-03-16"
+          what="A calculator that subtracts a user-entered annual fee from user-entered perk and rewards values."
+          who="Cardholders who want a transparent worksheet for their own assumptions."
+          bottomLine="The result is only as reliable as the values you enter and is not a keep, cancel, or downgrade recommendation."
+          lastUpdated="2026-08-02"
         />
 
         <form onSubmit={handleCalculate} className="space-y-6">
@@ -173,7 +173,7 @@ export default function CardValueCalculatorPage() {
                     onChange={(e) => updatePerk(perk.id, 'name', e.target.value)}
                     placeholder="Perk name"
                     aria-label="Perk name"
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
+                    className="min-h-[44px] min-w-0 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-gold focus:ring-0"
                   />
                   <div className="relative w-28">
                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-secondary">$</span>
@@ -218,7 +218,7 @@ export default function CardValueCalculatorPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="cv-rewards" className="block text-sm font-medium text-text-primary mb-1">
-                  Points / Miles / Cashback Earned
+                  Reward Units Earned (optional)
                 </label>
                 <input
                   id="cv-rewards"
@@ -235,17 +235,20 @@ export default function CardValueCalculatorPage() {
                 <label htmlFor="cv-vpp" className="block text-sm font-medium text-text-primary mb-1">
                   Value Per Point / Mile ($)
                 </label>
-                <select
+                <input
                   id="cv-vpp"
+                  type="number"
+                  min="0"
+                  step="0.0001"
                   value={valuePerPoint}
                   onChange={(e) => setValuePerPoint(e.target.value)}
+                  placeholder="Enter your realized value"
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
-                >
-                  <option value="0.01">$0.01 — Cashback</option>
-                  <option value="0.015">$0.015 — Transferable Points (avg)</option>
-                  <option value="0.02">$0.02 — Premium Travel Redemption</option>
-                  <option value="0.005">$0.005 — Low-value Redemption</option>
-                </select>
+                  aria-describedby="cv-vpp-help"
+                />
+                <p id="cv-vpp-help" className="text-[10px] text-text-secondary mt-0.5">
+                  Enter the value you actually received from a recent redemption; the site does not supply a valuation.
+                </p>
                 <p className="text-[10px] text-text-secondary mt-0.5">
                   Calculated value: ${rewardsEarned ? (rewards * vpp).toFixed(2) : '0.00'}
                 </p>
@@ -273,6 +276,10 @@ export default function CardValueCalculatorPage() {
         {/* Results */}
         {calculated && (
           <div className="mt-8 bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <p role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+              Calculation complete for {cardName || 'your card'}. Estimated annual net value is{' '}
+              {netValue >= 0 ? 'positive ' : 'negative '}${Math.abs(netValue).toFixed(2)}.
+            </p>
             <h2 className="font-display font-bold text-lg text-brand-navy mb-4">
               {cardName || 'Your Card'} — Value Analysis
             </h2>
@@ -331,96 +338,40 @@ export default function CardValueCalculatorPage() {
               </div>
             </div>
 
-            {/* Verdict */}
-            <div className={`rounded-xl p-4 text-sm font-medium ${
-              netValue > 0
-                ? 'bg-green-50 text-green-800 border border-green-200'
-                : netValue >= -50
-                  ? 'bg-amber-50 text-amber-800 border border-amber-200'
-                  : 'bg-red-50 text-red-800 border border-red-200'
-            }`}>
-              {netValue > 0
-                ? 'This card is paying for itself — keep it.'
-                : netValue >= -50
-                  ? 'Borderline — consider downgrading to a no-fee version.'
-                  : 'This card is costing you money — cancel or downgrade.'}
+            {/* Neutral interpretation */}
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">
+              Based only on your entries, benefits minus the annual fee equal{' '}
+              <strong>{netValue >= 0 ? '+' : '-'}${Math.abs(netValue).toFixed(2)}</strong>.
+              This arithmetic does not account for interest, opportunity cost, issuer terms,
+              credit effects, or whether you would otherwise buy each benefit.
             </div>
           </div>
         )}
 
-        {/* Informational content */}
         <section className="mt-12 space-y-8">
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Is the Card Value Calculator?</h2>
-            <p className="text-sm text-text-primary leading-relaxed mb-3">
-              The Card Value Calculator helps you determine whether a credit card with an annual fee is worth keeping at renewal time. Many premium cards charge annual fees ranging from $95 to $695, but they also offer credits, perks, and rewards that can offset or exceed that cost. This tool compares your total benefits received against the annual fee to give you a clear net value figure.
-            </p>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How the calculation works</h2>
             <p className="text-sm text-text-primary leading-relaxed">
-              Rather than guessing whether a card pays for itself, you can enter the specific credits and perks you actually used over the past year, add in the value of points or miles you earned, and see an objective breakdown. The calculator accounts for the most common card benefits including travel credits, dining credits, lounge access valuations, streaming credits, statement credits, hotel status, and any other perks your card offers.
+              The calculator adds only the perk values and rewards valuation you enter, then subtracts
+              the annual fee you enter. It does not retrieve current card terms, estimate points for
+              you, or assign a value to a benefit you did not price yourself.
             </p>
           </div>
-
           <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How to Use This Calculator</h2>
-            <p className="text-sm text-text-primary leading-relaxed mb-3">
-              Start by entering your card name and its annual fee. Then list every credit or perk you actually used in the past 12 months along with the dollar value you received. Be honest with yourself here — only count benefits you genuinely used, not the theoretical maximum. A $300 travel credit is worth $0 if you never redeemed it.
-            </p>
+            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Use realized values</h2>
             <p className="text-sm text-text-primary leading-relaxed">
-              Next, enter the total points, miles, or cashback you earned on the card during the year and select a valuation rate. The calculator multiplies your rewards by the per-point value to estimate your total rewards benefit. Click Calculate to see a visual comparison of your annual fee versus total benefits, a detailed breakdown, and a keep-or-cancel recommendation.
+              For a benefit, enter what it replaced in your real spending, not the issuer&apos;s headline
+              value. For points or miles, use the dollars received divided by the points redeemed in a
+              completed redemption. Verify the annual fee and every benefit in the current issuer terms.
             </p>
           </div>
-
-          <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Why Credit Card Point Values Vary by Redemption Method</h2>
-            <p className="text-sm text-text-primary leading-relaxed mb-3">
-              Not all points are created equal. The same 100,000 Chase Ultimate Rewards points can be worth $1,000 as cashback, $1,250 through the Chase travel portal, or $2,000 or more when transferred to airline partners for premium cabin flights. The redemption method you choose dramatically affects the value you extract from your rewards.
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-amber-950">
+            <h2 className="font-display font-bold text-xl mb-3">Do not use the result alone</h2>
+            <p className="text-sm leading-relaxed">
+              A positive or negative number does not decide whether to keep, cancel, or change a credit
+              account. Interest, debt, credit utilization, account history, refund timing, product-change
+              availability, and issuer-specific terms are outside this calculator.
             </p>
-            <p className="text-sm text-text-primary leading-relaxed">
-              Cashback is the simplest valuation — typically 1 cent per point. Travel portal redemptions often provide a 25% to 50% boost for premium cardholders. Transfer partners offer the highest ceiling but require more effort and flexibility. When using this calculator, select the valuation that matches how you actually redeem your rewards, not the aspirational best case. According to industry data, the average credit card holder redeems points at roughly 1 to 1.5 cents per point.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Common Redemption Options Compared</h2>
-            <p className="text-sm text-text-primary leading-relaxed mb-3">
-              <strong>Cash back</strong> delivers a straightforward $0.01 per point with no effort required. <strong>Travel portal bookings</strong> through Chase, Amex, or Capital One portals typically yield $0.01 to $0.02 per point depending on your card tier. <strong>Transfer partners</strong> can deliver $0.02 or more per point when you transfer to airline or hotel loyalty programs and book award flights or stays. <strong>Statement credits</strong> and <strong>gift cards</strong> generally match cashback at $0.01 per point or less.
-            </p>
-            <p className="text-sm text-text-primary leading-relaxed">
-              The right redemption method depends on your travel habits and willingness to plan. If you value simplicity, cashback is the baseline. If you travel frequently and can be flexible with dates, transfer partners unlock the highest per-point value. Use the valuation dropdown in the calculator to reflect your typical redemption approach.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Tips for Maximizing Card Value</h2>
-            <ul className="list-disc pl-6 space-y-2 text-sm text-text-primary leading-relaxed">
-              <li><strong>Set calendar reminders</strong> for annual credits. Many cardholders forfeit hundreds in unused travel or dining credits simply because they forget to redeem before the card year resets.</li>
-              <li><strong>Stack benefits</strong> by pairing card perks with other loyalty programs. For example, use a hotel card&apos;s elite status to earn free breakfast and late checkout, which adds value beyond the card&apos;s stated benefits.</li>
-              <li><strong>Consider the downgrade path</strong> before canceling. Many issuers let you product-change to a no-annual-fee version of the same card, preserving your credit history and any remaining rewards balance.</li>
-              <li><strong>Call the retention line</strong> at renewal. Many issuers offer statement credits or bonus points to keep you as a cardholder, which can tip a borderline card into positive territory.</li>
-              <li><strong>Re-evaluate annually</strong> because your spending patterns change over time. A card that was worth it last year may not be this year, and vice versa.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Frequently Asked Questions</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">How do I value lounge access?</h3>
-                <p className="text-sm text-text-primary leading-relaxed">Estimate the dollar amount you would have spent on airport meals and drinks during the year if you did not have lounge access. A reasonable estimate is $30 to $50 per visit. If you visited airport lounges 10 times, that could represent $300 to $500 in value.</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">Should I count the welcome bonus in my card value calculation?</h3>
-                <p className="text-sm text-text-primary leading-relaxed">No. The welcome bonus is a one-time benefit. This calculator focuses on the ongoing annual value to help you decide whether to keep the card at renewal. The welcome bonus should influence your decision to open the card, not whether to keep it in year two and beyond.</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">What if my card has a $0 annual fee?</h3>
-                <p className="text-sm text-text-primary leading-relaxed">Cards with no annual fee always have a positive or neutral net value. You can still use this calculator to compare the rewards value of no-fee cards against each other to determine which one deserves the most spend.</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-base text-brand-navy mb-1">How often should I recalculate?</h3>
-                <p className="text-sm text-text-primary leading-relaxed">Run this calculation once a year, ideally one to two months before your card anniversary date. This gives you enough time to either cancel, downgrade, or negotiate a retention offer before the next annual fee posts.</p>
-              </div>
-            </div>
           </div>
         </section>
 

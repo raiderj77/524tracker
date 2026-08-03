@@ -36,7 +36,7 @@ export default function AnswerBlock({ what, who, bottomLine, lastUpdated }: Answ
         className="block text-right text-xs text-slate-600"
       >
         Last updated:{' '}
-        {new Date(lastUpdated).toLocaleDateString('en-US', {
+        {new Date(`${lastUpdated}T00:00:00`).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric',

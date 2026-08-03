@@ -4,11 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/card-tracker', label: 'Card Tracker' },
   { href: '/spend-tracker', label: 'Spend Tracker' },
-  { href: '/application-flowchart', label: 'Flowchart' },
-  { href: '/rules-guide', label: 'Rules Guide' },
   { href: '/card-value-calculator', label: 'Card Value' },
+  { href: '/chase-524', label: '5/24 Guide' },
+  { href: '/rules-guide', label: 'Evidence Guide' },
   { href: '/faq', label: 'FAQ' },
   { href: '/about', label: 'About' },
 ];
