@@ -54,7 +54,12 @@ export default function RulesGuidePage() {
       <section className="mb-12">
         <h2 className="mb-4 font-display text-2xl font-bold text-brand-navy">Evidence at a glance</h2>
         <p className="mb-3 text-xs text-text-secondary sm:hidden">Swipe horizontally to review all columns.</p>
-        <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+        <div
+          className="overflow-x-auto rounded-xl border border-gray-200 bg-white"
+          role="region"
+          aria-label="Credit-card application evidence table"
+          tabIndex={0}
+        >
           <table className="min-w-[52rem] w-full text-left text-sm">
             <thead className="bg-brand-navy text-white">
               <tr>
