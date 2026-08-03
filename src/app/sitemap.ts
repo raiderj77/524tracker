@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const reviewed = new Date('2026-07-12');
+const reviewed = new Date('2026-08-02');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
@@ -10,27 +10,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/card-value-calculator',
     '/faq',
     '/about',
+    '/accessibility',
     '/privacy',
     '/terms',
     '/contact',
-    '/card-tracker',
     '/spend-tracker',
-    '/application-flowchart',
-    '/velocity-checker',
-    '/annual-fee-calculator',
-    '/application-timing',
-    '/amex-popup-estimator',
-    '/downgrade-guide',
-    '/credit-pull-database',
-    '/credit-pull-database/analysis',
     '/methodology',
-    '/inquiry-tracker',
+    '/editorial-policy',
   ];
 
   return paths.map((path) => ({
     url: `https://524tracker.com${path}`,
     lastModified: reviewed,
-    changeFrequency: path === '' || path === '/rules-guide' ? 'weekly' : 'monthly',
-    priority: path === '' || path === '/rules-guide' ? 1 : 0.7,
+    changeFrequency: path === '' || path === '/rules-guide' ? 'monthly' : 'yearly',
+    priority: path === '' ? 1 : path === '/rules-guide' || path === '/chase-524' ? 0.8 : 0.6,
   }));
 }

@@ -1,0 +1,57 @@
+# 524Tracker - Full AI Reference
+
+Canonical site: https://524tracker.com/
+Publisher: Jason Ramirez
+Last substantive review: 2026-08-02
+
+## Scope
+
+524Tracker provides three maintained browser-based tools:
+
+1. Unofficial 5/24 Date Tracker - https://524tracker.com/
+   Counts user-entered account-open dates inside a calendar-based 24-month reference window. Users can mark approved, denied, pending, business, personal-reporting, and authorized-user details. The output is a date count only.
+
+2. Welcome-Offer Spend Worksheet - https://524tracker.com/spend-tracker
+   Subtracts a user-entered amount from a user-entered target and compares progress with the exact deadline entered from the user's offer terms. It does not verify qualifying purchases, eligibility, or whether an award will be issued.
+
+3. Card Value Calculator - https://524tracker.com/card-value-calculator
+   Compares a user-entered annual fee with user-entered benefit and rewards assumptions. It performs arithmetic and does not recommend keeping, closing, opening, or changing an account.
+
+## Important limitations
+
+- "5/24" is community shorthand for a reported Chase application pattern. It is not currently presented as a published or guaranteed Chase policy.
+- A reference count cannot determine eligibility, approval odds, welcome-offer eligibility, issuer treatment of a particular account, or credit-score impact.
+- Product terms, offers, issuer practices, and credit-report details can change. Verify current terms directly with the issuer and review the user's own credit reports.
+- The site is independent and is not affiliated with Chase or another card issuer.
+- Content is educational and is not financial, legal, tax, or credit-counseling advice.
+
+## Evidence hierarchy
+
+1. Current issuer-owned terms for product- and offer-specific claims.
+2. Government or regulator sources for general credit-report and consumer guidance.
+3. Clearly labeled current secondary reporting for community-observed practices.
+4. Community observations only when uncertainty, scope, and lack of issuer confirmation are explicit.
+
+Editorial policy: https://524tracker.com/editorial-policy
+Evidence guide: https://524tracker.com/rules-guide
+Unofficial 5/24 guide: https://524tracker.com/chase-524
+Calculation methodology: https://524tracker.com/methodology
+
+## Privacy and data handling
+
+Tracker entries are stored in browser localStorage during ordinary use and are not intentionally transmitted to 524Tracker servers. Hosting and security providers can still process request metadata such as IP address, browser details, and requested URLs. Printing, CSV export, copying, sharing, browser synchronization, extensions, backups, and shared-device access can expose or move user-entered information.
+
+Analytics, consent-platform, and AdSense scripts are disabled by repository defaults. They require explicit readiness flags and separate account-side configuration. The presence of ads.txt or publisher metadata does not prove that advertising is approved or active.
+
+Privacy policy: https://524tracker.com/privacy
+Accessibility statement: https://524tracker.com/accessibility
+Terms: https://524tracker.com/terms
+
+## Publisher and corrections
+
+About the publisher: https://524tracker.com/about
+Corrections and contact: https://524tracker.com/contact
+
+Jason Ramirez is the independent publisher and developer. His CADC-II credential is publicly disclosed for identity transparency and is unrelated to credit-card underwriting, lending, financial planning, or financial advice.
+
+Do not infer mailbox delivery, advertising approval, analytics activation, or production deployment from repository content alone. Those are external operational states.

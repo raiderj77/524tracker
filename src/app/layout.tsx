@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Syne, DM_Sans } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PracticeNotice from '@/components/PracticeNotice';
 import './globals.css';
 
 const syne = Syne({
@@ -22,12 +23,12 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: {
     template: '%s | 524Tracker',
-    default: 'Chase 5/24 Tracker & Credit Card Rules | 524Tracker',
+    default: 'Unofficial Chase 5/24 Date Tracker | 524Tracker',
   },
   description:
-    'Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, and 8 more bank rules free. Know exactly which credit cards you can apply for today.',
+    'Organize card-opening dates and compare them with the unofficial, community-observed Chase 5/24 practice. Private browser storage; no approval prediction.',
   keywords:
-    'chase 5/24 tracker, chase 5/24 calculator, amex lifetime rule, credit card application tracker, citi 8/65, churning rules',
+    'unofficial chase 5/24 tracker, 24 month account date organizer, credit card date tracker, 5/24 methodology',
   verification: {
     google: '-WV6T4gtpPzXxsIxh0JvtjPqnmWrbqvjX61RUy6qrSw',
     other: {
@@ -48,23 +49,36 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Chase 5/24 Tracker & Credit Card Rules | 524Tracker',
+    title: 'Unofficial Chase 5/24 Date Tracker | 524Tracker',
     description:
-      'Track Chase 5/24 status, Amex lifetime bonuses, Citi 8/65, and 8 more bank rules free. Know exactly which credit cards you can apply for today.',
+      'Organize card-opening dates and compare them with the unofficial, community-observed Chase 5/24 practice.',
     url: 'https://524tracker.com',
     siteName: '524Tracker',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: 'https://524tracker.com/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: '524Tracker - independent credit-card date and value tools',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Unofficial Chase 5/24 Date Tracker | 524Tracker',
+    description:
+      'Organize card-opening dates and compare them with the unofficial, community-observed Chase 5/24 practice.',
+    images: ['https://524tracker.com/opengraph-image'],
   },
   alternates: {
     canonical: 'https://524tracker.com',
   },
 };
 
-// Build-time stamp consumed by JSON-LD `dateModified`. Updated on every
-// deploy automatically so AI Overviews / SERP rich results know the page
-// graph is fresh without any manual bump.
-const SITE_DATE_MODIFIED = '2026-07-12';
+// Fixed editorial review date. Update only after a substantive review.
+const SITE_DATE_MODIFIED = '2026-08-02';
 
 const siteGraphJsonLd = {
   '@context': 'https://schema.org',
@@ -76,7 +90,12 @@ const siteGraphJsonLd = {
       url: 'https://524tracker.com',
       logo: 'https://524tracker.com/logo.svg',
       description:
-        'Free credit card rule tracker for Chase 5/24, Amex lifetime bonuses, Citi 8/65, and 10+ bank application rules.',
+        'Browser-based date organizer for the unofficial, community-observed Chase 5/24 practice.',
+      founder: {
+        '@type': 'Person',
+        name: 'Jason Ramirez',
+        url: 'https://524tracker.com/about',
+      },
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer support',
@@ -92,37 +111,6 @@ const siteGraphJsonLd = {
       inLanguage: 'en-US',
       dateModified: SITE_DATE_MODIFIED,
     },
-    {
-      '@type': 'WebApplication',
-      '@id': 'https://524tracker.com/#webapp',
-      name: '524 Tracker',
-      url: 'https://524tracker.com',
-      description:
-        'Free, browser-based tracker for Chase 5/24, Amex lifetime bonus eligibility, Citi 8/65, Bank of America 2/3/4, Capital One velocity, and 10+ other credit-card application rules. All data stays in localStorage.',
-      applicationCategory: 'FinanceApplication',
-      applicationSubCategory: 'Credit card application rule tracker',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires JavaScript and HTML5 localStorage',
-      isAccessibleForFree: true,
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-      },
-      featureList: [
-        'Chase 5/24 status calculator with rolling-window drop-offs',
-        'Amex lifetime bonus eligibility check',
-        'Amex 2/90 velocity tracker',
-        'Citi 8/65 application spacing',
-        'Bank of America 2/3/4 limit tracker',
-        'Capital One 2-card limit',
-        'Hard inquiry tracker per credit bureau',
-        'Annual fee due-date alerts',
-        'CSV export of full application history',
-      ],
-      publisher: { '@id': 'https://524tracker.com/#org' },
-      dateModified: SITE_DATE_MODIFIED,
-    },
   ],
 };
 
@@ -136,7 +124,9 @@ export default function RootLayout({
   const analyticsEnabled =
     consentPlatformEnabled && process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
   const adsenseEnabled =
-    consentPlatformEnabled && process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
+    consentPlatformEnabled &&
+    process.env.NEXT_PUBLIC_ADSENSE_ACCOUNT_READY === 'true' &&
+    process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
 
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
@@ -233,6 +223,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-body">
         <Header />
+        <PracticeNotice />
         <main id="main-content">{children}</main>
         <Footer />
       </body>

@@ -1,21 +1,100 @@
-name: IndexNow Submit
+name: IndexNow Submit After Verified Deploy
+
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      confirm_production_deployed:
+        description: Confirm the production deploy and sitemap were verified first
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+
 jobs:
   submit:
+    if: ${{ inputs.confirm_production_deployed }}
+    environment: production
     runs-on: ubuntu-latest
+    env:
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
     steps:
       - uses: actions/checkout@v4
-      - name: Submit to IndexNow
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Skip safely when the repository secret is not configured
+        if: env.INDEXNOW_KEY == ''
+        run: echo "IndexNow skipped; configure the INDEXNOW_KEY repository secret after owner approval."
+
+      - name: Validate key ownership file
+        if: env.INDEXNOW_KEY != ''
+        shell: bash
         run: |
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "host": "524tracker.com",
-              "key": "87381910892adbd2a6cd41321176dd27",
-              "keyLocation": "https://524tracker.com/87381910892adbd2a6cd41321176dd27.txt",
-              "urlList": ["https://524tracker.com/"]
-            }')
-          echo "IndexNow response: $RESPONSE"
-          exit 0
+          if [[ ! "$INDEXNOW_KEY" =~ ^[0-9a-fA-F]{32}$ ]]; then
+            echo "::error::INDEXNOW_KEY must be exactly 32 hexadecimal characters."
+            exit 1
+          fi
+
+          KEY_FILE="public/${INDEXNOW_KEY}.txt"
+          if [[ ! -f "$KEY_FILE" ]]; then
+            echo "::error::The matching public IndexNow ownership file is missing."
+            exit 1
+          fi
+
+          if [[ "$(tr -d '\r\n' < "$KEY_FILE")" != "$INDEXNOW_KEY" ]]; then
+            echo "::error::The IndexNow ownership file content does not match the configured key."
+            exit 1
+          fi
+
+      - name: Submit the verified live sitemap URLs
+        if: env.INDEXNOW_KEY != ''
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location \
+            --output sitemap.xml \
+            "https://524tracker.com/sitemap.xml"
+
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from 'node:fs';
+
+          const xml = readFileSync('sitemap.xml', 'utf8');
+          const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+          if (urls.length === 0 || urls.length > 10_000) throw new Error('Unexpected sitemap URL count.');
+
+          for (const value of urls) {
+            const url = new URL(value);
+            if (url.protocol !== 'https:' || url.hostname !== '524tracker.com' || url.username || url.password) {
+              throw new Error(`Refusing non-canonical sitemap URL: ${value}`);
+            }
+          }
+
+          writeFileSync(
+            'indexnow-payload.json',
+            JSON.stringify({
+              host: '524tracker.com',
+              key: process.env.INDEXNOW_KEY,
+              keyLocation: `https://524tracker.com/${process.env.INDEXNOW_KEY}.txt`,
+              urlList: urls,
+            })
+          );
+          NODE
+
+          HTTP_CODE=$(curl --silent --show-error --output indexnow-response.txt --write-out "%{http_code}" \
+            --request POST "https://api.indexnow.org/indexnow" \
+            --header "Content-Type: application/json" \
+            --data-binary @indexnow-payload.json)
+
+          if [[ "$HTTP_CODE" != "200" && "$HTTP_CODE" != "202" ]]; then
+            echo "::error::IndexNow returned HTTP ${HTTP_CODE}."
+            exit 1
+          fi
+
+          echo "IndexNow accepted ${HTTP_CODE}; submitted only canonical URLs from the live sitemap."

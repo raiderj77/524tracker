@@ -1,126 +1,87 @@
 /**
- * content-lint.js — Content compliance linter for 524tracker.com
- * Scans src/**\/*.{tsx,ts} for:
- *   - Personal name exposure (site owner)
- *   - Financial advice claims (YMYL-adjacent — must include disclaimers)
- * Exit code 1 on failure, 0 on pass.
+ * Strict content lint for the maintained 524Tracker surfaces.
+ * Retired routes are redirected and intentionally excluded until their source
+ * files can be removed in a separately reviewed cleanup.
  */
 
-import { readFileSync, readdirSync, existsSync } from "fs";
-import { resolve, dirname, relative, join } from "path";
-import { fileURLToPath } from "url";
+import { readFileSync } from 'node:fs';
+import { dirname, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, "..");
-
-let failures = 0;
-
-function fail(file, line, msg) {
-  const rel = relative(ROOT, file);
-  console.error(`  ❌ ${rel}:${line} — ${msg}`);
-  failures++;
-}
-
-function getFiles(dir, extensions) {
-  const results = [];
-  if (!existsSync(dir)) return results;
-  const entries = readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = resolve(dir, entry.name);
-    if (entry.isDirectory()) {
-      results.push(...getFiles(fullPath, extensions));
-    } else if (extensions.some((ext) => entry.name.endsWith(ext))) {
-      results.push(fullPath);
-    }
-  }
-  return results;
-}
-
-// ---------------------------------------------------------------------------
-// Rules
-// ---------------------------------------------------------------------------
-
-// About and blog pages are exempt — real name required for AdSense E-E-A-T compliance per April 2026 decision.
-const PERSONAL_NAME_EXEMPT_FILES = [
-  join('src', 'app', 'about', 'page.tsx'),
-  join('src', 'app', 'about', 'jason-ramirez', 'page.tsx'),
-  join('src', 'app', 'blog', '[slug]', 'page.tsx'),
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const maintainedFiles = [
+  'src/app/layout.tsx',
+  'src/app/page.tsx',
+  'src/app/about/page.tsx',
+  'src/app/accessibility/page.tsx',
+  'src/app/card-value-calculator/layout.tsx',
+  'src/app/card-value-calculator/page.tsx',
+  'src/app/chase-524/page.tsx',
+  'src/app/contact/page.tsx',
+  'src/app/editorial-policy/page.tsx',
+  'src/app/faq/page.tsx',
+  'src/app/methodology/page.tsx',
+  'src/app/privacy/page.tsx',
+  'src/app/rules-guide/page.tsx',
+  'src/app/spend-tracker/page.tsx',
+  'src/app/terms/page.tsx',
+  'src/components/AuthorAttribution.tsx',
+  'src/components/FinancialDisclaimer.tsx',
+  'src/components/Footer.tsx',
+  'src/components/PracticeNotice.tsx',
+  'src/components/SpendTrackerTool.tsx',
+  'src/components/TrackerTool.tsx',
 ];
 
-/**
- * Check for personal name exposure.
- * The site owner's name must never appear in public content or code,
- * except on About pages (see PERSONAL_NAME_EXEMPT_FILES above).
- */
-function checkPersonalName(file, lines) {
-  const rel = relative(ROOT, file);
-  if (PERSONAL_NAME_EXEMPT_FILES.some((exempt) => rel === exempt || rel.endsWith(exempt))) return;
-
-  const namePattern = /\bJason\s+Ramirez\b/i;
-  const bylineLinePattern = /^\s*(author|reviewer|author_name|byline)\s*:/i;
-  const schemaNamePattern = /"name"\s*:\s*"Jason Ramirez/i;
-  for (let i = 0; i < lines.length; i++) {
-    if (!namePattern.test(lines[i])) continue;
-    if (bylineLinePattern.test(lines[i])) continue;
-    if (schemaNamePattern.test(lines[i])) continue;
-    fail(file, i + 1, "Personal name detected in body/prose - name is only allowed in byline metadata");
-  }
+let failures = 0;
+function fail(path, line, message) {
+  console.error(`  FAIL ${relative(root, path)}:${line} - ${message}`);
+  failures += 1;
 }
 
-/**
- * Check for direct financial advice claims.
- * This is a YMYL-adjacent site — the tool/site must NOT claim to provide
- * financial advice. Disclaimer language ("not financial advice",
- * "cannot provide financial advice") is required and must NOT be flagged.
- * Checks the previous line for negation to handle split-line disclaimers.
- */
-function checkFinancialAdviceClaims(file, lines) {
-  const advicePattern = /financial\s+advice/i;
-  const negationPattern = /\b(not|never|no|cannot|can't|don't|does\s+not|is\s+not|are\s+not)\b/i;
+const forbidden = [
+  [/\bwill (?:be )?den(?:y|ied)\b/i, 'Predicts a denial'],
+  [/\bautomatically (?:declin|deni)/i, 'Claims an automatic issuer decision'],
+  [/\bnext safe date\b/i, 'Labels a date as safe'],
+  [/\bfully eligible\b|\beligible to apply\b|\byou (?:are|'re) eligible\b/i, 'Claims eligibility'],
+  [/\bineligible for\b/i, 'Claims ineligibility'],
+  [/\byou can (?:open|apply|get approved)\b/i, 'Directs or predicts an application outcome'],
+  [/\bbest card\b/i, 'Makes an unsupported recommendation claim'],
+  [/\bexact(?:ly)? (?:which|when).*issuer/i, 'Claims issuer certainty'],
+  [/\bnever (?:leaves|sent|transmitted)\b/i, 'Makes an absolute data-handling promise'],
+  [/\bcompletely private\b/i, 'Makes an absolute privacy promise'],
+];
 
-  for (let i = 0; i < lines.length; i++) {
-    if (!advicePattern.test(lines[i])) continue;
+for (const rel of maintainedFiles) {
+  const path = resolve(root, rel);
+  const lines = readFileSync(path, 'utf8').split(/\r?\n/);
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    for (const [pattern, message] of forbidden) {
+      if (pattern.test(line)) fail(path, index + 1, message);
+    }
 
-    // Check for negation on the same line or the preceding line
-    const lineNegated = negationPattern.test(lines[i]);
-    const prevNegated = i > 0 && negationPattern.test(lines[i - 1]);
-
-    if (!lineNegated && !prevNegated) {
-      fail(
-        file,
-        i + 1,
-        'Financial advice claim — must include disclaimer ("not financial advice")'
-      );
+    if (/financial\s+advice/i.test(line)) {
+      const context = `${lines[index - 1] ?? ''} ${line}`;
+      if (!/\bnot\b|does not|cannot|isn['’]t|no personalized/i.test(context)) {
+        fail(path, index + 1, 'Financial-advice wording is not clearly negated');
+      }
     }
   }
 }
 
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
-
-console.log("💳 524tracker content lint\n");
-
-const srcFiles = getFiles(resolve(ROOT, "src"), [".tsx", ".ts"]);
-
-console.log(`  Scanning ${srcFiles.length} source files...\n`);
-
-for (const file of srcFiles) {
-  const content = readFileSync(file, "utf-8");
-  const lines = content.split("\n");
-
-  checkPersonalName(file, lines);
-  checkFinancialAdviceClaims(file, lines);
+const about = readFileSync(resolve(root, 'src/app/about/page.tsx'), 'utf8');
+if (!/Jason Ramirez/.test(about)) fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Public publisher identity is missing');
+if (!/CADC-II[\s\S]*unrelated to credit-card underwriting or[\s\S]*financial advice/.test(about)) {
+  fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Public CADC-II credential is not clearly scoped as unrelated to finance');
+}
+if (/Salinas|homeless|storage shed|recovering addict|Social Security number:\s*\d/i.test(about)) {
+  fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Unnecessary sensitive personal detail remains on the trust page');
 }
 
-// ---------------------------------------------------------------------------
-// Summary
-// ---------------------------------------------------------------------------
-console.log("\n" + "=".repeat(50));
 if (failures > 0) {
-  console.error(`\n💥 ${failures} content issue(s) found — fix before deploying.\n`);
+  console.error(`\n${failures} maintained-content issue(s) found.`);
   process.exit(1);
-} else {
-  console.log("\n🎉 All content checks passed.\n");
-  process.exit(0);
 }
+
+console.log('Content lint passed: maintained financial claims are scoped and publisher credentials are transparent.');

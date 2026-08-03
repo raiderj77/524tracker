@@ -1,18 +1,18 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildPageMetadata } from '@/lib/siteMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Privacy Policy',
   description:
     'How 524Tracker handles browser-local tracker data, analytics consent, server logs, affiliate links, and privacy requests.',
-  alternates: { canonical: 'https://524tracker.com/privacy' },
-};
+  path: '/privacy',
+});
 
 export default function PrivacyPage() {
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Privacy Policy</h1>
-      <p className="text-xs text-text-secondary mb-8">Effective January 1, 2026 | Last reviewed July 12, 2026</p>
+      <p className="text-xs text-text-secondary mb-8">Effective January 1, 2026 | Last reviewed August 2, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
@@ -33,15 +33,20 @@ export default function PrivacyPage() {
             this data by using a tool&apos;s reset control or clearing site data in your browser. Clearing
             browser data, changing devices, or using private browsing may permanently remove it.
           </p>
+          <p className="mt-3">
+            When you choose print, CSV export, copy, or share, your browser or selected destination
+            handles that output. Review it before sending because it can contain financial-account
+            names, dates, and reference counts.
+          </p>
         </section>
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Cookies and analytics</h2>
           <p className="mb-3">
-            Google Analytics (measurement ID G-308FHNWPPQ) is configured as a possible future
-            analytics provider but is currently disabled. Cookiebot is also disabled because a
-            domain-valid consent configuration has not yet been completed for 524tracker.com. The
-            site therefore does not currently load optional analytics or consent-provider scripts.
+            Google Analytics (measurement ID G-308FHNWPPQ) is configured as an optional analytics
+            provider. The repository defaults the consent platform and analytics to disabled.
+            Deployment settings can enable them only together; when enabled, the consent platform
+            controls whether the analytics script loads for a visitor.
           </p>
           <p>
             Consent Mode defaults advertising and analytics storage to denied. A Global Privacy
@@ -53,11 +58,11 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Advertising status</h2>
           <p>
-            Google AdSense is configured as a possible future advertising provider, but 524Tracker
-            has not been approved to show AdSense ads and the advertising script is currently
-            disabled. Code now requires both explicit AdSense approval and an enabled, domain-valid
-            consent platform before the advertising script can load. We will update this policy
-            before enabling advertising.
+            Google AdSense is configured as a possible advertising provider, but repository defaults
+            keep the script disabled. Code requires an enabled consent platform, an explicit account-
+            readiness flag, and a separate ad-serving flag before the script can load. The ads.txt
+            file authorizes the listed seller; it does not by itself mean that ads are approved or
+            active. We will update this policy before enabling advertising.
           </p>
         </section>
 
@@ -75,9 +80,9 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">External and sponsored links</h2>
           <p>
-            The site links to banks, credit bureaus, marketplaces, and other external services. Some
-            links may be sponsored or eligible for a referral commission and are labeled where
-            appropriate. The destination can receive ordinary referral and request data after you
+            Maintained pages do not currently contain compensated credit-card application buttons.
+            The site does link to issuers, regulators, and other external sources. A destination can
+            receive ordinary referral and request data after you
             choose to follow a link. Its own privacy policy governs any information you provide there.
             524Tracker does not append your browser-local tracker entries to outbound links.
           </p>
@@ -87,7 +92,7 @@ export default function PrivacyPage() {
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Retention and security</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Tracker data remains in your browser until you remove it or the browser removes it.</li>
-            <li>Cookiebot and Google Analytics are currently disabled and do not receive site visits.</li>
+            <li>Optional consent, analytics, and advertising integrations are disabled by repository defaults and require explicit deployment flags.</li>
             <li>Vercel retains hosting and security data under its settings, contracts, and policies.</li>
           </ul>
           <p className="mt-3">

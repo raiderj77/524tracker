@@ -1,18 +1,10 @@
-import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/siteMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Terms of Service',
-  description: '524Tracker terms of service — usage terms, disclaimers, and affiliate disclosures.',
-  keywords: 'terms of service, 524tracker terms, usage terms, disclaimers',
-  robots: { index: true, follow: true, 'max-snippet': -1 },
-  alternates: { canonical: 'https://524tracker.com/terms' },
-  openGraph: {
-    title: 'Terms of Service — 524Tracker',
-    description: '524Tracker terms of service — usage terms, disclaimers, and affiliate disclosures.',
-    url: 'https://524tracker.com/terms',
-    type: 'website',
-  },
-};
+  description: '524Tracker terms of service - usage terms, disclaimers, and affiliate disclosures.',
+  path: '/terms',
+});
 
 export default function TermsPage() {
   return (
@@ -31,7 +23,7 @@ export default function TermsPage() {
       />
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="font-display font-bold text-3xl text-brand-navy mb-2">Terms of Service</h1>
-      <p className="text-xs text-text-secondary mb-8">Effective Date: March 1, 2026 | Last updated: March 16, 2026</p>
+      <p className="text-xs text-text-secondary mb-8">Effective March 1, 2026 | Last updated August 2, 2026</p>
 
       <div className="space-y-8 text-sm text-text-primary leading-relaxed">
         <section>
@@ -41,7 +33,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">What Service 524Tracker Provides</h2>
-          <p>524Tracker provides a free, browser-based tool that helps users track credit card applications and understand bank-specific application rules. The tool stores all data locally in your browser using localStorage. No account is required.</p>
+          <p>524Tracker provides free browser-based organizers and calculators. Its 5/24 output compares dates with an unofficial community-observed practice; it is not an issuer policy, eligibility check, underwriting model, or approval prediction. No account is required.</p>
         </section>
 
         <section>
@@ -51,22 +43,22 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Why Approval Is Not Guaranteed</h2>
-          <p>Meeting a bank&apos;s stated application rules does not guarantee approval. Credit card approval decisions involve many factors including credit score, income, existing debt, account history, and other criteria that are beyond the scope of this tool.</p>
+          <p>No date count or community pattern guarantees approval. Credit-card decisions can involve credit history, income, debt, issuer relationships, product terms, and other criteria outside this site.</p>
         </section>
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Our Affiliate Relationships Work</h2>
-          <p>524Tracker may earn a commission when you apply for and are approved for a credit card through affiliate links on this site. This compensation does not influence our editorial content, tool calculations, or rule documentation. Affiliate relationships do not affect how we present bank rules or recommend cards.</p>
+          <p>Maintained pages currently do not present compensated credit-card application buttons. If a compensated link is added later, it will be labeled before the link and disclosed in the editorial policy. Direct links to issuer or government sources are not described as affiliate links.</p>
         </section>
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How Your Data and Privacy Are Handled</h2>
-          <p>All credit card application data you enter into the tracker is stored exclusively in your browser&apos;s localStorage. We do not collect, store, or transmit this data. See our <a href="/privacy" className="text-brand-gold hover:text-amber-600">Privacy Policy</a> for complete details on data handling.</p>
+          <p>Tool entries are stored in your browser&apos;s localStorage and are not intentionally transmitted to 524Tracker servers. Ordinary hosting logs still process request information, and outputs you choose to print, export, copy, or share are handled by your browser or selected destination. See our <a href="/privacy" className="text-brand-gold hover:text-amber-600">Privacy Policy</a> for details.</p>
         </section>
 
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">How We Handle Information Accuracy</h2>
-          <p>We make reasonable efforts to keep bank rules and card information up to date. However, we cannot guarantee the accuracy, completeness, or timeliness of any information on this site. Bank policies can change at any time without notice. Use this tool as a reference, not as the sole basis for financial decisions.</p>
+          <p>We distinguish official terms, government guidance, community observations, and user-input calculations. Information can still be incomplete or stale. Review the exact offer and issuer terms and use this site only as a secondary reference.</p>
         </section>
 
         <section>

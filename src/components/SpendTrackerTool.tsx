@@ -1,8 +1,16 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+  useSyncExternalStore,
+} from 'react';
 import Link from 'next/link';
 import { PrintResultsButton } from './PrintResultsButton';
+import { parseLocalDate } from '@/lib/dateMath';
 
 // ─── Types ────────────────────────────────────────────────────
 interface SpendCard {
@@ -21,6 +29,7 @@ type Urgency = 'green' | 'yellow' | 'red';
 
 // ─── Constants ────────────────────────────────────────────────
 const STORAGE_KEY = 'spend_tracker_v1';
+const subscribeToHydration = () => () => {};
 const ISSUERS = ['Chase', 'Amex', 'Citi', 'Bank of America', 'Capital One', 'Discover', 'Other'] as const;
 
 // ─── Helpers ──────────────────────────────────────────────────
@@ -29,7 +38,11 @@ function generateId(): string {
 }
 
 function todayISO(): string {
-  return new Date().toISOString().split('T')[0];
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 function formatDate(iso: string): string {
@@ -40,12 +53,6 @@ function formatDate(iso: string): string {
   });
 }
 
-function addDays(iso: string, days: number): Date {
-  const d = new Date(iso + 'T00:00:00');
-  d.setDate(d.getDate() + days);
-  return d;
-}
-
 function daysFromNow(target: Date): number {
   const now = new Date();
   now.setHours(0, 0, 0, 0);
@@ -54,24 +61,76 @@ function daysFromNow(target: Date): number {
   return Math.ceil((t.getTime() - now.getTime()) / 86400000);
 }
 
-function getDeadline(card: SpendCard): Date {
-  if (card.deadlineOverride) {
-    return new Date(card.deadlineOverride + 'T00:00:00');
-  }
-  return addDays(card.applicationDate, 90);
+function getDeadline(card: SpendCard): Date | null {
+  if (!card.deadlineOverride) return null;
+  const deadline = new Date(card.deadlineOverride + 'T00:00:00');
+  return Number.isNaN(deadline.getTime()) ? null : deadline;
 }
 
-function getUrgency(daysLeft: number, dailySpend: number): Urgency {
-  if (daysLeft < 15 || dailySpend > 50) return 'red';
-  if (daysLeft < 30 || dailySpend > 20) return 'yellow';
+function getUrgency(daysLeft: number): Urgency {
+  if (daysLeft < 15) return 'red';
+  if (daysLeft < 30) return 'yellow';
   return 'green';
 }
 
 function loadCards(): SpendCard[] {
   if (typeof window === 'undefined') return [];
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
+    return parseStoredCards(localStorage.getItem(STORAGE_KEY));
+  } catch {
+    return [];
+  }
+}
+
+function parseStoredCards(raw: string | null): SpendCard[] {
+  if (!raw) return [];
+
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed.flatMap((value): SpendCard[] => {
+      if (!value || typeof value !== 'object') return [];
+      const card = value as Record<string, unknown>;
+      const status = card.status;
+      const deadline = card.deadlineOverride;
+
+      if (
+        typeof card.id !== 'string' ||
+        card.id.trim() === '' ||
+        typeof card.cardName !== 'string' ||
+        card.cardName.trim() === '' ||
+        typeof card.issuer !== 'string' ||
+        typeof card.bonusAmount !== 'string' ||
+        typeof card.minSpend !== 'number' ||
+        !Number.isFinite(card.minSpend) ||
+        card.minSpend <= 0 ||
+        typeof card.spentSoFar !== 'number' ||
+        !Number.isFinite(card.spentSoFar) ||
+        card.spentSoFar < 0 ||
+        typeof card.applicationDate !== 'string' ||
+        parseLocalDate(card.applicationDate) === null ||
+        typeof deadline !== 'string' ||
+        (deadline !== '' && parseLocalDate(deadline) === null) ||
+        (status !== 'active' && status !== 'earned' && status !== 'abandoned')
+      ) {
+        return [];
+      }
+
+      return [
+        {
+          id: card.id,
+          cardName: card.cardName.trim(),
+          issuer: card.issuer,
+          bonusAmount: card.bonusAmount,
+          minSpend: card.minSpend,
+          spentSoFar: card.spentSoFar,
+          applicationDate: card.applicationDate,
+          deadlineOverride: deadline,
+          status,
+        },
+      ];
+    });
   } catch {
     return [];
   }
@@ -92,9 +151,9 @@ function formatCurrency(n: number): string {
 // ─── Status Badge ─────────────────────────────────────────────
 function UrgencyBadge({ urgency, daysLeft }: { urgency: Urgency; daysLeft: number }) {
   const config = {
-    green: { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-emerald-300', label: 'On Track' },
-    yellow: { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300', label: 'Caution' },
-    red: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300', label: daysLeft <= 0 ? 'Expired' : 'Urgent' },
+    green: { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-emerald-300', label: '30+ days' },
+    yellow: { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300', label: '15–29 days' },
+    red: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300', label: daysLeft <= 0 ? 'Date passed' : '0–14 days' },
   }[urgency];
 
   return (
@@ -106,7 +165,7 @@ function UrgencyBadge({ urgency, daysLeft }: { urgency: Urgency; daysLeft: numbe
 
 // ─── Progress Bar ─────────────────────────────────────────────
 function ProgressBar({ spent, target, urgency }: { spent: number; target: number; urgency: Urgency }) {
-  const pct = Math.min(100, Math.round((spent / target) * 100));
+  const pct = target > 0 ? Math.min(100, Math.max(0, Math.round((spent / target) * 100))) : 0;
   const barColor = {
     green: 'bg-emerald-500',
     yellow: 'bg-amber-500',
@@ -129,7 +188,8 @@ function ProgressBar({ spent, target, urgency }: { spent: number; target: number
 // ─── Main Component ───────────────────────────────────────────
 export default function SpendTrackerTool() {
   const [cards, setCards] = useState<SpendCard[]>(loadCards);
-  const mountedRef = useRef(false);
+  const hydrated = useSyncExternalStore(subscribeToHydration, () => true, () => false);
+  const previousCardsRef = useRef(cards);
   const liveRef = useRef<HTMLDivElement>(null);
 
   // Form state
@@ -159,38 +219,35 @@ export default function SpendTrackerTool() {
   }, []);
 
   useEffect(() => {
-    mountedRef.current = true;
-  }, []);
+    if (!hydrated || previousCardsRef.current === cards) return;
 
-  useEffect(() => {
-    if (mountedRef.current) {
-      saveCards(cards);
-      const showTimer = setTimeout(() => setShowSaved(true), 0);
-      const hideTimer = setTimeout(() => setShowSaved(false), 2000);
-      return () => {
-        clearTimeout(showTimer);
-        clearTimeout(hideTimer);
-      };
-    }
-  }, [cards]);
+    saveCards(cards);
+    previousCardsRef.current = cards;
+    const showTimer = setTimeout(() => setShowSaved(true), 0);
+    const hideTimer = setTimeout(() => setShowSaved(false), 2000);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, [cards, hydrated]);
 
   // ─── Computed ───────────────────────────────────────────────
+  const visibleCards = useMemo(() => (hydrated ? cards : []), [cards, hydrated]);
   const activeCards = useMemo(
-    () => cards
+    () => visibleCards
       .filter((c) => c.status === 'active')
-      .sort((a, b) => getDeadline(a).getTime() - getDeadline(b).getTime()),
-    [cards]
+      .sort(
+        (a, b) =>
+          (getDeadline(a)?.getTime() ?? Number.POSITIVE_INFINITY) -
+          (getDeadline(b)?.getTime() ?? Number.POSITIVE_INFINITY)
+      ),
+    [visibleCards]
   );
 
   const completedCards = useMemo(
-    () => cards.filter((c) => c.status === 'earned' || c.status === 'abandoned'),
-    [cards]
+    () => visibleCards.filter((c) => c.status === 'earned' || c.status === 'abandoned'),
+    [visibleCards]
   );
-
-  const totalBonusAtStake = activeCards.reduce((sum, c) => {
-    const match = c.bonusAmount.match(/[\d,]+/);
-    return sum + (match ? parseInt(match[0].replace(/,/g, ''), 10) : 0);
-  }, 0);
 
   const totalRemaining = activeCards.reduce((sum, c) => sum + Math.max(0, c.minSpend - c.spentSoFar), 0);
 
@@ -209,10 +266,14 @@ export default function SpendTrackerTool() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!cardName.trim() || !minSpend) return;
+    if (!cardName.trim() || !minSpend || !deadlineOverride) return;
 
-    const minSpendNum = parseFloat(minSpend) || 0;
-    const spentNum = parseFloat(spentSoFar) || 0;
+    const minSpendNum = Number(minSpend);
+    const spentNum = spentSoFar === '' ? 0 : Number(spentSoFar);
+    if (!Number.isFinite(minSpendNum) || minSpendNum <= 0 || !Number.isFinite(spentNum) || spentNum < 0) {
+      announce('Enter a spending target greater than zero and an amount spent of zero or more.');
+      return;
+    }
 
     if (editingId) {
       setCards((prev) =>
@@ -261,7 +322,7 @@ export default function SpendTrackerTool() {
 
   function markEarned(id: string) {
     setCards((prev) => prev.map((c) => (c.id === id ? { ...c, status: 'earned' as const } : c)));
-    announce('Bonus marked as earned.');
+    announce('Entry marked complete. Confirm award status with the issuer.');
   }
 
   function handleClearAll() {
@@ -290,14 +351,10 @@ export default function SpendTrackerTool() {
           <div className="flex justify-end mb-3">
             <PrintResultsButton />
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
               <p className="text-3xl font-bold tabular-nums text-brand-navy">{activeCards.length}</p>
               <p className="text-xs text-text-secondary mt-1">Active Card{activeCards.length !== 1 ? 's' : ''}</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-              <p className="text-3xl font-bold tabular-nums text-brand-gold">{totalBonusAtStake.toLocaleString()}</p>
-              <p className="text-xs text-text-secondary mt-1">Bonus Value at Stake</p>
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
               <p className="text-3xl font-bold tabular-nums text-brand-navy">{formatCurrency(totalRemaining)}</p>
@@ -314,56 +371,61 @@ export default function SpendTrackerTool() {
           <div className="space-y-4">
             {activeCards.map((card) => {
               const deadline = getDeadline(card);
-              const daysLeft = daysFromNow(deadline);
+              const daysLeft = deadline ? daysFromNow(deadline) : null;
               const remaining = Math.max(0, card.minSpend - card.spentSoFar);
-              const dailySpend = daysLeft > 0 ? remaining / daysLeft : remaining > 0 ? Infinity : 0;
-              const urgency = card.spentSoFar >= card.minSpend ? 'green' as Urgency : getUrgency(daysLeft, dailySpend);
+              const dailySpend = daysLeft !== null && daysLeft > 0 ? remaining / daysLeft : null;
+              const urgency = daysLeft === null ? 'yellow' : getUrgency(daysLeft);
               const completed = card.spentSoFar >= card.minSpend;
 
               return (
                 <div key={card.id} className={`bg-white rounded-xl border-2 p-4 sm:p-5 ${
                   completed ? 'border-emerald-300' :
+                  !deadline ? 'border-amber-300' :
                   urgency === 'red' ? 'border-red-300' :
                   urgency === 'yellow' ? 'border-amber-300' :
                   'border-gray-200'
                 }`}>
-                  <div className="flex items-start justify-between mb-3">
+                  <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="font-display font-bold text-base text-brand-navy">{card.cardName}</h3>
                         <span className="text-xs text-text-secondary">{card.issuer}</span>
                         {completed ? (
                           <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-100 text-emerald-800 border-emerald-300">
-                            Spend Met
+                            Entered amount reached
+                          </span>
+                        ) : !deadline ? (
+                          <span className="inline-block rounded-full border border-amber-300 bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-900">
+                            Deadline needed
                           </span>
                         ) : (
-                          <UrgencyBadge urgency={urgency} daysLeft={daysLeft} />
+                          <UrgencyBadge urgency={urgency} daysLeft={daysLeft ?? 0} />
                         )}
                       </div>
                       {card.bonusAmount && (
                         <p className="text-sm text-brand-gold font-medium mt-1">{card.bonusAmount}</p>
                       )}
                     </div>
-                    <div className="flex gap-2 shrink-0">
+                    <div className="flex shrink-0 flex-wrap gap-1 sm:justify-end">
                       {!completed && (
                         <button
                           onClick={() => markEarned(card.id)}
-                          className="text-xs text-emerald-600 hover:text-emerald-800 font-medium"
-                          aria-label={`Mark ${card.cardName} bonus as earned`}
+                          className="min-h-[44px] px-2 text-xs font-medium text-emerald-600 hover:text-emerald-800"
+                          aria-label={`Mark ${card.cardName} entry complete`}
                         >
-                          Earned
+                          Mark complete
                         </button>
                       )}
                       <button
                         onClick={() => startEdit(card)}
-                        className="text-xs text-brand-gold hover:text-amber-600 font-medium"
+                        className="min-h-[44px] px-2 text-xs font-medium text-brand-gold hover:text-amber-600"
                         aria-label={`Edit ${card.cardName}`}
                       >
                         Edit
                       </button>
                       <button
                         onClick={() => deleteCard(card.id)}
-                        className="text-xs text-red-500 hover:text-red-700 font-medium"
+                        className="min-h-[44px] px-2 text-xs font-medium text-red-500 hover:text-red-700"
                         aria-label={`Delete ${card.cardName}`}
                       >
                         Delete
@@ -380,22 +442,23 @@ export default function SpendTrackerTool() {
                     </div>
                     <div>
                       <span className="text-text-secondary">Deadline</span>
-                      <p className="font-semibold tabular-nums">{formatDate(deadline.toISOString().split('T')[0])}</p>
-                    </div>
-                    <div>
-                      <span className="text-text-secondary">Days Left</span>
-                      <p className={`font-semibold tabular-nums ${daysLeft <= 0 ? 'text-red-600' : daysLeft < 15 ? 'text-red-600' : daysLeft < 30 ? 'text-amber-600' : ''}`}>
-                        {daysLeft <= 0 ? 'Expired' : daysLeft}
+                      <p className="font-semibold tabular-nums">
+                        {deadline ? formatDate(card.deadlineOverride) : 'Edit to add'}
                       </p>
                     </div>
                     <div>
-                      <span className="text-text-secondary">Daily Spend Needed</span>
+                      <span className="text-text-secondary">Days Left</span>
+                      <p className={`font-semibold tabular-nums ${daysLeft !== null && daysLeft <= 0 ? 'text-red-600' : daysLeft !== null && daysLeft < 15 ? 'text-red-600' : daysLeft !== null && daysLeft < 30 ? 'text-amber-600' : ''}`}>
+                        {daysLeft === null ? '—' : daysLeft <= 0 ? 'Date passed' : daysLeft}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-text-secondary">Even Daily Pace</span>
                       <p className={`font-semibold tabular-nums ${
                         completed ? 'text-emerald-600' :
-                        dailySpend > 50 ? 'text-red-600' :
-                        dailySpend > 20 ? 'text-amber-600' : ''
+                        daysLeft !== null && daysLeft <= 0 ? 'text-red-600' : ''
                       }`}>
-                        {completed ? 'Done' : daysLeft <= 0 ? '—' : formatCurrency(Math.ceil(dailySpend)) + '/day'}
+                        {completed ? 'Entered amount reached' : dailySpend === null ? '—' : formatCurrency(Math.ceil(dailySpend)) + '/day'}
                       </p>
                     </div>
                   </div>
@@ -449,17 +512,17 @@ export default function SpendTrackerTool() {
               </select>
             </div>
 
-            {/* Bonus amount */}
+            {/* Offer label */}
             <div>
               <label htmlFor="st-bonus" className="block text-sm font-medium text-brand-navy mb-1">
-                Bonus Amount
+                Offer Label <span className="font-normal text-text-secondary">(optional)</span>
               </label>
               <input
                 id="st-bonus"
                 type="text"
                 value={bonusAmount}
                 onChange={(e) => setBonusAmount(e.target.value)}
-                placeholder='e.g. 60,000 points or $500 cash back'
+                placeholder="Use the wording from your offer"
                 className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold min-h-[44px]"
               />
             </div>
@@ -467,14 +530,14 @@ export default function SpendTrackerTool() {
             {/* Min spend */}
             <div>
               <label htmlFor="st-minspend" className="block text-sm font-medium text-brand-navy mb-1">
-                Minimum Spend Required
+                Spending Target from Offer Terms
               </label>
               <div className="relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-secondary">$</span>
                 <input
                   id="st-minspend"
                   type="number"
-                  min="0"
+                  min="1"
                   step="1"
                   value={minSpend}
                   onChange={(e) => setMinSpend(e.target.value)}
@@ -523,7 +586,7 @@ export default function SpendTrackerTool() {
             {/* Deadline override */}
             <div>
               <label htmlFor="st-deadline" className="block text-sm font-medium text-brand-navy mb-1">
-                Deadline Override <span className="text-text-secondary font-normal">(optional)</span>
+                Exact Offer Deadline
               </label>
               <input
                 id="st-deadline"
@@ -531,36 +594,41 @@ export default function SpendTrackerTool() {
                 value={deadlineOverride}
                 onChange={(e) => setDeadlineOverride(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-gold focus:ring-1 focus:ring-brand-gold min-h-[44px]"
+                required
               />
-              <p className="text-[10px] text-text-secondary mt-0.5">Defaults to 90 days from application date</p>
+              <p className="text-[10px] text-text-secondary mt-0.5">Enter the date shown in your offer terms; the site does not assume a window.</p>
             </div>
 
             {/* Status */}
-            <div>
-              <span className="block text-sm font-medium text-brand-navy mb-1">Status</span>
-              <div className="flex rounded-lg border border-gray-300 overflow-hidden" role="radiogroup" aria-label="Card status">
+            <fieldset>
+              <legend className="block text-sm font-medium text-brand-navy mb-1">Status</legend>
+              <div className="grid gap-2 sm:grid-cols-3">
                 {([
                   { value: 'active' as const, label: 'Active', activeBg: 'bg-brand-navy' },
-                  { value: 'earned' as const, label: 'Bonus Earned', activeBg: 'bg-emerald-600' },
+                  { value: 'earned' as const, label: 'Marked Complete', activeBg: 'bg-emerald-600' },
                   { value: 'abandoned' as const, label: 'Abandoned', activeBg: 'bg-gray-500' },
                 ]).map((opt) => (
-                  <button
+                  <label
                     key={opt.value}
-                    type="button"
-                    role="radio"
-                    aria-checked={status === opt.value}
-                    onClick={() => setStatus(opt.value)}
-                    className={`flex-1 py-2 text-xs font-medium transition-colors min-h-[44px] ${
+                    className={`flex min-h-[44px] cursor-pointer items-center justify-center gap-2 rounded-lg border px-2 py-2 text-xs font-medium transition-colors focus-within:ring-2 focus-within:ring-brand-gold ${
                       status === opt.value
-                        ? `${opt.activeBg} text-white`
-                        : 'bg-white text-text-secondary hover:bg-gray-50'
+                        ? `${opt.activeBg} border-transparent text-white`
+                        : 'border-gray-300 bg-white text-text-secondary hover:bg-gray-50'
                     }`}
                   >
+                    <input
+                      type="radio"
+                      name="spend-status"
+                      value={opt.value}
+                      checked={status === opt.value}
+                      onChange={() => setStatus(opt.value)}
+                      className="h-4 w-4 accent-brand-gold"
+                    />
                     {opt.label}
-                  </button>
+                  </label>
                 ))}
               </div>
-            </div>
+            </fieldset>
           </div>
 
           <div className="flex gap-3">
@@ -607,7 +675,7 @@ export default function SpendTrackerTool() {
           {showCompleted && (
             <div className="mt-3 space-y-2">
               {completedCards.map((card) => (
-                <div key={card.id} className="flex items-center justify-between bg-white rounded-lg border border-gray-200 px-4 py-3">
+                <div key={card.id} className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-sm font-medium">{card.cardName}</p>
                     <div className="flex gap-2 text-xs text-text-secondary">
@@ -615,22 +683,22 @@ export default function SpendTrackerTool() {
                       {card.bonusAmount && <span>&middot; {card.bonusAmount}</span>}
                       <span>&middot;
                         <span className={card.status === 'earned' ? 'text-emerald-600 font-medium' : 'text-gray-500'}>
-                          {card.status === 'earned' ? ' Bonus Earned' : ' Abandoned'}
+                          {card.status === 'earned' ? ' Marked Complete' : ' Abandoned'}
                         </span>
                       </span>
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-1">
                     <button
                       onClick={() => startEdit(card)}
-                      className="text-xs text-brand-gold hover:text-amber-600 font-medium"
+                      className="min-h-[44px] px-2 text-xs font-medium text-brand-gold hover:text-amber-600"
                       aria-label={`Edit ${card.cardName}`}
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => deleteCard(card.id)}
-                      className="text-xs text-red-500 hover:text-red-700 font-medium"
+                      className="min-h-[44px] px-2 text-xs font-medium text-red-500 hover:text-red-700"
                       aria-label={`Delete ${card.cardName}`}
                     >
                       Delete
@@ -645,8 +713,8 @@ export default function SpendTrackerTool() {
 
       {/* ─── Clear / Cross-link ────────────────────────────── */}
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <Link href="/card-tracker" className="text-sm text-brand-gold hover:text-amber-600 font-medium">
-          Tracking issuer rules? Use our Card Tracker &rarr;
+        <Link href="/methodology" className="text-sm text-brand-gold hover:text-amber-600 font-medium">
+          Review calculation and privacy limitations &rarr;
         </Link>
         <div className="flex items-center gap-3">
           {showSaved && (
@@ -654,11 +722,11 @@ export default function SpendTrackerTool() {
               Data saved to your browser
             </span>
           )}
-          {cards.length > 0 && (
+          {visibleCards.length > 0 && (
             !showClearConfirm ? (
               <button
                 onClick={() => setShowClearConfirm(true)}
-                className="text-xs text-red-500 hover:text-red-700 transition-colors"
+                className="min-h-[44px] px-2 text-xs text-red-500 transition-colors hover:text-red-700"
               >
                 Clear all data
               </button>
@@ -667,13 +735,13 @@ export default function SpendTrackerTool() {
                 <span className="text-xs text-red-600 font-medium">Are you sure?</span>
                 <button
                   onClick={handleClearAll}
-                  className="px-3 py-1 text-xs bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+                  className="min-h-[44px] rounded bg-red-500 px-3 py-2 text-xs text-white transition-colors hover:bg-red-600"
                 >
                   Yes, clear
                 </button>
                 <button
                   onClick={() => setShowClearConfirm(false)}
-                  className="px-3 py-1 text-xs border border-gray-300 rounded hover:bg-gray-50 transition-colors"
+                  className="min-h-[44px] rounded border border-gray-300 px-3 py-2 text-xs transition-colors hover:bg-gray-50"
                 >
                   Cancel
                 </button>
@@ -685,7 +753,9 @@ export default function SpendTrackerTool() {
 
       {/* Privacy note */}
       <p className="text-xs text-text-secondary text-center">
-        Your data is stored only in this browser and is never sent to our servers.
+        During ordinary use, entries are saved in this browser&apos;s local storage. Printing,
+        copying, browser sync, extensions, backups, exports, and shared-device access can move or
+        expose them. Do not enter account numbers, credentials, or transaction details.
       </p>
     </div>
   );
