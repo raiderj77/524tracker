@@ -19,6 +19,7 @@ const metadataHelper = read('src/lib/siteMetadata.ts');
 const spend = read('src/components/SpendTrackerTool.tsx');
 const cardValue = read('src/app/card-value-calculator/page.tsx');
 const editorialPolicy = read('src/app/editorial-policy/page.tsx');
+const rulesGuide = read('src/app/rules-guide/page.tsx');
 const privacy = read('src/app/privacy/page.tsx');
 const indexNow = read('src/app/api/indexnow/route.ts');
 const submissionRoute = read('src/app/api/submit-data-point/route.ts');
@@ -126,6 +127,10 @@ assert.match(cardValue, /aria-atomic="true"/);
 assert.match(editorialPolicy, /role="region"/);
 assert.match(editorialPolicy, /aria-label="Evidence levels table"/);
 assert.match(editorialPolicy, /tabIndex=\{0\}/);
+assert.match(rulesGuide, /role="region"/);
+assert.match(rulesGuide, /aria-label="Credit-card application evidence table"/);
+assert.match(rulesGuide, /tabIndex=\{0\}/);
+assert.match(styles, /\*:focus-visible\s*\{[\s\S]*?outline:/);
 
 assert.match(privacy, /does not intentionally transmit/);
 assert.match(privacy, /print, CSV export, copy, or share/);
