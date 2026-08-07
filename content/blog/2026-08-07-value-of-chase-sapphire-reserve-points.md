@@ -13,6 +13,9 @@ Chase Sapphire Reserve points are worth 1 cent each toward cash back, 1.5 cents 
 
 ## What Are My Options For Using Sapphire Reserve Points?
 
+You can cash them out at 1 cent each, book travel through Chase's portal for variable rates, or transfer to partners like airlines and hotels for potentially higher values. Each option offers a different balance of value, effort, and risk.
+
+
 You have three main paths. You can cash them out, book travel through the Chase portal, or transfer them to airline and hotel partners.
 
 Each path has a different value, a different amount of effort, and a different level of risk. Let's break down each one.
