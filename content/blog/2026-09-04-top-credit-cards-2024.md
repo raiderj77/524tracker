@@ -41,6 +41,9 @@ This one has an annual fee (around $95) but earns 3x points on the first $150,00
 
 ## What should I get once I'm over 5/24?
 
+Consider the American Express Gold Card for its generous dining and supermarket rewards. It offers 4x points at restaurants and up to $25,000 in annual grocery spending at 4x before switching to 1x. The annual fee is $250.
+
+
 Once you're past 5/24, Amex and Capital One become your main playground. Both have their own rules, but neither cares about your Chase-reported card count.
 
 **American Express Gold Card**
