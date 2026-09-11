@@ -65,6 +65,9 @@ US Bank also has a reputation for weighing your existing relationship with them,
 
 ## Side-by-side comparison
 
+Chase's 5/24 rule blocks approval if you've opened five or more new cards in the past 24 months. Amex's once-per-lifetime limits bonuses to one per card for life, while velocity rules restrict applications to two every three months.
+
+
 Here's how the major rules stack up against each other.
 
 **Chase 5/24**: 5 or more new cards from any bank in 24 months usually blocks approval. Well documented, very consistent, official-ish.
