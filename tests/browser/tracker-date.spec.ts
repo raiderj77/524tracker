@@ -33,3 +33,14 @@ test('future application dates remain invalid', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Entered Account History' })).toHaveCount(0);
   expect(await page.getByLabel('Application Date', { exact: true }).evaluate((input: HTMLInputElement) => input.validity.rangeOverflow)).toBe(true);
 });
+
+test('submitting across midnight saves the date still displayed', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2030-10-05T06:59:00Z'));
+  await page.goto('/');
+  await page.getByLabel('Card Name', { exact: true }).fill('Synthetic midnight');
+  await expect(page.getByLabel('Application Date', { exact: true })).toHaveValue('2030-10-04');
+  await page.clock.setFixedTime(new Date('2030-10-05T07:01:00Z'));
+  await page.getByRole('button', { name: 'Add Application', exact: true }).click();
+  await page.getByRole('button', { name: 'Edit Synthetic midnight', exact: true }).click();
+  await expect(page.getByLabel('Application Date', { exact: true })).toHaveValue('2030-10-04');
+});

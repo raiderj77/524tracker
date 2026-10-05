@@ -54,3 +54,16 @@ submission denials remain. No advertising, billing, external communications or
 paid calls. Revenue and conversion impact are UNKNOWN. Release acceptance
 requires exact-head checks and the canonical deployment; tests alone are not a
 production result. Rollback is the prior Vercel deployment.
+
+## Midnight follow-up
+
+PR14 exact head 95033672303b412a01b78e0739da5ff3c00373ee passed CI
+37265494383 and merged to 0fa59cbd82464596b6470156815583b5fb8d1076.
+An automated review found that submitting an untouched default after midnight
+could store the new day while displaying the previous day. The merge command
+was mistakenly issued in the same command batch as the review read, before the
+finding was evaluated. This was a review-process error, not approval of the
+finding. A follow-up replaces both submit-time clock reads with the rendered
+effective date and adds an actual browser midnight regression. Future review
+reads and merges must remain separate decisions. Prior CI success does not
+establish coverage of this previously missing case.
