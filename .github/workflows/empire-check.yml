@@ -27,7 +27,12 @@ jobs:
       - name: Install and build
         run: |
           npm ci
+          npm audit --audit-level=moderate
           npm run build
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Verify date entry after static build
+        run: npx playwright test
 
   # ────────────────────────────────────────────────────────────────
   # Job 2 — Empire compliance gates (no Node required)
