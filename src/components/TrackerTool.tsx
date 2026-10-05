@@ -147,7 +147,10 @@ export default function TrackerTool() {
   // Form state
   const [cardName, setCardName] = useState('');
   const [bank, setBank] = useState('Chase');
-  const [appDate, setAppDate] = useState(todayISO());
+  // Keep the server and first client render identical. A static build date
+  // must not become the browser's persistent native date-input maximum.
+  const browserToday = hydrated ? todayISO() : '';
+  const [appDate, setAppDate] = useState<string | null>(null);
   const [status, setStatus] = useState<'approved' | 'denied' | 'pending'>('approved');
   const [isBusiness, setIsBusiness] = useState(false);
   const [isAuthorizedUser, setIsAuthorizedUser] = useState(false);
@@ -256,7 +259,7 @@ export default function TrackerTool() {
                 ...app,
                 cardName: cardName.trim(),
                 bank,
-                applicationDate: appDate,
+                applicationDate: appDate ?? todayISO(),
                 status,
                 isBusinessCard: isBusiness,
                 isAuthorizedUser,
@@ -273,7 +276,7 @@ export default function TrackerTool() {
         id: generateId(),
         cardName: cardName.trim(),
         bank,
-        applicationDate: appDate,
+        applicationDate: appDate ?? todayISO(),
         status,
         isBusinessCard: isBusiness,
         isAuthorizedUser,
@@ -291,7 +294,7 @@ export default function TrackerTool() {
   function resetForm() {
     setCardName('');
     setBank('Chase');
-    setAppDate(todayISO());
+    setAppDate(null);
     setStatus('approved');
     setIsBusiness(false);
     setIsAuthorizedUser(false);
@@ -471,9 +474,9 @@ export default function TrackerTool() {
               <input
                 id="application-date"
                 type="date"
-                value={appDate}
+                value={appDate ?? browserToday}
                 onChange={(e) => setAppDate(e.target.value)}
-                max={todayISO()}
+                max={browserToday || undefined}
                 required
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
               />
@@ -563,7 +566,7 @@ export default function TrackerTool() {
                 type="date"
                 value={cardOpenDate}
                 onChange={(e) => setCardOpenDate(e.target.value)}
-                max={todayISO()}
+                max={browserToday || undefined}
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:border-brand-gold focus:ring-0 min-h-[44px]"
               />
               <p className="text-[10px] text-text-secondary mt-0.5">
