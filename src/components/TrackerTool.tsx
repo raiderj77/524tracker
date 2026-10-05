@@ -20,6 +20,7 @@ import {
   exportToCSV,
   parseStoredApplications,
 } from '@/lib/tracker';
+import { calendarDaysBetween } from '@/lib/dateMath';
 import { searchCards, type CardInfo } from '@/lib/cardList';
 
 const STORAGE_KEY = '524tracker-applications';
@@ -64,11 +65,7 @@ function formatDate(dateStr: string): string {
 }
 
 function daysUntil(date: Date): number {
-  const now = new Date();
-  now.setHours(0, 0, 0, 0);
-  const target = new Date(date);
-  target.setHours(0, 0, 0, 0);
-  return Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+  return calendarDaysBetween(new Date(), date);
 }
 
 function todayISO(): string {

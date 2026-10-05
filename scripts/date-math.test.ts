@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseLocalDate, shiftCalendarMonths, startOfLocalDay } from '../src/lib/dateMath.ts';
+import { calendarDaysBetween, parseLocalDate, shiftCalendarMonths, startOfLocalDay } from '../src/lib/dateMath.ts';
 
 function ymd(date: Date): string {
   const year = date.getFullYear();
@@ -30,4 +30,30 @@ test('startOfLocalDay removes time without changing the local date', () => {
   assert.equal(ymd(result), '2026-08-02');
   assert.equal(result.getHours(), 0);
   assert.equal(result.getMinutes(), 0);
+});
+
+test('calendar-day distances ignore DST, time of day and direction', () => {
+  const originalTZ = process.env.TZ;
+  try {
+    for (const zone of ['UTC', 'America/Los_Angeles', 'Australia/Lord_Howe']) {
+      process.env.TZ = zone;
+      for (const [start, end, expected] of [
+        [new Date(2026, 9, 4, 23), new Date(2026, 10, 4, 1), 31],
+        [new Date(2026, 2, 7, 23), new Date(2026, 2, 9, 1), 2],
+        [new Date(2026, 3, 4), new Date(2026, 3, 6), 2],
+        [new Date(2026, 9, 4, 1), new Date(2026, 9, 4, 23), 0],
+      ] as const) {
+        assert.equal(calendarDaysBetween(start, end), expected, zone);
+        assert.equal(calendarDaysBetween(end, start), expected === 0 ? 0 : -expected, zone);
+      }
+    }
+    const ancient = new Date(0);
+    ancient.setFullYear(99, 11, 31);
+    const next = new Date(ancient);
+    next.setDate(next.getDate() + 1);
+    assert.equal(calendarDaysBetween(ancient, next), 1);
+  } finally {
+    if (originalTZ === undefined) delete process.env.TZ;
+    else process.env.TZ = originalTZ;
+  }
 });
