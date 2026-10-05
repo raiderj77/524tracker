@@ -10,7 +10,7 @@ import {
 } from 'react';
 import Link from 'next/link';
 import { PrintResultsButton } from './PrintResultsButton';
-import { parseLocalDate } from '@/lib/dateMath';
+import { calendarDaysBetween, parseLocalDate } from '@/lib/dateMath';
 
 // ─── Types ────────────────────────────────────────────────────
 interface SpendCard {
@@ -54,11 +54,7 @@ function formatDate(iso: string): string {
 }
 
 function daysFromNow(target: Date): number {
-  const now = new Date();
-  now.setHours(0, 0, 0, 0);
-  const t = new Date(target);
-  t.setHours(0, 0, 0, 0);
-  return Math.ceil((t.getTime() - now.getTime()) / 86400000);
+  return calendarDaysBetween(new Date(), target);
 }
 
 function getDeadline(card: SpendCard): Date | null {
@@ -153,7 +149,7 @@ function UrgencyBadge({ urgency, daysLeft }: { urgency: Urgency; daysLeft: numbe
   const config = {
     green: { bg: 'bg-emerald-100', text: 'text-emerald-800', border: 'border-emerald-300', label: '30+ days' },
     yellow: { bg: 'bg-amber-100', text: 'text-amber-800', border: 'border-amber-300', label: '15–29 days' },
-    red: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300', label: daysLeft <= 0 ? 'Date passed' : '0–14 days' },
+    red: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-300', label: daysLeft < 0 ? 'Date passed' : daysLeft === 0 ? 'Today' : '0–14 days' },
   }[urgency];
 
   return (
@@ -449,7 +445,7 @@ export default function SpendTrackerTool() {
                     <div>
                       <span className="text-text-secondary">Days Left</span>
                       <p className={`font-semibold tabular-nums ${daysLeft !== null && daysLeft <= 0 ? 'text-red-600' : daysLeft !== null && daysLeft < 15 ? 'text-red-600' : daysLeft !== null && daysLeft < 30 ? 'text-amber-600' : ''}`}>
-                        {daysLeft === null ? '—' : daysLeft <= 0 ? 'Date passed' : daysLeft}
+                        {daysLeft === null ? '—' : daysLeft < 0 ? 'Date passed' : daysLeft === 0 ? 'Today' : daysLeft}
                       </p>
                     </div>
                     <div>

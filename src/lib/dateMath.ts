@@ -35,3 +35,14 @@ export function shiftCalendarMonths(value: Date, months: number): Date {
   date.setDate(Math.min(day, lastDay));
   return date;
 }
+
+/** Count local calendar dates, independent of daylight-saving day length. */
+export function calendarDaysBetween(start: Date, end: Date): number {
+  const ordinal = (value: Date): number => {
+    const date = new Date(0);
+    date.setUTCFullYear(value.getFullYear(), value.getMonth(), value.getDate());
+    date.setUTCHours(0, 0, 0, 0);
+    return date.getTime() / 86400000;
+  };
+  return ordinal(end) - ordinal(start);
+}
