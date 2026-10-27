@@ -110,6 +110,37 @@ export default function RulesGuidePage() {
         </div>
       </section>
 
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Chase: account openings and the 5/24 shorthand</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Community reports describe 5/24 as counting recent personal credit-card openings across issuers, rather than only Chase applications or inquiries. A recently closed account can still represent an opening within the reference window. Replacement cards and product changes deserve a closer look before being logged as separate accounts; a new card number alone does not establish a new opening.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Authorized-user entries and business accounts are common sources of disagreement in community discussions. Check the role, opening date, and personal-report visibility on each report, then compare those entries with issuer statements. Keep ambiguous accounts identified separately. This is a way to document a reference count, not to verify an unpublished Chase formula. Confirm current product and offer terms directly with Chase.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">American Express: prior offers and application messages</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">The community phrase “once per lifetime” concerns reported welcome-offer restrictions tied to prior card history; it should not be confused with a universal account-opening limit. Exact offer language may address a particular product, related products, or other conditions. Community reports also describe an application message, often called a popup, indicating that a welcome offer may not be available on the displayed terms.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">A previous product change, a prior bonus, or a differently worded offer can complicate comparisons between applicants. Do not infer a reliable reset period or popup prediction from those anecdotes. Review the actual offer and any message presented by American Express, and compare them with saved offer disclosures and account statements. Statements can help establish your history, but they cannot substitute for current issuer terms or explain every application message.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Citi: distinguish application spacing from bonus conditions</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Community discussions commonly use “8/65” for a reported spacing pattern of one application in eight days and two in 65 days. It is an application-frequency shorthand, not a count of all personal accounts opened across banks. Reports may differ about product coverage, business applications, and which date starts a window. Those uncertainties make it unsuitable as a guaranteed processing schedule.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Keep application confirmations and decision correspondence alongside opening dates; a credit report alone may not reconstruct every submitted application. Check current Citi terms for the specific product and welcome offer, including any prior-account or bonus restrictions. A separate bonus waiting period should not be treated as another name for application spacing. Where your records are incomplete, mark the gap instead of inventing a date to make the calculation work.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Bank of America: the reported 2/3/4 pattern</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">The community label “2/3/4” generally describes reports of two Bank of America card openings in two months, three in 12 months, and four in 24 months. These are reported issuer-specific windows, unlike a cross-issuer personal-account reference. Discussions can differ about business products, existing banking relationships, and how simultaneous requests are treated. None of those anecdotes establishes an exception for a particular reader.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Reconcile opening dates with Bank of America correspondence and statements, and compare the reported tradelines with your personal reports. Keep applications that did not create accounts in a separate list. Read current issuer terms rather than assuming that a count below every reported window settles the application or welcome-offer question.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Capital One: product scope matters</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Community discussions of Capital One include reported cardholding limits and application-spacing patterns, but a broad “two-card limit” label can hide differences between product categories. Reports about co-branded cards, business products, or older accounts should not be combined into a single universal cap. An existing-account count is also a different measure from recent application frequency.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Inventory the actual products and their current account status using issuer statements, then compare personal-report entries without assuming every product reports identically. Review current Capital One application and offer disclosures for the product in question. A community account of approval with several existing cards does not establish that all products share its treatment, just as one refusal does not prove a universal numerical limit.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">How to use this guide with the tracker</h2>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">Begin with the <Link href="/card-tracker" className="font-semibold underline">card tracker</Link> to organize dates and account types, then use the <Link href="/chase-524" className="font-semibold underline">5/24 walkthrough</Link> for a personal-report reference count. Keep applications, inquiries, openings, and prior bonuses distinct. That separation makes it easier to see which evidence a question actually requires.</p>
+          <p className="mb-4 text-sm leading-relaxed text-text-primary">The <Link href="/velocity-checker" className="font-semibold underline">velocity reference route</Link> and <Link href="/application-flowchart" className="font-semibold underline">application flowchart route</Link> lead to this evidence guide and the value calculator, respectively. Those destinations do not validate an older timing prediction. Use your records to identify uncertainties, then verify current terms with the issuer; the guide cannot resolve an unpublished underwriting decision.</p>
+        </section>
+
       <section className="mb-12">
         <h2 className="mb-4 font-display text-2xl font-bold text-brand-navy">Primary sources</h2>
         <ul className="space-y-4 text-sm leading-relaxed">
