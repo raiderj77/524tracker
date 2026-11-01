@@ -71,6 +71,8 @@ assert.match(layout, /NEXT_PUBLIC_CONSENT_PLATFORM_ENABLED === 'true'/);
 assert.match(layout, /NEXT_PUBLIC_ADSENSE_ACCOUNT_READY === 'true'/);
 assert.match(layout, /NEXT_PUBLIC_ADSENSE_ENABLED === 'true'/);
 assert.match(layout, /NEXT_PUBLIC_ANALYTICS_ENABLED === 'true'/);
+assert.match(layout, /NEXT_PUBLIC_GA_ID/);
+assert.doesNotMatch(layout, /G-[A-Z0-9]{8,}/);
 assert.match(layout, /data-cookieconsent="marketing"/);
 assert.match(layout, /data-cookieconsent="statistics"/);
 assert.doesNotMatch(layout, /microsoft-clarity|clarity\.ms/);

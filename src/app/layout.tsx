@@ -121,8 +121,10 @@ export default function RootLayout({
 }>) {
   const consentPlatformEnabled =
     process.env.NEXT_PUBLIC_CONSENT_PLATFORM_ENABLED === 'true';
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID?.trim();
   const analyticsEnabled =
-    consentPlatformEnabled && process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+    consentPlatformEnabled && process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true' &&
+    Boolean(gaMeasurementId);
   const adsenseEnabled =
     consentPlatformEnabled &&
     process.env.NEXT_PUBLIC_ADSENSE_ACCOUNT_READY === 'true' &&
@@ -188,7 +190,6 @@ export default function RootLayout({
             <link rel="preconnect" href="https://consent.cookiebot.com" crossOrigin="anonymous" />
           </>
         )}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraphJsonLd) }}
@@ -204,9 +205,10 @@ export default function RootLayout({
         )}
         {analyticsEnabled && (
           <>
+            <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
             <Script
               id="ga4-loader"
-              src="https://www.googletagmanager.com/gtag/js?id=G-308FHNWPPQ"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
               strategy="afterInteractive"
               data-cookieconsent="statistics"
             />
@@ -215,7 +217,7 @@ export default function RootLayout({
               strategy="afterInteractive"
               data-cookieconsent="statistics"
               dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-308FHNWPPQ', { anonymize_ip: true });`,
+                __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaMeasurementId}', { anonymize_ip: true });`,
               }}
             />
           </>
