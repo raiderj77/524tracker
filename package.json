@@ -20,7 +20,7 @@
     "lint:content": "node scripts/content-lint.js",
     "lint:predeploy": "node scripts/predeploy-check.js",
     "test:date-math": "tsx --test scripts/date-math.test.ts",
-    "test:core": "tsx --test scripts/date-math.test.ts scripts/tracker-core.test.ts scripts/dependency-depth-guard.test.ts",
+    "test:core": "tsx --test scripts/date-math.test.ts scripts/tracker-core.test.ts scripts/dependency-depth-guard.test.ts scripts/affiliate-links.test.ts",
     "test:quality": "node scripts/quality-gate.mjs",
     "prebuild": "npm run test:core && npm run test:quality && npm run lint:predeploy && npm run lint:content && npm run lint"
   },

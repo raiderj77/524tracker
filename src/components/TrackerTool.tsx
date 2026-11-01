@@ -22,6 +22,8 @@ import {
 } from '@/lib/tracker';
 import { calendarDaysBetween } from '@/lib/dateMath';
 import { searchCards, type CardInfo } from '@/lib/cardList';
+import CardOfferModule from '@/components/CardOfferModule';
+import SlotReminderCapture from '@/components/SlotReminderCapture';
 
 const STORAGE_KEY = '524tracker-applications';
 const subscribeToHydration = () => () => {};
@@ -817,6 +819,14 @@ export default function TrackerTool() {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Card offers + reminder capture, shown with the results state */}
+      {visibleApplications.length > 0 && (
+        <div className="mt-6 space-y-6">
+          <CardOfferModule variant={count524 < 5 ? 'slots-open' : 'over-threshold'} />
+          <SlotReminderCapture />
         </div>
       )}
 

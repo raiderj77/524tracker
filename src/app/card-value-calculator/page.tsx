@@ -4,6 +4,7 @@ import { useState } from 'react';
 import AnswerBlock from '@/components/AnswerBlock';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import AuthorAttribution from '@/components/AuthorAttribution';
+import CardOfferModule from '@/components/CardOfferModule';
 
 interface Perk {
   id: string;
@@ -347,6 +348,10 @@ export default function CardValueCalculatorPage() {
             </div>
           </div>
         )}
+
+        <div className="mt-8">
+          <CardOfferModule variant="compare" />
+        </div>
 
         <section className="mt-12 space-y-8">
           <div>
