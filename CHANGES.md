@@ -1,3 +1,49 @@
+# Affiliate activation build (2026-11-01)
+
+Implements the 2026-10-24 monetization plan on branch
+`feature/affiliate-activation-2026-11-01`. Not merged or deployed — the repo
+rule is plan approval before production changes, and affiliate accounts do
+not exist yet, so every link currently resolves to the issuer's public page.
+
+**Config (`src/lib/affiliateUrls.ts`):** per-card affiliate URLs now come
+from `NEXT_PUBLIC_AFFILIATE_<SLUG>` environment variables; unset cards fall
+back to issuer pages with no commission. Activation after program approval
+is pasting network URLs into Vercel env and redeploying — no code change.
+Added Discover it Cash Back to the map. New unit tests
+(`scripts/affiliate-links.test.ts`, wired into `test:core`) cover fallback,
+override, malformed-value rejection, and offer-list integrity.
+
+**Placements:** new `CardOfferModule` (variants: slots-open, over-threshold,
+compare) + short-form `AffiliateDisclosure`, placed in the tracker results
+state (under and over the 5/24 reference count), in `/rules-guide` after the
+Chase section, and on `/card-value-calculator`. Copy states no bonuses,
+rates, or terms; links land on issuer/network pages for current offers.
+`/top-cards` and `/best-cards-by-category` remain permanent redirects to the
+calculator, so the calculator placement covers those surfaces.
+
+**Disclosure:** new `/affiliate-disclosure` page (plain-language FTC
+disclosure), footer trust link, and sitemap entry.
+
+**Email capture:** `SlotReminderCapture` mirrors the Creator Revenue
+Calculator Beehiiv pattern — renders the subscribe-form iframe only when
+`NEXT_PUBLIC_BEEHIIV_FORM_URL` matches the subscribe-forms URL shape;
+otherwise renders nothing. CSP `frame-src` now allows
+`subscribe-forms.beehiiv.com` so activation works the day the owner creates
+the publication and sets the variable.
+
+**Docs:** `AFFILIATE_LINKS.md` rewritten for the config system;
+`docs/AFFILIATE_PROGRAMS_2026-11-01.md` carries the refreshed program ladder
+(rates labeled roundup-reported, verify at application) and the owner's
+activation checklist.
+
+Validation: `npm run test:core` 20/20, `test:quality`, `lint:predeploy`, and
+`lint:content` all pass; scoped `eslint src scripts` clean; `next build`
+succeeds with all placements confirmed in prerendered HTML. The repo-wide
+`npm run lint` step still fails on the pre-existing untracked
+`.opencode/plugins/entire.ts` (tooling file, unrelated to this change).
+
+---
+
 # Content-depth expansion
 
 Counts use `wc -w` on the source files, with the supplied baselines. They include markup and schema as well as visible prose. CHANGES.md did not exist before this task.

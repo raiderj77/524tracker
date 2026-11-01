@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/spend-tracker',
     '/methodology',
     '/editorial-policy',
+    '/affiliate-disclosure',
   ];
 
   return paths.map((path) => ({

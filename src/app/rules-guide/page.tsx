@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AuthorAttribution from '@/components/AuthorAttribution';
+import CardOfferModule from '@/components/CardOfferModule';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import { buildPageMetadata } from '@/lib/siteMetadata';
 
@@ -114,6 +115,9 @@ export default function RulesGuidePage() {
           <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">Chase: account openings and the 5/24 shorthand</h2>
           <p className="mb-4 text-sm leading-relaxed text-text-primary">Community reports describe 5/24 as counting recent personal credit-card openings across issuers, rather than only Chase applications or inquiries. A recently closed account can still represent an opening within the reference window. Replacement cards and product changes deserve a closer look before being logged as separate accounts; a new card number alone does not establish a new opening.</p>
           <p className="mb-4 text-sm leading-relaxed text-text-primary">Authorized-user entries and business accounts are common sources of disagreement in community discussions. Check the role, opening date, and personal-report visibility on each report, then compare those entries with issuer statements. Keep ambiguous accounts identified separately. This is a way to document a reference count, not to verify an unpublished Chase formula. Confirm current product and offer terms directly with Chase.</p>
+        </section>
+        <section className="mb-10">
+          <CardOfferModule variant="over-threshold" />
         </section>
         <section className="mb-10">
           <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">American Express: prior offers and application messages</h2>

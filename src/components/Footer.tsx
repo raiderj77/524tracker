@@ -10,6 +10,7 @@ const trustLinks = [
   { href: '/chase-524', label: 'Unofficial 5/24 Guide' },
   { href: '/rules-guide', label: 'Evidence Guide' },
   { href: '/editorial-policy', label: 'Editorial & Sourcing Policy' },
+  { href: '/affiliate-disclosure', label: 'Affiliate Disclosure' },
   { href: '/methodology', label: 'Data Methodology' },
   { href: '/about', label: 'About the Publisher' },
   { href: '/contact', label: 'Corrections & Contact' },
