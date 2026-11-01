@@ -86,6 +86,7 @@ for (const route of [
 const layout = read('src/app/layout.tsx');
 check('consent platform is opt-in', /NEXT_PUBLIC_CONSENT_PLATFORM_ENABLED === 'true'/.test(layout));
 check('analytics requires consent platform', /consentPlatformEnabled && process\.env\.NEXT_PUBLIC_ANALYTICS_ENABLED/.test(layout));
+check('analytics uses an environment measurement ID without a hardcoded ID', /NEXT_PUBLIC_GA_ID/.test(layout) && !/G-[A-Z0-9]{8,}/.test(layout));
 check('AdSense requires account readiness', /NEXT_PUBLIC_ADSENSE_ACCOUNT_READY === 'true'/.test(layout));
 check('AdSense requires a separate serving flag', /NEXT_PUBLIC_ADSENSE_ENABLED === 'true'/.test(layout));
 

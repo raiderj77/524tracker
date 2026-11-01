@@ -43,8 +43,9 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display font-bold text-xl text-brand-navy mb-3">Cookies and analytics</h2>
           <p className="mb-3">
-            Google Analytics (measurement ID G-308FHNWPPQ) is configured as an optional analytics
-            provider. The repository defaults the consent platform and analytics to disabled.
+            Google Analytics (GA4) is configured as an optional analytics provider. No measurement ID
+            is stored in this site&apos;s code; the deployment must supply one through its environment
+            settings. The repository defaults the consent platform and analytics to disabled.
             Deployment settings can enable them only together; when enabled, the consent platform
             controls whether the analytics script loads for a visitor.
           </p>
