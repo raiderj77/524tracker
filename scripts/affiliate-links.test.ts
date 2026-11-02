@@ -8,12 +8,13 @@ import {
   offerCardsOver524,
   offerCardsUnder524,
 } from '../src/lib/affiliateUrls.ts';
-import { beehiivFormUrl } from '../src/components/SlotReminderCapture.tsx';
+import { captureConfig } from '../src/components/SlotReminderCapture.tsx';
 
 const ENV_KEYS = [
   'NEXT_PUBLIC_AFFILIATE_CHASE_SAPPHIRE_PREFERRED',
   'NEXT_PUBLIC_AFFILIATE_DISCOVER_IT_CASH_BACK',
-  'NEXT_PUBLIC_BEEHIIV_FORM_URL',
+  'NEXT_PUBLIC_CAPTURE_ENDPOINT',
+  'NEXT_PUBLIC_CAPTURE_KEY',
 ];
 
 afterEach(() => {
@@ -73,14 +74,17 @@ test('over-threshold list contains no Chase cards', () => {
   }
 });
 
-test('beehiiv form URL is accepted only in the subscribe-forms shape', () => {
-  assert.equal(beehiivFormUrl(), null);
-  process.env.NEXT_PUBLIC_BEEHIIV_FORM_URL =
-    'https://subscribe-forms.beehiiv.com/v3/forms/93dec953-d143-4aec-bd65-eb8e9570c42e';
-  assert.equal(
-    beehiivFormUrl(),
-    'https://subscribe-forms.beehiiv.com/v3/forms/93dec953-d143-4aec-bd65-eb8e9570c42e'
-  );
-  process.env.NEXT_PUBLIC_BEEHIIV_FORM_URL = 'https://example.com/form';
-  assert.equal(beehiivFormUrl(), null);
+test('capture config is accepted only in the fleet-table shape', () => {
+  assert.equal(captureConfig(), null);
+  process.env.NEXT_PUBLIC_CAPTURE_ENDPOINT =
+    'https://fkcwnxamhxtpgbdpvvjl.supabase.co/rest/v1/fleet_subscribers';
+  assert.equal(captureConfig(), null);
+  process.env.NEXT_PUBLIC_CAPTURE_KEY = 'sb_publishable_test';
+  assert.deepEqual(captureConfig(), {
+    endpoint:
+      'https://fkcwnxamhxtpgbdpvvjl.supabase.co/rest/v1/fleet_subscribers',
+    key: 'sb_publishable_test',
+  });
+  process.env.NEXT_PUBLIC_CAPTURE_ENDPOINT = 'https://example.com/form';
+  assert.equal(captureConfig(), null);
 });

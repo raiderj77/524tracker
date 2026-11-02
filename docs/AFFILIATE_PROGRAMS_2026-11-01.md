@@ -41,10 +41,13 @@ first, issuer-direct partnerships later) still holds.
 4. For each approved offer, copy the network-issued link into the matching
    `NEXT_PUBLIC_AFFILIATE_<SLUG>` variable in the Vercel project and
    redeploy (see `AFFILIATE_LINKS.md` for the key list). No code change.
-5. Create a **Beehiiv** publication for 524Tracker plus a subscribe form,
-   then set `NEXT_PUBLIC_BEEHIIV_FORM_URL` to the form URL
-   (`https://subscribe-forms.beehiiv.com/v3/forms/<id>`) and redeploy to
-   switch on the slot-opening reminder capture in the tracker results.
+5. Email capture (DONE 2026-11-01, supersedes the Beehiiv plan): the
+   slot-opening reminder form POSTs to `public.fleet_subscribers`
+   (Supabase, PermitPulse project, insert-only). Set
+   `NEXT_PUBLIC_CAPTURE_ENDPOINT` and `NEXT_PUBLIC_CAPTURE_KEY` in the
+   Vercel project and redeploy to switch it on. Note: Credit Karma
+   (Awin) terms allow website placement only - never put its links in
+   capture emails.
 
 ## Compliance notes baked into the build
 
