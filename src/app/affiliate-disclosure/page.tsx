@@ -40,7 +40,7 @@ export default function AffiliateDisclosurePage() {
             <p>
               Some links on 524Tracker that point to a card issuer&apos;s website are
               affiliate links. They pass through an affiliate network (for example CJ
-              Affiliate or FlexOffers) before reaching the issuer. Pages that carry these
+              Affiliate) before reaching the issuer. Pages that carry these
               links show a short affiliate disclosure next to them, and affiliate links
               are tagged so search engines can identify them as sponsored.
             </p>
