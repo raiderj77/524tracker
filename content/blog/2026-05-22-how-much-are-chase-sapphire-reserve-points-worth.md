@@ -5,7 +5,7 @@ slug: "how-much-are-chase-sapphire-reserve-points-worth"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # How Much Are Chase Sapphire Reserve Points Worth?

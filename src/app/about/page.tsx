@@ -50,12 +50,6 @@ export default function AboutPage() {
                 not a professional finance credential.
               </p>
               <p>
-                Jason also holds a CADC-II counseling credential. That credential is public for
-                identity transparency, but it is unrelated to credit-card underwriting or
-                financial advice and is not presented as authority for this site&apos;s financial
-                information.
-              </p>
-              <p>
                 Jason is not a financial adviser, credit counselor, lender, attorney, tax
                 professional, or representative of Chase or another card issuer.
               </p>

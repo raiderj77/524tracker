@@ -52,6 +52,6 @@ Terms: https://524tracker.com/terms
 About the publisher: https://524tracker.com/about
 Corrections and contact: https://524tracker.com/contact
 
-Jason Ramirez is the independent publisher and developer. His CADC-II credential is publicly disclosed for identity transparency and is unrelated to credit-card underwriting, lending, financial planning, or financial advice.
+Jason Ramirez is the independent publisher and developer. He is not a financial adviser, credit counselor, lender, or issuer representative.
 
 Do not infer mailbox delivery, advertising approval, analytics activation, or production deployment from repository content alone. Those are external operational states.

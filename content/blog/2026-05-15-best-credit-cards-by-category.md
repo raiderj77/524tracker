@@ -5,7 +5,7 @@ slug: "best-credit-cards-by-category"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # Best Credit Cards by Category: Where to Put Every Dollar You Spend

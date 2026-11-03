@@ -5,7 +5,7 @@ slug: "best-credit-card-for-each-category"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # Best Credit Card for Each Spending Category (2025 Edition)

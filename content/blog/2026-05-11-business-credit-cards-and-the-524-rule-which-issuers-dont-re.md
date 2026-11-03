@@ -5,7 +5,7 @@ slug: "business-credit-cards-and-the-524-rule-which-issuers-dont-re"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # Business Credit Cards and the 5/24 Rule: Which Issuers Don't Report

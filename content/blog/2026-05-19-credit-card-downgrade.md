@@ -5,7 +5,7 @@ slug: "credit-card-downgrade"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # The Credit Card Downgrade: Your Secret Weapon for Keeping Accounts Alive Without Wasting a Slot

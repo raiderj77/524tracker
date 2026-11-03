@@ -5,7 +5,7 @@ slug: "best-category-credit-cards"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # Best Category Credit Cards: Match Your Spending, Max Your Points
