@@ -5,7 +5,7 @@ slug: "is-chase-sapphire-reserve-worth-550"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # Is the Chase Sapphire Reserve Worth the $550 Annual Fee?

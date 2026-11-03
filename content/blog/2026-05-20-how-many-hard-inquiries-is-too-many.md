@@ -5,7 +5,7 @@ slug: "how-many-hard-inquiries-is-too-many"
 description: ""
 status: published
 author: "Jason Ramirez"
-reviewer: "Jason Ramirez, CADC-II"
+reviewer: "Jason Ramirez"
 ---
 
 # How Many Hard Inquiries Is Too Many? A Points Chaser's Real Answer

@@ -72,8 +72,14 @@ for (const rel of maintainedFiles) {
 
 const about = readFileSync(resolve(root, 'src/app/about/page.tsx'), 'utf8');
 if (!/Jason Ramirez/.test(about)) fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Public publisher identity is missing');
-if (!/CADC-II[\s\S]*unrelated to credit-card underwriting or[\s\S]*financial advice/.test(about)) {
-  fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Public CADC-II credential is not clearly scoped as unrelated to finance');
+// Policy 2026-11-02: the publisher's counseling credential lives only on
+// MindCheckTools and must NOT appear on 524Tracker pages.
+if (/CADC/.test(about)) {
+  fail(resolve(root, 'src/app/about/page.tsx'), 1, 'CADC credential must not appear on 524Tracker (policy 2026-11-02)');
+}
+const llmsFull = readFileSync(resolve(root, 'public/llms-full.txt'), 'utf8');
+if (/CADC/.test(llmsFull)) {
+  fail(resolve(root, 'public/llms-full.txt'), 1, 'CADC credential must not appear on 524Tracker (policy 2026-11-02)');
 }
 if (/Salinas|homeless|storage shed|recovering addict|Social Security number:\s*\d/i.test(about)) {
   fail(resolve(root, 'src/app/about/page.tsx'), 1, 'Unnecessary sensitive personal detail remains on the trust page');
@@ -84,4 +90,4 @@ if (failures > 0) {
   process.exit(1);
 }
 
-console.log('Content lint passed: maintained financial claims are scoped and publisher credentials are transparent.');
+console.log('Content lint passed: maintained financial claims are scoped, the publisher is named, and no counseling credential appears on this site.');
