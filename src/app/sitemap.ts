@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/rules-guide',
     '/chase-524',
+    '/discharge-injunction',
     '/card-value-calculator',
     '/faq',
     '/about',

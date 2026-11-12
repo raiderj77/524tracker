@@ -17,6 +17,7 @@ const maintainedFiles = [
   'src/app/card-value-calculator/layout.tsx',
   'src/app/card-value-calculator/page.tsx',
   'src/app/chase-524/page.tsx',
+  'src/app/discharge-injunction/page.tsx',
   'src/app/contact/page.tsx',
   'src/app/editorial-policy/page.tsx',
   'src/app/faq/page.tsx',
