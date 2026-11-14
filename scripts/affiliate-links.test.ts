@@ -4,6 +4,7 @@ import {
   anyAffiliateConfigured,
   getAffiliateUrl,
   getCardLink,
+  getServiceLink,
   offerCardsCompare,
   offerCardsOver524,
   offerCardsUnder524,
@@ -15,6 +16,7 @@ const ENV_KEYS = [
   'NEXT_PUBLIC_AFFILIATE_DISCOVER_IT_CASH_BACK',
   'NEXT_PUBLIC_CAPTURE_ENDPOINT',
   'NEXT_PUBLIC_CAPTURE_KEY',
+  'NEXT_PUBLIC_AFFILIATE_WALLETHUB',
 ];
 
 afterEach(() => {
@@ -87,4 +89,44 @@ test('capture config is accepted only in the fleet-table shape', () => {
   });
   process.env.NEXT_PUBLIC_CAPTURE_ENDPOINT = 'https://example.com/form';
   assert.equal(captureConfig(), null);
+});
+
+test('wallethub service link is inert when unset or blank', () => {
+  assert.equal(getServiceLink('wallethub'), null);
+  process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB = '   ';
+  assert.equal(getServiceLink('wallethub'), null);
+});
+
+test('wallethub service link accepts a valid https tracking URL', () => {
+  process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB =
+    '  https://www.tkqlhce.com/click-101918556-16959162  ';
+  assert.deepEqual(getServiceLink('wallethub'), {
+    slug: 'wallethub',
+    url: 'https://www.tkqlhce.com/click-101918556-16959162',
+    isAffiliate: true,
+  });
+});
+
+test('wallethub service link rejects http and garbage values', () => {
+  process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB =
+    'http://www.tkqlhce.com/click-101918556-16959162';
+  assert.equal(getServiceLink('wallethub'), null);
+  for (const bad of [
+    'not a url',
+    'javascript:alert(1)',
+    'https://',
+    'https://has space.example/x',
+    '/relative/path',
+  ]) {
+    process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB = bad;
+    assert.equal(getServiceLink('wallethub'), null, `should reject ${bad}`);
+  }
+});
+
+test('configuring wallethub leaves card links and card affiliate status unchanged', () => {
+  const before = getCardLink('chase-sapphire-preferred');
+  process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB =
+    'https://www.tkqlhce.com/click-101918556-16959162';
+  assert.deepEqual(getCardLink('chase-sapphire-preferred'), before);
+  assert.equal(anyAffiliateConfigured(), false);
 });

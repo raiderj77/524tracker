@@ -38,9 +38,7 @@ export default function AffiliateDisclosurePage() {
               How affiliate links work here
             </h2>
             <p>
-              Some links on 524Tracker that point to a card issuer&apos;s website are
-              affiliate links. They pass through an affiliate network (for example CJ
-              Affiliate) before reaching the issuer. Pages that carry these
+              Some links on 524Tracker that point to a card issuer&apos;s website, or to a third-party service such as WalletHub, are affiliate links. They pass through an affiliate network (for example CJ Affiliate) before reaching the issuer or service. Pages that carry these
               links show a short affiliate disclosure next to them, and affiliate links
               are tagged so search engines can identify them as sponsored.
             </p>
@@ -51,12 +49,7 @@ export default function AffiliateDisclosurePage() {
               How the site earns commissions
             </h2>
             <p>
-              If a visitor follows an affiliate link, applies for a card, and is approved,
-              the issuer or its affiliate network may pay the site operator a commission.
-              The commission comes out of the issuer&apos;s marketing budget. It does not
-              add any cost to the applicant, and it does not change the offer the issuer
-              shows. Not every outbound link is an affiliate link: links without a network
-              relationship go straight to the issuer&apos;s public pages and earn nothing.
+              If a visitor follows an affiliate link, applies for a card and is approved, or signs up for a service, the issuer, the service, or its affiliate network may pay the site operator a commission. The commission comes out of the issuer&apos;s or service&apos;s marketing budget. It does not add any cost to the visitor, and it does not change the offer shown. Not every outbound link is an affiliate link: links without a network relationship go straight to the destination&apos;s public pages and earn nothing.
             </p>
           </section>
 
