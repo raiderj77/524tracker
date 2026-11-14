@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import AuthorAttribution from '@/components/AuthorAttribution';
 import CardOfferModule from '@/components/CardOfferModule';
+import CreditMonitoringModule from '@/components/CreditMonitoringModule';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import { buildPageMetadata } from '@/lib/siteMetadata';
 
@@ -119,6 +120,7 @@ export default function RulesGuidePage() {
         <section className="mb-10">
           <CardOfferModule variant="over-threshold" />
         </section>
+        <CreditMonitoringModule />
         <section className="mb-10">
           <h2 className="mb-3 font-display text-2xl font-bold text-brand-navy">American Express: prior offers and application messages</h2>
           <p className="mb-4 text-sm leading-relaxed text-text-primary">The community phrase “once per lifetime” concerns reported welcome-offer restrictions tied to prior card history; it should not be confused with a universal account-opening limit. Exact offer language may address a particular product, related products, or other conditions. Community reports also describe an application message, often called a popup, indicating that a welcome offer may not be available on the displayed terms.</p>

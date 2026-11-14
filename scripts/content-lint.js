@@ -27,6 +27,7 @@ const maintainedFiles = [
   'src/app/spend-tracker/page.tsx',
   'src/app/terms/page.tsx',
   'src/components/AuthorAttribution.tsx',
+  'src/components/CreditMonitoringModule.tsx',
   'src/components/FinancialDisclaimer.tsx',
   'src/components/Footer.tsx',
   'src/components/PracticeNotice.tsx',

@@ -132,6 +132,41 @@ export function getAffiliateUrl(slug: string): string {
   return getCardLink(slug).url;
 }
 
+/**
+ * Non-card services with an approved affiliate program. These are kept
+ * separate from cards on purpose: they have no issuer fallback page, so
+ * an unconfigured or invalid value means the placement renders nothing.
+ * As with cards, each variable is referenced statically so Next.js can
+ * inline it.
+ */
+export type ServiceSlug = 'wallethub';
+
+function serviceOverrides(): Record<ServiceSlug, string | undefined> {
+  return {
+    wallethub: process.env.NEXT_PUBLIC_AFFILIATE_WALLETHUB,
+  };
+}
+
+export interface ServiceLink {
+  slug: ServiceSlug;
+  url: string;
+  /** Always true: a service link exists only when an affiliate URL is configured. */
+  isAffiliate: true;
+}
+
+/**
+ * Resolve the affiliate link for a non-card service. Returns null when the
+ * environment variable is unset, blank, or not an absolute https URL, so
+ * callers stay inert by default.
+ */
+export function getServiceLink(slug: ServiceSlug): ServiceLink | null {
+  const value = serviceOverrides()[slug]?.trim();
+  if (value && /^https:\/\/\S+$/.test(value)) {
+    return { slug, url: value, isAffiliate: true };
+  }
+  return null;
+}
+
 export interface OfferCard {
   slug: string;
   name: string;
