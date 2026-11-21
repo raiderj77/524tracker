@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import AnswerBlock from '@/components/AnswerBlock';
 import AuthorAttribution from '@/components/AuthorAttribution';
+import CreditMonitoringModule from '@/components/CreditMonitoringModule';
 import FinancialDisclaimer from '@/components/FinancialDisclaimer';
 import TrackerTool from '@/components/TrackerTool';
 import { buildPageMetadata } from '@/lib/siteMetadata';
@@ -152,7 +153,7 @@ export default function Chase524Page() {
           account, no credit-report access, and entries are stored on this device so you can return
           to them.
         </p>
-        <TrackerTool />
+        <TrackerTool resultSupplement={<CreditMonitoringModule variant="before-applying" />} />
       </section>
 
       <section className="mb-10 rounded-2xl border border-amber-300 bg-amber-50 p-6 text-amber-950">

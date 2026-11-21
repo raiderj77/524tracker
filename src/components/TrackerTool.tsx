@@ -7,6 +7,7 @@ import {
   useCallback,
   useMemo,
   useSyncExternalStore,
+  type ReactNode,
 } from 'react';
 import { PrintResultsButton } from './PrintResultsButton';
 import {
@@ -137,7 +138,7 @@ function ProgressCircle({
   );
 }
 
-export default function TrackerTool() {
+export default function TrackerTool({ resultSupplement }: { resultSupplement?: ReactNode }) {
   const [applications, setApplications] = useState<CardApplication[]>(loadApplications);
   const hydrated = useSyncExternalStore(subscribeToHydration, () => true, () => false);
   const previousApplicationsRef = useRef(applications);
@@ -822,9 +823,10 @@ export default function TrackerTool() {
         </div>
       )}
 
-      {/* Card offers + reminder capture, shown with the results state */}
+      {/* Supplemental content shown with the results state */}
       {visibleApplications.length > 0 && (
         <div className="mt-6 space-y-6">
+          {resultSupplement}
           <CardOfferModule variant={count524 < 5 ? 'slots-open' : 'over-threshold'} />
           <SlotReminderCapture />
         </div>
