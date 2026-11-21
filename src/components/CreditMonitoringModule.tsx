@@ -2,12 +2,14 @@ import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import { getServiceLink } from '@/lib/affiliateUrls';
 
 /**
- * Compact credit-monitoring placement for the rules guide. Renders nothing
+ * Compact credit-monitoring placement. Renders nothing
  * unless NEXT_PUBLIC_AFFILIATE_WALLETHUB holds a valid https URL (see
  * getServiceLink in src/lib/affiliateUrls.ts). Copy is limited to what
  * WalletHub offers for free; no approval, savings, or score claims.
  */
-export default function CreditMonitoringModule() {
+export default function CreditMonitoringModule({
+  variant = 'rules-guide',
+}: { variant?: 'rules-guide' | 'before-applying' }) {
   const link = getServiceLink('wallethub');
   if (!link) return null;
 
@@ -17,12 +19,16 @@ export default function CreditMonitoringModule() {
       className="mb-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
     >
       <h3 className="mb-2 font-display text-lg font-bold text-brand-navy">
-        Keeping an eye on your credit while older accounts age out?
+        {variant === 'before-applying'
+          ? 'Want to review your credit before applying?'
+          : 'Keeping an eye on your credit while older accounts age out?'}
       </h3>
       <p className="mb-4 text-sm leading-relaxed text-text-primary">
-        If you are waiting for older openings to fall outside the 5/24 reference window, a free
-        monitoring service can help you watch your credit in the meantime. WalletHub offers a free
-        credit score and a free credit report with daily updates. It is a third-party service, not
+        {variant === 'before-applying'
+          ? 'If you are considering a card application, reviewing your credit report can help you check your credit picture. '
+          : 'If you are waiting for older openings to fall outside the 5/24 reference window, a free monitoring service can help you watch your credit in the meantime. '}
+        WalletHub offers a free credit score and a free credit report with daily updates.
+        It is a third-party service, not
         a replacement for your official free reports at AnnualCreditReport.com, and it cannot tell
         you how any issuer will treat an application.
       </p>
