@@ -37,6 +37,13 @@ export const metadata: Metadata = {
     },
   },
   metadataBase: new URL('https://524tracker.com'),
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/favicon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: { url: '/favicon-180.png', sizes: '180x180' },
+  },
   robots: {
     index: true,
     follow: true,
@@ -58,7 +65,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://524tracker.com/opengraph-image',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: '524Tracker - independent credit-card date and value tools',
@@ -70,7 +77,7 @@ export const metadata: Metadata = {
     title: 'Unofficial Chase 5/24 Date Tracker | 524Tracker',
     description:
       'Organize card-opening dates and compare them with the unofficial, community-observed Chase 5/24 practice.',
-    images: ['https://524tracker.com/opengraph-image'],
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://524tracker.com',

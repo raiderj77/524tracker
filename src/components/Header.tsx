@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -27,9 +28,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-gold text-brand-navy font-display font-bold text-sm">
-                CT
-              </span>
+              <Image src="/logo-mark.svg" alt="" width={36} height={36} unoptimized />
               <span className="font-display font-bold text-xl text-white group-hover:text-brand-gold transition-colors">
                 524Tracker
               </span>
