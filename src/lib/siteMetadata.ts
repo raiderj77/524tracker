@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 const SITE_NAME = '524Tracker';
 const SITE_URL = 'https://524tracker.com';
-const SOCIAL_IMAGE = `${SITE_URL}/opengraph-image`;
+const SOCIAL_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface PageMetadataOptions {
   title: string;
