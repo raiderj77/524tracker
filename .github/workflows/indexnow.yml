@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '26'
 
       - name: Skip safely when the repository secret is not configured
         if: env.INDEXNOW_KEY == ''
